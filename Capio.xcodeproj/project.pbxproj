@@ -46,11 +46,11 @@
 		5AA4D7E013BB52080029B616 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5AA4D7E213BB52080029B616 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5AA4D7E413BB52080029B616 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		5AA4D7E813BB52080029B616 /* Capio-Info.plist */ = {isa = PBXFileReference; path = "Capio-Info.plist"; sourceTree = "<group>"; };
+		5AA4D7E813BB52080029B616 /* Capio-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Capio-Info.plist"; sourceTree = "<group>"; };
 		5AA4D7EA13BB52080029B616 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5AA4D7EC13BB52080029B616 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5AA4D7EE13BB52080029B616 /* Capio-Prefix.pch */ = {isa = PBXFileReference; path = "Capio-Prefix.pch"; sourceTree = "<group>"; };
-		5AA4D7EF13BB52080029B616 /* CapioAppDelegate.h */ = {isa = PBXFileReference; path = CapioAppDelegate.h; sourceTree = "<group>"; };
+		5AA4D7EE13BB52080029B616 /* Capio-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Capio-Prefix.pch"; sourceTree = "<group>"; };
+		5AA4D7EF13BB52080029B616 /* CapioAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CapioAppDelegate.h; sourceTree = "<group>"; };
 		5AA4D7F013BB52080029B616 /* CapioAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CapioAppDelegate.m; sourceTree = "<group>"; };
 		5AA4D7F313BB52080029B616 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		5AA4D7F513BB52080029B616 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 		5AA4D80313BB52080029B616 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		5AA4D80A13BB52080029B616 /* CapioTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CapioTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AA4D80B13BB52080029B616 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		5AA4D81413BB52080029B616 /* CapioTests-Info.plist */ = {isa = PBXFileReference; path = "CapioTests-Info.plist"; sourceTree = "<group>"; };
+		5AA4D81413BB52080029B616 /* CapioTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CapioTests-Info.plist"; sourceTree = "<group>"; };
 		5AA4D81613BB52080029B616 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5AA4D81813BB52080029B616 /* CapioTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CapioTests.h; sourceTree = "<group>"; };
 		5AA4D81A13BB52080029B616 /* CapioTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CapioTests.m; sourceTree = "<group>"; };
@@ -392,6 +392,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Capio/Capio-Prefix.pch";
 				INFOPLIST_FILE = "Capio/Capio-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -403,6 +404,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Capio/Capio-Prefix.pch";
 				INFOPLIST_FILE = "Capio/Capio-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -461,6 +463,7 @@
 				5AA4D82013BB52080029B616 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5AA4D82113BB52080029B616 /* Build configuration list for PBXNativeTarget "CapioTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +472,7 @@
 				5AA4D82313BB52080029B616 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
