@@ -137,11 +137,8 @@
 			children = (
 				5AA4D7EF13BB52080029B616 /* CapioAppDelegate.h */,
 				5AA4D7F013BB52080029B616 /* CapioAppDelegate.m */,
+				5AD615CD13BB5F1E00F9CA45 /* ViewControllers */,
 				5AA4D7F213BB52080029B616 /* MainStoryboard.storyboard */,
-				5AA4D7F513BB52080029B616 /* FirstViewController.h */,
-				5AA4D7F713BB52080029B616 /* FirstViewController.m */,
-				5AA4D7FD13BB52080029B616 /* SecondViewController.h */,
-				5AA4D7FF13BB52080029B616 /* SecondViewController.m */,
 				5A15955513BB54700007B60F /* Resources */,
 				5AA4D7E713BB52080029B616 /* Supporting Files */,
 			);
@@ -176,6 +173,17 @@
 				5AA4D81513BB52080029B616 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5AD615CD13BB5F1E00F9CA45 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5AA4D7F513BB52080029B616 /* FirstViewController.h */,
+				5AA4D7F713BB52080029B616 /* FirstViewController.m */,
+				5AA4D7FD13BB52080029B616 /* SecondViewController.h */,
+				5AA4D7FF13BB52080029B616 /* SecondViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
