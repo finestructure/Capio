@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MGSplitViewController.h"
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController {
+  MGSplitViewController *splitViewController;
+}
+
+@property (nonatomic, retain) IBOutlet MGSplitViewController *splitViewController;
 
 @end

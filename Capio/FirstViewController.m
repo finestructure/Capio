@@ -7,11 +7,12 @@
 //
 
 #import "FirstViewController.h"
-#import "MGSplitViewController.h"
 #import "AppList.h"
 #import "AppOverview.h"
 
 @implementation FirstViewController
+
+@synthesize splitViewController;
 
 - (void)didReceiveMemoryWarning
 {
@@ -27,13 +28,13 @@
   //AppList *vc1 = [[AppList alloc] initWithNibName:@"AppList" bundle:nil];
   //AppOverview *vc2 = [[AppOverview alloc] initWithNibName:@"AppOverview" bundle:nil];
 
-  MGSplitViewController *svc = [[MGSplitViewController alloc] init];
-  svc.viewControllers = [NSArray arrayWithObjects:
-                         [[AppList alloc] initWithNibName:@"AppList" bundle:nil],
-                         [[AppOverview alloc] initWithNibName:@"AppOverview" bundle:nil],
-                         nil];
+  splitViewController = [[MGSplitViewController alloc] init];
+  splitViewController.viewControllers = [NSArray arrayWithObjects:
+                                         [[AppList alloc] initWithNibName:@"AppList" bundle:nil],
+                                         [[AppOverview alloc] initWithNibName:@"AppOverview" bundle:nil],
+                                         nil];
 
-  [self.view addSubview:svc.view];
+  [self.view addSubview:splitViewController.view];
 }
 
 - (void)viewDidUnload
