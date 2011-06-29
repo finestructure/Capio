@@ -7,6 +7,9 @@
 //
 
 #import "FirstViewController.h"
+#import "MGSplitViewController.h"
+#import "AppList.h"
+#import "AppOverview.h"
 
 @implementation FirstViewController
 
@@ -18,10 +21,19 @@
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+- (void)viewDidLoad {
+  [super viewDidLoad];
+
+  //AppList *vc1 = [[AppList alloc] initWithNibName:@"AppList" bundle:nil];
+  //AppOverview *vc2 = [[AppOverview alloc] initWithNibName:@"AppOverview" bundle:nil];
+
+  MGSplitViewController *svc = [[MGSplitViewController alloc] init];
+  svc.viewControllers = [NSArray arrayWithObjects:
+                         [[AppList alloc] initWithNibName:@"AppList" bundle:nil],
+                         [[AppOverview alloc] initWithNibName:@"AppOverview" bundle:nil],
+                         nil];
+
+  [self.view addSubview:svc.view];
 }
 
 - (void)viewDidUnload
