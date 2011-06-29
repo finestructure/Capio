@@ -30,6 +30,8 @@
 		5AA4D81B13BB52080029B616 /* CapioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4D81A13BB52080029B616 /* CapioTests.m */; };
 		5AD615D213BB6D4E00F9CA45 /* AppList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD615D013BB6D4E00F9CA45 /* AppList.m */; };
 		5AD615D313BB6D4E00F9CA45 /* AppList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD615D113BB6D4E00F9CA45 /* AppList.xib */; };
+		5AD615D713BB703800F9CA45 /* AppOverview.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD615D513BB703800F9CA45 /* AppOverview.m */; };
+		5AD615D813BB703800F9CA45 /* AppOverview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD615D613BB703800F9CA45 /* AppOverview.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,9 @@
 		5AD615CF13BB6D4E00F9CA45 /* AppList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppList.h; sourceTree = "<group>"; };
 		5AD615D013BB6D4E00F9CA45 /* AppList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppList.m; sourceTree = "<group>"; };
 		5AD615D113BB6D4E00F9CA45 /* AppList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppList.xib; sourceTree = "<group>"; };
+		5AD615D413BB703800F9CA45 /* AppOverview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppOverview.h; sourceTree = "<group>"; };
+		5AD615D513BB703800F9CA45 /* AppOverview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppOverview.m; sourceTree = "<group>"; };
+		5AD615D613BB703800F9CA45 /* AppOverview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppOverview.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +195,9 @@
 				5AD615CF13BB6D4E00F9CA45 /* AppList.h */,
 				5AD615D013BB6D4E00F9CA45 /* AppList.m */,
 				5AD615D113BB6D4E00F9CA45 /* AppList.xib */,
+				5AD615D413BB703800F9CA45 /* AppOverview.h */,
+				5AD615D513BB703800F9CA45 /* AppOverview.m */,
+				5AD615D613BB703800F9CA45 /* AppOverview.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -272,6 +280,7 @@
 				5A15955A13BB54700007B60F /* planning.png in Resources */,
 				5A15955B13BB54700007B60F /* sizing.png in Resources */,
 				5AD615D313BB6D4E00F9CA45 /* AppList.xib in Resources */,
+				5AD615D813BB703800F9CA45 /* AppOverview.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +321,7 @@
 				5AA4D7F813BB52080029B616 /* FirstViewController.m in Sources */,
 				5AA4D80013BB52080029B616 /* SecondViewController.m in Sources */,
 				5AD615D213BB6D4E00F9CA45 /* AppList.m in Sources */,
+				5AD615D713BB703800F9CA45 /* AppOverview.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
