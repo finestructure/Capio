@@ -10,7 +10,7 @@
 
 @class MGSplitViewController;
 @interface MGSplitDividerView : UIView {
-	MGSplitViewController *splitViewController;
+	MGSplitViewController *__unsafe_unretained splitViewController;
 	BOOL allowsDragging;
 }
 
