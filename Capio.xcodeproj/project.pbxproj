@@ -130,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				5AA4D7E613BB52080029B616 /* Capio */,
+				5AD615E713BB820100F9CA45 /* MGSplitViewController */,
 				5AA4D81213BB52080029B616 /* CapioTests */,
 				5AA4D7DF13BB52080029B616 /* Frameworks */,
 				5AA4D7DD13BB52080029B616 /* Products */,
@@ -163,7 +164,6 @@
 				5AA4D7EF13BB52080029B616 /* CapioAppDelegate.h */,
 				5AA4D7F013BB52080029B616 /* CapioAppDelegate.m */,
 				5AD615CD13BB5F1E00F9CA45 /* ViewControllers */,
-				5AD615E713BB820100F9CA45 /* MGSplitViewController */,
 				5A15955513BB54700007B60F /* Resources */,
 				5AA4D7E713BB52080029B616 /* Supporting Files */,
 			);
@@ -240,6 +240,7 @@
 				5AD615E313BB81F200F9CA45 /* MGSplitViewController.m */,
 			);
 			name = MGSplitViewController;
+			path = Capio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
