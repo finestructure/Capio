@@ -12,6 +12,8 @@
 		5A15955B13BB54700007B60F /* sizing.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A15955813BB54700007B60F /* sizing.png */; };
 		5A67A26F13BCB82D002BDCAA /* AppOverview.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A67A26E13BCB82D002BDCAA /* AppOverview.m */; };
 		5A67A27013BCB82D002BDCAA /* AppOverview.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A67A26E13BCB82D002BDCAA /* AppOverview.m */; };
+		5A67A27613BCBD68002BDCAA /* app_overview.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A67A27513BCBD68002BDCAA /* app_overview.plist */; };
+		5A67A27713BCBD68002BDCAA /* app_overview.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A67A27513BCBD68002BDCAA /* app_overview.plist */; };
 		5AA4D7E113BB52080029B616 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA4D7E013BB52080029B616 /* UIKit.framework */; };
 		5AA4D7E313BB52080029B616 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA4D7E213BB52080029B616 /* Foundation.framework */; };
 		5AA4D7E513BB52080029B616 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA4D7E413BB52080029B616 /* CoreGraphics.framework */; };
@@ -53,6 +55,7 @@
 		5A15955813BB54700007B60F /* sizing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sizing.png; sourceTree = "<group>"; };
 		5A67A26D13BCB82D002BDCAA /* AppOverview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppOverview.h; sourceTree = "<group>"; };
 		5A67A26E13BCB82D002BDCAA /* AppOverview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppOverview.m; sourceTree = "<group>"; };
+		5A67A27513BCBD68002BDCAA /* app_overview.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = app_overview.plist; sourceTree = "<group>"; };
 		5AA4D7DC13BB52080029B616 /* Capio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AA4D7E013BB52080029B616 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5AA4D7E213BB52080029B616 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -115,6 +118,7 @@
 		5A15955513BB54700007B60F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5A67A27513BCBD68002BDCAA /* app_overview.plist */,
 				5ABC805E13BC5BA000468868 /* MainWindow.xib */,
 				5A15955613BB54700007B60F /* info.png */,
 				5A15955713BB54700007B60F /* planning.png */,
@@ -314,6 +318,7 @@
 				5AD615D813BB703800F9CA45 /* AppOverview.xib in Resources */,
 				5ABC806013BC5BA000468868 /* MainWindow.xib in Resources */,
 				5AD5B6AB13BC6CA10083D454 /* SecondViewController.xib in Resources */,
+				5A67A27613BCBD68002BDCAA /* app_overview.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +328,7 @@
 			files = (
 				5AA4D81713BB52080029B616 /* InfoPlist.strings in Resources */,
 				5AA4D81913BB52080029B616 /* CapioTests.h in Resources */,
+				5A67A27713BCBD68002BDCAA /* app_overview.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
