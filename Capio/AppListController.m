@@ -41,6 +41,10 @@
     item.appOwner = [dict objectForKey:@"appOwner"];
     item.serverCount = [dict objectForKey:@"serverCount"];
     item.reportDate = [dict objectForKey:@"reportDate"];
+    item.ragRed = [dict objectForKey:@"ragRed"];
+    item.ragAmber = [dict objectForKey:@"ragAmber"];
+    item.ragGreen = [dict objectForKey:@"ragGreen"];
+    item.ragTotal = [dict objectForKey:@"ragTotal"];
     [self.apps addObject:item];
   }
 

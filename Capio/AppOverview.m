@@ -15,6 +15,10 @@
 @synthesize appOwner = _appOwner;
 @synthesize serverCount = _serverCount;
 @synthesize reportDate = _reportDate;
+@synthesize ragRed = _ragRed;
+@synthesize ragAmber = _ragAmber;
+@synthesize ragGreen = _ragGreen;
+@synthesize ragTotal = _ragTotal;
 
 
 - (id)init

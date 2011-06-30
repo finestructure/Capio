@@ -2,29 +2,45 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-  <dict>
-    <key>appName</key>
-    <string>App X</string>
-    <key>appDescription</key>
-    <string>An array containing the contents of the file specified by aPath. Returns nil if the file can’t be opened or if the contents of the file can’t be parsed into an array.</string>
-    <key>appOwner</key>
-    <string>John Doe</string>
-    <key>serverCount</key>
-    <integer>42</integer>
-    <key>reportDate</key>
-    <date>2011-06-30T14:10:06Z</date>
-  </dict>
-  <dict>
-    <key>appName</key>
-    <string>App Z</string>
-    <key>appDescription</key>
-    <string>Some other application</string>
-    <key>appOwner</key>
-    <string>Peter Pan</string>
-    <key>serverCount</key>
-    <integer>234</integer>
-    <key>reportDate</key>
-    <date>2011-05-21T08:10:06Z</date>
-  </dict>
+	<dict>
+		<key>appName</key>
+		<string>App X</string>
+		<key>appDescription</key>
+		<string>An array containing the contents of the file specified by aPath. Returns nil if the file can’t be opened or if the contents of the file can’t be parsed into an array.</string>
+		<key>appOwner</key>
+		<string>John Doe</string>
+		<key>serverCount</key>
+		<integer>42</integer>
+		<key>reportDate</key>
+		<date>2011-06-30T14:10:06Z</date>
+		<key>ragRed</key>
+		<integer>3</integer>
+		<key>ragAmber</key>
+		<integer>6</integer>
+		<key>ragGreen</key>
+		<integer>12</integer>
+		<key>ragTotal</key>
+		<integer>21</integer>
+	</dict>
+	<dict>
+		<key>appName</key>
+		<string>App Z</string>
+		<key>appDescription</key>
+		<string>Some other application</string>
+		<key>appOwner</key>
+		<string>Peter Pan</string>
+		<key>serverCount</key>
+		<integer>234</integer>
+		<key>reportDate</key>
+		<date>2011-05-21T08:10:06Z</date>
+		<key>ragRed</key>
+		<integer>1</integer>
+		<key>ragAmber</key>
+		<integer>3</integer>
+		<key>ragGreen</key>
+		<integer>5</integer>
+		<key>ragTotal</key>
+		<integer>9</integer>
+	</dict>
 </array>
 </plist>

@@ -16,6 +16,10 @@
   UILabel *_appOwner;
   UILabel *_serverCount;
   UILabel *_reportDate;
+  UIButton *_ragRed;
+  UIButton *_ragAmber;
+  UIButton *_ragGreen;
+  UIButton *_ragTotal;
   UISegmentedControl *_performanceCostToggle;
 }
 
@@ -29,5 +33,9 @@
 @property (nonatomic, strong) IBOutlet UILabel *serverCount;
 @property (nonatomic, strong) IBOutlet UILabel *reportDate;
 
+@property (nonatomic, strong) IBOutlet UIButton *ragRed;
+@property (nonatomic, strong) IBOutlet UIButton *ragAmber;
+@property (nonatomic, strong) IBOutlet UIButton *ragGreen;
+@property (nonatomic, strong) IBOutlet UIButton *ragTotal;
 
 @end
