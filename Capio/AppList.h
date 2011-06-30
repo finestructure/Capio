@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class AppOverview;
+
 @interface AppList : UITableViewController
+
+@property (strong, nonatomic) IBOutlet AppOverview *appOverviewController;
 
 @end

@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@class DetailViewController;
+@class AppOverview;
 
 @interface RootViewController : UITableViewController {
-    DetailViewController *detailViewController;
+    AppOverview *detailViewController;
 }
 
-@property (nonatomic, retain) IBOutlet DetailViewController *detailViewController;
+@property (nonatomic, retain) IBOutlet AppOverview *detailViewController;
 
 - (void)selectFirstRow;
 

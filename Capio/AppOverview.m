@@ -10,22 +10,73 @@
 
 @implementation AppOverview
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+@synthesize detailItem = _detailItem;
+@synthesize detailDescriptionLabel = _detailDescriptionLabel;
+
+
+#pragma mark -
+#pragma mark Managing the detail item
+
+
+// When setting the detail item, update the view and dismiss the popover controller if it's showing.
+- (void)setDetailItem:(id)newDetailItem {
+  if (_detailItem != newDetailItem) {
+    _detailItem = newDetailItem;
+    
+    // Update the view.
+    self.detailDescriptionLabel.text = [_detailItem description];
+  }
 }
 
-- (void)didReceiveMemoryWarning
+
+#pragma mark -
+#pragma mark Split view support
+
+
+- (void)splitViewController:(MGSplitViewController*)svc 
+     willHideViewController:(UIViewController *)aViewController 
+          withBarButtonItem:(UIBarButtonItem*)barButtonItem 
+       forPopoverController: (UIPopoverController*)pc
 {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
+	//NSLog(@"%@", NSStringFromSelector(_cmd));
 }
+
+
+// Called when the view is shown again in the split view, invalidating the button and popover controller.
+- (void)splitViewController:(MGSplitViewController*)svc 
+     willShowViewController:(UIViewController *)aViewController 
+  invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
+{
+	//NSLog(@"%@", NSStringFromSelector(_cmd));
+}
+
+
+- (void)splitViewController:(MGSplitViewController*)svc 
+          popoverController:(UIPopoverController*)pc 
+  willPresentViewController:(UIViewController *)aViewController
+{
+	//NSLog(@"%@", NSStringFromSelector(_cmd));
+}
+
+
+- (void)splitViewController:(MGSplitViewController*)svc willChangeSplitOrientationToVertical:(BOOL)isVertical
+{
+	//NSLog(@"%@", NSStringFromSelector(_cmd));
+}
+
+
+- (void)splitViewController:(MGSplitViewController*)svc willMoveSplitToPosition:(float)position
+{
+	//NSLog(@"%@", NSStringFromSelector(_cmd));
+}
+
+
+- (float)splitViewController:(MGSplitViewController *)svc constrainSplitPosition:(float)proposedPosition splitViewSize:(CGSize)viewSize
+{
+	//NSLog(@"%@", NSStringFromSelector(_cmd));
+	return proposedPosition;
+}
+
 
 #pragma mark - View lifecycle
 

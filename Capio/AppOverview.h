@@ -6,8 +6,12 @@
 //  Copyright 2011 abstracture GmbH & Co. KG. All rights reserved.
 //
 
+#import "MGSplitViewController.h"
 
 
-@interface AppOverview : UIViewController
+@interface AppOverview : UIViewController <UIPopoverControllerDelegate, MGSplitViewControllerDelegate>
+
+@property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (strong, nonatomic) id detailItem;
 
 @end

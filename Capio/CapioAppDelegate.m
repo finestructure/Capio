@@ -8,7 +8,6 @@
 
 #import "CapioAppDelegate.h"
 #import "RootViewController.h"
-#import "DetailViewController.h"
 #import "MGSplitViewController.h"
 
 #import "SecondViewController.h"
@@ -51,7 +50,6 @@
     [self.window makeKeyAndVisible];
 	
     [self.rootViewController performSelector:@selector(selectFirstRow) withObject:nil afterDelay:0];
-    [self.detailViewController performSelector:@selector(configureView) withObject:nil afterDelay:0];
     
   }
     
