@@ -20,4 +20,6 @@
 @property (strong, nonatomic) IBOutlet RootViewController *rootViewController;
 @property (strong, nonatomic) IBOutlet DetailViewController *detailViewController;
 
+@property (strong, nonatomic) UITabBarController *tabBarController;
+
 @end

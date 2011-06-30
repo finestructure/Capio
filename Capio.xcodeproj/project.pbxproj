@@ -27,6 +27,8 @@
 		5ABC806013BC5BA000468868 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ABC805E13BC5BA000468868 /* MainWindow.xib */; };
 		5ABC806513BC5BB100468868 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC806213BC5BB100468868 /* DetailViewController.m */; };
 		5ABC806613BC5BB100468868 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC806413BC5BB100468868 /* RootViewController.m */; };
+		5AD5B6AA13BC6CA10083D454 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5B6A813BC6CA10083D454 /* SecondViewController.m */; };
+		5AD5B6AB13BC6CA10083D454 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD5B6A913BC6CA10083D454 /* SecondViewController.xib */; };
 		5AD615D213BB6D4E00F9CA45 /* AppList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD615D013BB6D4E00F9CA45 /* AppList.m */; };
 		5AD615D313BB6D4E00F9CA45 /* AppList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD615D113BB6D4E00F9CA45 /* AppList.xib */; };
 		5AD615D713BB703800F9CA45 /* AppOverview.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD615D513BB703800F9CA45 /* AppOverview.m */; };
@@ -72,6 +74,9 @@
 		5ABC806213BC5BB100468868 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		5ABC806313BC5BB100468868 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		5ABC806413BC5BB100468868 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		5AD5B6A713BC6CA10083D454 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		5AD5B6A813BC6CA10083D454 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		5AD5B6A913BC6CA10083D454 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 		5AD615CF13BB6D4E00F9CA45 /* AppList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppList.h; sourceTree = "<group>"; };
 		5AD615D013BB6D4E00F9CA45 /* AppList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppList.m; sourceTree = "<group>"; };
 		5AD615D113BB6D4E00F9CA45 /* AppList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppList.xib; sourceTree = "<group>"; };
@@ -217,6 +222,9 @@
 				5AD615D413BB703800F9CA45 /* AppOverview.h */,
 				5AD615D513BB703800F9CA45 /* AppOverview.m */,
 				5AD615D613BB703800F9CA45 /* AppOverview.xib */,
+				5AD5B6A713BC6CA10083D454 /* SecondViewController.h */,
+				5AD5B6A813BC6CA10083D454 /* SecondViewController.m */,
+				5AD5B6A913BC6CA10083D454 /* SecondViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -312,6 +320,7 @@
 				5AD615D813BB703800F9CA45 /* AppOverview.xib in Resources */,
 				5ABC805F13BC5BA000468868 /* DetailView.xib in Resources */,
 				5ABC806013BC5BA000468868 /* MainWindow.xib in Resources */,
+				5AD5B6AB13BC6CA10083D454 /* SecondViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +365,7 @@
 				5AD615E613BB81F200F9CA45 /* MGSplitViewController.m in Sources */,
 				5ABC806513BC5BB100468868 /* DetailViewController.m in Sources */,
 				5ABC806613BC5BB100468868 /* RootViewController.m in Sources */,
+				5AD5B6AA13BC6CA10083D454 /* SecondViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

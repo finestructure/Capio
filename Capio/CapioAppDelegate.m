@@ -11,6 +11,8 @@
 #import "DetailViewController.h"
 #import "MGSplitViewController.h"
 
+#import "SecondViewController.h"
+
 @implementation CapioAppDelegate
 
 @synthesize window = _window;
@@ -18,21 +20,34 @@
 @synthesize rootViewController = _rootViewController;
 @synthesize detailViewController = _detailViewController;
 
+@synthesize tabBarController = _tabBarController;
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-  // Add the split view controller's view to the window and display.
-  [self.window addSubview:self.splitViewController.view];
-  [self.window makeKeyAndVisible];
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  
+  bool useTabs = YES;
+  
+  if (useTabs) {
+  
+    self.tabBarController = [[UITabBarController alloc] init];
+    
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:
+                                             self.splitViewController,
+                                             [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil],
+                                             nil];
+  
+    [self.window addSubview:self.tabBarController.view];
+    [self.window makeKeyAndVisible];
+
+  } else {
+
+    [self.window addSubview:self.splitViewController.view];
+    [self.window makeKeyAndVisible];
 	
-	[self.rootViewController performSelector:@selector(selectFirstRow) withObject:nil afterDelay:0];
-	[self.detailViewController performSelector:@selector(configureView) withObject:nil afterDelay:0];
-	
-	if (NO) { // whether to allow dragging the divider to move the split.
-		self.splitViewController.splitWidth = 15.0; // make it wide enough to actually drag!
-		self.splitViewController.allowsDraggingDivider = YES;
-	}
-	
+    [self.rootViewController performSelector:@selector(selectFirstRow) withObject:nil afterDelay:0];
+    [self.detailViewController performSelector:@selector(configureView) withObject:nil afterDelay:0];
+    
+  }
+    
   return YES;
 
 }
