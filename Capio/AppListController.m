@@ -8,11 +8,13 @@
 
 #import "AppListController.h"
 #import "AppOverviewController.h"
+#import "AppOverview.h"
 
 
 @implementation AppListController
 
 @synthesize appOverviewController = _appOverviewController;
+@synthesize apps = _apps;
 
 
 #pragma mark - View lifecycle
@@ -24,7 +26,24 @@
   self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
 
   // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+  // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+  
+  self.apps = [NSMutableArray array];
+  
+  NSBundle *thisBundle = [NSBundle bundleForClass:[self class]];
+  NSURL *url = [thisBundle URLForResource:@"app_overview" withExtension:@"plist"];
+  
+  NSArray *data = [NSArray arrayWithContentsOfURL:url];
+  for (NSDictionary *dict in data) {
+    AppOverview *item = [[AppOverview alloc] init];
+    item.appName = [dict objectForKey:@"appName"];
+    item.appDescription = [dict objectForKey:@"appDescription"];
+    item.appOwner = [dict objectForKey:@"appOwner"];
+    item.serverCount = [dict objectForKey:@"serverCount"];
+    item.reportDate = [dict objectForKey:@"reportDate"];
+    [self.apps addObject:item];
+  }
+
 }
 
 
@@ -40,7 +59,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-  return 5;
+  return [self.apps count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -52,7 +71,8 @@
   }
   
   // Configure the cell
-  cell.textLabel.text = [NSString stringWithFormat:@"Row %d", indexPath.row];
+  AppOverview *item = [self.apps objectAtIndex:indexPath.row];
+  cell.textLabel.text = item.appName;
   
   return cell;
 }
@@ -99,7 +119,8 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  self.appOverviewController.detailItem = [NSString stringWithFormat:@"Row %d", indexPath.row];
+  AppOverview *item = [self.apps objectAtIndex:indexPath.row];
+  self.appOverviewController.detailItem = item;
 }
 
 @end

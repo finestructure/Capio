@@ -7,6 +7,7 @@
 //
 
 #import "AppOverviewController.h"
+#import "AppOverview.h"
 
 @implementation AppOverviewController
 
@@ -24,12 +25,23 @@
 
 
 // When setting the detail item, update the view and dismiss the popover controller if it's showing.
-- (void)setDetailItem:(id)newDetailItem {
+- (void)setDetailItem:(AppOverview *)newDetailItem {
+  static NSDateFormatter *dateFormatter = nil;
+  if (dateFormatter == nil) {
+    dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+  }
+  
   if (_detailItem != newDetailItem) {
     _detailItem = newDetailItem;
     
     // Update the view.
-    self.appDescription.text = [_detailItem description];
+    self.appName.text = self.detailItem.appName;
+    self.appDescription.text = self.detailItem.appDescription;
+    self.appOwner.text = self.detailItem.appOwner;
+    self.serverCount.text = [self.detailItem.serverCount stringValue];
+    self.reportDate.text = [dateFormatter stringFromDate:self.detailItem.reportDate];
   }
 }
 

@@ -13,5 +13,6 @@
 @interface AppListController : UITableViewController
 
 @property (strong, nonatomic) IBOutlet AppOverviewController *appOverviewController;
+@property (nonatomic, strong) NSMutableArray *apps;
 
 @end

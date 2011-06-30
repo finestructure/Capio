@@ -8,6 +8,7 @@
 
 #import "MGSplitViewController.h"
 
+@class AppOverview;
 
 @interface AppOverviewController : UIViewController <UIPopoverControllerDelegate, MGSplitViewControllerDelegate> {
   UILabel *_appName;
@@ -19,7 +20,7 @@
 }
 
 
-@property (strong, nonatomic) id detailItem;
+@property (strong, nonatomic) AppOverview *detailItem;
 
 @property (nonatomic, strong) IBOutlet UISegmentedControl *performanceCostToggle;
 @property (nonatomic, strong) IBOutlet UILabel *appName;
