@@ -14,7 +14,10 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+      UIImage *img = [UIImage imageNamed:@"planning.png"];
+      UITabBarItem *tab = [[UITabBarItem alloc] initWithTitle:@"Planning"
+                                                        image:img tag:1];
+      self.tabBarItem = tab;
     }
     return self;
 }

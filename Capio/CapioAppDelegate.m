@@ -28,6 +28,13 @@
   
   if (useTabs) {
   
+    { // set tab bar item for first tab
+      UIImage *img = [UIImage imageNamed:@"info.png"];
+      UITabBarItem *tab = [[UITabBarItem alloc] initWithTitle:@"Analysis"
+                                                        image:img tag:0];
+      self.splitViewController.tabBarItem = tab;
+    }
+
     self.tabBarController = [[UITabBarController alloc] init];
     
     self.tabBarController.viewControllers = [NSArray arrayWithObjects:
