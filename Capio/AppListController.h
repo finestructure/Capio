@@ -10,7 +10,7 @@
 
 @class AppOverviewController;
 
-@interface AppList : UITableViewController
+@interface AppListController : UITableViewController
 
 @property (strong, nonatomic) IBOutlet AppOverviewController *appOverviewController;
 

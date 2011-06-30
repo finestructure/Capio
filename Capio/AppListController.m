@@ -6,11 +6,11 @@
 //  Copyright 2011 abstracture GmbH & Co. KG. All rights reserved.
 //
 
-#import "AppList.h"
+#import "AppListController.h"
 #import "AppOverviewController.h"
 
 
-@implementation AppList
+@implementation AppListController
 
 @synthesize appOverviewController = _appOverviewController;
 
