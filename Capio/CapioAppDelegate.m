@@ -7,16 +7,34 @@
 //
 
 #import "CapioAppDelegate.h"
+#import "RootViewController.h"
+#import "DetailViewController.h"
+#import "MGSplitViewController.h"
 
 @implementation CapioAppDelegate
 
 @synthesize window = _window;
+@synthesize splitViewController = _splitViewController;
+@synthesize rootViewController = _rootViewController;
+@synthesize detailViewController = _detailViewController;
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    [self.window makeKeyAndVisible];
-    return YES;
+  // Add the split view controller's view to the window and display.
+  [self.window addSubview:self.splitViewController.view];
+  [self.window makeKeyAndVisible];
+	
+	[self.rootViewController performSelector:@selector(selectFirstRow) withObject:nil afterDelay:0];
+	[self.detailViewController performSelector:@selector(configureView) withObject:nil afterDelay:0];
+	
+	if (NO) { // whether to allow dragging the divider to move the split.
+		self.splitViewController.splitWidth = 15.0; // make it wide enough to actually drag!
+		self.splitViewController.allowsDraggingDivider = YES;
+	}
+	
+  return YES;
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
