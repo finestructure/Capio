@@ -6,9 +6,9 @@
 //  Copyright 2011 abstracture GmbH & Co. KG. All rights reserved.
 //
 
-#import "AppOverview.h"
+#import "AppOverviewController.h"
 
-@implementation AppOverview
+@implementation AppOverviewController
 
 @synthesize detailItem = _detailItem;
 @synthesize detailDescriptionLabel = _detailDescriptionLabel;

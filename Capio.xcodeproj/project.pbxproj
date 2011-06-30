@@ -28,7 +28,7 @@
 		5AD5B6AB13BC6CA10083D454 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD5B6A913BC6CA10083D454 /* SecondViewController.xib */; };
 		5AD615D213BB6D4E00F9CA45 /* AppList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD615D013BB6D4E00F9CA45 /* AppList.m */; };
 		5AD615D313BB6D4E00F9CA45 /* AppList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD615D113BB6D4E00F9CA45 /* AppList.xib */; };
-		5AD615D713BB703800F9CA45 /* AppOverview.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD615D513BB703800F9CA45 /* AppOverview.m */; };
+		5AD615D713BB703800F9CA45 /* AppOverviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD615D513BB703800F9CA45 /* AppOverviewController.m */; };
 		5AD615D813BB703800F9CA45 /* AppOverview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD615D613BB703800F9CA45 /* AppOverview.xib */; };
 		5AD615E413BB81F200F9CA45 /* MGSplitCornersView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD615DF13BB81F200F9CA45 /* MGSplitCornersView.m */; };
 		5AD615E513BB81F200F9CA45 /* MGSplitDividerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD615E113BB81F200F9CA45 /* MGSplitDividerView.m */; };
@@ -72,8 +72,8 @@
 		5AD615CF13BB6D4E00F9CA45 /* AppList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppList.h; sourceTree = "<group>"; };
 		5AD615D013BB6D4E00F9CA45 /* AppList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppList.m; sourceTree = "<group>"; };
 		5AD615D113BB6D4E00F9CA45 /* AppList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppList.xib; sourceTree = "<group>"; };
-		5AD615D413BB703800F9CA45 /* AppOverview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppOverview.h; sourceTree = "<group>"; };
-		5AD615D513BB703800F9CA45 /* AppOverview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppOverview.m; sourceTree = "<group>"; };
+		5AD615D413BB703800F9CA45 /* AppOverviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = AppOverviewController.h; sourceTree = "<group>"; };
+		5AD615D513BB703800F9CA45 /* AppOverviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppOverviewController.m; sourceTree = "<group>"; };
 		5AD615D613BB703800F9CA45 /* AppOverview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppOverview.xib; sourceTree = "<group>"; };
 		5AD615DE13BB81F200F9CA45 /* MGSplitCornersView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSplitCornersView.h; sourceTree = "<group>"; };
 		5AD615DF13BB81F200F9CA45 /* MGSplitCornersView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSplitCornersView.m; sourceTree = "<group>"; };
@@ -198,8 +198,8 @@
 				5AD615CF13BB6D4E00F9CA45 /* AppList.h */,
 				5AD615D013BB6D4E00F9CA45 /* AppList.m */,
 				5AD615D113BB6D4E00F9CA45 /* AppList.xib */,
-				5AD615D413BB703800F9CA45 /* AppOverview.h */,
-				5AD615D513BB703800F9CA45 /* AppOverview.m */,
+				5AD615D413BB703800F9CA45 /* AppOverviewController.h */,
+				5AD615D513BB703800F9CA45 /* AppOverviewController.m */,
 				5AD615D613BB703800F9CA45 /* AppOverview.xib */,
 				5AD5B6A713BC6CA10083D454 /* SecondViewController.h */,
 				5AD5B6A813BC6CA10083D454 /* SecondViewController.m */,
@@ -338,7 +338,7 @@
 				5AA4D7ED13BB52080029B616 /* main.m in Sources */,
 				5AA4D7F113BB52080029B616 /* CapioAppDelegate.m in Sources */,
 				5AD615D213BB6D4E00F9CA45 /* AppList.m in Sources */,
-				5AD615D713BB703800F9CA45 /* AppOverview.m in Sources */,
+				5AD615D713BB703800F9CA45 /* AppOverviewController.m in Sources */,
 				5AD615E413BB81F200F9CA45 /* MGSplitCornersView.m in Sources */,
 				5AD615E513BB81F200F9CA45 /* MGSplitDividerView.m in Sources */,
 				5AD615E613BB81F200F9CA45 /* MGSplitViewController.m in Sources */,

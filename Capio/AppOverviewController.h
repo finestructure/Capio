@@ -9,7 +9,7 @@
 #import "MGSplitViewController.h"
 
 
-@interface AppOverview : UIViewController <UIPopoverControllerDelegate, MGSplitViewControllerDelegate>
+@interface AppOverviewController : UIViewController <UIPopoverControllerDelegate, MGSplitViewControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @property (strong, nonatomic) id detailItem;

@@ -7,7 +7,7 @@
 //
 
 #import "AppList.h"
-#import "AppOverview.h"
+#import "AppOverviewController.h"
 
 
 @implementation AppList
