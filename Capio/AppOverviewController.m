@@ -11,7 +11,12 @@
 @implementation AppOverviewController
 
 @synthesize detailItem = _detailItem;
-@synthesize detailDescriptionLabel = _detailDescriptionLabel;
+@synthesize performanceCostToggle = _performanceCostToggle;
+@synthesize appName = _appName;
+@synthesize appDescription = _appDescription;
+@synthesize appOwner = _appOwner;
+@synthesize serverCount = _serverCount;
+@synthesize reportDate = _reportDate;
 
 
 #pragma mark -
@@ -24,7 +29,7 @@
     _detailItem = newDetailItem;
     
     // Update the view.
-    self.detailDescriptionLabel.text = [_detailItem description];
+    self.appDescription.text = [_detailItem description];
   }
 }
 
@@ -88,6 +93,12 @@
 
 - (void)viewDidUnload
 {
+  [self setAppName:nil];
+  [self setAppDescription:nil];
+  [self setAppOwner:nil];
+  [self setServerCount:nil];
+  [self setReportDate:nil];
+  [self setPerformanceCostToggle:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
