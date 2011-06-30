@@ -29,3 +29,7 @@ typedef enum _MGCornersPosition {
 @property (nonatomic, retain) UIColor *cornerBackgroundColor;
 
 @end
+
+
+double deg2Rad(double degrees);
+double rad2Deg(double radians);
