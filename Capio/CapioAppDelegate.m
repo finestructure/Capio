@@ -7,7 +7,6 @@
 //
 
 #import "CapioAppDelegate.h"
-#import "RootViewController.h"
 #import "MGSplitViewController.h"
 
 #import "SecondViewController.h"
@@ -49,8 +48,6 @@
     [self.window addSubview:self.splitViewController.view];
     [self.window makeKeyAndVisible];
 	
-    [self.rootViewController performSelector:@selector(selectFirstRow) withObject:nil afterDelay:0];
-    
   }
     
   return YES;

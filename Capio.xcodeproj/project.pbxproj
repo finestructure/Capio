@@ -24,7 +24,6 @@
 		5AA4D81913BB52080029B616 /* CapioTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 5AA4D81813BB52080029B616 /* CapioTests.h */; };
 		5AA4D81B13BB52080029B616 /* CapioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4D81A13BB52080029B616 /* CapioTests.m */; };
 		5ABC806013BC5BA000468868 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ABC805E13BC5BA000468868 /* MainWindow.xib */; };
-		5ABC806613BC5BB100468868 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC806413BC5BB100468868 /* RootViewController.m */; };
 		5AD5B6AA13BC6CA10083D454 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5B6A813BC6CA10083D454 /* SecondViewController.m */; };
 		5AD5B6AB13BC6CA10083D454 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD5B6A913BC6CA10083D454 /* SecondViewController.xib */; };
 		5AD615D213BB6D4E00F9CA45 /* AppList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD615D013BB6D4E00F9CA45 /* AppList.m */; };
@@ -67,8 +66,6 @@
 		5AA4D81813BB52080029B616 /* CapioTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CapioTests.h; sourceTree = "<group>"; };
 		5AA4D81A13BB52080029B616 /* CapioTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CapioTests.m; sourceTree = "<group>"; };
 		5ABC805E13BC5BA000468868 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
-		5ABC806313BC5BB100468868 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		5ABC806413BC5BB100468868 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		5AD5B6A713BC6CA10083D454 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		5AD5B6A813BC6CA10083D454 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		5AD5B6A913BC6CA10083D454 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
@@ -198,8 +195,6 @@
 		5ABC805C13BC5B8600468868 /* MG */ = {
 			isa = PBXGroup;
 			children = (
-				5ABC806313BC5BB100468868 /* RootViewController.h */,
-				5ABC806413BC5BB100468868 /* RootViewController.m */,
 				5ABC805E13BC5BA000468868 /* MainWindow.xib */,
 			);
 			name = MG;
@@ -355,7 +350,6 @@
 				5AD615E413BB81F200F9CA45 /* MGSplitCornersView.m in Sources */,
 				5AD615E513BB81F200F9CA45 /* MGSplitDividerView.m in Sources */,
 				5AD615E613BB81F200F9CA45 /* MGSplitViewController.m in Sources */,
-				5ABC806613BC5BB100468868 /* RootViewController.m in Sources */,
 				5AD5B6AA13BC6CA10083D454 /* SecondViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

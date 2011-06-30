@@ -87,6 +87,7 @@
 				<array class="NSMutableArray" key="IBUIViewControllers">
 					<object class="IBUITableViewController" id="154558136">
 						<object class="IBUINavigationItem" key="IBUINavigationItem" id="113864107">
+							<reference key="IBUINavigationBar"/>
 							<string key="IBUITitle">Master</string>
 							<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						</object>
@@ -123,14 +124,6 @@
 						<reference key="destination" ref="963208320"/>
 					</object>
 					<int key="connectionID">17</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">detailViewController</string>
-						<reference key="source" ref="154558136"/>
-						<reference key="destination" ref="649040653"/>
-					</object>
-					<int key="connectionID">60</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -187,6 +180,14 @@
 						<reference key="destination" ref="673453472"/>
 					</object>
 					<int key="connectionID">71</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">appOverviewController</string>
+						<reference key="source" ref="154558136"/>
+						<reference key="destination" ref="649040653"/>
+					</object>
+					<int key="connectionID">72</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -270,7 +271,7 @@
 				<string key="55.CustomClassName">AppOverview</string>
 				<string key="55.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="56.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="57.CustomClassName">RootViewController</string>
+				<string key="57.CustomClassName">AppList</string>
 				<string key="57.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="58.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="62.CustomClassName">MGSplitViewController</string>
@@ -280,7 +281,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">71</int>
+			<int key="maxID">72</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
