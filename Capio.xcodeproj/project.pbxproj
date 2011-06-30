@@ -16,11 +16,6 @@
 		5AA4D7EB13BB52080029B616 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5AA4D7E913BB52080029B616 /* InfoPlist.strings */; };
 		5AA4D7ED13BB52080029B616 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4D7EC13BB52080029B616 /* main.m */; };
 		5AA4D7F113BB52080029B616 /* CapioAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4D7F013BB52080029B616 /* CapioAppDelegate.m */; };
-		5AA4D7F413BB52080029B616 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AA4D7F213BB52080029B616 /* MainStoryboard.storyboard */; };
-		5AA4D7F613BB52080029B616 /* FirstViewController.h in Resources */ = {isa = PBXBuildFile; fileRef = 5AA4D7F513BB52080029B616 /* FirstViewController.h */; };
-		5AA4D7F813BB52080029B616 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4D7F713BB52080029B616 /* FirstViewController.m */; };
-		5AA4D7FE13BB52080029B616 /* SecondViewController.h in Resources */ = {isa = PBXBuildFile; fileRef = 5AA4D7FD13BB52080029B616 /* SecondViewController.h */; };
-		5AA4D80013BB52080029B616 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4D7FF13BB52080029B616 /* SecondViewController.m */; };
 		5AA4D80C13BB52080029B616 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA4D80B13BB52080029B616 /* SenTestingKit.framework */; };
 		5AA4D80D13BB52080029B616 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA4D7E013BB52080029B616 /* UIKit.framework */; };
 		5AA4D80E13BB52080029B616 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA4D7E213BB52080029B616 /* Foundation.framework */; };
@@ -66,11 +61,6 @@
 		5AA4D7EE13BB52080029B616 /* Capio-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Capio-Prefix.pch"; sourceTree = "<group>"; };
 		5AA4D7EF13BB52080029B616 /* CapioAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CapioAppDelegate.h; sourceTree = "<group>"; };
 		5AA4D7F013BB52080029B616 /* CapioAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CapioAppDelegate.m; sourceTree = "<group>"; };
-		5AA4D7F313BB52080029B616 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		5AA4D7F513BB52080029B616 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		5AA4D7F713BB52080029B616 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		5AA4D7FD13BB52080029B616 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		5AA4D7FF13BB52080029B616 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		5AA4D80A13BB52080029B616 /* CapioTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CapioTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AA4D80B13BB52080029B616 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		5AA4D81413BB52080029B616 /* CapioTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CapioTests-Info.plist"; sourceTree = "<group>"; };
@@ -171,7 +161,6 @@
 				5AA4D7EF13BB52080029B616 /* CapioAppDelegate.h */,
 				5AA4D7F013BB52080029B616 /* CapioAppDelegate.m */,
 				5AD615CD13BB5F1E00F9CA45 /* ViewControllers */,
-				5AA4D7F213BB52080029B616 /* MainStoryboard.storyboard */,
 				5AD615E713BB820100F9CA45 /* MGSplitViewController */,
 				5A15955513BB54700007B60F /* Resources */,
 				5AA4D7E713BB52080029B616 /* Supporting Files */,
@@ -227,10 +216,6 @@
 		5AD615CD13BB5F1E00F9CA45 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				5AA4D7F513BB52080029B616 /* FirstViewController.h */,
-				5AA4D7F713BB52080029B616 /* FirstViewController.m */,
-				5AA4D7FD13BB52080029B616 /* SecondViewController.h */,
-				5AA4D7FF13BB52080029B616 /* SecondViewController.m */,
 				5AD615CF13BB6D4E00F9CA45 /* AppList.h */,
 				5AD615D013BB6D4E00F9CA45 /* AppList.m */,
 				5AD615D113BB6D4E00F9CA45 /* AppList.xib */,
@@ -325,9 +310,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AA4D7EB13BB52080029B616 /* InfoPlist.strings in Resources */,
-				5AA4D7F413BB52080029B616 /* MainStoryboard.storyboard in Resources */,
-				5AA4D7F613BB52080029B616 /* FirstViewController.h in Resources */,
-				5AA4D7FE13BB52080029B616 /* SecondViewController.h in Resources */,
 				5A15955913BB54700007B60F /* info.png in Resources */,
 				5A15955A13BB54700007B60F /* planning.png in Resources */,
 				5A15955B13BB54700007B60F /* sizing.png in Resources */,
@@ -372,8 +354,6 @@
 			files = (
 				5AA4D7ED13BB52080029B616 /* main.m in Sources */,
 				5AA4D7F113BB52080029B616 /* CapioAppDelegate.m in Sources */,
-				5AA4D7F813BB52080029B616 /* FirstViewController.m in Sources */,
-				5AA4D80013BB52080029B616 /* SecondViewController.m in Sources */,
 				5AD615D213BB6D4E00F9CA45 /* AppList.m in Sources */,
 				5AD615D713BB703800F9CA45 /* AppOverview.m in Sources */,
 				5AD615E413BB81F200F9CA45 /* MGSplitCornersView.m in Sources */,
@@ -410,14 +390,6 @@
 				5AA4D7EA13BB52080029B616 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		5AA4D7F213BB52080029B616 /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5AA4D7F313BB52080029B616 /* en */,
-			);
-			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 		5AA4D81513BB52080029B616 /* InfoPlist.strings */ = {
