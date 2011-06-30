@@ -32,6 +32,7 @@
 		5ABC806013BC5BA000468868 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ABC805E13BC5BA000468868 /* MainWindow.xib */; };
 		5ABC806513BC5BB100468868 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC806213BC5BB100468868 /* DetailViewController.m */; };
 		5ABC806613BC5BB100468868 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC806413BC5BB100468868 /* RootViewController.m */; };
+		5ABC806913BC5D1500468868 /* MGSplitViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC806813BC5D1500468868 /* MGSplitViewAppDelegate.m */; };
 		5AD615D213BB6D4E00F9CA45 /* AppList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD615D013BB6D4E00F9CA45 /* AppList.m */; };
 		5AD615D313BB6D4E00F9CA45 /* AppList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD615D113BB6D4E00F9CA45 /* AppList.xib */; };
 		5AD615D713BB703800F9CA45 /* AppOverview.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD615D513BB703800F9CA45 /* AppOverview.m */; };
@@ -82,6 +83,8 @@
 		5ABC806213BC5BB100468868 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		5ABC806313BC5BB100468868 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		5ABC806413BC5BB100468868 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		5ABC806713BC5D1500468868 /* MGSplitViewAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSplitViewAppDelegate.h; sourceTree = "<group>"; };
+		5ABC806813BC5D1500468868 /* MGSplitViewAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSplitViewAppDelegate.m; sourceTree = "<group>"; };
 		5AD615CF13BB6D4E00F9CA45 /* AppList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppList.h; sourceTree = "<group>"; };
 		5AD615D013BB6D4E00F9CA45 /* AppList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppList.m; sourceTree = "<group>"; };
 		5AD615D113BB6D4E00F9CA45 /* AppList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppList.xib; sourceTree = "<group>"; };
@@ -209,6 +212,8 @@
 		5ABC805C13BC5B8600468868 /* MG */ = {
 			isa = PBXGroup;
 			children = (
+				5ABC806713BC5D1500468868 /* MGSplitViewAppDelegate.h */,
+				5ABC806813BC5D1500468868 /* MGSplitViewAppDelegate.m */,
 				5ABC806113BC5BB100468868 /* DetailViewController.h */,
 				5ABC806213BC5BB100468868 /* DetailViewController.m */,
 				5ABC806313BC5BB100468868 /* RootViewController.h */,
@@ -376,6 +381,7 @@
 				5AD615E613BB81F200F9CA45 /* MGSplitViewController.m in Sources */,
 				5ABC806513BC5BB100468868 /* DetailViewController.m in Sources */,
 				5ABC806613BC5BB100468868 /* RootViewController.m in Sources */,
+				5ABC806913BC5D1500468868 /* MGSplitViewAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
