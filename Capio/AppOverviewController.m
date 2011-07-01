@@ -8,11 +8,13 @@
 
 #import "AppOverviewController.h"
 #import "AppOverview.h"
+#import "DatePopupController.h"
 
 @implementation AppOverviewController
 
 @synthesize detailItem = _detailItem;
 @synthesize performanceCostToggle = _performanceCostToggle;
+@synthesize popover = _popover;
 @synthesize appName = _appName;
 @synthesize appDescription = _appDescription;
 @synthesize appOwner = _appOwner;
@@ -22,6 +24,7 @@
 @synthesize ragAmber = _ragAmber;
 @synthesize ragGreen = _ragGreen;
 @synthesize ragTotal = _ragTotal;
+@synthesize dateButton = _dateButton;
 
 
 #pragma mark -
@@ -51,6 +54,14 @@
     self.ragGreen.titleLabel.text = [self.detailItem.ragGreen stringValue];
     self.ragTotal.titleLabel.text = [self.detailItem.ragTotal stringValue];
   }
+}
+
+
+- (void)tapped:(id)sender {
+  DatePopupController *vc = [[DatePopupController alloc] initWithNibName:@"DatePopup" bundle:nil];
+  self.popover = [[UIPopoverController alloc] initWithContentViewController:vc];
+  self.popover.popoverContentSize = CGSizeMake(300, 216);
+  [self.popover presentPopoverFromRect:self.dateButton.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
 }
 
 
@@ -123,6 +134,7 @@
   [self setRagAmber:nil];
   [self setRagGreen:nil];
   [self setRagTotal:nil];
+  [self setDateButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
