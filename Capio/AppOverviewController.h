@@ -23,6 +23,8 @@
   UIButton *_ragAmber;
   UIButton *_ragGreen;
   UIButton *_ragTotal;
+  UIView *_detailView;
+  UIView *_blankView;
   UIButton *_dateButton;
   UISegmentedControl *_performanceCostToggle;
 }
@@ -44,6 +46,9 @@
 @property (nonatomic, strong) IBOutlet UIButton *ragAmber;
 @property (nonatomic, strong) IBOutlet UIButton *ragGreen;
 @property (nonatomic, strong) IBOutlet UIButton *ragTotal;
+
+@property (nonatomic, strong) IBOutlet UIView *detailView;
+@property (nonatomic, strong) IBOutlet UIView *blankView;
 
 - (IBAction)tapped:(id)sender;
 

@@ -24,6 +24,8 @@
 @synthesize ragAmber = _ragAmber;
 @synthesize ragGreen = _ragGreen;
 @synthesize ragTotal = _ragTotal;
+@synthesize detailView = _detailView;
+@synthesize blankView = _blankView;
 @synthesize dateButton = _dateButton;
 
 
@@ -47,6 +49,7 @@
     [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
     [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
   }
+  self.view = self.detailView;
   self.appName.text = self.detailItem.appName;
   self.appDescription.text = self.detailItem.appDescription;
   self.appOwner.text = self.detailItem.appOwner;
@@ -139,6 +142,8 @@
   [self setRagGreen:nil];
   [self setRagTotal:nil];
   [self setDateButton:nil];
+  [self setBlankView:nil];
+  [self setDetailView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
