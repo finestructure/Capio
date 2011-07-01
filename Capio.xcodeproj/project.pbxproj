@@ -14,6 +14,8 @@
 		5A67A27013BCB82D002BDCAA /* AppOverview.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A67A26E13BCB82D002BDCAA /* AppOverview.m */; };
 		5A67A27613BCBD68002BDCAA /* app_overview.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A67A27513BCBD68002BDCAA /* app_overview.plist */; };
 		5A67A27713BCBD68002BDCAA /* app_overview.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A67A27513BCBD68002BDCAA /* app_overview.plist */; };
+		5A67A27B13BCCEDC002BDCAA /* DatePopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A67A27913BCCEDC002BDCAA /* DatePopupController.m */; };
+		5A67A27C13BCCEDC002BDCAA /* DatePopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A67A27A13BCCEDC002BDCAA /* DatePopup.xib */; };
 		5AA4D7E113BB52080029B616 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA4D7E013BB52080029B616 /* UIKit.framework */; };
 		5AA4D7E313BB52080029B616 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA4D7E213BB52080029B616 /* Foundation.framework */; };
 		5AA4D7E513BB52080029B616 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA4D7E413BB52080029B616 /* CoreGraphics.framework */; };
@@ -56,6 +58,9 @@
 		5A67A26D13BCB82D002BDCAA /* AppOverview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppOverview.h; sourceTree = "<group>"; };
 		5A67A26E13BCB82D002BDCAA /* AppOverview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppOverview.m; sourceTree = "<group>"; };
 		5A67A27513BCBD68002BDCAA /* app_overview.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = app_overview.plist; sourceTree = "<group>"; };
+		5A67A27813BCCEDC002BDCAA /* DatePopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePopupController.h; sourceTree = "<group>"; };
+		5A67A27913BCCEDC002BDCAA /* DatePopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePopupController.m; sourceTree = "<group>"; };
+		5A67A27A13BCCEDC002BDCAA /* DatePopup.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePopup.xib; sourceTree = "<group>"; };
 		5AA4D7DC13BB52080029B616 /* Capio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AA4D7E013BB52080029B616 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5AA4D7E213BB52080029B616 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -222,6 +227,9 @@
 				5AD5B6A713BC6CA10083D454 /* SecondViewController.h */,
 				5AD5B6A813BC6CA10083D454 /* SecondViewController.m */,
 				5AD5B6A913BC6CA10083D454 /* SecondViewController.xib */,
+				5A67A27813BCCEDC002BDCAA /* DatePopupController.h */,
+				5A67A27913BCCEDC002BDCAA /* DatePopupController.m */,
+				5A67A27A13BCCEDC002BDCAA /* DatePopup.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -319,6 +327,7 @@
 				5ABC806013BC5BA000468868 /* MainWindow.xib in Resources */,
 				5AD5B6AB13BC6CA10083D454 /* SecondViewController.xib in Resources */,
 				5A67A27613BCBD68002BDCAA /* app_overview.plist in Resources */,
+				5A67A27C13BCCEDC002BDCAA /* DatePopup.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +373,7 @@
 				5AD615E613BB81F200F9CA45 /* MGSplitViewController.m in Sources */,
 				5AD5B6AA13BC6CA10083D454 /* SecondViewController.m in Sources */,
 				5A67A26F13BCB82D002BDCAA /* AppOverview.m in Sources */,
+				5A67A27B13BCCEDC002BDCAA /* DatePopupController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
