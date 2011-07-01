@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@class RootViewController;
-@class DetailViewController;
 @class MGSplitViewController;
 
 @interface CapioAppDelegate : UIResponder <UIApplicationDelegate>
@@ -17,9 +15,6 @@
 @property (strong, nonatomic) IBOutlet UIWindow *window;
 
 @property (strong, nonatomic) IBOutlet MGSplitViewController *splitViewController;
-@property (strong, nonatomic) IBOutlet RootViewController *rootViewController;
-@property (strong, nonatomic) IBOutlet DetailViewController *detailViewController;
-
 @property (strong, nonatomic) UITabBarController *tabBarController;
 
 @end
