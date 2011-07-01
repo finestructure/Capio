@@ -8,6 +8,25 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DatePopupController : UIViewController
+
+@protocol DatePopupControllerDelegate <NSObject>
+
+- (void)cancel:(id)sender;
+- (void)done:(id)sender;
+
+@end
+
+
+@interface DatePopupController : UIViewController {
+  UIDatePicker *_datePicker;
+}
+
+
+@property (nonatomic, weak) id<DatePopupControllerDelegate> delegate;
+
+@property (nonatomic, strong) IBOutlet UIDatePicker *datePicker;
+
+- (IBAction)cancel:(id)sender;
+- (IBAction)done:(id)sender;
 
 @end

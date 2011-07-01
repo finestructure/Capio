@@ -8,7 +8,7 @@
 
 #import "AppOverviewController.h"
 #import "AppOverview.h"
-#import "DatePopupController.h"
+
 
 @implementation AppOverviewController
 
@@ -32,35 +32,39 @@
 
 
 // When setting the detail item, update the view and dismiss the popover controller if it's showing.
-- (void)setDetailItem:(AppOverview *)newDetailItem {
+- (void)setDetailItem:(AppOverview *)newDetailItem {  
+  if (_detailItem != newDetailItem) {
+    _detailItem = newDetailItem;
+    [self updateView];
+  }
+}
+
+
+- (void)updateView {
   static NSDateFormatter *dateFormatter = nil;
   if (dateFormatter == nil) {
     dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
     [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
   }
-  
-  if (_detailItem != newDetailItem) {
-    _detailItem = newDetailItem;
-    
-    // Update the view.
-    self.appName.text = self.detailItem.appName;
-    self.appDescription.text = self.detailItem.appDescription;
-    self.appOwner.text = self.detailItem.appOwner;
-    self.serverCount.text = [self.detailItem.serverCount stringValue];
-    self.reportDate.text = [dateFormatter stringFromDate:self.detailItem.reportDate];
-    self.ragRed.titleLabel.text = [self.detailItem.ragRed stringValue];
-    self.ragAmber.titleLabel.text = [self.detailItem.ragAmber stringValue];
-    self.ragGreen.titleLabel.text = [self.detailItem.ragGreen stringValue];
-    self.ragTotal.titleLabel.text = [self.detailItem.ragTotal stringValue];
-  }
+  self.appName.text = self.detailItem.appName;
+  self.appDescription.text = self.detailItem.appDescription;
+  self.appOwner.text = self.detailItem.appOwner;
+  self.serverCount.text = [self.detailItem.serverCount stringValue];
+  self.reportDate.text = [dateFormatter stringFromDate:self.detailItem.reportDate];
+  self.ragRed.titleLabel.text = [self.detailItem.ragRed stringValue];
+  self.ragAmber.titleLabel.text = [self.detailItem.ragAmber stringValue];
+  self.ragGreen.titleLabel.text = [self.detailItem.ragGreen stringValue];
+  self.ragTotal.titleLabel.text = [self.detailItem.ragTotal stringValue];
 }
 
 
 - (void)tapped:(id)sender {
   DatePopupController *vc = [[DatePopupController alloc] initWithNibName:@"DatePopup" bundle:nil];
+  vc.datePicker.date = self.detailItem.reportDate;
+  vc.delegate = self;
   self.popover = [[UIPopoverController alloc] initWithContentViewController:vc];
-  self.popover.popoverContentSize = CGSizeMake(300, 216);
+  self.popover.popoverContentSize = CGSizeMake(300, 260);
   [self.popover presentPopoverFromRect:self.dateButton.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
 }
 
@@ -145,5 +149,25 @@
     // Return YES for supported orientations
 	return YES;
 }
+
+
+#pragma mark - DatePopupControllerDelegate
+
+
+- (void)cancel:(id)sender {
+  [self.popover dismissPopoverAnimated:YES];
+}
+
+
+- (void)done:(id)sender {
+  DatePopupController *vc = (DatePopupController *)self.popover.contentViewController;
+  NSLog(@"%@", vc.datePicker.date);
+  if (! [self.detailItem.reportDate isEqualToDate:vc.datePicker.date]) {
+    self.detailItem.reportDate = vc.datePicker.date;
+    [self updateView];
+  }
+  [self.popover dismissPopoverAnimated:YES];
+}
+
 
 @end

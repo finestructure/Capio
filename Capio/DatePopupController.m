@@ -10,6 +10,10 @@
 
 @implementation DatePopupController
 
+@synthesize delegate = _delegate;
+@synthesize datePicker = _datePicker;
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -37,6 +41,7 @@
 
 - (void)viewDidUnload
 {
+  [self setDatePicker:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -48,4 +53,11 @@
 	return YES;
 }
 
+- (IBAction)cancel:(id)sender {
+  [self.delegate cancel:sender];
+}
+
+- (IBAction)done:(id)sender {
+  [self.delegate done:sender];
+}
 @end

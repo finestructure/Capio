@@ -7,10 +7,13 @@
 //
 
 #import "MGSplitViewController.h"
+#import "DatePopupController.h"
+
 
 @class AppOverview;
 
-@interface AppOverviewController : UIViewController <UIPopoverControllerDelegate, MGSplitViewControllerDelegate> {
+
+@interface AppOverviewController : UIViewController <UIPopoverControllerDelegate, MGSplitViewControllerDelegate, DatePopupControllerDelegate> {
   UILabel *_appName;
   UITextView *_appDescription;
   UILabel *_appOwner;
@@ -43,5 +46,7 @@
 @property (nonatomic, strong) IBOutlet UIButton *ragTotal;
 
 - (IBAction)tapped:(id)sender;
+
+- (void)updateView;
 
 @end
