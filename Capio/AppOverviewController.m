@@ -19,14 +19,13 @@
 @synthesize appDescription = _appDescription;
 @synthesize appOwner = _appOwner;
 @synthesize serverCount = _serverCount;
-@synthesize reportDate = _reportDate;
 @synthesize ragRed = _ragRed;
 @synthesize ragAmber = _ragAmber;
 @synthesize ragGreen = _ragGreen;
 @synthesize ragTotal = _ragTotal;
 @synthesize detailView = _detailView;
 @synthesize blankView = _blankView;
-@synthesize dateButton = _dateButton;
+@synthesize reportDateButton = _reportDateButton;
 
 
 #pragma mark -
@@ -54,7 +53,9 @@
   self.appDescription.text = self.detailItem.appDescription;
   self.appOwner.text = self.detailItem.appOwner;
   self.serverCount.text = [self.detailItem.serverCount stringValue];
-  self.reportDate.text = [dateFormatter stringFromDate:self.detailItem.reportDate];
+  NSString *reportDate = [dateFormatter stringFromDate:self.detailItem.reportDate];
+  [self.reportDateButton setTitle:reportDate forState:UIControlStateNormal];
+  [self.reportDateButton setTitle:reportDate forState:UIControlStateHighlighted];
   self.ragRed.titleLabel.text = [self.detailItem.ragRed stringValue];
   self.ragAmber.titleLabel.text = [self.detailItem.ragAmber stringValue];
   self.ragGreen.titleLabel.text = [self.detailItem.ragGreen stringValue];
@@ -68,7 +69,7 @@
   vc.delegate = self;
   self.popover = [[UIPopoverController alloc] initWithContentViewController:vc];
   self.popover.popoverContentSize = CGSizeMake(300, 260);
-  [self.popover presentPopoverFromRect:self.dateButton.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
+  [self.popover presentPopoverFromRect:self.reportDateButton.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
 }
 
 
@@ -135,15 +136,14 @@
   [self setAppDescription:nil];
   [self setAppOwner:nil];
   [self setServerCount:nil];
-  [self setReportDate:nil];
   [self setPerformanceCostToggle:nil];
   [self setRagRed:nil];
   [self setRagAmber:nil];
   [self setRagGreen:nil];
   [self setRagTotal:nil];
-  [self setDateButton:nil];
   [self setBlankView:nil];
   [self setDetailView:nil];
+  [self setReportDateButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
