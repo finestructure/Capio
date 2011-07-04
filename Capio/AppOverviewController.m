@@ -63,7 +63,7 @@
 }
 
 
-- (void)tapped:(id)sender {
+- (void)reportDateButtonTapped:(id)sender {
   DatePopupController *vc = [[DatePopupController alloc] initWithNibName:@"DatePopup" bundle:nil];
   vc.datePicker.date = self.detailItem.reportDate;
   vc.delegate = self;

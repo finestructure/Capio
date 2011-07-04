@@ -48,7 +48,7 @@
 @property (nonatomic, strong) IBOutlet UIView *detailView;
 @property (nonatomic, strong) IBOutlet UIView *blankView;
 
-- (IBAction)tapped:(id)sender;
+- (IBAction)reportDateButtonTapped:(id)sender;
 
 - (void)updateView;
 
