@@ -12,6 +12,7 @@
 
 @synthesize appName = _appName;
 @synthesize ragRed = _ragRed;
+@synthesize ragAmber = _ragAmber;
 
 
 @end

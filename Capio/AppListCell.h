@@ -11,9 +11,11 @@
 @interface AppListCell : UITableViewCell {
   UILabel *_appName;
   UILabel *_ragRed;
+  UILabel *_ragAmber;
 }
 
 @property (nonatomic, strong) IBOutlet UILabel *appName;
 @property (nonatomic, strong) IBOutlet UILabel *ragRed;
+@property (nonatomic, strong) IBOutlet UILabel *ragAmber;
 
 @end

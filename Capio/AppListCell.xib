@@ -78,7 +78,7 @@
 							<object class="IBUILabel" id="735716765">
 								<reference key="NSNextResponder" ref="155271004"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{276, 11}, {24, 24}}</string>
+								<string key="NSFrame">{{272, 8}, {28, 28}}</string>
 								<reference key="NSSuperview" ref="155271004"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView"/>
@@ -93,7 +93,7 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<string key="IBUIText">5</string>
-								<object class="NSColor" key="IBUITextColor">
+								<object class="NSColor" key="IBUITextColor" id="67589650">
 									<int key="NSColorSpace">3</int>
 									<bytes key="NSWhite">MQA</bytes>
 								</object>
@@ -102,15 +102,41 @@
 								<int key="IBUIBaselineAdjustment">1</int>
 								<float key="IBUIMinimumFontSize">10</float>
 								<int key="IBUITextAlignment">1</int>
-								<object class="IBUIFontDescription" key="IBUIFontDescription">
-									<int key="type">1</int>
-									<double key="pointSize">11</double>
+								<object class="IBUIFontDescription" key="IBUIFontDescription" id="1038492719">
+									<int key="type">2</int>
+									<double key="pointSize">12</double>
 								</object>
-								<object class="NSFont" key="IBUIFont">
-									<string key="NSName">Helvetica</string>
-									<double key="NSSize">11</double>
+								<object class="NSFont" key="IBUIFont" id="288454695">
+									<string key="NSName">Helvetica-Bold</string>
+									<double key="NSSize">12</double>
 									<int key="NSfFlags">16</int>
 								</object>
+							</object>
+							<object class="IBUILabel" id="700533562">
+								<reference key="NSNextResponder" ref="155271004"/>
+								<int key="NSvFlags">292</int>
+								<string key="NSFrame">{{236, 8}, {28, 28}}</string>
+								<reference key="NSSuperview" ref="155271004"/>
+								<reference key="NSWindow"/>
+								<string key="NSReuseIdentifierKey">_NS:330</string>
+								<object class="NSColor" key="IBUIBackgroundColor">
+									<int key="NSColorSpace">1</int>
+									<bytes key="NSRGB">MSAwLjUwMTk2MDgxNCAwAA</bytes>
+								</object>
+								<bool key="IBUIOpaque">NO</bool>
+								<bool key="IBUIClipsSubviews">YES</bool>
+								<int key="IBUIContentMode">7</int>
+								<bool key="IBUIUserInteractionEnabled">NO</bool>
+								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+								<string key="IBUIText">5</string>
+								<reference key="IBUITextColor" ref="67589650"/>
+								<nil key="IBUIHighlightedColor"/>
+								<string key="IBUIShadowOffset">{1, -1}</string>
+								<int key="IBUIBaselineAdjustment">1</int>
+								<float key="IBUIMinimumFontSize">10</float>
+								<int key="IBUITextAlignment">1</int>
+								<reference key="IBUIFontDescription" ref="1038492719"/>
+								<reference key="IBUIFont" ref="288454695"/>
 							</object>
 						</object>
 						<string key="NSFrameSize">{320, 44}</string>
@@ -172,6 +198,14 @@
 					</object>
 					<int key="connectionID">9</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">ragAmber</string>
+						<reference key="source" ref="987372652"/>
+						<reference key="destination" ref="700533562"/>
+					</object>
+					<int key="connectionID">11</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -202,6 +236,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="849372344"/>
 							<reference ref="735716765"/>
+							<reference ref="700533562"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -215,6 +250,11 @@
 						<reference key="object" ref="735716765"/>
 						<reference key="parent" ref="987372652"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">10</int>
+						<reference key="object" ref="700533562"/>
+						<reference key="parent" ref="987372652"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -224,6 +264,7 @@
 					<string>-1.IBPluginDependency</string>
 					<string>-2.CustomClassName</string>
 					<string>-2.IBPluginDependency</string>
+					<string>10.IBPluginDependency</string>
 					<string>4.CustomClassName</string>
 					<string>4.IBPluginDependency</string>
 					<string>5.IBPluginDependency</string>
@@ -233,6 +274,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>UIResponder</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>AppListCell</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -252,7 +294,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">9</int>
+			<int key="maxID">11</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -265,10 +307,12 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>appName</string>
+							<string>ragAmber</string>
 							<string>ragRed</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>UILabel</string>
 							<string>UILabel</string>
 							<string>UILabel</string>
 						</object>
@@ -278,12 +322,17 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>appName</string>
+							<string>ragAmber</string>
 							<string>ragRed</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBToOneOutletInfo">
 								<string key="name">appName</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">ragAmber</string>
 								<string key="candidateClassName">UILabel</string>
 							</object>
 							<object class="IBToOneOutletInfo">

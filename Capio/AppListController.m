@@ -76,6 +76,7 @@
   AppOverview *item = [self.apps objectAtIndex:indexPath.row];
   cell.appName.text = item.appName;
   cell.ragRed.text = [item.ragRed stringValue];
+  cell.ragAmber.text = [item.ragAmber stringValue];
   
   return cell;
   
