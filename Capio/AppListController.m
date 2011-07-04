@@ -9,6 +9,7 @@
 #import "AppListController.h"
 #import "AppOverviewController.h"
 #import "AppOverview.h"
+#import "AppListCell.h"
 
 
 @implementation AppListController
@@ -47,6 +48,8 @@
     item.ragTotal = [dict objectForKey:@"ragTotal"];
     [self.apps addObject:item];
   }
+  
+  [self.tableView registerNib:[UINib nibWithNibName:@"AppListCell" bundle:nil] forCellReuseIdentifier:@"AppListCell"];
 
 }
 
@@ -67,6 +70,17 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+  AppListCell *cell = (AppListCell *)[tableView dequeueReusableCellWithIdentifier:@"AppListCell"];
+  
+  // Configure the cell
+  AppOverview *item = [self.apps objectAtIndex:indexPath.row];
+  cell.appName.text = item.appName;
+  cell.ragRed.text = [item.ragRed stringValue];
+  
+  return cell;
+  
+  /*
+   
   static NSString *CellIdentifier = @"Cell";
   
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -79,6 +93,7 @@
   cell.textLabel.text = item.appName;
   
   return cell;
+   */
 }
 
 /*

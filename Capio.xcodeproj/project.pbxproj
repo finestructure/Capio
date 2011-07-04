@@ -41,6 +41,8 @@
 		5AD615E413BB81F200F9CA45 /* MGSplitCornersView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD615DF13BB81F200F9CA45 /* MGSplitCornersView.m */; };
 		5AD615E513BB81F200F9CA45 /* MGSplitDividerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD615E113BB81F200F9CA45 /* MGSplitDividerView.m */; };
 		5AD615E613BB81F200F9CA45 /* MGSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD615E313BB81F200F9CA45 /* MGSplitViewController.m */; };
+		5AF74AD713C1EC9F00DF0794 /* AppListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF74AD513C1EC9F00DF0794 /* AppListCell.m */; };
+		5AF74AD813C1EC9F00DF0794 /* AppListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF74AD613C1EC9F00DF0794 /* AppListCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,9 @@
 		5AD615E113BB81F200F9CA45 /* MGSplitDividerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSplitDividerView.m; sourceTree = "<group>"; };
 		5AD615E213BB81F200F9CA45 /* MGSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSplitViewController.h; sourceTree = "<group>"; };
 		5AD615E313BB81F200F9CA45 /* MGSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSplitViewController.m; sourceTree = "<group>"; };
+		5AF74AD413C1EC9F00DF0794 /* AppListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppListCell.h; sourceTree = "<group>"; };
+		5AF74AD513C1EC9F00DF0794 /* AppListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppListCell.m; sourceTree = "<group>"; };
+		5AF74AD613C1EC9F00DF0794 /* AppListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppListCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +241,9 @@
 				5A67A27813BCCEDC002BDCAA /* DatePopupController.h */,
 				5A67A27913BCCEDC002BDCAA /* DatePopupController.m */,
 				5A67A27A13BCCEDC002BDCAA /* DatePopup.xib */,
+				5AF74AD413C1EC9F00DF0794 /* AppListCell.h */,
+				5AF74AD513C1EC9F00DF0794 /* AppListCell.m */,
+				5AF74AD613C1EC9F00DF0794 /* AppListCell.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -336,6 +344,7 @@
 				5A67A27C13BCCEDC002BDCAA /* DatePopup.xib in Resources */,
 				5A66A31913BF3B6000DB7161 /* dropdown_button.png in Resources */,
 				5A66A31C13BF3C3600DB7161 /* dropdown_button_pressed.png in Resources */,
+				5AF74AD813C1EC9F00DF0794 /* AppListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +391,7 @@
 				5AD5B6AA13BC6CA10083D454 /* SecondViewController.m in Sources */,
 				5A67A26F13BCB82D002BDCAA /* AppOverview.m in Sources */,
 				5A67A27B13BCCEDC002BDCAA /* DatePopupController.m in Sources */,
+				5AF74AD713C1EC9F00DF0794 /* AppListCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
