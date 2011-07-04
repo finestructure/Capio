@@ -68,8 +68,11 @@
   vc.datePicker.date = self.detailItem.reportDate;
   vc.delegate = self;
   self.popover = [[UIPopoverController alloc] initWithContentViewController:vc];
+  self.popover.delegate = self;
   self.popover.popoverContentSize = CGSizeMake(300, 260);
   [self.popover presentPopoverFromRect:self.reportDateButton.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+  // keep button selected while the popover is up
+  self.reportDateButton.selected = YES;
 }
 
 
@@ -124,10 +127,13 @@
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+- (void)viewDidLoad {
+  [super viewDidLoad];
+
+  // set button state image (combined state not possible via IB)
+  UIImage *img = [UIImage imageNamed:@"dropdown_button_pressed.png"];
+  [self.reportDateButton setBackgroundImage:img forState:UIControlStateSelected];
+  [self.reportDateButton setBackgroundImage:img forState:(UIControlStateHighlighted|UIControlStateSelected)];
 }
 
 - (void)viewDidUnload
@@ -172,6 +178,13 @@
     [self updateView];
   }
   [self.popover dismissPopoverAnimated:YES];
+}
+
+
+#pragma mark - UIPopoverController delegate
+
+- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
+  self.reportDateButton.selected = NO;  
 }
 
 
