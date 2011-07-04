@@ -50,7 +50,7 @@
   }
   
   [self.tableView registerNib:[UINib nibWithNibName:@"AppListCell" bundle:nil] forCellReuseIdentifier:@"AppListCell"];
-
+  self.tableView.rowHeight = 52;
 }
 
 
