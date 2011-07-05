@@ -22,6 +22,7 @@
   UIButton *_ragAmber;
   UIButton *_ragGreen;
   UIButton *_ragTotal;
+  UIButton *_timeline;
   UIView *_detailView;
   UIView *_blankView;
   UIButton *_reportDateButton;
@@ -44,6 +45,8 @@
 @property (nonatomic, strong) IBOutlet UIButton *ragAmber;
 @property (nonatomic, strong) IBOutlet UIButton *ragGreen;
 @property (nonatomic, strong) IBOutlet UIButton *ragTotal;
+
+@property (nonatomic, strong) IBOutlet UIButton *timeline;
 
 @property (nonatomic, strong) IBOutlet UIView *detailView;
 @property (nonatomic, strong) IBOutlet UIView *blankView;

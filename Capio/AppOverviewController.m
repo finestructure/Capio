@@ -23,6 +23,7 @@
 @synthesize ragAmber = _ragAmber;
 @synthesize ragGreen = _ragGreen;
 @synthesize ragTotal = _ragTotal;
+@synthesize timeline = _timeline;
 @synthesize detailView = _detailView;
 @synthesize blankView = _blankView;
 @synthesize reportDateButton = _reportDateButton;
@@ -150,6 +151,7 @@
   [self setBlankView:nil];
   [self setDetailView:nil];
   [self setReportDateButton:nil];
+    [self setTimeline:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

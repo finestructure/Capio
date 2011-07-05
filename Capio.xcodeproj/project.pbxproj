@@ -20,6 +20,8 @@
 		5A67A27C13BCCEDC002BDCAA /* DatePopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A67A27A13BCCEDC002BDCAA /* DatePopup.xib */; };
 		5A843E2F13C2049A00289E51 /* red_rag.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A843E2E13C2049A00289E51 /* red_rag.png */; };
 		5A843E3213C2096F00289E51 /* amber_rag.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A843E3113C2096F00289E51 /* amber_rag.png */; };
+		5A886EDC13C33E8F003E06FA /* button1_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A886EDA13C33E8F003E06FA /* button1_pressed.png */; };
+		5A886EDD13C33E8F003E06FA /* button1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A886EDB13C33E8F003E06FA /* button1.png */; };
 		5AA4D7E113BB52080029B616 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA4D7E013BB52080029B616 /* UIKit.framework */; };
 		5AA4D7E313BB52080029B616 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA4D7E213BB52080029B616 /* Foundation.framework */; };
 		5AA4D7E513BB52080029B616 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA4D7E413BB52080029B616 /* CoreGraphics.framework */; };
@@ -71,6 +73,8 @@
 		5A67A27A13BCCEDC002BDCAA /* DatePopup.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePopup.xib; sourceTree = "<group>"; };
 		5A843E2E13C2049A00289E51 /* red_rag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_rag.png; sourceTree = "<group>"; };
 		5A843E3113C2096F00289E51 /* amber_rag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amber_rag.png; sourceTree = "<group>"; };
+		5A886EDA13C33E8F003E06FA /* button1_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button1_pressed.png; sourceTree = "<group>"; };
+		5A886EDB13C33E8F003E06FA /* button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button1.png; sourceTree = "<group>"; };
 		5AA4D7DC13BB52080029B616 /* Capio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AA4D7E013BB52080029B616 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5AA4D7E213BB52080029B616 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -136,6 +140,8 @@
 		5A15955513BB54700007B60F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5A886EDA13C33E8F003E06FA /* button1_pressed.png */,
+				5A886EDB13C33E8F003E06FA /* button1.png */,
 				5A66A31813BF3B6000DB7161 /* dropdown_button.png */,
 				5A66A31B13BF3C3600DB7161 /* dropdown_button_pressed.png */,
 				5A67A27513BCBD68002BDCAA /* app_overview.plist */,
@@ -353,6 +359,8 @@
 				5AF74AD813C1EC9F00DF0794 /* AppListCell.xib in Resources */,
 				5A843E2F13C2049A00289E51 /* red_rag.png in Resources */,
 				5A843E3213C2096F00289E51 /* amber_rag.png in Resources */,
+				5A886EDC13C33E8F003E06FA /* button1_pressed.png in Resources */,
+				5A886EDD13C33E8F003E06FA /* button1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
