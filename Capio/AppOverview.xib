@@ -518,7 +518,7 @@
 					<object class="IBUIButton" id="961802120">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{11, 400}, {363, 66}}</string>
+						<string key="NSFrame">{{11, 401}, {320, 44}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
@@ -526,9 +526,9 @@
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<double key="IBUIContentEdgeInsets.top">-8</double>
+						<double key="IBUIContentEdgeInsets.top">0.0</double>
 						<double key="IBUIContentEdgeInsets.bottom">0.0</double>
-						<double key="IBUIContentEdgeInsets.left">24</double>
+						<double key="IBUIContentEdgeInsets.left">12</double>
 						<double key="IBUIContentEdgeInsets.right">0.0</double>
 						<string key="IBUINormalTitle">Timeline</string>
 						<reference key="IBUIHighlightedTitleColor" ref="379350758"/>
@@ -1216,8 +1216,8 @@
 			</object>
 			<object class="NSMutableArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>
-				<string>{343, 66}</string>
-				<string>{343, 66}</string>
+				<string>{325, 48}</string>
+				<string>{325, 48}</string>
 				<string>{150, 31}</string>
 				<string>{150, 31}</string>
 			</object>
