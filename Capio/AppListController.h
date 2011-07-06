@@ -10,9 +10,14 @@
 
 @class AppOverviewController;
 
-@interface AppListController : UITableViewController
+@interface AppListController : UIViewController {
+  UITableView *_tableView;
+}
+
+
+@property (nonatomic, strong) NSMutableArray *apps;
 
 @property (strong, nonatomic) IBOutlet AppOverviewController *appOverviewController;
-@property (nonatomic, strong) NSMutableArray *apps;
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 @end

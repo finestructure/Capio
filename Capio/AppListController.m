@@ -16,6 +16,7 @@
 
 @synthesize appOverviewController = _appOverviewController;
 @synthesize apps = _apps;
+@synthesize tableView = _tableView;
 
 
 #pragma mark - View lifecycle
@@ -23,7 +24,6 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
 
-  self.clearsSelectionOnViewWillAppear = NO;
   self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
 
   // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -143,4 +143,8 @@
   self.appOverviewController.detailItem = item;
 }
 
+- (void)viewDidUnload {
+  [self setTableView:nil];
+  [super viewDidUnload];
+}
 @end
