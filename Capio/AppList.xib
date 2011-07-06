@@ -107,7 +107,7 @@
 				</object>
 				<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 			</object>
-			<object class="IBUISearchBar" id="56856655">
+			<object class="IBUISearchBar" id="183183767">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">290</int>
 				<string key="NSFrameSize">{320, 44}</string>
@@ -115,9 +115,10 @@
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView"/>
 				<string key="NSReuseIdentifierKey">_NS:581</string>
-				<float key="IBUIAlpha">0.0</float>
+				<float key="IBUIAlpha">0.20000000298023224</float>
 				<int key="IBUIContentMode">3</int>
 				<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+				<int key="IBBarStyle">2</int>
 				<object class="IBUITextInputTraits" key="IBTextInputTraits">
 					<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				</object>
@@ -161,7 +162,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">searchBar</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="56856655"/>
+						<reference key="destination" ref="183183767"/>
 					</object>
 					<int key="connectionID">18</int>
 				</object>
@@ -201,7 +202,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">17</int>
-						<reference key="object" ref="56856655"/>
+						<reference key="object" ref="183183767"/>
 						<reference key="parent" ref="0"/>
 					</object>
 				</array>
