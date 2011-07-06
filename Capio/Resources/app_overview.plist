@@ -42,5 +42,105 @@
 		<key>ragTotal</key>
 		<integer>9</integer>
 	</dict>
+	<dict>
+		<key>appName</key>
+		<string>Some App 1</string>
+		<key>appDescription</key>
+		<string>Some other application</string>
+		<key>appOwner</key>
+		<string>Peter Pan</string>
+		<key>serverCount</key>
+		<integer>234</integer>
+		<key>reportDate</key>
+		<date>2011-05-21T08:10:06Z</date>
+		<key>ragRed</key>
+		<integer>1</integer>
+		<key>ragAmber</key>
+		<integer>3</integer>
+		<key>ragGreen</key>
+		<integer>5</integer>
+		<key>ragTotal</key>
+		<integer>9</integer>
+	</dict>
+	<dict>
+		<key>appName</key>
+		<string>Aperture</string>
+		<key>appDescription</key>
+		<string>Some other application</string>
+		<key>appOwner</key>
+		<string>Peter Pan</string>
+		<key>serverCount</key>
+		<integer>234</integer>
+		<key>reportDate</key>
+		<date>2011-05-21T08:10:06Z</date>
+		<key>ragRed</key>
+		<integer>1</integer>
+		<key>ragAmber</key>
+		<integer>3</integer>
+		<key>ragGreen</key>
+		<integer>5</integer>
+		<key>ragTotal</key>
+		<integer>9</integer>
+	</dict>
+	<dict>
+		<key>appName</key>
+		<string>iChat</string>
+		<key>appDescription</key>
+		<string>Some other application</string>
+		<key>appOwner</key>
+		<string>Peter Pan</string>
+		<key>serverCount</key>
+		<integer>234</integer>
+		<key>reportDate</key>
+		<date>2011-05-21T08:10:06Z</date>
+		<key>ragRed</key>
+		<integer>1</integer>
+		<key>ragAmber</key>
+		<integer>3</integer>
+		<key>ragGreen</key>
+		<integer>5</integer>
+		<key>ragTotal</key>
+		<integer>9</integer>
+	</dict>
+	<dict>
+		<key>appName</key>
+		<string>Emacs</string>
+		<key>appDescription</key>
+		<string>Some other application</string>
+		<key>appOwner</key>
+		<string>Peter Pan</string>
+		<key>serverCount</key>
+		<integer>234</integer>
+		<key>reportDate</key>
+		<date>2011-05-21T08:10:06Z</date>
+		<key>ragRed</key>
+		<integer>1</integer>
+		<key>ragAmber</key>
+		<integer>3</integer>
+		<key>ragGreen</key>
+		<integer>5</integer>
+		<key>ragTotal</key>
+		<integer>9</integer>
+	</dict>
+	<dict>
+		<key>appName</key>
+		<string>Xcode</string>
+		<key>appDescription</key>
+		<string>Some other application</string>
+		<key>appOwner</key>
+		<string>Peter Pan</string>
+		<key>serverCount</key>
+		<integer>234</integer>
+		<key>reportDate</key>
+		<date>2011-05-21T08:10:06Z</date>
+		<key>ragRed</key>
+		<integer>1</integer>
+		<key>ragAmber</key>
+		<integer>3</integer>
+		<key>ragGreen</key>
+		<integer>5</integer>
+		<key>ragTotal</key>
+		<integer>9</integer>
+	</dict>
 </array>
 </plist>
