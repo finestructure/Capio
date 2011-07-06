@@ -20,4 +20,6 @@
 @property (strong, nonatomic) IBOutlet AppOverviewController *appOverviewController;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 
+- (void)searchButtonTapped:(id)sender;
+
 @end
