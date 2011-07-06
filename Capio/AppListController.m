@@ -68,34 +68,32 @@
 - (void)toggleSearchbar {
   CGFloat height = self.searchBar.bounds.size.height;
   CGRect targetTableViewFrame = self.tableView.frame;
-  CGRect targetSearchFrame;
   CGFloat targetAlpha;
 
-  if (self.searchBar.alpha == 0) {
-    [self.view addSubview:self.searchBar];
-    
-//    CGRect startFrame = self.searchBar.frame;
-//    startFrame.origin = CGPointMake(0, -height);
-//    self.searchBar.frame = startFrame;
-//    targetSearchFrame.origin = CGPointMake(0, 0);
-    
+  if (self.searchBar.alpha < 1) {
+    [self.view addSubview:self.searchBar];    
     targetTableViewFrame.origin.y += height;
     targetAlpha = 1;
   } else {
-    [self.searchBar removeFromSuperview];
     targetTableViewFrame.origin.y -= height;
-    targetAlpha = 0;
+    targetAlpha = 0.2;
   }
 
   [UIView beginAnimations:nil context:NULL];
   [UIView setAnimationBeginsFromCurrentState:YES];
   [UIView setAnimationDuration:0.3];
-  
-  self.tableView.frame = targetTableViewFrame;
-  self.searchBar.alpha = targetAlpha;
-  //self.searchBar.frame = targetSearchFrame;
-  
   [UIView commitAnimations];
+  
+  [UIView animateWithDuration:0.3
+                   animations:^{
+                     self.tableView.frame = targetTableViewFrame;
+                     self.searchBar.alpha = targetAlpha;  
+                   }
+                   completion:^(BOOL finished){
+                     if (self.searchBar.alpha < 1) {
+                       [self.searchBar removeFromSuperview];
+                     }
+                   }];
 }
 
 
