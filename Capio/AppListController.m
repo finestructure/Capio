@@ -16,6 +16,7 @@
 
 @synthesize appOverviewController = _appOverviewController;
 @synthesize apps = _apps;
+@synthesize displayedApps = _displayedApps;
 @synthesize tableView = _tableView;
 @synthesize searchBar = _searchBar;
 
@@ -29,12 +30,11 @@
 
   // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
   // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-  
-  self.apps = [NSMutableArray array];
-  
+    
   NSBundle *thisBundle = [NSBundle bundleForClass:[self class]];
   NSURL *url = [thisBundle URLForResource:@"app_overview" withExtension:@"plist"];
   
+  self.apps = [NSMutableArray array];
   NSArray *data = [NSArray arrayWithContentsOfURL:url];
   for (NSDictionary *dict in data) {
     AppOverview *item = [[AppOverview alloc] init];
@@ -49,6 +49,7 @@
     item.ragTotal = [dict objectForKey:@"ragTotal"];
     [self.apps addObject:item];
   }
+  self.displayedApps = [self.apps copy];
   
   [self.tableView registerNib:[UINib nibWithNibName:@"AppListCell" bundle:nil] forCellReuseIdentifier:@"AppListCell"];
   self.tableView.rowHeight = 52;
@@ -111,35 +112,19 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-  return [self.apps count];
+  return [self.displayedApps count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   AppListCell *cell = (AppListCell *)[tableView dequeueReusableCellWithIdentifier:@"AppListCell"];
   
   // Configure the cell
-  AppOverview *item = [self.apps objectAtIndex:indexPath.row];
+  AppOverview *item = [self.displayedApps objectAtIndex:indexPath.row];
   cell.appName.text = item.appName;
   cell.ragRed.text = [item.ragRed stringValue];
   cell.ragAmber.text = [item.ragAmber stringValue];
   
   return cell;
-  
-  /*
-   
-  static NSString *CellIdentifier = @"Cell";
-  
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-  if (cell == nil) {
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-  }
-  
-  // Configure the cell
-  AppOverview *item = [self.apps objectAtIndex:indexPath.row];
-  cell.textLabel.text = item.appName;
-  
-  return cell;
-   */
 }
 
 /*
@@ -184,7 +169,7 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  AppOverview *item = [self.apps objectAtIndex:indexPath.row];
+  AppOverview *item = [self.displayedApps objectAtIndex:indexPath.row];
   self.appOverviewController.detailItem = item;
 }
 
@@ -198,7 +183,11 @@
 #pragma mark - UISearchBarDelegate
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-  NSLog(@"search: %@", searchText);
+  NSString *asterisk = @"*";
+  NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K like[cd] %@",
+                            @"appName", [[asterisk stringByAppendingString:searchText] stringByAppendingString:asterisk]];
+  self.displayedApps = [self.apps filteredArrayUsingPredicate:predicate];
+  [self.tableView reloadData];
 }
 
 

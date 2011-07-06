@@ -17,6 +17,7 @@
 
 
 @property (nonatomic, strong) NSMutableArray *apps;
+@property (strong, nonatomic) NSArray *displayedApps;
 
 @property (strong, nonatomic) IBOutlet AppOverviewController *appOverviewController;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
