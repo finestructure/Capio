@@ -10,7 +10,7 @@
 
 @class AppOverviewController;
 
-@interface AppListController : UIViewController {
+@interface AppListController : UIViewController<UISearchBarDelegate> {
   UITableView *_tableView;
   UISearchBar *_searchBar;
 }

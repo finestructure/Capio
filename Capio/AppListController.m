@@ -193,4 +193,13 @@
   [self setSearchBar:nil];
   [super viewDidUnload];
 }
+
+
+#pragma mark - UISearchBarDelegate
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+  NSLog(@"search: %@", searchText);
+}
+
+
 @end
