@@ -12,6 +12,7 @@
 
 @interface AppListController : UIViewController {
   UITableView *_tableView;
+  UISearchBar *_searchBar;
 }
 
 
@@ -19,6 +20,7 @@
 
 @property (strong, nonatomic) IBOutlet AppOverviewController *appOverviewController;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) IBOutlet UISearchBar *searchBar;
 
 - (void)searchButtonTapped:(id)sender;
 

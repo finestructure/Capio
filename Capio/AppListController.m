@@ -17,6 +17,7 @@
 @synthesize appOverviewController = _appOverviewController;
 @synthesize apps = _apps;
 @synthesize tableView = _tableView;
+@synthesize searchBar = _searchBar;
 
 
 #pragma mark - View lifecycle
@@ -63,8 +64,43 @@
 
 #pragma mark - Actions
 
+
+- (void)toggleSearchbar {
+  CGFloat height = self.searchBar.bounds.size.height;
+  CGRect targetTableViewFrame = self.tableView.frame;
+  CGRect targetSearchFrame;
+  CGFloat targetAlpha;
+
+  if (self.searchBar.alpha == 0) {
+    [self.view addSubview:self.searchBar];
+    
+//    CGRect startFrame = self.searchBar.frame;
+//    startFrame.origin = CGPointMake(0, -height);
+//    self.searchBar.frame = startFrame;
+//    targetSearchFrame.origin = CGPointMake(0, 0);
+    
+    targetTableViewFrame.origin.y += height;
+    targetAlpha = 1;
+  } else {
+    [self.searchBar removeFromSuperview];
+    targetTableViewFrame.origin.y -= height;
+    targetAlpha = 0;
+  }
+
+  [UIView beginAnimations:nil context:NULL];
+  [UIView setAnimationBeginsFromCurrentState:YES];
+  [UIView setAnimationDuration:0.3];
+  
+  self.tableView.frame = targetTableViewFrame;
+  self.searchBar.alpha = targetAlpha;
+  //self.searchBar.frame = targetSearchFrame;
+  
+  [UIView commitAnimations];
+}
+
+
 - (void)searchButtonTapped:(id)sender {
-  NSLog(@"Search!");
+  [self toggleSearchbar];
 }
 
 
@@ -154,6 +190,7 @@
 
 - (void)viewDidUnload {
   [self setTableView:nil];
+  [self setSearchBar:nil];
   [super viewDidUnload];
 }
 @end
