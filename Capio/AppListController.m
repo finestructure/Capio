@@ -70,13 +70,15 @@
   CGRect targetTableViewFrame = self.tableView.frame;
   CGFloat targetAlpha;
 
-  if (self.searchBar.alpha < 1) {
+  if (self.searchBar.alpha < 1) { // show
     [self.view addSubview:self.searchBar];    
     targetTableViewFrame.origin.y += height;
     targetAlpha = 1;
-  } else {
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(searchButtonTapped:)];
+  } else { // hide
     targetTableViewFrame.origin.y -= height;
     targetAlpha = 0.2;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchButtonTapped:)];
   }
 
   [UIView beginAnimations:nil context:NULL];
