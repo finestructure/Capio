@@ -8,6 +8,7 @@
 
 #import "AppOverviewController.h"
 #import "AppOverview.h"
+#import "AppTimelineController.h"
 
 
 @implementation AppOverviewController
@@ -78,6 +79,8 @@
 
 - (IBAction)timelineTapped:(id)sender {
   NSLog(@"app timeline");
+  AppTimelineController *vc = [[AppTimelineController alloc] initWithNibName:@"AppTimeline" bundle:nil];
+  [self.navigationController pushViewController:vc animated:YES];
 }
 
 
