@@ -76,6 +76,10 @@
   self.reportDateButton.selected = YES;
 }
 
+- (IBAction)timelineTapped:(id)sender {
+  NSLog(@"app timeline");
+}
+
 
 #pragma mark -
 #pragma mark Split view support
