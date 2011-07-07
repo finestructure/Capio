@@ -24,7 +24,7 @@
 
 /// @name Graph
 /// @{
-@property (nonatomic, readwrite, assign) __weak CPGraph *graph;
+@property (nonatomic, readwrite, weak) CPGraph *graph;
 /// @}
 
 /// @name Padding

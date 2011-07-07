@@ -189,9 +189,9 @@ typedef enum _CPAxisLabelingPolicy {
 /// @name Layers
 /// @{
 @property (nonatomic, readwrite, assign) BOOL separateLayers;
-@property (nonatomic, readwrite, assign) __weak CPPlotArea *plotArea;
-@property (nonatomic, readonly, assign) __weak CPGridLines *minorGridLines;
-@property (nonatomic, readonly, assign) __weak CPGridLines *majorGridLines;
+@property (nonatomic, readwrite, weak)  CPPlotArea *plotArea;
+@property (nonatomic, readonly, weak)  CPGridLines *minorGridLines;
+@property (nonatomic, readonly, weak) CPGridLines *majorGridLines;
 @property (nonatomic, readonly, retain) CPAxisSet *axisSet;
 ///	@}
 

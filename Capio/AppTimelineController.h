@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppTimelineController : UIViewController
+#import "CorePlot-CocoaTouch.h"
+
+
+@interface AppTimelineController : UIViewController<CPPlotDataSource> {
+  CPGraphHostingView *_graphView;
+}
+
+@property (nonatomic, strong) CPXYGraph *graph;
+@property (nonatomic, strong) NSMutableArray *data;
+
+@property (nonatomic, strong) IBOutlet CPGraphHostingView *graphView;
 
 @end
