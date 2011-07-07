@@ -55,9 +55,10 @@
     CPXYAxis *x = axisSet.xAxis;
     x.majorIntervalLength = CPDecimalFromInt(oneDay);
     x.minorTicksPerInterval = 1;
+    x.labelRotation = 0.7;
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.dateStyle = kCFDateFormatterShortStyle;
+    dateFormatter.dateFormat = @"MM-dd";
     CPTimeFormatter *timeFormatter = [[CPTimeFormatter alloc] initWithDateFormatter:dateFormatter];
     
     NSDate *refDate = [dateTimeFormatter dateFromString:@"2011-06-01 12:00"];
