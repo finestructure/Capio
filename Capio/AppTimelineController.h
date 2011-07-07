@@ -16,7 +16,7 @@
 }
 
 @property (nonatomic, strong) CPXYGraph *graph;
-@property (nonatomic, strong) NSMutableArray *data;
+@property (nonatomic, strong) NSArray *data;
 
 @property (nonatomic, strong) IBOutlet CPGraphHostingView *graphView;
 
