@@ -41,7 +41,7 @@
   NSTimeInterval oneDay = 24 * 60 * 60;
   NSTimeInterval xLow = 0.0f;
   plotSpace.xRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(xLow) length:CPTDecimalFromFloat(oneDay*10)];
-  plotSpace.yRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(-1) length:CPTDecimalFromFloat(10)];
+  plotSpace.yRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0) length:CPTDecimalFromFloat(10)];
 }
 
 
@@ -50,6 +50,13 @@
   NSDateFormatter *dateTimeFormatter = [[NSDateFormatter alloc] init];
   [dateTimeFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
   
+  CPTMutableLineStyle *gridLineStyle = [CPTMutableLineStyle lineStyle];
+  gridLineStyle.lineWidth = 0.75;
+  gridLineStyle.dashPattern = [NSArray arrayWithObjects:
+                               [NSNumber numberWithFloat:2.0f],
+                               [NSNumber numberWithFloat:5.0f],
+                               nil];
+
   CPTXYAxisSet *axisSet = (CPTXYAxisSet *)self.graph.axisSet;
   {
     CPTXYAxis *x = axisSet.xAxis;
@@ -68,6 +75,8 @@
     x.isFloatingAxis = YES;
     x.constraints = CPTMakeConstraints(CPTConstraintFixed,
                                        CPTConstraintFixed);
+    
+    x.majorGridLineStyle = gridLineStyle;
   }
   {
     CPTXYAxis *y = axisSet.yAxis;
@@ -76,6 +85,8 @@
     y.isFloatingAxis = YES;
     y.constraints = CPTMakeConstraints(CPTConstraintFixed,
                                        CPTConstraintFixed);
+
+    y.majorGridLineStyle = gridLineStyle;
   }
 }
 
