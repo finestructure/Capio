@@ -11,13 +11,13 @@
 #import "CorePlot-CocoaTouch.h"
 
 
-@interface AppTimelineController : UIViewController<CPPlotDataSource> {
-  CPGraphHostingView *_graphView;
+@interface AppTimelineController : UIViewController<CPTPlotDataSource> {
+  CPTGraphHostingView *_graphView;
 }
 
-@property (nonatomic, strong) CPXYGraph *graph;
+@property (nonatomic, strong) CPTXYGraph *graph;
 @property (nonatomic, strong) NSArray *data;
 
-@property (nonatomic, strong) IBOutlet CPGraphHostingView *graphView;
+@property (nonatomic, strong) IBOutlet CPTGraphHostingView *graphView;
 
 @end

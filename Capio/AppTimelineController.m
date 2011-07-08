@@ -36,12 +36,12 @@
 #pragma mark - Workers
 
 
-- (void)configurePlotSpace:(CPXYPlotSpace *)plotSpace {
+- (void)configurePlotSpace:(CPTXYPlotSpace *)plotSpace {
   plotSpace.allowsUserInteraction = YES;
   NSTimeInterval oneDay = 24 * 60 * 60;
   NSTimeInterval xLow = 0.0f;
-  plotSpace.xRange = [CPPlotRange plotRangeWithLocation:CPDecimalFromFloat(xLow) length:CPDecimalFromFloat(oneDay*10)];
-  plotSpace.yRange = [CPPlotRange plotRangeWithLocation:CPDecimalFromFloat(-1) length:CPDecimalFromFloat(10)];
+  plotSpace.xRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(xLow) length:CPTDecimalFromFloat(oneDay*10)];
+  plotSpace.yRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(-1) length:CPTDecimalFromFloat(10)];
 }
 
 
@@ -50,50 +50,50 @@
   NSDateFormatter *dateTimeFormatter = [[NSDateFormatter alloc] init];
   [dateTimeFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
   
-  CPXYAxisSet *axisSet = (CPXYAxisSet *)self.graph.axisSet;
+  CPTXYAxisSet *axisSet = (CPTXYAxisSet *)self.graph.axisSet;
   {
-    CPXYAxis *x = axisSet.xAxis;
-    x.majorIntervalLength = CPDecimalFromInt(oneDay);
+    CPTXYAxis *x = axisSet.xAxis;
+    x.majorIntervalLength = CPTDecimalFromInt(oneDay);
     x.minorTicksPerInterval = 1;
     x.labelRotation = 0.7;
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"MM-dd";
-    CPTimeFormatter *timeFormatter = [[CPTimeFormatter alloc] initWithDateFormatter:dateFormatter];
+    CPTTimeFormatter *timeFormatter = [[CPTTimeFormatter alloc] initWithDateFormatter:dateFormatter];
     
     NSDate *refDate = [dateTimeFormatter dateFromString:@"2011-06-01 12:00"];
     timeFormatter.referenceDate = refDate;
     x.labelFormatter = timeFormatter;
   }
   {
-    CPXYAxis *y = axisSet.yAxis;
-    y.majorIntervalLength = CPDecimalFromInt(1);
+    CPTXYAxis *y = axisSet.yAxis;
+    y.majorIntervalLength = CPTDecimalFromInt(1);
     y.minorTicksPerInterval = 2;
   }
 }
 
 
-- (void)configurePlot:(CPScatterPlot *)plot {
+- (void)configurePlot:(CPTScatterPlot *)plot {
   // Line style
-  CPMutableLineStyle *lineStyle = [plot.dataLineStyle mutableCopy];
+  CPTMutableLineStyle *lineStyle = [plot.dataLineStyle mutableCopy];
 	lineStyle.lineWidth = 3.f;
-  lineStyle.lineColor = [CPColor redColor];
+  lineStyle.lineColor = [CPTColor redColor];
   plot.dataLineStyle = lineStyle;
 	
   // Fill style
-	CPColor *fillColor = [CPColor redColor];
-  CPGradient *gradient = [CPGradient gradientWithBeginningColor:fillColor endingColor:[CPColor whiteColor]];
+	CPTColor *fillColor = [CPTColor redColor];
+  CPTGradient *gradient = [CPTGradient gradientWithBeginningColor:fillColor endingColor:[CPTColor whiteColor]];
   gradient.angle = -90.0f;
-  CPFill *areaGradientFill = [CPFill fillWithGradient:gradient];
+  CPTFill *areaGradientFill = [CPTFill fillWithGradient:gradient];
   plot.areaFill = areaGradientFill;
   plot.areaBaseValue = [[NSDecimalNumber zero] decimalValue];
 }
 
 
-- (void)addAnimationToPlot:(CPPlot *)plot {
+- (void)addAnimationToPlot:(CPTPlot *)plot {
 	// Animate in the new plot, as an example
 	plot.opacity = 0.0f;
-	plot.cachePrecision = CPPlotCachePrecisionDecimal;
+	plot.cachePrecision = CPTPlotCachePrecisionDecimal;
   [self.graph addPlot:plot];
 	
 	CABasicAnimation *fadeInAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
@@ -115,9 +115,9 @@
 		[newData addObject:
      [NSDictionary dictionaryWithObjectsAndKeys:
       [NSDecimalNumber numberWithFloat:x],
-      [NSNumber numberWithInt:CPScatterPlotFieldX], 
+      [NSNumber numberWithInt:CPTScatterPlotFieldX], 
       y,
-      [NSNumber numberWithInt:CPScatterPlotFieldY], 
+      [NSNumber numberWithInt:CPTScatterPlotFieldY], 
       nil]];
 	}
   return newData;
@@ -125,8 +125,8 @@
 
 
 - (void)createGraph {
-  self.graph = [[CPXYGraph alloc] initWithFrame:CGRectZero];
-	CPTheme *theme = [CPTheme themeNamed:kCPPlainWhiteTheme];
+  self.graph = [[CPTXYGraph alloc] initWithFrame:CGRectZero];
+	CPTTheme *theme = [CPTTheme themeNamed:kCPTPlainWhiteTheme];
   [self.graph applyTheme:theme];
   self.graphView.hostedGraph = self.graph;
 	
@@ -135,11 +135,11 @@
 	self.graph.paddingRight = 10.0;
 	self.graph.paddingBottom = 10.0;
   
-  [self configurePlotSpace:(CPXYPlotSpace *)self.graph.defaultPlotSpace];
+  [self configurePlotSpace:(CPTXYPlotSpace *)self.graph.defaultPlotSpace];
 	
   [self configureAxes];
 	
-  CPScatterPlot *plot = [[CPScatterPlot alloc] init];
+  CPTScatterPlot *plot = [[CPTScatterPlot alloc] init];
   plot.dataSource = self;
 
   [self configurePlot:plot];
@@ -151,11 +151,11 @@
 #pragma mark - CPPlotDataSource
 
 
--(NSUInteger)numberOfRecordsForPlot:(CPPlot *)plot {
+-(NSUInteger)numberOfRecordsForPlot:(CPTPlot *)plot {
   return [self.data count];
 }
 
--(NSNumber *)numberForPlot:(CPPlot *)plot field:(NSUInteger)fieldEnum recordIndex:(NSUInteger)index  {
+-(NSNumber *)numberForPlot:(CPTPlot *)plot field:(NSUInteger)fieldEnum recordIndex:(NSUInteger)index  {
   NSDecimalNumber *num = [[self.data objectAtIndex:index] objectForKey:[NSNumber numberWithInt:fieldEnum]];
   NSLog(@"num: %.1f", [num floatValue]);
   return num;
