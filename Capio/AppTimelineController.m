@@ -102,6 +102,7 @@
 
 - (void)configurePlot:(CPTScatterPlot *)plot {
   plot.dataSource = self;
+  plot.identifier = @"Exceptions";
 
   // Line style
   CPTMutableLineStyle *lineStyle = [plot.dataLineStyle mutableCopy];
@@ -165,29 +166,30 @@
   graph.plotAreaFrame.paddingLeft = 65.0;
   graph.plotAreaFrame.paddingRight = 20.0;
   graph.plotAreaFrame.cornerRadius = 5.0;
+}
 
-  /*
-  CPTMutableTextStyle *textStyle = [CPTMutableTextStyle textStyle];
-	textStyle.fontName = @"Helvetica-Bold";
-	textStyle.fontSize = 14.0;
 
+- (void)addLegend:(CPTXYGraph *)graph {
   CPTXYAxisSet *axisSet = (CPTXYAxisSet *)graph.axisSet;
   CPTXYAxis *x = axisSet.xAxis;
   
+  CPTMutableTextStyle *textStyle = [CPTMutableTextStyle textStyle];
+	textStyle.fontName = @"Helvetica";
+	textStyle.fontSize = 12.0;
+
   graph.legend = [CPTLegend legendWithGraph:graph];
-	graph.legend.textStyle = x.titleTextStyle;
-	graph.legend.fill = [CPTFill fillWithColor:[CPTColor darkGrayColor]];
+	graph.legend.textStyle = textStyle;
+	graph.legend.fill = [CPTFill fillWithColor:[CPTColor whiteColor]];
 	graph.legend.borderLineStyle = x.axisLineStyle;
-	graph.legend.cornerRadius = 5.0;
-	graph.legend.swatchSize = CGSizeMake(25.0, 25.0);
-	graph.legendAnchor = CPTRectAnchorBottom;
-	graph.legendDisplacement = CGPointMake(0.0, 12.0);
-   */
+	graph.legendAnchor = CPTRectAnchorTop;
+	graph.legendDisplacement = CGPointMake(0, -10.0);
 }
 
 
 - (void)createGraph {
   CPTXYGraph *graph = [[CPTXYGraph alloc] initWithFrame:CGRectZero];
+  CPTScatterPlot *plot = [[CPTScatterPlot alloc] init];
+  [graph addPlot:plot];
   self.graphView.hostedGraph = graph;
 	
   [self configureGraph:graph];
@@ -196,10 +198,9 @@
 	
   [self configureAxes:(CPTXYAxisSet *)graph.axisSet];
 	
-  CPTScatterPlot *plot = [[CPTScatterPlot alloc] init];
-  [graph addPlot:plot];
-
   [self configurePlot:plot];
+
+  [self addLegend:graph];
 
   [self addAnimationToPlot:plot];
 }
