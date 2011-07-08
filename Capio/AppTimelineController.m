@@ -58,6 +58,10 @@
                                [NSNumber numberWithFloat:5.0f],
                                nil];
 
+  CPTMutableTextStyle *axisTitleTextStyle = [CPTMutableTextStyle textStyle];
+	axisTitleTextStyle.fontName = @"Helvetica-Bold";
+	axisTitleTextStyle.fontSize = 14.0;
+
   CPTXYAxisSet *axisSet = (CPTXYAxisSet *)self.graph.axisSet;
   {
     CPTXYAxis *x = axisSet.xAxis;
@@ -78,6 +82,9 @@
                                        CPTConstraintFixed);
     
     x.majorGridLineStyle = gridLineStyle;
+    x.titleTextStyle = axisTitleTextStyle;
+    x.titleOffset = 45.0;
+    x.title = @"Date";
   }
   {
     CPTXYAxis *y = axisSet.yAxis;
@@ -88,6 +95,9 @@
                                        CPTConstraintFixed);
 
     y.majorGridLineStyle = gridLineStyle;
+    y.titleTextStyle = axisTitleTextStyle;
+    y.titleOffset = 35.0;
+    y.title = @"Exceptions";
   }
 }
 
@@ -155,8 +165,8 @@
   self.graph.paddingBottom = 0.0;
   
   self.graph.plotAreaFrame.paddingTop = 20.0;
-  self.graph.plotAreaFrame.paddingBottom = 50.0;
-  self.graph.plotAreaFrame.paddingLeft = 50.0;
+  self.graph.plotAreaFrame.paddingBottom = 70.0;
+  self.graph.plotAreaFrame.paddingLeft = 65.0;
   self.graph.plotAreaFrame.paddingRight = 20.0;
   self.graph.plotAreaFrame.cornerRadius = 5.0;
 
