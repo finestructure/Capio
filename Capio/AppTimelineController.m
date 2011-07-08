@@ -37,6 +37,7 @@
 
 
 - (void)configurePlotSpace:(CPTXYPlotSpace *)plotSpace {
+  plotSpace.delegate = self;
   plotSpace.allowsUserInteraction = YES;
   NSTimeInterval oneDay = 24 * 60 * 60;
   NSTimeInterval xLow = 0.0f;
@@ -184,6 +185,21 @@
   NSLog(@"num: %.1f", [num floatValue]);
   return num;
 }
+
+
+#pragma mark - Plot Space Delegate Methods
+
+-(CPTPlotRange *)plotSpace:(CPTPlotSpace *)space willChangePlotRangeTo:(CPTPlotRange *)newRange forCoordinate:(CPTCoordinate)coordinate {
+  if (coordinate == CPTCoordinateY) {
+    CPTPlotRange *maxRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromInt(0) length:CPTDecimalFromInt(12)];
+    CPTPlotRange *changedRange = [newRange copy];
+    [changedRange shiftEndToFitInRange:maxRange];
+    [changedRange shiftLocationToFitInRange:maxRange];
+    newRange = changedRange;
+  }
+  return newRange;
+}
+
 
 
 #pragma mark - View lifecycle

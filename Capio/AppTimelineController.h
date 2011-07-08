@@ -11,7 +11,7 @@
 #import "CorePlot-CocoaTouch.h"
 
 
-@interface AppTimelineController : UIViewController<CPTPlotDataSource> {
+@interface AppTimelineController : UIViewController<CPTPlotDataSource, CPTPlotSpaceDelegate> {
   CPTGraphHostingView *_graphView;
 }
 
