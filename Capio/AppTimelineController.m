@@ -11,7 +11,6 @@
 
 @implementation AppTimelineController
 
-@synthesize graph = _graph;
 @synthesize data = _data;
 @synthesize graphView = _graphView;
 
@@ -46,7 +45,7 @@
 }
 
 
-- (void)configureAxes {
+- (void)configureAxes:(CPTXYAxisSet *)axisSet {
   NSTimeInterval oneDay = 24 * 60 * 60;
   NSDateFormatter *dateTimeFormatter = [[NSDateFormatter alloc] init];
   [dateTimeFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
@@ -62,7 +61,6 @@
 	axisTitleTextStyle.fontName = @"Helvetica-Bold";
 	axisTitleTextStyle.fontSize = 14.0;
 
-  CPTXYAxisSet *axisSet = (CPTXYAxisSet *)self.graph.axisSet;
   {
     CPTXYAxis *x = axisSet.xAxis;
     x.majorIntervalLength = CPTDecimalFromInt(oneDay);
@@ -103,6 +101,8 @@
 
 
 - (void)configurePlot:(CPTScatterPlot *)plot {
+  plot.dataSource = self;
+
   // Line style
   CPTMutableLineStyle *lineStyle = [plot.dataLineStyle mutableCopy];
 	lineStyle.lineWidth = 3.f;
@@ -120,10 +120,8 @@
 
 
 - (void)addAnimationToPlot:(CPTPlot *)plot {
-	// Animate in the new plot, as an example
 	plot.opacity = 0.0f;
 	plot.cachePrecision = CPTPlotCachePrecisionDecimal;
-  [self.graph addPlot:plot];
 	
 	CABasicAnimation *fadeInAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
 	fadeInAnimation.duration = 1.0f;
@@ -153,29 +151,53 @@
 }
 
 
-- (void)createGraph {
-  self.graph = [[CPTXYGraph alloc] initWithFrame:CGRectZero];
+- (void)configureGraph:(CPTXYGraph *)graph {
 	CPTTheme *theme = [CPTTheme themeNamed:kCPTPlainWhiteTheme];
-  [self.graph applyTheme:theme];
-  self.graphView.hostedGraph = self.graph;
-	
-  self.graph.paddingLeft = 0.0;
-  self.graph.paddingTop = 0.0;
-  self.graph.paddingRight = 0.0;
-  self.graph.paddingBottom = 0.0;
-  
-  self.graph.plotAreaFrame.paddingTop = 20.0;
-  self.graph.plotAreaFrame.paddingBottom = 70.0;
-  self.graph.plotAreaFrame.paddingLeft = 65.0;
-  self.graph.plotAreaFrame.paddingRight = 20.0;
-  self.graph.plotAreaFrame.cornerRadius = 5.0;
+  [graph applyTheme:theme];
 
-  [self configurePlotSpace:(CPTXYPlotSpace *)self.graph.defaultPlotSpace];
+  graph.paddingLeft = 0.0;
+  graph.paddingTop = 0.0;
+  graph.paddingRight = 0.0;
+  graph.paddingBottom = 0.0;
+  
+  graph.plotAreaFrame.paddingTop = 20.0;
+  graph.plotAreaFrame.paddingBottom = 70.0;
+  graph.plotAreaFrame.paddingLeft = 65.0;
+  graph.plotAreaFrame.paddingRight = 20.0;
+  graph.plotAreaFrame.cornerRadius = 5.0;
+
+  /*
+  CPTMutableTextStyle *textStyle = [CPTMutableTextStyle textStyle];
+	textStyle.fontName = @"Helvetica-Bold";
+	textStyle.fontSize = 14.0;
+
+  CPTXYAxisSet *axisSet = (CPTXYAxisSet *)graph.axisSet;
+  CPTXYAxis *x = axisSet.xAxis;
+  
+  graph.legend = [CPTLegend legendWithGraph:graph];
+	graph.legend.textStyle = x.titleTextStyle;
+	graph.legend.fill = [CPTFill fillWithColor:[CPTColor darkGrayColor]];
+	graph.legend.borderLineStyle = x.axisLineStyle;
+	graph.legend.cornerRadius = 5.0;
+	graph.legend.swatchSize = CGSizeMake(25.0, 25.0);
+	graph.legendAnchor = CPTRectAnchorBottom;
+	graph.legendDisplacement = CGPointMake(0.0, 12.0);
+   */
+}
+
+
+- (void)createGraph {
+  CPTXYGraph *graph = [[CPTXYGraph alloc] initWithFrame:CGRectZero];
+  self.graphView.hostedGraph = graph;
 	
-  [self configureAxes];
+  [self configureGraph:graph];
+
+  [self configurePlotSpace:(CPTXYPlotSpace *)graph.defaultPlotSpace];
+	
+  [self configureAxes:(CPTXYAxisSet *)graph.axisSet];
 	
   CPTScatterPlot *plot = [[CPTScatterPlot alloc] init];
-  plot.dataSource = self;
+  [graph addPlot:plot];
 
   [self configurePlot:plot];
 

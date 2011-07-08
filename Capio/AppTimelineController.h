@@ -15,7 +15,6 @@
   CPTGraphHostingView *_graphView;
 }
 
-@property (nonatomic, strong) CPTXYGraph *graph;
 @property (nonatomic, strong) NSArray *data;
 
 @property (nonatomic, strong) IBOutlet CPTGraphHostingView *graphView;
