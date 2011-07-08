@@ -574,10 +574,7 @@
 				GCC_PREFIX_HEADER = "Capio/Capio-Prefix.pch";
 				INFOPLIST_FILE = "Capio/Capio-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/CorePlotHeaders\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -595,10 +592,7 @@
 				GCC_PREFIX_HEADER = "Capio/Capio-Prefix.pch";
 				INFOPLIST_FILE = "Capio/Capio-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/CorePlotHeaders\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
