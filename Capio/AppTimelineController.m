@@ -138,10 +138,16 @@
   self.graphView.hostedGraph = self.graph;
 	
   self.graph.paddingLeft = 0.0;
-	self.graph.paddingTop = 0.0;
-	self.graph.paddingRight = 0.0;
-	self.graph.paddingBottom = 0.0;
+  self.graph.paddingTop = 0.0;
+  self.graph.paddingRight = 0.0;
+  self.graph.paddingBottom = 0.0;
   
+  self.graph.plotAreaFrame.paddingTop = 20.0;
+  self.graph.plotAreaFrame.paddingBottom = 50.0;
+  self.graph.plotAreaFrame.paddingLeft = 50.0;
+  self.graph.plotAreaFrame.paddingRight = 20.0;
+  self.graph.plotAreaFrame.cornerRadius = 5.0;
+
   [self configurePlotSpace:(CPTXYPlotSpace *)self.graph.defaultPlotSpace];
 	
   [self configureAxes];
