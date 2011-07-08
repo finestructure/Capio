@@ -137,10 +137,10 @@
   [self.graph applyTheme:theme];
   self.graphView.hostedGraph = self.graph;
 	
-  self.graph.paddingLeft = 10.0;
-	self.graph.paddingTop = 10.0;
-	self.graph.paddingRight = 10.0;
-	self.graph.paddingBottom = 10.0;
+  self.graph.paddingLeft = 0.0;
+	self.graph.paddingTop = 0.0;
+	self.graph.paddingRight = 0.0;
+	self.graph.paddingBottom = 0.0;
   
   [self configurePlotSpace:(CPTXYPlotSpace *)self.graph.defaultPlotSpace];
 	
