@@ -98,8 +98,8 @@ extern NSString * const CPTPlotSpaceCoordinateMappingDidChangeNotification;
 
 @property (nonatomic, readwrite, copy) id <NSCopying, NSObject> identifier;
 @property (nonatomic, readwrite, assign) BOOL allowsUserInteraction;
-@property (nonatomic, readwrite, assign) __weak CPTGraph *graph;
-@property (nonatomic, readwrite, assign) __weak id <CPTPlotSpaceDelegate> delegate;
+@property (nonatomic, readwrite, weak) CPTGraph *graph;
+@property (nonatomic, readwrite, weak) id <CPTPlotSpaceDelegate> delegate;
 
 @end
 

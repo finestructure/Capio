@@ -10,7 +10,7 @@
     CPTRectAnchor rectAnchor;
 }
 
-@property (nonatomic, readonly, assign) __weak CPTLayer *anchorLayer;
+@property (nonatomic, readonly, weak) CPTLayer *anchorLayer;
 @property (nonatomic, readwrite, assign) CPTRectAnchor rectAnchor;
 
 -(id)initWithAnchorLayer:(CPTLayer *)anchorLayer;

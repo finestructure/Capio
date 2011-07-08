@@ -14,7 +14,7 @@
 }
 
 @property (nonatomic, readwrite, retain) CPTLayer *contentLayer;
-@property (nonatomic, readwrite, assign) __weak CPTAnnotationHostLayer *annotationHostLayer;
+@property (nonatomic, readwrite, weak) CPTAnnotationHostLayer *annotationHostLayer;
 @property (nonatomic, readwrite, assign) CGPoint contentAnchorPoint;
 @property (nonatomic, readwrite, assign) CGPoint displacement;
 @property (nonatomic, readwrite, assign) CGFloat rotation;
