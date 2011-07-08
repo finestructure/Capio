@@ -64,11 +64,18 @@
     NSDate *refDate = [dateTimeFormatter dateFromString:@"2011-06-01 12:00"];
     timeFormatter.referenceDate = refDate;
     x.labelFormatter = timeFormatter;
+
+    x.isFloatingAxis = YES;
+    x.constraints = CPTMakeConstraints(CPTConstraintFixed,
+                                       CPTConstraintFixed);
   }
   {
     CPTXYAxis *y = axisSet.yAxis;
     y.majorIntervalLength = CPTDecimalFromInt(1);
     y.minorTicksPerInterval = 2;
+    y.isFloatingAxis = YES;
+    y.constraints = CPTMakeConstraints(CPTConstraintFixed,
+                                       CPTConstraintFixed);
   }
 }
 
