@@ -100,26 +100,6 @@
 }
 
 
-- (void)configurePlot:(CPTScatterPlot *)plot {
-  plot.dataSource = self;
-  plot.identifier = @"Exceptions";
-
-  // Line style
-  CPTMutableLineStyle *lineStyle = [plot.dataLineStyle mutableCopy];
-	lineStyle.lineWidth = 3.f;
-  lineStyle.lineColor = [CPTColor redColor];
-  plot.dataLineStyle = lineStyle;
-	
-  // Fill style
-	CPTColor *fillColor = [CPTColor redColor];
-  CPTGradient *gradient = [CPTGradient gradientWithBeginningColor:fillColor endingColor:[CPTColor whiteColor]];
-  gradient.angle = -90.0f;
-  CPTFill *areaGradientFill = [CPTFill fillWithGradient:gradient];
-  plot.areaFill = areaGradientFill;
-  plot.areaBaseValue = [[NSDecimalNumber zero] decimalValue];
-}
-
-
 - (void)addAnimationToPlot:(CPTPlot *)plot {
 	plot.opacity = 0.0f;
 	plot.cachePrecision = CPTPlotCachePrecisionDecimal;
@@ -130,6 +110,27 @@
 	fadeInAnimation.fillMode = kCAFillModeForwards;
 	fadeInAnimation.toValue = [NSNumber numberWithFloat:1.0];
 	[plot addAnimation:fadeInAnimation forKey:@"animateOpacity"];
+}
+
+
+- (void)configurePlot:(CPTScatterPlot *)plot withTitle:(NSString *)title color:(CPTColor *)color {
+  plot.dataSource = self;
+  plot.identifier = title;
+
+  // Line style
+  CPTMutableLineStyle *lineStyle = [plot.dataLineStyle mutableCopy];
+	lineStyle.lineWidth = 3.f;
+  lineStyle.lineColor = color;
+  plot.dataLineStyle = lineStyle;
+	
+  // Fill style
+  CPTGradient *gradient = [CPTGradient gradientWithBeginningColor:color endingColor:[CPTColor whiteColor]];
+  gradient.angle = -90.0f;
+  CPTFill *areaGradientFill = [CPTFill fillWithGradient:gradient];
+  plot.areaFill = areaGradientFill;
+  plot.areaBaseValue = [[NSDecimalNumber zero] decimalValue];
+
+  [self addAnimationToPlot:plot];
 }
 
 
@@ -188,8 +189,6 @@
 
 - (void)createGraph {
   CPTXYGraph *graph = [[CPTXYGraph alloc] initWithFrame:CGRectZero];
-  CPTScatterPlot *plot = [[CPTScatterPlot alloc] init];
-  [graph addPlot:plot];
   self.graphView.hostedGraph = graph;
 	
   [self configureGraph:graph];
@@ -198,11 +197,20 @@
 	
   [self configureAxes:(CPTXYAxisSet *)graph.axisSet];
 	
-  [self configurePlot:plot];
+  { // exceptions
+    CPTScatterPlot *plot = [[CPTScatterPlot alloc] init];
+    [self configurePlot:plot withTitle:@"Exceptions" color:[CPTColor redColor]];
+    [graph addPlot:plot];
+    [self.data setObject:[self dummyData] forKey:plot.identifier];
+  }
+  { // warnings
+    CPTScatterPlot *plot = [[CPTScatterPlot alloc] init];
+    [self configurePlot:plot withTitle:@"Warnings" color:[CPTColor orangeColor]];
+    [graph addPlot:plot];
+    [self.data setObject:[self dummyData] forKey:plot.identifier];
+  }
 
   [self addLegend:graph];
-
-  [self addAnimationToPlot:plot];
 }
 
 
@@ -210,12 +218,14 @@
 
 
 -(NSUInteger)numberOfRecordsForPlot:(CPTPlot *)plot {
-  return [self.data count];
+  NSArray *data = [self.data objectForKey:plot.identifier];
+  return [data count];
 }
 
 -(NSNumber *)numberForPlot:(CPTPlot *)plot field:(NSUInteger)fieldEnum recordIndex:(NSUInteger)index  {
-  NSDecimalNumber *num = [[self.data objectAtIndex:index] objectForKey:[NSNumber numberWithInt:fieldEnum]];
-  NSLog(@"num: %.1f", [num floatValue]);
+  NSArray *data = [self.data objectForKey:plot.identifier];
+  NSDecimalNumber *num = [[data objectAtIndex:index] objectForKey:[NSNumber numberWithInt:fieldEnum]];
+  //NSLog(@"num: %.1f", [num floatValue]);
   return num;
 }
 
@@ -239,8 +249,8 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  self.data = [NSMutableDictionary dictionary];
   [self createGraph];
-  self.data = [self dummyData];
 }
 
 
