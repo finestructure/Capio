@@ -41,7 +41,7 @@
   NSTimeInterval oneDay = 24 * 60 * 60;
   NSTimeInterval xLow = 0.0f;
   plotSpace.xRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(xLow) length:CPTDecimalFromFloat(oneDay*10)];
-  plotSpace.yRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0) length:CPTDecimalFromFloat(10)];
+  plotSpace.yRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0) length:CPTDecimalFromFloat(15)];
 }
 
 
@@ -134,11 +134,10 @@
 }
 
 
-- (NSArray *)dummyData {
+- (NSArray *)dummyData:(NSUInteger)count {
   NSTimeInterval oneDay = 24 * 60 * 60;
   NSMutableArray *newData = [NSMutableArray array];
-	NSUInteger i;
-	for ( i = 0; i <= 10; i++ ) {
+	for (NSUInteger i = 0; i <= count; i++ ) {
 		NSTimeInterval x = oneDay*i;
 		id y = [NSDecimalNumber numberWithFloat:10*fabs(rand()/(float)RAND_MAX)];
 		[newData addObject:
@@ -150,6 +149,23 @@
       nil]];
 	}
   return newData;
+}
+
+
+- (NSArray *)dummyDataWithOffset:(NSArray *)offset {
+  NSMutableArray *sum = [NSMutableArray array];
+  NSArray *data = [self dummyData:[offset count]];
+  [offset enumerateObjectsUsingBlock:^(NSDictionary *obj, NSUInteger idx, BOOL *stop) {
+    NSNumber *xKey = [NSNumber numberWithInt:CPTScatterPlotFieldX];
+    NSNumber *yKey = [NSNumber numberWithInt:CPTScatterPlotFieldY];
+    NSDecimalNumber *y1 = [[data objectAtIndex:idx] objectForKey:yKey];
+    NSDecimalNumber *y2 = [obj objectForKey:yKey];
+    NSDecimalNumber *y = [y1 decimalNumberByAdding:y2];
+    NSDecimalNumber *x = [obj objectForKey:xKey];
+    [sum addObject:
+     [NSDictionary dictionaryWithObjectsAndKeys:x, xKey, y, yKey, nil]];
+  }];
+  return sum;
 }
 
 
@@ -197,17 +213,22 @@
 	
   [self configureAxes:(CPTXYAxisSet *)graph.axisSet];
 	
-  { // exceptions
-    CPTScatterPlot *plot = [[CPTScatterPlot alloc] init];
-    [self configurePlot:plot withTitle:@"Exceptions" color:[CPTColor redColor]];
-    [graph addPlot:plot];
-    [self.data setObject:[self dummyData] forKey:plot.identifier];
-  }
-  { // warnings
-    CPTScatterPlot *plot = [[CPTScatterPlot alloc] init];
-    [self configurePlot:plot withTitle:@"Warnings" color:[CPTColor orangeColor]];
-    [graph addPlot:plot];
-    [self.data setObject:[self dummyData] forKey:plot.identifier];
+  {
+    NSUInteger count = 10;
+    NSArray *data = [self dummyData:count];
+
+    // warnings
+    CPTScatterPlot *plot1 = [[CPTScatterPlot alloc] init];
+    [self configurePlot:plot1 withTitle:@"Warnings" color:[CPTColor orangeColor]];
+    [self.data setObject:data forKey:plot1.identifier];
+  
+    // exceptions
+    CPTScatterPlot *plot2 = [[CPTScatterPlot alloc] init];
+    [self configurePlot:plot2 withTitle:@"Exceptions" color:[CPTColor redColor]];
+    [self.data setObject:[self dummyDataWithOffset:data] forKey:plot2.identifier];
+
+    [graph addPlot:plot2];
+    [graph addPlot:plot1];
   }
 
   [self addLegend:graph];
@@ -234,7 +255,7 @@
 
 -(CPTPlotRange *)plotSpace:(CPTPlotSpace *)space willChangePlotRangeTo:(CPTPlotRange *)newRange forCoordinate:(CPTCoordinate)coordinate {
   if (coordinate == CPTCoordinateY) {
-    CPTPlotRange *maxRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromInt(0) length:CPTDecimalFromInt(12)];
+    CPTPlotRange *maxRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromInt(0) length:CPTDecimalFromInt(15)];
     CPTPlotRange *changedRange = [newRange copy];
     [changedRange shiftEndToFitInRange:maxRange];
     [changedRange shiftLocationToFitInRange:maxRange];
