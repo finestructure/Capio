@@ -8,6 +8,7 @@
 
 #import "CapioTests.h"
 #import "DataStore.h"
+#import "Tuple.h"
 
 @implementation CapioTests
 
@@ -48,6 +49,21 @@
   NSArray *results = [apps filteredArrayUsingPredicate:predicate];
   STAssertEquals(3, (int)[results count], nil);
 }
+
+
+- (void)test_tuple_add {
+  Tuple *t1 = [[Tuple alloc] init];
+  t1.x = [NSDecimalNumber decimalNumberWithString:@"1"];
+  t1.y = [NSDecimalNumber decimalNumberWithString:@"2"];
+  Tuple *t2 = [[Tuple alloc] init];
+  t2.x = [NSDecimalNumber decimalNumberWithString:@"3"];
+  t2.y = [NSDecimalNumber decimalNumberWithString:@"4"];
+  [t1 add:t2];
+  STAssertEqualObjects(t1.x, [NSDecimalNumber decimalNumberWithString:@"4"], @"t1.x");
+  STAssertEqualObjects(t1.y, [NSDecimalNumber decimalNumberWithString:@"6"], @"t1.y");
+}
+
+
 
 
 @end
