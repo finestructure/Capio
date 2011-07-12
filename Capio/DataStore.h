@@ -12,4 +12,6 @@
 
 + (DataStore *)sharedDataStore;
 
+- (NSArray *)appList;
+
 @end

@@ -7,8 +7,36 @@
 //
 
 #import "DataStore.h"
+#import "AppOverview.h"
 
 @implementation DataStore
+
+
+#pragma mark - Workers
+
+- (NSArray *)appList {
+  NSBundle *thisBundle = [NSBundle bundleForClass:[self class]];
+  NSURL *url = [thisBundle URLForResource:@"app_overview" withExtension:@"plist"];
+  
+  NSMutableArray *apps = [NSMutableArray array];
+  NSArray *data = [NSArray arrayWithContentsOfURL:url];
+  for (NSDictionary *dict in data) {
+    AppOverview *item = [[AppOverview alloc] init];
+    item.appName = [dict objectForKey:@"appName"];
+    item.appDescription = [dict objectForKey:@"appDescription"];
+    item.appOwner = [dict objectForKey:@"appOwner"];
+    item.serverCount = [dict objectForKey:@"serverCount"];
+    item.reportDate = [dict objectForKey:@"reportDate"];
+    item.ragRed = [dict objectForKey:@"ragRed"];
+    item.ragAmber = [dict objectForKey:@"ragAmber"];
+    item.ragGreen = [dict objectForKey:@"ragGreen"];
+    item.ragTotal = [dict objectForKey:@"ragTotal"];
+    [apps addObject:item];
+  }
+  return apps;
+}
+
+#pragma mark - Initializers
 
 - (id)init
 {

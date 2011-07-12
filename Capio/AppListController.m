@@ -10,6 +10,7 @@
 #import "AppOverviewController.h"
 #import "AppOverview.h"
 #import "AppListCell.h"
+#import "DataStore.h"
 
 
 @implementation AppListController
@@ -31,24 +32,7 @@
   // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
   // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-  NSBundle *thisBundle = [NSBundle bundleForClass:[self class]];
-  NSURL *url = [thisBundle URLForResource:@"app_overview" withExtension:@"plist"];
-  
-  self.apps = [NSMutableArray array];
-  NSArray *data = [NSArray arrayWithContentsOfURL:url];
-  for (NSDictionary *dict in data) {
-    AppOverview *item = [[AppOverview alloc] init];
-    item.appName = [dict objectForKey:@"appName"];
-    item.appDescription = [dict objectForKey:@"appDescription"];
-    item.appOwner = [dict objectForKey:@"appOwner"];
-    item.serverCount = [dict objectForKey:@"serverCount"];
-    item.reportDate = [dict objectForKey:@"reportDate"];
-    item.ragRed = [dict objectForKey:@"ragRed"];
-    item.ragAmber = [dict objectForKey:@"ragAmber"];
-    item.ragGreen = [dict objectForKey:@"ragGreen"];
-    item.ragTotal = [dict objectForKey:@"ragTotal"];
-    [self.apps addObject:item];
-  }
+  self.apps = [[DataStore sharedDataStore] appList];
   self.displayedApps = [self.apps copy];
   
   [self.tableView registerNib:[UINib nibWithNibName:@"AppListCell" bundle:nil] forCellReuseIdentifier:@"AppListCell"];
