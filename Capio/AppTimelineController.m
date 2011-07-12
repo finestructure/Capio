@@ -7,6 +7,7 @@
 //
 
 #import "AppTimelineController.h"
+#import "DataStore.h"
 
 
 @implementation AppTimelineController
@@ -134,41 +135,6 @@
 }
 
 
-- (NSArray *)dummyData:(NSUInteger)count {
-  NSTimeInterval oneDay = 24 * 60 * 60;
-  NSMutableArray *newData = [NSMutableArray array];
-	for (NSUInteger i = 0; i <= count; i++ ) {
-		NSTimeInterval x = oneDay*i;
-		id y = [NSDecimalNumber numberWithFloat:10*fabs(rand()/(float)RAND_MAX)];
-		[newData addObject:
-     [NSDictionary dictionaryWithObjectsAndKeys:
-      [NSDecimalNumber numberWithFloat:x],
-      [NSNumber numberWithInt:CPTScatterPlotFieldX], 
-      y,
-      [NSNumber numberWithInt:CPTScatterPlotFieldY], 
-      nil]];
-	}
-  return newData;
-}
-
-
-- (NSArray *)dummyDataWithOffset:(NSArray *)offset {
-  NSMutableArray *sum = [NSMutableArray array];
-  NSArray *data = [self dummyData:[offset count]];
-  [offset enumerateObjectsUsingBlock:^(NSDictionary *obj, NSUInteger idx, BOOL *stop) {
-    NSNumber *xKey = [NSNumber numberWithInt:CPTScatterPlotFieldX];
-    NSNumber *yKey = [NSNumber numberWithInt:CPTScatterPlotFieldY];
-    NSDecimalNumber *y1 = [[data objectAtIndex:idx] objectForKey:yKey];
-    NSDecimalNumber *y2 = [obj objectForKey:yKey];
-    NSDecimalNumber *y = [y1 decimalNumberByAdding:y2];
-    NSDecimalNumber *x = [obj objectForKey:xKey];
-    [sum addObject:
-     [NSDictionary dictionaryWithObjectsAndKeys:x, xKey, y, yKey, nil]];
-  }];
-  return sum;
-}
-
-
 - (void)configureGraph:(CPTXYGraph *)graph {
 	CPTTheme *theme = [CPTTheme themeNamed:kCPTPlainWhiteTheme];
   [graph applyTheme:theme];
@@ -215,7 +181,7 @@
 	
   {
     NSUInteger count = 10;
-    NSArray *data = [self dummyData:count];
+    NSArray *data = [[DataStore sharedDataStore] dummyData:count];
 
     // warnings
     CPTScatterPlot *plot1 = [[CPTScatterPlot alloc] init];
@@ -225,7 +191,7 @@
     // exceptions
     CPTScatterPlot *plot2 = [[CPTScatterPlot alloc] init];
     [self configurePlot:plot2 withTitle:@"Exceptions" color:[CPTColor redColor]];
-    [self.data setObject:[self dummyDataWithOffset:data] forKey:plot2.identifier];
+    [self.data setObject:[[DataStore sharedDataStore] dummyDataWithOffset:data] forKey:plot2.identifier];
 
     [graph addPlot:plot2];
     [graph addPlot:plot1];

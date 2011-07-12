@@ -9,10 +9,51 @@
 #import "DataStore.h"
 #import "AppOverview.h"
 
+
 @implementation DataStore
 
 
 #pragma mark - Workers
+
+- (NSArray *)dummyData:(NSUInteger)count {
+  NSTimeInterval oneDay = 24 * 60 * 60;
+  NSMutableArray *newData = [NSMutableArray array];
+	for (NSUInteger i = 0; i <= count; i++ ) {
+		NSTimeInterval x = oneDay*i;
+		id y = [NSDecimalNumber numberWithFloat:10*fabs(rand()/(float)RAND_MAX)];
+		[newData addObject:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      [NSDecimalNumber numberWithFloat:x],
+      [NSNumber numberWithInt:0], 
+      y,
+      [NSNumber numberWithInt:1], 
+      nil]];
+	}
+  return newData;
+}
+
+
+- (NSArray *)dummyDataWithOffset:(NSArray *)offset {
+  NSMutableArray *sum = [NSMutableArray array];
+  NSArray *data = [[DataStore sharedDataStore] dummyData:[offset count]];
+  [offset enumerateObjectsUsingBlock:^(NSDictionary *obj, NSUInteger idx, BOOL *stop) {
+    NSNumber *xKey = [NSNumber numberWithInt:0];
+    NSNumber *yKey = [NSNumber numberWithInt:1];
+    NSDecimalNumber *y1 = [[data objectAtIndex:idx] objectForKey:yKey];
+    NSDecimalNumber *y2 = [obj objectForKey:yKey];
+    NSDecimalNumber *y = [y1 decimalNumberByAdding:y2];
+    NSDecimalNumber *x = [obj objectForKey:xKey];
+    [sum addObject:
+     [NSDictionary dictionaryWithObjectsAndKeys:x, xKey, y, yKey, nil]];
+  }];
+  return sum;
+}
+
+
+- (NSUInteger)randomWithMax:(NSUInteger)maxValue {
+  NSUInteger r = arc4random() % (maxValue+1); // [0,maxValue]
+  return r;
+}
 
 - (NSArray *)appList {
   NSBundle *thisBundle = [NSBundle bundleForClass:[self class]];
