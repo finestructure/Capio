@@ -265,6 +265,10 @@
 }
 
 
+- (BOOL)plotSpace:(CPTPlotSpace *)space shouldScaleBy:(CGFloat)interactionScale aboutPoint:(CGPoint)interactionPoint {
+  return NO;
+}
+
 
 #pragma mark - View lifecycle
 
