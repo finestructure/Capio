@@ -165,17 +165,26 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   NSTimeInterval duration = 0.15;
+  UIView *visibleView = self.appOverviewController.navigationController.visibleViewController.view;
+  UIView *rootView = [[self.appOverviewController.navigationController.viewControllers objectAtIndex:0] view];
+  if (visibleView != rootView) {
+    rootView.alpha = 0;
+  }
   [UIView animateWithDuration:duration
                    animations:^{
-                     self.appOverviewController.view.alpha = 0;  
+                     visibleView.alpha = 0;
                    }
                    completion:^(BOOL finished){
                      AppOverview *item = [self.displayedApps objectAtIndex:indexPath.row];
                      self.appOverviewController.detailItem = item;
+                     [self.appOverviewController.navigationController popToRootViewControllerAnimated:NO];
 
                      [UIView animateWithDuration:duration
                                       animations:^{
-                                        self.appOverviewController.view.alpha = 1;  
+                                        visibleView.alpha = 1;
+                                        if (visibleView != rootView) {
+                                          rootView.alpha = 1;
+                                        }
                                       }];
                    }];
 }
