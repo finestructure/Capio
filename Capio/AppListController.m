@@ -164,8 +164,20 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  AppOverview *item = [self.displayedApps objectAtIndex:indexPath.row];
-  self.appOverviewController.detailItem = item;
+  NSTimeInterval duration = 0.15;
+  [UIView animateWithDuration:duration
+                   animations:^{
+                     self.appOverviewController.view.alpha = 0;  
+                   }
+                   completion:^(BOOL finished){
+                     AppOverview *item = [self.displayedApps objectAtIndex:indexPath.row];
+                     self.appOverviewController.detailItem = item;
+
+                     [UIView animateWithDuration:duration
+                                      animations:^{
+                                        self.appOverviewController.view.alpha = 1;  
+                                      }];
+                   }];
 }
 
 - (void)viewDidUnload {
