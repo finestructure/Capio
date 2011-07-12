@@ -24,6 +24,7 @@
 		5A843E3213C2096F00289E51 /* amber_rag.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A843E3113C2096F00289E51 /* amber_rag.png */; };
 		5A886EDC13C33E8F003E06FA /* button1_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A886EDA13C33E8F003E06FA /* button1_pressed.png */; };
 		5A886EDD13C33E8F003E06FA /* button1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A886EDB13C33E8F003E06FA /* button1.png */; };
+		5A9DC74A13CC5F5A00D67F65 /* DataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DC74913CC5F5A00D67F65 /* DataStore.m */; };
 		5AA4D7E113BB52080029B616 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA4D7E013BB52080029B616 /* UIKit.framework */; };
 		5AA4D7E313BB52080029B616 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA4D7E213BB52080029B616 /* Foundation.framework */; };
 		5AA4D7E513BB52080029B616 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA4D7E413BB52080029B616 /* CoreGraphics.framework */; };
@@ -95,6 +96,8 @@
 		5A843E3113C2096F00289E51 /* amber_rag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amber_rag.png; sourceTree = "<group>"; };
 		5A886EDA13C33E8F003E06FA /* button1_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button1_pressed.png; sourceTree = "<group>"; };
 		5A886EDB13C33E8F003E06FA /* button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button1.png; sourceTree = "<group>"; };
+		5A9DC74813CC5F5A00D67F65 /* DataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStore.h; sourceTree = "<group>"; };
+		5A9DC74913CC5F5A00D67F65 /* DataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataStore.m; sourceTree = "<group>"; };
 		5AA4D7DC13BB52080029B616 /* Capio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AA4D7E013BB52080029B616 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5AA4D7E213BB52080029B616 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -193,6 +196,8 @@
 			children = (
 				5A67A26D13BCB82D002BDCAA /* AppOverview.h */,
 				5A67A26E13BCB82D002BDCAA /* AppOverview.m */,
+				5A9DC74813CC5F5A00D67F65 /* DataStore.h */,
+				5A9DC74913CC5F5A00D67F65 /* DataStore.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -473,6 +478,7 @@
 				5A67A27B13BCCEDC002BDCAA /* DatePopupController.m in Sources */,
 				5AF74AD713C1EC9F00DF0794 /* AppListCell.m in Sources */,
 				5AB26AB713C5B44900AC5B87 /* AppTimelineController.m in Sources */,
+				5A9DC74A13CC5F5A00D67F65 /* DataStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
