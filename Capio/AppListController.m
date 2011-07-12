@@ -82,11 +82,6 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchButtonTapped:)];
   }
 
-  [UIView beginAnimations:nil context:NULL];
-  [UIView setAnimationBeginsFromCurrentState:YES];
-  [UIView setAnimationDuration:0.3];
-  [UIView commitAnimations];
-  
   [UIView animateWithDuration:0.3
                    animations:^{
                      self.tableView.frame = targetTableViewFrame;
