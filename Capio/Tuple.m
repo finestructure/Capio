@@ -39,6 +39,22 @@
 
 #pragma mark - Initializers
 
++ (id)tupleWithX:(NSString *)x y:(NSString *)y {
+  id tuple = [[Tuple alloc] initWithX:x y:y];
+  return tuple;
+}
+
+
+- (id)initWithX:(NSString *)x y:(NSString *)y {
+  self = [super init];
+  if (self) {
+    self.x = [NSDecimalNumber decimalNumberWithString:x];
+    self.y = [NSDecimalNumber decimalNumberWithString:y];
+  }
+
+  return self;
+}
+
 
 - (id)init {
   self = [super init];

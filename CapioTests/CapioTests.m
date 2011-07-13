@@ -52,18 +52,34 @@
 
 
 - (void)test_tuple_add {
-  Tuple *t1 = [[Tuple alloc] init];
-  t1.x = [NSDecimalNumber decimalNumberWithString:@"1"];
-  t1.y = [NSDecimalNumber decimalNumberWithString:@"2"];
-  Tuple *t2 = [[Tuple alloc] init];
-  t2.x = [NSDecimalNumber decimalNumberWithString:@"3"];
-  t2.y = [NSDecimalNumber decimalNumberWithString:@"4"];
+  Tuple *t1 = [Tuple tupleWithX:@"1" y:@"2"];
+  Tuple *t2 = [Tuple tupleWithX:@"3" y:@"4"];
   [t1 add:t2];
   STAssertEqualObjects(t1.x, [NSDecimalNumber decimalNumberWithString:@"4"], @"t1.x");
   STAssertEqualObjects(t1.y, [NSDecimalNumber decimalNumberWithString:@"6"], @"t1.y");
 }
 
 
-
+- (void)test_tuple_sum {
+  NSMutableArray *a1 = [NSMutableArray array];
+  NSMutableArray *a2 = [NSMutableArray array];
+  for (NSUInteger i = 0; i < 10; ++i) {
+    {
+      NSString *x = [NSString stringWithFormat:@"%d", i];
+      NSString *y = [NSString stringWithFormat:@"%d", i+1];
+      [a1 addObject:[Tuple tupleWithX:x y:y]];
+    }
+    {
+      NSString *x = [NSString stringWithFormat:@"%d", i+10];
+      NSString *y = [NSString stringWithFormat:@"%d", i+11];
+      [a2 addObject:[Tuple tupleWithX:x y:y]];
+    }
+  }
+  NSArray *sum = [Tuple addArray:a1 toArray:a2];
+  STAssertEquals(10u, [sum count], @"sum count");
+  STAssertEqualObjects(@"10", [[(Tuple *)[sum objectAtIndex:0] x] stringValue], @"sum item");
+  STAssertEqualObjects(@"12", [[(Tuple *)[sum objectAtIndex:1] x] stringValue], @"sum item");
+  STAssertEqualObjects(@"28", [[(Tuple *)[sum objectAtIndex:9] x] stringValue], @"sum item");
+}
 
 @end

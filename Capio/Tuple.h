@@ -16,6 +16,9 @@
 
 + (NSArray *)addArray:(NSArray *)a1 toArray:(NSArray *)a2;
 
++ (id)tupleWithX:(NSString *)x y:(NSString *)y;
+- (id)initWithX:(NSString *)x y:(NSString *)y;
+
 - (void)add:(Tuple *)t;
 
 
