@@ -12,9 +12,9 @@
 
 + (DataStore *)sharedDataStore;
 
+- (NSUInteger)randomWithMax:(NSUInteger)maxValue;
 - (NSArray *)appList;
 
 - (NSArray *)dummyData:(NSUInteger)count;
-- (NSArray *)dummyDataWithOffset:(NSArray *)offset;
 
 @end

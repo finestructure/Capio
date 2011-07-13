@@ -16,15 +16,16 @@
 
 #pragma mark - Workers
 
-+ (NSArray *)addArray:(NSArray *)a1 toArray:(NSArray *)a2 {
++ (NSArray *)ySumArray:(NSArray *)a1 andArray:(NSArray *)a2 {
   if ([a1 count] != [a2 count]) {
     [NSException raise:@"Argument Error" format:@"Array counts must be equal"];
   }
   NSMutableArray *result = [NSMutableArray arrayWithCapacity:[a1 count]];
   [a1 enumerateObjectsUsingBlock:^(Tuple *i, NSUInteger idx, BOOL *stop) {
+    Tuple *j = [a2 objectAtIndex:idx];
     Tuple *sum = [[Tuple alloc] init];
-    [sum add:i];
-    [sum add:[a2 objectAtIndex:idx]];
+    sum.x = i.x;
+    sum.y = [i.y decimalNumberByAdding:j.y];
     [result addObject:sum];
   }];
   return result;

@@ -70,16 +70,20 @@
       [a1 addObject:[Tuple tupleWithX:x y:y]];
     }
     {
-      NSString *x = [NSString stringWithFormat:@"%d", i+10];
+      NSString *x = [NSString stringWithFormat:@"%d", i];
       NSString *y = [NSString stringWithFormat:@"%d", i+11];
       [a2 addObject:[Tuple tupleWithX:x y:y]];
     }
   }
-  NSArray *sum = [Tuple addArray:a1 toArray:a2];
+  NSArray *sum = [Tuple ySumArray:a1 andArray:a2];
   STAssertEquals(10u, [sum count], @"sum count");
-  STAssertEqualObjects(@"10", [[(Tuple *)[sum objectAtIndex:0] x] stringValue], @"sum item");
-  STAssertEqualObjects(@"12", [[(Tuple *)[sum objectAtIndex:1] x] stringValue], @"sum item");
-  STAssertEqualObjects(@"28", [[(Tuple *)[sum objectAtIndex:9] x] stringValue], @"sum item");
+  STAssertEqualObjects(@"0", [[(Tuple *)[sum objectAtIndex:0] x] stringValue], @"sum item");
+  STAssertEqualObjects(@"1", [[(Tuple *)[sum objectAtIndex:1] x] stringValue], @"sum item");
+  STAssertEqualObjects(@"9", [[(Tuple *)[sum objectAtIndex:9] x] stringValue], @"sum item");
+  
+  STAssertEqualObjects(@"12", [[(Tuple *)[sum objectAtIndex:0] y] stringValue], @"sum item");
+  STAssertEqualObjects(@"14", [[(Tuple *)[sum objectAtIndex:1] y] stringValue], @"sum item");
+  STAssertEqualObjects(@"30", [[(Tuple *)[sum objectAtIndex:9] y] stringValue], @"sum item");
 }
 
 @end

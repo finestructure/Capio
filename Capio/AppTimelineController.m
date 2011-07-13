@@ -8,6 +8,7 @@
 
 #import "AppTimelineController.h"
 #import "DataStore.h"
+#import "Tuple.h"
 
 
 @implementation AppTimelineController
@@ -181,17 +182,19 @@
 	
   {
     NSUInteger count = 10;
-    NSArray *data = [[DataStore sharedDataStore] dummyData:count];
+    NSArray *warnings = [[DataStore sharedDataStore] dummyData:count];
 
     // warnings
     CPTScatterPlot *plot1 = [[CPTScatterPlot alloc] init];
     [self configurePlot:plot1 withTitle:@"Warnings" color:[CPTColor orangeColor]];
-    [self.data setObject:data forKey:plot1.identifier];
+    [self.data setObject:warnings forKey:plot1.identifier];
   
     // exceptions
     CPTScatterPlot *plot2 = [[CPTScatterPlot alloc] init];
     [self configurePlot:plot2 withTitle:@"Exceptions" color:[CPTColor redColor]];
-    [self.data setObject:[[DataStore sharedDataStore] dummyDataWithOffset:data] forKey:plot2.identifier];
+    NSArray *exceptions = [[DataStore sharedDataStore] dummyData:count];
+    NSArray *sum = [Tuple ySumArray:exceptions andArray:warnings];
+    [self.data setObject:sum forKey:plot2.identifier];
 
     [graph addPlot:plot2];
     [graph addPlot:plot1];
@@ -211,9 +214,12 @@
 
 -(NSNumber *)numberForPlot:(CPTPlot *)plot field:(NSUInteger)fieldEnum recordIndex:(NSUInteger)index  {
   NSArray *data = [self.data objectForKey:plot.identifier];
-  NSDecimalNumber *num = [[data objectAtIndex:index] objectForKey:[NSNumber numberWithInt:fieldEnum]];
-  //NSLog(@"num: %.1f", [num floatValue]);
-  return num;
+  Tuple *t = [data objectAtIndex:index];
+  if (fieldEnum == CPTCoordinateX) {
+    return t.x;
+  } else {
+    return t.y;
+  }
 }
 
 
