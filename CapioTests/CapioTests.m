@@ -10,6 +10,7 @@
 #import "DataStore.h"
 #import "Tuple.h"
 
+
 @implementation CapioTests
 
 - (void)setUp
@@ -85,5 +86,18 @@
   STAssertEqualObjects(@"14", [[(Tuple *)[sum objectAtIndex:1] y] stringValue], @"sum item");
   STAssertEqualObjects(@"30", [[(Tuple *)[sum objectAtIndex:9] y] stringValue], @"sum item");
 }
+
+
+- (void)test_rest {
+  NSURL *url = [NSURL URLWithString:@"http://localhost:5984/test/my_doc"];
+  NSData *data = [NSData dataWithContentsOfURL:url];
+  NSError *error = nil;
+  NSDictionary *obj = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+  STAssertNil(error, @"error must be nil");
+  STAssertNotNil(obj, @"obj must not be nil");
+  NSLog(@"obj: %@", obj);
+  STAssertEqualObjects(@"äöüß ÄÖÜ €", [obj objectForKey:@"utf_field"], nil);
+}
+
 
 @end
