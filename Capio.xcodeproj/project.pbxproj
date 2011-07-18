@@ -12,12 +12,11 @@
 		5A15955B13BB54700007B60F /* sizing.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A15955813BB54700007B60F /* sizing.png */; };
 		5A26ECC613C7137500533B5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A26ECC513C7137500533B5D /* QuartzCore.framework */; };
 		5A26ECC713C7144800533B5D /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A26ECBC13C7116D00533B5D /* libCorePlot-CocoaTouch.a */; };
+		5A32A12B13D495CA00AC7CB3 /* DataStoreTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A32A12A13D495CA00AC7CB3 /* DataStoreTest.m */; };
 		5A66A31913BF3B6000DB7161 /* dropdown_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A66A31813BF3B6000DB7161 /* dropdown_button.png */; };
 		5A66A31C13BF3C3600DB7161 /* dropdown_button_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A66A31B13BF3C3600DB7161 /* dropdown_button_pressed.png */; };
 		5A67A26F13BCB82D002BDCAA /* AppOverview.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A67A26E13BCB82D002BDCAA /* AppOverview.m */; };
 		5A67A27013BCB82D002BDCAA /* AppOverview.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A67A26E13BCB82D002BDCAA /* AppOverview.m */; };
-		5A67A27613BCBD68002BDCAA /* app_overview.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A67A27513BCBD68002BDCAA /* app_overview.plist */; };
-		5A67A27713BCBD68002BDCAA /* app_overview.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A67A27513BCBD68002BDCAA /* app_overview.plist */; };
 		5A67A27B13BCCEDC002BDCAA /* DatePopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A67A27913BCCEDC002BDCAA /* DatePopupController.m */; };
 		5A67A27C13BCCEDC002BDCAA /* DatePopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A67A27A13BCCEDC002BDCAA /* DatePopup.xib */; };
 		5A843E2F13C2049A00289E51 /* red_rag.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A843E2E13C2049A00289E51 /* red_rag.png */; };
@@ -86,11 +85,12 @@
 		5A26ECB213C7116D00533B5D /* CorePlot-CocoaTouch.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "CorePlot-CocoaTouch.xcodeproj"; path = "../CorePlot_0.4/Source/framework/CorePlot-CocoaTouch.xcodeproj"; sourceTree = "<group>"; };
 		5A26ECC513C7137500533B5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		5A32A12813D4912900AC7CB3 /* testdata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testdata.json; sourceTree = "<group>"; };
+		5A32A12913D495CA00AC7CB3 /* DataStoreTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStoreTest.h; sourceTree = "<group>"; };
+		5A32A12A13D495CA00AC7CB3 /* DataStoreTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataStoreTest.m; sourceTree = "<group>"; };
 		5A66A31813BF3B6000DB7161 /* dropdown_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropdown_button.png; sourceTree = "<group>"; };
 		5A66A31B13BF3C3600DB7161 /* dropdown_button_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropdown_button_pressed.png; sourceTree = "<group>"; };
 		5A67A26D13BCB82D002BDCAA /* AppOverview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppOverview.h; sourceTree = "<group>"; };
 		5A67A26E13BCB82D002BDCAA /* AppOverview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppOverview.m; sourceTree = "<group>"; };
-		5A67A27513BCBD68002BDCAA /* app_overview.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = app_overview.plist; sourceTree = "<group>"; };
 		5A67A27813BCCEDC002BDCAA /* DatePopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePopupController.h; sourceTree = "<group>"; };
 		5A67A27913BCCEDC002BDCAA /* DatePopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePopupController.m; sourceTree = "<group>"; };
 		5A67A27A13BCCEDC002BDCAA /* DatePopup.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePopup.xib; sourceTree = "<group>"; };
@@ -177,7 +177,6 @@
 				5A886EDB13C33E8F003E06FA /* button1.png */,
 				5A66A31813BF3B6000DB7161 /* dropdown_button.png */,
 				5A66A31B13BF3C3600DB7161 /* dropdown_button_pressed.png */,
-				5A67A27513BCBD68002BDCAA /* app_overview.plist */,
 				5ABC805E13BC5BA000468868 /* MainWindow.xib */,
 				5A15955613BB54700007B60F /* info.png */,
 				5A15955713BB54700007B60F /* planning.png */,
@@ -271,6 +270,8 @@
 			children = (
 				5AA4D81813BB52080029B616 /* CapioTests.h */,
 				5AA4D81A13BB52080029B616 /* CapioTests.m */,
+				5A32A12913D495CA00AC7CB3 /* DataStoreTest.h */,
+				5A32A12A13D495CA00AC7CB3 /* DataStoreTest.m */,
 				5AA4D81313BB52080029B616 /* Supporting Files */,
 			);
 			path = CapioTests;
@@ -427,7 +428,6 @@
 				5AD615D813BB703800F9CA45 /* AppOverview.xib in Resources */,
 				5ABC806013BC5BA000468868 /* MainWindow.xib in Resources */,
 				5AD5B6AB13BC6CA10083D454 /* SecondViewController.xib in Resources */,
-				5A67A27613BCBD68002BDCAA /* app_overview.plist in Resources */,
 				5A67A27C13BCCEDC002BDCAA /* DatePopup.xib in Resources */,
 				5A66A31913BF3B6000DB7161 /* dropdown_button.png in Resources */,
 				5A66A31C13BF3C3600DB7161 /* dropdown_button_pressed.png in Resources */,
@@ -446,7 +446,6 @@
 			files = (
 				5AA4D81713BB52080029B616 /* InfoPlist.strings in Resources */,
 				5AA4D81913BB52080029B616 /* CapioTests.h in Resources */,
-				5A67A27713BCBD68002BDCAA /* app_overview.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +495,7 @@
 			files = (
 				5AA4D81B13BB52080029B616 /* CapioTests.m in Sources */,
 				5A67A27013BCB82D002BDCAA /* AppOverview.m in Sources */,
+				5A32A12B13D495CA00AC7CB3 /* DataStoreTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
