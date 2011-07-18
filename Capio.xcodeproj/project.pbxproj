@@ -85,6 +85,7 @@
 		5A15955813BB54700007B60F /* sizing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sizing.png; sourceTree = "<group>"; };
 		5A26ECB213C7116D00533B5D /* CorePlot-CocoaTouch.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "CorePlot-CocoaTouch.xcodeproj"; path = "../CorePlot_0.4/Source/framework/CorePlot-CocoaTouch.xcodeproj"; sourceTree = "<group>"; };
 		5A26ECC513C7137500533B5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5A32A12813D4912900AC7CB3 /* testdata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testdata.json; sourceTree = "<group>"; };
 		5A66A31813BF3B6000DB7161 /* dropdown_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropdown_button.png; sourceTree = "<group>"; };
 		5A66A31B13BF3C3600DB7161 /* dropdown_button_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropdown_button_pressed.png; sourceTree = "<group>"; };
 		5A67A26D13BCB82D002BDCAA /* AppOverview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppOverview.h; sourceTree = "<group>"; };
@@ -171,6 +172,7 @@
 		5A15955513BB54700007B60F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5A32A12813D4912900AC7CB3 /* testdata.json */,
 				5A886EDA13C33E8F003E06FA /* button1_pressed.png */,
 				5A886EDB13C33E8F003E06FA /* button1.png */,
 				5A66A31813BF3B6000DB7161 /* dropdown_button.png */,

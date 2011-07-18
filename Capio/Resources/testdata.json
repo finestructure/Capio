@@ -1,0 +1,41 @@
+{
+  "_id" : "apps",
+  "Workstation" : {
+    "app_name" : "Workstation",
+    "app_description" : "Praesent ornare dignissim urna vel volutpat. Aliquam ut lobortis ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at.",
+    "app_owner" : "Marcus Mineapp",
+    "server_list" : [
+      "DBGERLT2073"
+    ],
+    "report_date" : "2011-06-30T14:10:06Z",
+    "red_rag_count" : 0,
+    "amber_rag_count" : 1,
+    "green1_rag_count" : 0
+  },
+  "Solaris" : {
+    "app_name" : "Solaris",
+    "app_description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut ligula lorem, vel adipiscing diam. Vivamus tempus augue non turpis.",
+    "app_owner" : "Peter Appowner",
+    "server_list" : [
+      "sol45a",
+      "sol45d"
+    ],
+    "report_date" : "2011-06-30T14:10:06Z",
+    "red_rag_count" : 0,
+    "amber_rag_count" : 1,
+    "green1_rag_count" : 1
+  },
+  "DB Caprep" : {
+    "app_name" : "DB Caprep",
+    "app_description" : "Phasellus quis lectus ut nibh molestie facilisis. Donec mauris risus, egestas eu tincidunt at, venenatis at massa. Vivamus volutpat interdum gravida. Maecenas magna eros, suscipit.",
+    "app_owner" : "Steven Götäpp",
+    "server_list" : [
+      "caprpu1"
+    ],
+    "report_date" : "2011-06-30T14:10:06Z",
+    "red_rag_count" : 1,
+    "amber_rag_count" : 0,
+    "green1_rag_count" : 0
+  }
+}
+
