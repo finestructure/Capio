@@ -38,24 +38,36 @@
 
 
 - (NSArray *)appList {
-  NSBundle *thisBundle = [NSBundle bundleForClass:[self class]];
-  NSURL *url = [thisBundle URLForResource:@"app_overview" withExtension:@"plist"];
+  static NSDateFormatter *dateFormatter = nil;
+  if (! dateFormatter) {
+    dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+  }
+
+  NSURL *url = [NSURL URLWithString:@"http://127.0.0.1:5984/dev/apps"];
+  NSData *data = [NSData dataWithContentsOfURL:url];
+  NSError *error = nil;
+  NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
   
   NSMutableArray *apps = [NSMutableArray array];
-  NSArray *data = [NSArray arrayWithContentsOfURL:url];
-  for (NSDictionary *dict in data) {
-    AppOverview *item = [[AppOverview alloc] init];
-    item.appName = [dict objectForKey:@"appName"];
-    item.appDescription = [dict objectForKey:@"appDescription"];
-    item.appOwner = [dict objectForKey:@"appOwner"];
-    item.serverCount = [dict objectForKey:@"serverCount"];
-    item.reportDate = [dict objectForKey:@"reportDate"];
-    item.ragRed = [dict objectForKey:@"ragRed"];
-    item.ragAmber = [dict objectForKey:@"ragAmber"];
-    item.ragGreen = [dict objectForKey:@"ragGreen"];
-    item.ragTotal = [dict objectForKey:@"ragTotal"];
-    [apps addObject:item];
-  }
+  [jsonDict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+    if ([obj isKindOfClass:[NSDictionary class]]) {
+      NSDictionary *dict = (NSDictionary *)obj;
+      AppOverview *item = [[AppOverview alloc] init];
+      item.appName = [dict objectForKey:@"app_name"];
+      item.appDescription = [dict objectForKey:@"app_description"];
+      item.appOwner = [dict objectForKey:@"app_owner"];
+      NSArray *server_list = [dict objectForKey:@"server_list"];
+      item.serverCount = [NSNumber numberWithUnsignedInteger:[server_list count]];
+      NSString *value = [dict objectForKey:@"report_date"];
+      item.reportDate = [dateFormatter dateFromString:value];
+      item.ragRed = [dict objectForKey:@"red_rag_count"];
+      item.ragAmber = [dict objectForKey:@"amber_rag_count"];
+      item.ragGreen = [dict objectForKey:@"green_rag_count"];
+      item.ragTotal = [NSNumber numberWithUnsignedInteger:[item.ragRed unsignedIntValue] + [item.ragAmber unsignedIntValue] + [item.ragGreen unsignedIntValue]];
+      [apps addObject:item];
+    }
+  }];
   return apps;
 }
 

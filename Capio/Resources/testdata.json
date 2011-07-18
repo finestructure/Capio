@@ -1,5 +1,45 @@
 {
   "_id" : "apps",
+  
+  "App X" : {
+    "app_name" : "App X",
+    "app_description" : "Sed eu nisi eros, et gravida ligula. Nunc imperdiet, ipsum eu iaculis feugiat, est libero.",
+    "app_owner" : "Peter Paul",
+    "server_list" : [
+      "DBGERLT2073"
+    ],
+    "report_date" : "2011-06-30 14:10",
+    "red_rag_count" : 0,
+    "amber_rag_count" : 1,
+    "green_rag_count" : 0
+  },
+  
+  "App Y" : {
+    "app_name" : "App Y",
+    "app_description" : "Curabitur augue enim, mollis sit amet hendrerit vitae, fermentum ac ipsum. Aenean nisi nibh, sodales non dapibus quis, dictum eu.",
+    "app_owner" : "Marcus Mineapp",
+    "server_list" : [
+      "DBGERLT2073"
+    ],
+    "report_date" : "2011-06-30 14:10",
+    "red_rag_count" : 0,
+    "amber_rag_count" : 1,
+    "green_rag_count" : 0
+  },
+  
+  "App Z" : {
+    "app_name" : "App Z",
+    "app_description" : "Vestibulum dictum gravida nibh non interdum. Nunc eu sem fermentum justo convallis vulputate. Vivamus id odio et leo sagittis pharetra.",
+    "app_owner" : "Marcus Mineapp",
+    "server_list" : [
+      "DBGERLT2073"
+    ],
+    "report_date" : "2011-06-30 14:10",
+    "red_rag_count" : 0,
+    "amber_rag_count" : 1,
+    "green_rag_count" : 0
+  },
+  
   "Workstation" : {
     "app_name" : "Workstation",
     "app_description" : "Praesent ornare dignissim urna vel volutpat. Aliquam ut lobortis ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at.",
@@ -7,11 +47,12 @@
     "server_list" : [
       "DBGERLT2073"
     ],
-    "report_date" : "2011-06-30T14:10:06Z",
+    "report_date" : "2011-06-30 14:10",
     "red_rag_count" : 0,
     "amber_rag_count" : 1,
-    "green1_rag_count" : 0
+    "green_rag_count" : 0
   },
+  
   "Solaris" : {
     "app_name" : "Solaris",
     "app_description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut ligula lorem, vel adipiscing diam. Vivamus tempus augue non turpis.",
@@ -20,11 +61,12 @@
       "sol45a",
       "sol45d"
     ],
-    "report_date" : "2011-06-30T14:10:06Z",
+    "report_date" : "2011-06-30 14:10",
     "red_rag_count" : 0,
     "amber_rag_count" : 1,
-    "green1_rag_count" : 1
+    "green_rag_count" : 1
   },
+  
   "DB Caprep" : {
     "app_name" : "DB Caprep",
     "app_description" : "Phasellus quis lectus ut nibh molestie facilisis. Donec mauris risus, egestas eu tincidunt at, venenatis at massa. Vivamus volutpat interdum gravida. Maecenas magna eros, suscipit.",
@@ -32,10 +74,10 @@
     "server_list" : [
       "caprpu1"
     ],
-    "report_date" : "2011-06-30T14:10:06Z",
+    "report_date" : "2011-06-30 14:10",
     "red_rag_count" : 1,
     "amber_rag_count" : 0,
-    "green1_rag_count" : 0
+    "green_rag_count" : 0
   }
 }
 
