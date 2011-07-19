@@ -15,6 +15,7 @@
 		5A32A12B13D495CA00AC7CB3 /* DataStoreTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A32A12A13D495CA00AC7CB3 /* DataStoreTest.m */; };
 		5A4B5E4A13D561EC006E1C9E /* ServerOverviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B5E4813D561EC006E1C9E /* ServerOverviewController.m */; };
 		5A4B5E4B13D561EC006E1C9E /* ServerOverview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A4B5E4913D561EC006E1C9E /* ServerOverview.xib */; };
+		5A4B5E5413D5CC35006E1C9E /* response_workloads.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A4B5E5313D5CC35006E1C9E /* response_workloads.png */; };
 		5A66A31913BF3B6000DB7161 /* dropdown_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A66A31813BF3B6000DB7161 /* dropdown_button.png */; };
 		5A66A31C13BF3C3600DB7161 /* dropdown_button_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A66A31B13BF3C3600DB7161 /* dropdown_button_pressed.png */; };
 		5A67A26F13BCB82D002BDCAA /* AppOverview.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A67A26E13BCB82D002BDCAA /* AppOverview.m */; };
@@ -92,6 +93,7 @@
 		5A4B5E4713D561EC006E1C9E /* ServerOverviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerOverviewController.h; sourceTree = "<group>"; };
 		5A4B5E4813D561EC006E1C9E /* ServerOverviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerOverviewController.m; sourceTree = "<group>"; };
 		5A4B5E4913D561EC006E1C9E /* ServerOverview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServerOverview.xib; sourceTree = "<group>"; };
+		5A4B5E5313D5CC35006E1C9E /* response_workloads.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = response_workloads.png; sourceTree = "<group>"; };
 		5A66A31813BF3B6000DB7161 /* dropdown_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropdown_button.png; sourceTree = "<group>"; };
 		5A66A31B13BF3C3600DB7161 /* dropdown_button_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropdown_button_pressed.png; sourceTree = "<group>"; };
 		5A67A26D13BCB82D002BDCAA /* AppOverview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppOverview.h; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 		5A15955513BB54700007B60F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5A4B5E5313D5CC35006E1C9E /* response_workloads.png */,
 				5A32A12813D4912900AC7CB3 /* testdata.json */,
 				5A886EDA13C33E8F003E06FA /* button1_pressed.png */,
 				5A886EDB13C33E8F003E06FA /* button1.png */,
@@ -446,6 +449,7 @@
 				5A886EDD13C33E8F003E06FA /* button1.png in Resources */,
 				5AB26AB813C5B44900AC5B87 /* AppTimeline.xib in Resources */,
 				5A4B5E4B13D561EC006E1C9E /* ServerOverview.xib in Resources */,
+				5A4B5E5413D5CC35006E1C9E /* response_workloads.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
