@@ -91,8 +91,23 @@
 }
 
 - (IBAction)ragButtonTapped:(id)sender {
-  ServerOverviewController *vc = [[ServerOverviewController alloc] initWithNibName:@"ServerOverview" bundle:nil];
-  [self.navigationController pushViewController:vc animated:YES];
+  NSUInteger count = 0;
+  if (sender == self.ragRed) {
+    count = [self.detailItem.ragRed unsignedIntegerValue];
+  } else if (sender == self.ragAmber) {
+    count = [self.detailItem.ragAmber unsignedIntegerValue];
+  } else if (sender == self.ragGreen) {
+    count = [self.detailItem.ragGreen unsignedIntegerValue];
+  } else {
+    count = [self.detailItem.ragTotal unsignedIntegerValue];
+  }
+  if (count == 1) {
+    ServerOverviewController *vc = [[ServerOverviewController alloc] initWithNibName:@"ServerOverview" bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
+  } else {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Not Implemented" message:@"Display of multiple servers not implemented yet" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
+  }
 }
 
 
