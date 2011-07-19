@@ -299,7 +299,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5AB26AED13C5D14E00AC5B87 /* Accessory View Controllers */ = {
+		5AB26AED13C5D14E00AC5B87 /* Accessory Controls */ = {
 			isa = PBXGroup;
 			children = (
 				5AD5B6A713BC6CA10083D454 /* SecondViewController.h */,
@@ -308,8 +308,11 @@
 				5A67A27813BCCEDC002BDCAA /* DatePopupController.h */,
 				5A67A27913BCCEDC002BDCAA /* DatePopupController.m */,
 				5A67A27A13BCCEDC002BDCAA /* DatePopup.xib */,
+				5AF74AD413C1EC9F00DF0794 /* AppListCell.h */,
+				5AF74AD513C1EC9F00DF0794 /* AppListCell.m */,
+				5AF74AD613C1EC9F00DF0794 /* AppListCell.xib */,
 			);
-			name = "Accessory View Controllers";
+			name = "Accessory Controls";
 			sourceTree = "<group>";
 		};
 		5AD615CD13BB5F1E00F9CA45 /* ViewControllers */ = {
@@ -321,9 +324,6 @@
 				5AD615D413BB703800F9CA45 /* AppOverviewController.h */,
 				5AD615D513BB703800F9CA45 /* AppOverviewController.m */,
 				5AD615D613BB703800F9CA45 /* AppOverview.xib */,
-				5AF74AD413C1EC9F00DF0794 /* AppListCell.h */,
-				5AF74AD513C1EC9F00DF0794 /* AppListCell.m */,
-				5AF74AD613C1EC9F00DF0794 /* AppListCell.xib */,
 				5AB26AB413C5B44900AC5B87 /* AppTimelineController.h */,
 				5AB26AB513C5B44900AC5B87 /* AppTimelineController.m */,
 				5AB26AB613C5B44900AC5B87 /* AppTimeline.xib */,
@@ -333,7 +333,7 @@
 				5A4B5E5A13D5CD49006E1C9E /* MetricOverviewController.h */,
 				5A4B5E5B13D5CD49006E1C9E /* MetricOverviewController.m */,
 				5A4B5E5C13D5CD4A006E1C9E /* MetricOverview.xib */,
-				5AB26AED13C5D14E00AC5B87 /* Accessory View Controllers */,
+				5AB26AED13C5D14E00AC5B87 /* Accessory Controls */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
