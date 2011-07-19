@@ -100,8 +100,8 @@
   // Configure the cell
   AppOverview *item = [self.displayedApps objectAtIndex:indexPath.row];
   cell.appName.text = item.appName;
-  cell.ragRed.text = [item.ragRed stringValue];
-  cell.ragAmber.text = [item.ragAmber stringValue];
+  [cell setRedRagValue:[item.ragRed unsignedIntegerValue]];
+  [cell setAmberRagValue:[item.ragAmber unsignedIntegerValue]];
   
   return cell;
 }
