@@ -16,25 +16,27 @@
 @synthesize amberImage = _amberImage;
 @synthesize redImage = _redImage;
 
+const CGFloat kZeroValueAlpha = 0.3;
+
 - (void)setRedRagValue:(NSUInteger)value {
+  self.ragRed.text = [NSString stringWithFormat:@"%d", value];
   if (value > 0) {
-    self.ragRed.hidden = NO;
-    self.redImage.hidden = NO;
-    self.ragRed.text = [NSString stringWithFormat:@"%d", value];
+    self.ragRed.alpha = 1;
+    self.redImage.alpha = 1;
   } else {
-    self.ragRed.hidden = YES;
-    self.redImage.hidden = YES;
+    self.ragRed.alpha = kZeroValueAlpha;
+    self.redImage.alpha = kZeroValueAlpha;
   }
 }
 
 - (void)setAmberRagValue:(NSUInteger)value {
+  self.ragAmber.text = [NSString stringWithFormat:@"%d", value];
   if (value > 0) {
-    self.ragAmber.hidden = NO;
-    self.amberImage.hidden = NO;
-    self.ragAmber.text = [NSString stringWithFormat:@"%d", value];
+    self.ragAmber.alpha = 1;
+    self.amberImage.alpha = 1;
   } else {
-    self.ragAmber.hidden = YES;
-    self.amberImage.hidden = YES;
+    self.ragAmber.alpha = kZeroValueAlpha;
+    self.amberImage.alpha = kZeroValueAlpha;
   }
 }
 
