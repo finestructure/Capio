@@ -10,4 +10,6 @@
 
 @interface ServerOverviewController : UIViewController
 
+- (IBAction)metricsTapped:(id)sender;
+
 @end

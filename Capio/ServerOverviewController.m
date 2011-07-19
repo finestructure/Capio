@@ -7,15 +7,27 @@
 //
 
 #import "ServerOverviewController.h"
+#import "MetricOverviewController.h"
 
 @implementation ServerOverviewController
 
+#pragma mark - Actions
+
+
+- (IBAction)metricsTapped:(id)sender {
+  MetricOverviewController *vc = [[MetricOverviewController alloc] initWithNibName:@"MetricOverview" bundle:nil];
+  [self.navigationController pushViewController:vc animated:YES];
+}
+
+
+#pragma mark - Initializers
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-      self.title = @"Server Overview";
-    }
-    return self;
+  self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+  if (self) {
+    self.title = @"Server Overview";
+  }
+  return self;
 }
 
 - (void)didReceiveMemoryWarning
