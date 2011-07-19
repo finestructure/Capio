@@ -53,6 +53,7 @@
 
 - (IBAction)reportDateButtonTapped:(id)sender;
 - (IBAction)timelineTapped:(id)sender;
+- (IBAction)ragButtonTapped:(id)sender;
 
 - (void)updateView;
 

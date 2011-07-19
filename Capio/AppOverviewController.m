@@ -9,6 +9,7 @@
 #import "AppOverviewController.h"
 #import "AppOverview.h"
 #import "AppTimelineController.h"
+#import "ServerOverviewController.h"
 
 
 @implementation AppOverviewController
@@ -78,8 +79,12 @@
 }
 
 - (IBAction)timelineTapped:(id)sender {
-  NSLog(@"app timeline");
   AppTimelineController *vc = [[AppTimelineController alloc] initWithNibName:@"AppTimeline" bundle:nil];
+  [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)ragButtonTapped:(id)sender {
+  ServerOverviewController *vc = [[ServerOverviewController alloc] initWithNibName:@"ServerOverview" bundle:nil];
   [self.navigationController pushViewController:vc animated:YES];
 }
 
