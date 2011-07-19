@@ -44,6 +44,13 @@
 }
 
 
+- (void)setTitle:(NSString *)title forButton:(UIButton *)button {
+  [button setTitle:title forState:UIControlStateNormal];
+  [button setTitle:title forState:UIControlStateHighlighted];
+  [button setTitle:title forState:UIControlStateSelected];
+}
+
+
 - (void)updateView {
   static NSDateFormatter *dateFormatter = nil;
   if (dateFormatter == nil) {
@@ -59,10 +66,10 @@
   NSString *reportDate = [dateFormatter stringFromDate:self.detailItem.reportDate];
   [self.reportDateButton setTitle:reportDate forState:UIControlStateNormal];
   [self.reportDateButton setTitle:reportDate forState:UIControlStateHighlighted];
-  self.ragRed.titleLabel.text = [self.detailItem.ragRed stringValue];
-  self.ragAmber.titleLabel.text = [self.detailItem.ragAmber stringValue];
-  self.ragGreen.titleLabel.text = [self.detailItem.ragGreen stringValue];
-  self.ragTotal.titleLabel.text = [self.detailItem.ragTotal stringValue];
+  [self setTitle:[self.detailItem.ragRed stringValue] forButton:self.ragRed];
+  [self setTitle:[self.detailItem.ragAmber stringValue] forButton:self.ragAmber];
+  [self setTitle:[self.detailItem.ragGreen stringValue] forButton:self.ragGreen];
+  [self setTitle:[self.detailItem.ragTotal stringValue] forButton:self.ragTotal];
 }
 
 
