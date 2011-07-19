@@ -18,6 +18,7 @@
 		5A4B5E5413D5CC35006E1C9E /* response_workloads.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A4B5E5313D5CC35006E1C9E /* response_workloads.png */; };
 		5A4B5E5D13D5CD4B006E1C9E /* MetricOverviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B5E5B13D5CD49006E1C9E /* MetricOverviewController.m */; };
 		5A4B5E5E13D5CD4B006E1C9E /* MetricOverview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A4B5E5C13D5CD4A006E1C9E /* MetricOverview.xib */; };
+		5A4B5E6013D5D1DE006E1C9E /* metrics.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A4B5E5F13D5D1DE006E1C9E /* metrics.png */; };
 		5A66A31913BF3B6000DB7161 /* dropdown_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A66A31813BF3B6000DB7161 /* dropdown_button.png */; };
 		5A66A31C13BF3C3600DB7161 /* dropdown_button_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A66A31B13BF3C3600DB7161 /* dropdown_button_pressed.png */; };
 		5A67A26F13BCB82D002BDCAA /* AppOverview.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A67A26E13BCB82D002BDCAA /* AppOverview.m */; };
@@ -99,6 +100,7 @@
 		5A4B5E5A13D5CD49006E1C9E /* MetricOverviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetricOverviewController.h; sourceTree = "<group>"; };
 		5A4B5E5B13D5CD49006E1C9E /* MetricOverviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetricOverviewController.m; sourceTree = "<group>"; };
 		5A4B5E5C13D5CD4A006E1C9E /* MetricOverview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MetricOverview.xib; sourceTree = "<group>"; };
+		5A4B5E5F13D5D1DE006E1C9E /* metrics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = metrics.png; sourceTree = "<group>"; };
 		5A66A31813BF3B6000DB7161 /* dropdown_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropdown_button.png; sourceTree = "<group>"; };
 		5A66A31B13BF3C3600DB7161 /* dropdown_button_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropdown_button_pressed.png; sourceTree = "<group>"; };
 		5A67A26D13BCB82D002BDCAA /* AppOverview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppOverview.h; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 		5A15955513BB54700007B60F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5A4B5E5F13D5D1DE006E1C9E /* metrics.png */,
 				5A4B5E5313D5CC35006E1C9E /* response_workloads.png */,
 				5A32A12813D4912900AC7CB3 /* testdata.json */,
 				5A886EDA13C33E8F003E06FA /* button1_pressed.png */,
@@ -459,6 +462,7 @@
 				5A4B5E4B13D561EC006E1C9E /* ServerOverview.xib in Resources */,
 				5A4B5E5413D5CC35006E1C9E /* response_workloads.png in Resources */,
 				5A4B5E5E13D5CD4B006E1C9E /* MetricOverview.xib in Resources */,
+				5A4B5E6013D5D1DE006E1C9E /* metrics.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
