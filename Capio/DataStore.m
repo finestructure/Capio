@@ -44,8 +44,17 @@
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
   }
 
-  NSURL *url = [NSURL URLWithString:@"http://127.0.0.1:5984/dev/apps"];
+  NSString *urlString = @"http://127.0.0.1:5984/dev/apps";
+  NSURL *url = [NSURL URLWithString:urlString];
   NSData *data = [NSData dataWithContentsOfURL:url];
+  
+  if (data == nil) {
+    NSString *msg = [NSString stringWithFormat:@"Server at '%@' did not return any data", urlString];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Server Not Available" message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
+    return [NSArray array];
+  }
+  
   NSError *error = nil;
   NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
   
