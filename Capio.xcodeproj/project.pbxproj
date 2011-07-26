@@ -49,7 +49,7 @@
 		5AA4D81913BB52080029B616 /* CapioTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 5AA4D81813BB52080029B616 /* CapioTests.h */; };
 		5AA4D81B13BB52080029B616 /* CapioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4D81A13BB52080029B616 /* CapioTests.m */; };
 		5AB26AB713C5B44900AC5B87 /* AppTimelineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB26AB513C5B44900AC5B87 /* AppTimelineController.m */; };
-		5AB26AB813C5B44900AC5B87 /* AppTimeline.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AB26AB613C5B44900AC5B87 /* AppTimeline.xib */; };
+		5AB26AB813C5B44900AC5B87 /* Timeline.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AB26AB613C5B44900AC5B87 /* Timeline.xib */; };
 		5ABC806013BC5BA000468868 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ABC805E13BC5BA000468868 /* MainWindow.xib */; };
 		5AD5B6AA13BC6CA10083D454 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5B6A813BC6CA10083D454 /* SecondViewController.m */; };
 		5AD5B6AB13BC6CA10083D454 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD5B6A913BC6CA10083D454 /* SecondViewController.xib */; };
@@ -207,7 +207,7 @@
 		5AA4D81A13BB52080029B616 /* CapioTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CapioTests.m; sourceTree = "<group>"; };
 		5AB26AB413C5B44900AC5B87 /* AppTimelineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTimelineController.h; sourceTree = "<group>"; };
 		5AB26AB513C5B44900AC5B87 /* AppTimelineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTimelineController.m; sourceTree = "<group>"; };
-		5AB26AB613C5B44900AC5B87 /* AppTimeline.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppTimeline.xib; sourceTree = "<group>"; };
+		5AB26AB613C5B44900AC5B87 /* Timeline.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Timeline.xib; sourceTree = "<group>"; };
 		5ABC805E13BC5BA000468868 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainWindow.xib; path = ../MainWindow.xib; sourceTree = "<group>"; };
 		5AD5B6A713BC6CA10083D454 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		5AD5B6A813BC6CA10083D454 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
@@ -486,7 +486,7 @@
 				5AD615D613BB703800F9CA45 /* AppOverview.xib */,
 				5AB26AB413C5B44900AC5B87 /* AppTimelineController.h */,
 				5AB26AB513C5B44900AC5B87 /* AppTimelineController.m */,
-				5AB26AB613C5B44900AC5B87 /* AppTimeline.xib */,
+				5AB26AB613C5B44900AC5B87 /* Timeline.xib */,
 				5A4B5E4713D561EC006E1C9E /* ServerOverviewController.h */,
 				5A4B5E4813D561EC006E1C9E /* ServerOverviewController.m */,
 				5A4B5E4913D561EC006E1C9E /* ServerOverview.xib */,
@@ -605,7 +605,7 @@
 				5A843E3213C2096F00289E51 /* amber_rag.png in Resources */,
 				5A886EDC13C33E8F003E06FA /* button1_pressed.png in Resources */,
 				5A886EDD13C33E8F003E06FA /* button1.png in Resources */,
-				5AB26AB813C5B44900AC5B87 /* AppTimeline.xib in Resources */,
+				5AB26AB813C5B44900AC5B87 /* Timeline.xib in Resources */,
 				5A4B5E4B13D561EC006E1C9E /* ServerOverview.xib in Resources */,
 				5A4B5E5413D5CC35006E1C9E /* response_workloads.png in Resources */,
 				5A4B5E5E13D5CD4B006E1C9E /* MetricOverview.xib in Resources */,

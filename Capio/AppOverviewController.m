@@ -88,7 +88,7 @@
 }
 
 - (IBAction)timelineTapped:(id)sender {
-  AppTimelineController *vc = [[AppTimelineController alloc] initWithNibName:@"AppTimeline" bundle:nil];
+  AppTimelineController *vc = [[AppTimelineController alloc] initWithNibName:@"Timeline" bundle:nil];
   [self.navigationController pushViewController:vc animated:YES];
 }
 
