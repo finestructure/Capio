@@ -12,5 +12,6 @@
 
 - (IBAction)metricsTapped:(id)sender;
 - (IBAction)timelineTapped:(id)sender;
+- (IBAction)configTapped:(id)sender;
 
 @end

@@ -1,44 +1,19 @@
 //
-//  ServerOverviewController.m
+//  ServerConfigController.m
 //  Capio
 //
-//  Created by Sven A. Schmidt on 19.07.11.
+//  Created by Sven A. Schmidt on 26.07.11.
 //  Copyright 2011 abstracture GmbH & Co. KG. All rights reserved.
 //
 
-#import "ServerOverviewController.h"
-#import "MetricOverviewController.h"
-#import "TimelineController.h"
 #import "ServerConfigController.h"
 
-@implementation ServerOverviewController
-
-#pragma mark - Actions
-
-
-- (IBAction)metricsTapped:(id)sender {
-  id vc = [[MetricOverviewController alloc] initWithNibName:@"MetricOverview" bundle:nil];
-  [self.navigationController pushViewController:vc animated:YES];
-}
-
-- (IBAction)timelineTapped:(id)sender {
-  TimelineController *vc = [[TimelineController alloc] initWithNibName:@"Timeline" bundle:nil];
-  vc.title = @"Server Timeline";
-  [self.navigationController pushViewController:vc animated:YES];
-}
-
-- (IBAction)configTapped:(id)sender {
-  id vc = [[ServerConfigController alloc] initWithNibName:@"ServerConfig" bundle:nil];
-  [self.navigationController pushViewController:vc animated:YES];
-}
-
-
-#pragma mark - Initializers
+@implementation ServerConfigController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
-    self.title = @"Server Overview";
+    self.title = @"Server Configuration";
   }
   return self;
 }
