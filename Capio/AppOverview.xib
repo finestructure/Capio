@@ -274,7 +274,7 @@
 					<object class="IBUILabel" id="981902915">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{193, 247}, {78, 22}}</string>
+						<string key="NSFrame">{{151, 247}, {78, 22}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="771305066"/>
@@ -296,7 +296,7 @@
 					<object class="IBUILabel" id="771305066">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{308, 247}, {78, 22}}</string>
+						<string key="NSFrame">{{248, 247}, {78, 22}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="164712760"/>
@@ -318,7 +318,7 @@
 					<object class="IBUILabel" id="164712760">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{417, 247}, {78, 22}}</string>
+						<string key="NSFrame">{{345, 247}, {78, 22}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="268849408"/>
@@ -340,7 +340,7 @@
 					<object class="IBUIButton" id="479338079">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{188, 274}, {89, 44}}</string>
+						<string key="NSFrame">{{146, 274}, {89, 44}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="610346068"/>
@@ -366,12 +366,12 @@
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
 						</object>
-						<object class="NSCustomResource" key="IBUIHighlightedBackgroundImage" id="946359758">
+						<object class="NSCustomResource" key="IBUIHighlightedBackgroundImage" id="1055888573">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">button2_pressed.png</string>
 						</object>
-						<reference key="IBUISelectedBackgroundImage" ref="946359758"/>
-						<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="388528308">
+						<reference key="IBUISelectedBackgroundImage" ref="1055888573"/>
+						<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="347823239">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">button2.png</string>
 						</object>
@@ -384,7 +384,7 @@
 					<object class="IBUIButton" id="593519972">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{420, 276}, {89, 44}}</string>
+						<string key="NSFrame">{{340, 274}, {89, 44}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="490576629"/>
@@ -401,16 +401,16 @@
 							<bytes key="NSRGB">MC4yNTA5ODA0MDcgMC41MDE5NjA4MTQgMAA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="416155284"/>
-						<reference key="IBUIHighlightedBackgroundImage" ref="946359758"/>
-						<reference key="IBUISelectedBackgroundImage" ref="946359758"/>
-						<reference key="IBUINormalBackgroundImage" ref="388528308"/>
+						<reference key="IBUIHighlightedBackgroundImage" ref="1055888573"/>
+						<reference key="IBUISelectedBackgroundImage" ref="1055888573"/>
+						<reference key="IBUINormalBackgroundImage" ref="347823239"/>
 						<reference key="IBUIFontDescription" ref="1070456807"/>
 						<reference key="IBUIFont" ref="187086750"/>
 					</object>
 					<object class="IBUIButton" id="610346068">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{303, 274}, {89, 44}}</string>
+						<string key="NSFrame">{{243, 274}, {89, 44}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="593519972"/>
@@ -427,16 +427,16 @@
 							<bytes key="NSRGB">MSAwLjUwMTk2MDgxNCAwAA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="416155284"/>
-						<reference key="IBUIHighlightedBackgroundImage" ref="946359758"/>
-						<reference key="IBUISelectedBackgroundImage" ref="946359758"/>
-						<reference key="IBUINormalBackgroundImage" ref="388528308"/>
+						<reference key="IBUIHighlightedBackgroundImage" ref="1055888573"/>
+						<reference key="IBUISelectedBackgroundImage" ref="1055888573"/>
+						<reference key="IBUINormalBackgroundImage" ref="347823239"/>
 						<reference key="IBUIFontDescription" ref="1070456807"/>
 						<reference key="IBUIFont" ref="187086750"/>
 					</object>
 					<object class="IBUILabel" id="268849408">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{549, 247}, {78, 22}}</string>
+						<string key="NSFrame">{{466, 247}, {78, 22}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="750717328"/>
@@ -458,7 +458,7 @@
 					<object class="IBUIButton" id="490576629">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{552, 276}, {89, 44}}</string>
+						<string key="NSFrame">{{461, 274}, {89, 44}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="961802120"/>
@@ -475,9 +475,9 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzE0IDAuMzA5ODAzOTIxNiAwLjUyMTU2ODYyNzUAA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="416155284"/>
-						<reference key="IBUIHighlightedBackgroundImage" ref="946359758"/>
-						<reference key="IBUISelectedBackgroundImage" ref="946359758"/>
-						<reference key="IBUINormalBackgroundImage" ref="388528308"/>
+						<reference key="IBUIHighlightedBackgroundImage" ref="1055888573"/>
+						<reference key="IBUISelectedBackgroundImage" ref="1055888573"/>
+						<reference key="IBUINormalBackgroundImage" ref="347823239"/>
 						<reference key="IBUIFontDescription" ref="1070456807"/>
 						<reference key="IBUIFont" ref="187086750"/>
 					</object>
@@ -928,18 +928,18 @@
 							<reference ref="669920424"/>
 							<reference ref="268823899"/>
 							<reference ref="750717328"/>
-							<reference ref="981902915"/>
-							<reference ref="771305066"/>
-							<reference ref="164712760"/>
-							<reference ref="593519972"/>
-							<reference ref="268849408"/>
-							<reference ref="490576629"/>
 							<reference ref="792759155"/>
 							<reference ref="961802120"/>
 							<reference ref="202902869"/>
 							<reference ref="229711742"/>
+							<reference ref="981902915"/>
+							<reference ref="771305066"/>
+							<reference ref="164712760"/>
 							<reference ref="479338079"/>
+							<reference ref="593519972"/>
 							<reference ref="610346068"/>
+							<reference ref="490576629"/>
+							<reference ref="268849408"/>
 						</object>
 						<reference key="parent" ref="0"/>
 						<string key="objectName">Detail View</string>
