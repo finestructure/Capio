@@ -58,6 +58,7 @@
 		5AD615E413BB81F200F9CA45 /* MGSplitCornersView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD615DF13BB81F200F9CA45 /* MGSplitCornersView.m */; };
 		5AD615E513BB81F200F9CA45 /* MGSplitDividerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD615E113BB81F200F9CA45 /* MGSplitDividerView.m */; };
 		5AD615E613BB81F200F9CA45 /* MGSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD615E313BB81F200F9CA45 /* MGSplitViewController.m */; };
+		5ADF8CBE13DEE6BA00023BA8 /* app_config.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ADF8CBD13DEE6BA00023BA8 /* app_config.png */; };
 		5AF74AD713C1EC9F00DF0794 /* AppListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF74AD513C1EC9F00DF0794 /* AppListCell.m */; };
 		5AF74AD813C1EC9F00DF0794 /* AppListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF74AD613C1EC9F00DF0794 /* AppListCell.xib */; };
 /* End PBXBuildFile section */
@@ -216,6 +217,7 @@
 		5AD615E113BB81F200F9CA45 /* MGSplitDividerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSplitDividerView.m; sourceTree = "<group>"; };
 		5AD615E213BB81F200F9CA45 /* MGSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSplitViewController.h; sourceTree = "<group>"; };
 		5AD615E313BB81F200F9CA45 /* MGSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSplitViewController.m; sourceTree = "<group>"; };
+		5ADF8CBD13DEE6BA00023BA8 /* app_config.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_config.png; sourceTree = "<group>"; };
 		5AF74AD413C1EC9F00DF0794 /* AppListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppListCell.h; sourceTree = "<group>"; };
 		5AF74AD513C1EC9F00DF0794 /* AppListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppListCell.m; sourceTree = "<group>"; };
 		5AF74AD613C1EC9F00DF0794 /* AppListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppListCell.xib; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 		5A15955513BB54700007B60F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5ADF8CBD13DEE6BA00023BA8 /* app_config.png */,
 				5A4B5E5F13D5D1DE006E1C9E /* metrics.png */,
 				5A4B5E5313D5CC35006E1C9E /* response_workloads.png */,
 				5A32A12813D4912900AC7CB3 /* testdata.json */,
@@ -591,6 +594,7 @@
 				5A4B5E5E13D5CD4B006E1C9E /* MetricOverview.xib in Resources */,
 				5A4B5E6013D5D1DE006E1C9E /* metrics.png in Resources */,
 				5A5742CD13DEE17700294D1A /* AppConfig.xib in Resources */,
+				5ADF8CBE13DEE6BA00023BA8 /* app_config.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
