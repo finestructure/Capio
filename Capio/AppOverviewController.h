@@ -55,6 +55,7 @@
 - (IBAction)timelineTapped:(id)sender;
 - (IBAction)ragButtonTapped:(id)sender;
 - (IBAction)configTapped:(id)sender;
+- (IBAction)connectionsTapped:(id)sender;
 
 - (void)updateView;
 

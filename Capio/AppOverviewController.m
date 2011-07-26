@@ -11,6 +11,7 @@
 #import "AppTimelineController.h"
 #import "ServerOverviewController.h"
 #import "AppConfigController.h"
+#import "AppConnectionsController.h"
 
 
 @implementation AppOverviewController
@@ -111,8 +112,15 @@
   }
 }
 
+
 - (IBAction)configTapped:(id)sender {
   AppConfigController *vc = [[AppConfigController alloc] initWithNibName:@"AppConfig" bundle:nil];
+  [self.navigationController pushViewController:vc animated:YES];
+}
+
+
+- (IBAction)connectionsTapped:(id)sender {
+  id vc = [[AppConnectionsController alloc] initWithNibName:@"AppConnections" bundle:nil];
   [self.navigationController pushViewController:vc animated:YES];
 }
 

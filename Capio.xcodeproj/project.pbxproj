@@ -223,7 +223,7 @@
 		5ADF8CBD13DEE6BA00023BA8 /* app_config.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_config.png; sourceTree = "<group>"; };
 		5ADF8CC013DEE7E200023BA8 /* AppConnectionsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConnectionsController.h; sourceTree = "<group>"; };
 		5ADF8CC113DEE7E200023BA8 /* AppConnectionsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConnectionsController.m; sourceTree = "<group>"; };
-		5ADF8CC213DEE7E200023BA8 /* AppConnections.xib */ = {isa = PBXFileReference; fileEncoding = 4; path = AppConnections.xib; sourceTree = "<group>"; };
+		5ADF8CC213DEE7E200023BA8 /* AppConnections.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppConnections.xib; sourceTree = "<group>"; };
 		5ADF8CC513DEE87800023BA8 /* app_connections.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_connections.png; sourceTree = "<group>"; };
 		5AF74AD413C1EC9F00DF0794 /* AppListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppListCell.h; sourceTree = "<group>"; };
 		5AF74AD513C1EC9F00DF0794 /* AppListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppListCell.m; sourceTree = "<group>"; };
