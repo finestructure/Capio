@@ -106,7 +106,7 @@
   if (count == 1) {
     ServerOverviewController *vc = [[ServerOverviewController alloc] initWithNibName:@"ServerOverview" bundle:nil];
     [self.navigationController pushViewController:vc animated:YES];
-  } else {
+  } else if (count > 1) {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Not Implemented" message:@"Display of multiple servers not implemented yet" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
   }
