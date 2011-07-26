@@ -8,6 +8,7 @@
 
 #import "ServerOverviewController.h"
 #import "MetricOverviewController.h"
+#import "TimelineController.h"
 
 @implementation ServerOverviewController
 
@@ -15,7 +16,12 @@
 
 
 - (IBAction)metricsTapped:(id)sender {
-  MetricOverviewController *vc = [[MetricOverviewController alloc] initWithNibName:@"MetricOverview" bundle:nil];
+  id vc = [[MetricOverviewController alloc] initWithNibName:@"MetricOverview" bundle:nil];
+  [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)timelineTapped:(id)sender {
+  id vc = [[TimelineController alloc] initWithNibName:@"Timeline" bundle:nil];
   [self.navigationController pushViewController:vc animated:YES];
 }
 

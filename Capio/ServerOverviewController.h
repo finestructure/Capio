@@ -11,5 +11,6 @@
 @interface ServerOverviewController : UIViewController
 
 - (IBAction)metricsTapped:(id)sender;
+- (IBAction)timelineTapped:(id)sender;
 
 @end
