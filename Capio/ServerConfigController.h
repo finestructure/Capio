@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ServerConfigController : UIViewController
+@interface ServerConfigController : UIViewController {
+  UITableView *_tableview;
+}
+
+@property (strong, nonatomic) IBOutlet UITableView *tableview;
 
 @end

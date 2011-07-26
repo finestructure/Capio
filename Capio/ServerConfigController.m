@@ -6,9 +6,13 @@
 //  Copyright 2011 abstracture GmbH & Co. KG. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
 #import "ServerConfigController.h"
 
 @implementation ServerConfigController
+
+@synthesize tableview = _tableview;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -48,17 +52,18 @@
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+- (void)viewDidLoad {
+  [super viewDidLoad];
+  self.tableview.layer.borderWidth = 1.0;
+  self.tableview.layer.borderColor = [[UIColor lightGrayColor] CGColor];
 }
 
 - (void)viewDidUnload
 {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+  [self setTableview:nil];
+  [super viewDidUnload];
+  // Release any retained subviews of the main view.
+  // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
