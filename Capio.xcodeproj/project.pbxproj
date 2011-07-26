@@ -59,6 +59,9 @@
 		5AD615E513BB81F200F9CA45 /* MGSplitDividerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD615E113BB81F200F9CA45 /* MGSplitDividerView.m */; };
 		5AD615E613BB81F200F9CA45 /* MGSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD615E313BB81F200F9CA45 /* MGSplitViewController.m */; };
 		5ADF8CBE13DEE6BA00023BA8 /* app_config.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ADF8CBD13DEE6BA00023BA8 /* app_config.png */; };
+		5ADF8CC313DEE7E200023BA8 /* AppConnectionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADF8CC113DEE7E200023BA8 /* AppConnectionsController.m */; };
+		5ADF8CC413DEE7E200023BA8 /* AppConnections.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ADF8CC213DEE7E200023BA8 /* AppConnections.xib */; };
+		5ADF8CC613DEE87800023BA8 /* app_connections.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ADF8CC513DEE87800023BA8 /* app_connections.png */; };
 		5AF74AD713C1EC9F00DF0794 /* AppListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF74AD513C1EC9F00DF0794 /* AppListCell.m */; };
 		5AF74AD813C1EC9F00DF0794 /* AppListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF74AD613C1EC9F00DF0794 /* AppListCell.xib */; };
 /* End PBXBuildFile section */
@@ -218,6 +221,10 @@
 		5AD615E213BB81F200F9CA45 /* MGSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSplitViewController.h; sourceTree = "<group>"; };
 		5AD615E313BB81F200F9CA45 /* MGSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSplitViewController.m; sourceTree = "<group>"; };
 		5ADF8CBD13DEE6BA00023BA8 /* app_config.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_config.png; sourceTree = "<group>"; };
+		5ADF8CC013DEE7E200023BA8 /* AppConnectionsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConnectionsController.h; sourceTree = "<group>"; };
+		5ADF8CC113DEE7E200023BA8 /* AppConnectionsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConnectionsController.m; sourceTree = "<group>"; };
+		5ADF8CC213DEE7E200023BA8 /* AppConnections.xib */ = {isa = PBXFileReference; fileEncoding = 4; path = AppConnections.xib; sourceTree = "<group>"; };
+		5ADF8CC513DEE87800023BA8 /* app_connections.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_connections.png; sourceTree = "<group>"; };
 		5AF74AD413C1EC9F00DF0794 /* AppListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppListCell.h; sourceTree = "<group>"; };
 		5AF74AD513C1EC9F00DF0794 /* AppListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppListCell.m; sourceTree = "<group>"; };
 		5AF74AD613C1EC9F00DF0794 /* AppListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppListCell.xib; sourceTree = "<group>"; };
@@ -253,6 +260,7 @@
 		5A15955513BB54700007B60F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5ADF8CC513DEE87800023BA8 /* app_connections.png */,
 				5ADF8CBD13DEE6BA00023BA8 /* app_config.png */,
 				5A4B5E5F13D5D1DE006E1C9E /* metrics.png */,
 				5A4B5E5313D5CC35006E1C9E /* response_workloads.png */,
@@ -482,6 +490,9 @@
 				5A5742C913DEE17700294D1A /* AppConfigController.h */,
 				5A5742CA13DEE17700294D1A /* AppConfigController.m */,
 				5A5742CB13DEE17700294D1A /* AppConfig.xib */,
+				5ADF8CC013DEE7E200023BA8 /* AppConnectionsController.h */,
+				5ADF8CC113DEE7E200023BA8 /* AppConnectionsController.m */,
+				5ADF8CC213DEE7E200023BA8 /* AppConnections.xib */,
 				5AB26AED13C5D14E00AC5B87 /* Accessory Controls */,
 			);
 			name = ViewControllers;
@@ -595,6 +606,8 @@
 				5A4B5E6013D5D1DE006E1C9E /* metrics.png in Resources */,
 				5A5742CD13DEE17700294D1A /* AppConfig.xib in Resources */,
 				5ADF8CBE13DEE6BA00023BA8 /* app_config.png in Resources */,
+				5ADF8CC413DEE7E200023BA8 /* AppConnections.xib in Resources */,
+				5ADF8CC613DEE87800023BA8 /* app_connections.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,6 +660,7 @@
 				5A4B5E4A13D561EC006E1C9E /* ServerOverviewController.m in Sources */,
 				5A4B5E5D13D5CD4B006E1C9E /* MetricOverviewController.m in Sources */,
 				5A5742CC13DEE17700294D1A /* AppConfigController.m in Sources */,
+				5ADF8CC313DEE7E200023BA8 /* AppConnectionsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
