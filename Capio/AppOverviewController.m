@@ -89,6 +89,7 @@
 
 - (IBAction)timelineTapped:(id)sender {
   TimelineController *vc = [[TimelineController alloc] initWithNibName:@"Timeline" bundle:nil];
+  vc.title = @"Application Timeline";
   [self.navigationController pushViewController:vc animated:YES];
 }
 

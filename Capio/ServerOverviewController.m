@@ -21,7 +21,8 @@
 }
 
 - (IBAction)timelineTapped:(id)sender {
-  id vc = [[TimelineController alloc] initWithNibName:@"Timeline" bundle:nil];
+  TimelineController *vc = [[TimelineController alloc] initWithNibName:@"Timeline" bundle:nil];
+  vc.title = @"Server Timeline";
   [self.navigationController pushViewController:vc animated:YES];
 }
 
