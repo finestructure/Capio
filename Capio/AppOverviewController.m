@@ -8,7 +8,7 @@
 
 #import "AppOverviewController.h"
 #import "AppOverview.h"
-#import "AppTimelineController.h"
+#import "TimelineController.h"
 #import "ServerOverviewController.h"
 #import "AppConfigController.h"
 #import "AppConnectionsController.h"
@@ -88,7 +88,7 @@
 }
 
 - (IBAction)timelineTapped:(id)sender {
-  AppTimelineController *vc = [[AppTimelineController alloc] initWithNibName:@"Timeline" bundle:nil];
+  TimelineController *vc = [[TimelineController alloc] initWithNibName:@"Timeline" bundle:nil];
   [self.navigationController pushViewController:vc animated:YES];
 }
 

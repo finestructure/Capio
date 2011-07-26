@@ -6,12 +6,12 @@
 //  Copyright 2011 abstracture GmbH & Co. KG. All rights reserved.
 //
 
-#import "AppTimelineController.h"
+#import "TimelineController.h"
 #import "DataStore.h"
 #import "Tuple.h"
 
 
-@implementation AppTimelineController
+@implementation TimelineController
 
 @synthesize data = _data;
 @synthesize graphView = _graphView;

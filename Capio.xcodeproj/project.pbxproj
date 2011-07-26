@@ -48,7 +48,7 @@
 		5AA4D81713BB52080029B616 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5AA4D81513BB52080029B616 /* InfoPlist.strings */; };
 		5AA4D81913BB52080029B616 /* CapioTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 5AA4D81813BB52080029B616 /* CapioTests.h */; };
 		5AA4D81B13BB52080029B616 /* CapioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4D81A13BB52080029B616 /* CapioTests.m */; };
-		5AB26AB713C5B44900AC5B87 /* AppTimelineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB26AB513C5B44900AC5B87 /* AppTimelineController.m */; };
+		5AB26AB713C5B44900AC5B87 /* TimelineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB26AB513C5B44900AC5B87 /* TimelineController.m */; };
 		5AB26AB813C5B44900AC5B87 /* Timeline.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AB26AB613C5B44900AC5B87 /* Timeline.xib */; };
 		5ABC806013BC5BA000468868 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ABC805E13BC5BA000468868 /* MainWindow.xib */; };
 		5AD5B6AA13BC6CA10083D454 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5B6A813BC6CA10083D454 /* SecondViewController.m */; };
@@ -205,8 +205,8 @@
 		5AA4D81613BB52080029B616 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5AA4D81813BB52080029B616 /* CapioTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CapioTests.h; sourceTree = "<group>"; };
 		5AA4D81A13BB52080029B616 /* CapioTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CapioTests.m; sourceTree = "<group>"; };
-		5AB26AB413C5B44900AC5B87 /* AppTimelineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTimelineController.h; sourceTree = "<group>"; };
-		5AB26AB513C5B44900AC5B87 /* AppTimelineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTimelineController.m; sourceTree = "<group>"; };
+		5AB26AB413C5B44900AC5B87 /* TimelineController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = TimelineController.h; sourceTree = "<group>"; };
+		5AB26AB513C5B44900AC5B87 /* TimelineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineController.m; sourceTree = "<group>"; };
 		5AB26AB613C5B44900AC5B87 /* Timeline.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Timeline.xib; sourceTree = "<group>"; };
 		5ABC805E13BC5BA000468868 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainWindow.xib; path = ../MainWindow.xib; sourceTree = "<group>"; };
 		5AD5B6A713BC6CA10083D454 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
@@ -484,8 +484,8 @@
 				5AD615D413BB703800F9CA45 /* AppOverviewController.h */,
 				5AD615D513BB703800F9CA45 /* AppOverviewController.m */,
 				5AD615D613BB703800F9CA45 /* AppOverview.xib */,
-				5AB26AB413C5B44900AC5B87 /* AppTimelineController.h */,
-				5AB26AB513C5B44900AC5B87 /* AppTimelineController.m */,
+				5AB26AB413C5B44900AC5B87 /* TimelineController.h */,
+				5AB26AB513C5B44900AC5B87 /* TimelineController.m */,
 				5AB26AB613C5B44900AC5B87 /* Timeline.xib */,
 				5A4B5E4713D561EC006E1C9E /* ServerOverviewController.h */,
 				5A4B5E4813D561EC006E1C9E /* ServerOverviewController.m */,
@@ -662,7 +662,7 @@
 				5A67A26F13BCB82D002BDCAA /* AppOverview.m in Sources */,
 				5A67A27B13BCCEDC002BDCAA /* DatePopupController.m in Sources */,
 				5AF74AD713C1EC9F00DF0794 /* AppListCell.m in Sources */,
-				5AB26AB713C5B44900AC5B87 /* AppTimelineController.m in Sources */,
+				5AB26AB713C5B44900AC5B87 /* TimelineController.m in Sources */,
 				5A9DC74A13CC5F5A00D67F65 /* DataStore.m in Sources */,
 				5A9DC74D13CC9CA300D67F65 /* Tuple.m in Sources */,
 				5A4B5E4A13D561EC006E1C9E /* ServerOverviewController.m in Sources */,
