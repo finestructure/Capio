@@ -10,6 +10,7 @@
 #import "AppOverview.h"
 #import "AppTimelineController.h"
 #import "ServerOverviewController.h"
+#import "AppConfigController.h"
 
 
 @implementation AppOverviewController
@@ -108,6 +109,11 @@
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Not Implemented" message:@"Display of multiple servers not implemented yet" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
   }
+}
+
+- (IBAction)configTapped:(id)sender {
+  AppConfigController *vc = [[AppConfigController alloc] initWithNibName:@"AppConfig" bundle:nil];
+  [self.navigationController pushViewController:vc animated:YES];
 }
 
 
