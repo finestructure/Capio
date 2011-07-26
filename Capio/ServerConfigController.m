@@ -26,6 +26,26 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+  return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+  return 20;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+  UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ConfigCell"];
+  
+  // Configure the cell
+  cell.textLabel.text = [NSString stringWithFormat:@"Configuration %d", indexPath.row];
+  
+  return cell;
+}
+
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
