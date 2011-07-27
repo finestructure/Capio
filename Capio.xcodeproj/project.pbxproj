@@ -20,6 +20,8 @@
 		5A32465F13E022C000AE1937 /* DomainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A32465A13E022C000AE1937 /* DomainViewController.m */; };
 		5A32466013E022C000AE1937 /* SimpleEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A32465C13E022C000AE1937 /* SimpleEditViewController.m */; };
 		5A32466313E0358900AE1937 /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A32466213E0358800AE1937 /* gear.png */; };
+		5A32466713E03B8300AE1937 /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A32466513E03B8300AE1937 /* ConfigViewController.m */; };
+		5A32466813E03B8300AE1937 /* ConfigView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A32466613E03B8300AE1937 /* ConfigView.xib */; };
 		5A32A12B13D495CA00AC7CB3 /* DataStoreTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A32A12A13D495CA00AC7CB3 /* DataStoreTest.m */; };
 		5A4B5E4A13D561EC006E1C9E /* ServerOverviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B5E4813D561EC006E1C9E /* ServerOverviewController.m */; };
 		5A4B5E4B13D561EC006E1C9E /* ServerOverview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A4B5E4913D561EC006E1C9E /* ServerOverview.xib */; };
@@ -104,6 +106,9 @@
 		5A32465B13E022C000AE1937 /* SimpleEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleEditViewController.h; sourceTree = "<group>"; };
 		5A32465C13E022C000AE1937 /* SimpleEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleEditViewController.m; sourceTree = "<group>"; };
 		5A32466213E0358800AE1937 /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
+		5A32466413E03B8300AE1937 /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigViewController.h; sourceTree = "<group>"; };
+		5A32466513E03B8300AE1937 /* ConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigViewController.m; sourceTree = "<group>"; };
+		5A32466613E03B8300AE1937 /* ConfigView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigView.xib; sourceTree = "<group>"; };
 		5A32A12813D4912900AC7CB3 /* testdata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testdata.json; sourceTree = "<group>"; };
 		5A32A12913D495CA00AC7CB3 /* DataStoreTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStoreTest.h; sourceTree = "<group>"; };
 		5A32A12A13D495CA00AC7CB3 /* DataStoreTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataStoreTest.m; sourceTree = "<group>"; };
@@ -320,6 +325,16 @@
 			path = BonjourSupport;
 			sourceTree = "<group>";
 		};
+		5A32466913E03B9E00AE1937 /* Main Views */ = {
+			isa = PBXGroup;
+			children = (
+				5A32466413E03B8300AE1937 /* ConfigViewController.h */,
+				5A32466513E03B8300AE1937 /* ConfigViewController.m */,
+				5A32466613E03B8300AE1937 /* ConfigView.xib */,
+			);
+			name = "Main Views";
+			sourceTree = "<group>";
+		};
 		5A57427713DED37600294D1A /* CorePlotHeaders */ = {
 			isa = PBXGroup;
 			children = (
@@ -456,6 +471,7 @@
 				5AA4D7EF13BB52080029B616 /* CapioAppDelegate.h */,
 				5AA4D7F013BB52080029B616 /* CapioAppDelegate.m */,
 				5A67A26B13BCB803002BDCAA /* Model */,
+				5A32466913E03B9E00AE1937 /* Main Views */,
 				5AD615CD13BB5F1E00F9CA45 /* ViewControllers */,
 				5A15955513BB54700007B60F /* Resources */,
 				5AA4D7E713BB52080029B616 /* Supporting Files */,
@@ -657,6 +673,7 @@
 				5A32464913DEED9E00AE1937 /* button2.png in Resources */,
 				5A32464F13DEF41D00AE1937 /* ServerConfig.xib in Resources */,
 				5A32466313E0358900AE1937 /* gear.png in Resources */,
+				5A32466813E03B8300AE1937 /* ConfigView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,6 +732,7 @@
 				5A32465E13E022C000AE1937 /* BrowserViewController.m in Sources */,
 				5A32465F13E022C000AE1937 /* DomainViewController.m in Sources */,
 				5A32466013E022C000AE1937 /* SimpleEditViewController.m in Sources */,
+				5A32466713E03B8300AE1937 /* ConfigViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
