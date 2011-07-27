@@ -118,6 +118,7 @@
     NSLog(@"Stored kCouchServiceName: %@", service.name);
     [defaults setValue:url forKey:kCouchServiceUrl];
     NSLog(@"Stored kCouchServiceUrl: %@", url);
+    [defaults synchronize];
     [[NSNotificationCenter defaultCenter] postNotificationName:kCouchServiceUrlChanged object:self];
   }
 }
