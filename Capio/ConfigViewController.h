@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ConfigViewController : UIViewController
+@interface ConfigViewController : UIViewController {
+  UINavigationController *_navigationController;
+}
+
+
+@property (strong, nonatomic) IBOutlet UINavigationController *navigationController;
 
 @end

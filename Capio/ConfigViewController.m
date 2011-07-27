@@ -7,14 +7,17 @@
 //
 
 #import "ConfigViewController.h"
+#import "BonjourBrowser.h"
 
 @implementation ConfigViewController
+@synthesize navigationController = _navigationController;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+      UIImage *img = [UIImage imageNamed:@"gear.png"];
+      UITabBarItem *tab = [[UITabBarItem alloc] initWithTitle:@"Configuration" image:img tag:2];
+      self.tabBarItem = tab;
     }
     return self;
 }
@@ -29,14 +32,23 @@
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+- (void)viewDidLoad {
+  [super viewDidLoad];
+
+  BonjourBrowser *browser = [[BonjourBrowser alloc] initForType:@"_http._tcp"
+                                                       inDomain:@"local"
+                                                  customDomains:nil
+                                       showDisclosureIndicators:NO
+                                               showCancelButton:NO];
+  browser.navigationBar.barStyle = UIBarStyleBlack;
+
+  self.navigationController = browser;
+  [self.view addSubview:browser.view];
 }
 
 - (void)viewDidUnload
 {
+  [self setNavigationController:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
