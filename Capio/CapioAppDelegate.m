@@ -20,33 +20,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   
-  bool useTabs = YES;
-  
-  if (useTabs) {
-  
-    { // set tab bar item for first tab
-      UIImage *img = [UIImage imageNamed:@"info.png"];
-      UITabBarItem *tab = [[UITabBarItem alloc] initWithTitle:@"Analysis"
-                                                        image:img tag:0];
-      self.splitViewController.tabBarItem = tab;
-    }
-
-    self.tabBarController = [[UITabBarController alloc] init];
-    
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:
-                                             self.splitViewController,
-                                             [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil],
-                                             nil];
-  
-    [self.window addSubview:self.tabBarController.view];
-    [self.window makeKeyAndVisible];
-
-  } else {
-
-    [self.window addSubview:self.splitViewController.view];
-    [self.window makeKeyAndVisible];
-	
+  { // set tab bar item for first tab
+    UIImage *img = [UIImage imageNamed:@"info.png"];
+    UITabBarItem *tab = [[UITabBarItem alloc] initWithTitle:@"Analysis"
+                                                      image:img tag:0];
+    self.splitViewController.tabBarItem = tab;
   }
+  
+  self.tabBarController = [[UITabBarController alloc] init];
+  
+  self.tabBarController.viewControllers = [NSArray arrayWithObjects:
+                                           self.splitViewController,
+                                           [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil],
+                                           nil];
+  
+  [self.window addSubview:self.tabBarController.view];
+  [self.window makeKeyAndVisible];
     
   return YES;
 
