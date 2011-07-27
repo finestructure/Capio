@@ -331,6 +331,9 @@
 		5A32466913E03B9E00AE1937 /* Main Views */ = {
 			isa = PBXGroup;
 			children = (
+				5AD5B6A713BC6CA10083D454 /* SecondViewController.h */,
+				5AD5B6A813BC6CA10083D454 /* SecondViewController.m */,
+				5AD5B6A913BC6CA10083D454 /* SecondViewController.xib */,
 				5A32466413E03B8300AE1937 /* ConfigViewController.h */,
 				5A32466513E03B8300AE1937 /* ConfigViewController.m */,
 				5A32466613E03B8300AE1937 /* ConfigView.xib */,
@@ -438,8 +441,8 @@
 		5AA4D7D113BB52080029B616 = {
 			isa = PBXGroup;
 			children = (
-				5A32465413E022C000AE1937 /* BonjourSupport */,
 				5AA4D7E613BB52080029B616 /* Capio */,
+				5A32465413E022C000AE1937 /* BonjourSupport */,
 				5A57427713DED37600294D1A /* CorePlotHeaders */,
 				5A5742C213DED37600294D1A /* libCorePlot-CocoaTouch.a */,
 				5A26ECC513C7137500533B5D /* QuartzCore.framework */,
@@ -519,9 +522,6 @@
 		5AB26AED13C5D14E00AC5B87 /* Accessory Controls */ = {
 			isa = PBXGroup;
 			children = (
-				5AD5B6A713BC6CA10083D454 /* SecondViewController.h */,
-				5AD5B6A813BC6CA10083D454 /* SecondViewController.m */,
-				5AD5B6A913BC6CA10083D454 /* SecondViewController.xib */,
 				5A67A27813BCCEDC002BDCAA /* DatePopupController.h */,
 				5A67A27913BCCEDC002BDCAA /* DatePopupController.m */,
 				5A67A27A13BCCEDC002BDCAA /* DatePopup.xib */,
