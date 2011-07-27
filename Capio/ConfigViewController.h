@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ConfigViewController : UIViewController {
+#import "BonjourBrowser.h"
+
+
+@interface ConfigViewController : UIViewController <BonjourBrowserDelegate> {
   UINavigationController *_navigationController;
 }
 
