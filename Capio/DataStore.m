@@ -9,6 +9,7 @@
 #import "DataStore.h"
 #import "AppOverview.h"
 #import "Tuple.h"
+#import "Constants.h"
 
 
 @implementation DataStore
@@ -37,6 +38,15 @@
 }
 
 
+- (NSString *)baseUrl {
+  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+  //NSString *serviceName = [defaults stringForKey:kCouchServiceName];
+  NSString *url = [defaults stringForKey:kCouchServiceUrl];
+  //NSNetServiceBrowser
+  return url;
+}
+
+
 - (NSArray *)appList {
   static NSDateFormatter *dateFormatter = nil;
   if (! dateFormatter) {
@@ -44,13 +54,24 @@
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
   }
 
-  NSString *urlString = @"http://127.0.0.1:5984/dev/apps";
+  NSString *baseUrl = [self baseUrl];
+  
+  if (baseUrl == nil) {
+    NSString *msg = [NSString stringWithFormat:@"Server at '%@' did not available", baseUrl];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Server Not Available" message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
+    return [NSArray array];
+  }
+  
+  NSMutableString *urlString = [NSMutableString stringWithString:baseUrl];
+  
+  [urlString appendString:@"/dev/apps"];
   NSURL *url = [NSURL URLWithString:urlString];
   NSData *data = [NSData dataWithContentsOfURL:url];
   
   if (data == nil) {
     NSString *msg = [NSString stringWithFormat:@"Server at '%@' did not return any data", urlString];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Server Not Available" message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Data" message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
     return [NSArray array];
   }

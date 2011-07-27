@@ -7,6 +7,7 @@
 //
 
 #import "ConfigViewController.h"
+#import "Constants.h"
 
 
 @implementation ConfigViewController
@@ -109,8 +110,10 @@
                       portStr,
                       path];
 	
-  [[NSUserDefaults standardUserDefaults] setValue:service.name forKey:@"CouchServiceName"];
-  [[NSUserDefaults standardUserDefaults] setValue:url forKey:@"CouchServiceUrl"];
+  [[NSUserDefaults standardUserDefaults] setValue:service.name forKey:kCouchServiceName];
+  NSLog(@"Stored kCouchServiceName: %@", service.name);
+  [[NSUserDefaults standardUserDefaults] setValue:url forKey:kCouchServiceUrl];
+  NSLog(@"Stored kCouchServiceUrl: %@", url);
 }
 
 @end
