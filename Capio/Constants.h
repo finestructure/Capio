@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+// user defaults keys
 extern NSString * const kCouchServiceName;
 extern NSString * const kCouchServiceUrl;
 
+// notifications
+extern NSString * const kCouchServiceUrlChanged;

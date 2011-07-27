@@ -11,6 +11,7 @@
 #import "AppOverview.h"
 #import "AppListCell.h"
 #import "DataStore.h"
+#import "Constants.h"
 
 
 @implementation AppListController
@@ -22,6 +23,16 @@
 @synthesize searchBar = _searchBar;
 
 
+#pragma mark - Workers
+
+
+- (void)fetchAppList {
+  self.apps = [[DataStore sharedDataStore] appList];
+  self.displayedApps = [self.apps copy];
+  [self.tableView reloadData];
+}
+
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad {
@@ -29,11 +40,9 @@
 
   self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
 
-  // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-  // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-  self.apps = [[DataStore sharedDataStore] appList];
-  self.displayedApps = [self.apps copy];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fetchAppList) name:kCouchServiceUrlChanged object:nil];
+
+  [self fetchAppList];
   
   [self.tableView registerNib:[UINib nibWithNibName:@"AppListCell" bundle:nil] forCellReuseIdentifier:@"AppListCell"];
   self.tableView.rowHeight = 52;

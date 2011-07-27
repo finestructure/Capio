@@ -8,5 +8,7 @@
 
 #import "Constants.h"
 
-NSString * const kCouchServiceName = @"CouchServiceName";
-NSString * const kCouchServiceUrl = @"CouchServiceUrl";
+NSString * const kCouchServiceName = @"kCouchServiceName";
+NSString * const kCouchServiceUrl = @"kCouchServiceUrl";
+
+NSString * const kCouchServiceUrlChanged = @"kCouchServiceUrlChanged";
