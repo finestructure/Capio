@@ -10,6 +10,7 @@
 #import "MGSplitViewController.h"
 
 #import "SecondViewController.h"
+#import "BonjourBrowser.h"
 
 @implementation CapioAppDelegate
 
@@ -27,11 +28,25 @@
     self.splitViewController.tabBarItem = tab;
   }
   
+  BonjourBrowser *browser = [[BonjourBrowser alloc] initForType:@"_http._tcp"
+                                                        inDomain:@"local"
+                                                   customDomains:nil
+                                        showDisclosureIndicators:NO
+                                                showCancelButton:NO];
+  browser.navigationBar.barStyle = UIBarStyleBlack;
+  { // set tab bar item for config tab
+    UIImage *img = [UIImage imageNamed:@"gear.png"];
+    UITabBarItem *tab = [[UITabBarItem alloc] initWithTitle:@"Configuration"
+                                                      image:img tag:0];
+    browser.tabBarItem = tab;
+  }
+
   self.tabBarController = [[UITabBarController alloc] init];
   
   self.tabBarController.viewControllers = [NSArray arrayWithObjects:
                                            self.splitViewController,
                                            [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil],
+                                           browser,
                                            nil];
   
   [self.window addSubview:self.tabBarController.view];
