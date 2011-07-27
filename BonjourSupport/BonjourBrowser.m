@@ -108,7 +108,6 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 		}
 	}
 	
-	[dvc release];
 	
 	return self;
 }
@@ -120,7 +119,6 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 // This property holds a string that displays the status of the service search to the user.
 - (void) setSearchingForServicesString:(NSString*)searchingForServicesString {
 	if (_searchingForServicesString != searchingForServicesString) {
-		[_searchingForServicesString release];
 		_searchingForServicesString = [searchingForServicesString copy];
 
 		if (self.bvc) {
@@ -173,7 +171,6 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 
     // Store the BrowerViewController in an instance variable.
 	self.bvc = aBvc;
-	[aBvc release];
 	if (self.showTitleInNavigationBar)
 		self.bvc.navigationItem.prompt = self.title;
 }
@@ -193,13 +190,5 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 }
 
 
-- (void) dealloc {
-	[_dvc release];
-	[_bvc release];
-	[_type release];
-	[_domain release];
-	[_searchingForServicesString release];
-	[super dealloc];
-}
 
 @end

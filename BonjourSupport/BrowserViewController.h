@@ -74,7 +74,7 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 @interface BrowserViewController : UITableViewController <NSNetServiceBrowserDelegate, NSNetServiceDelegate> {
 
 @private
-	id<BrowserViewControllerDelegate> _delegate;
+	id<BrowserViewControllerDelegate> __weak _delegate;
 	NSString* _searchingForServicesString;
 	BOOL _showDisclosureIndicators;
 	NSMutableArray* _services;
@@ -85,7 +85,7 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 	BOOL _initialWaitOver;
 }
 
-@property (nonatomic, assign) id<BrowserViewControllerDelegate> delegate;
+@property (nonatomic, weak) id<BrowserViewControllerDelegate> delegate;
 @property (nonatomic, copy) NSString* searchingForServicesString;
 
 - (id)initWithTitle:(NSString *)title showDisclosureIndicators:(BOOL)showDisclosureIndicators showCancelButton:(BOOL)showCancelButton;

@@ -111,7 +111,6 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 			UIBarButtonItem *addButton = [[UIBarButtonItem alloc]
 										  initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelAction)];
 			self.navigationItem.rightBarButtonItem = addButton;
-			[addButton release];
 		}
 
 		// Make sure we have a chance to discover devices before showing the user that nothing was found (yet)
@@ -128,7 +127,6 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 // Holds the string that's displayed in the table view during service discovery.
 - (void)setSearchingForServicesString:(NSString *)searchingForServicesString {
 	if (_searchingForServicesString != searchingForServicesString) {
-		[_searchingForServicesString release];
 		_searchingForServicesString = [searchingForServicesString copy];
 
         // If there are no services, reload the table to ensure that searchingForServicesString appears.
@@ -155,7 +153,6 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 
 	aNetServiceBrowser.delegate = self;
 	self.netServiceBrowser = aNetServiceBrowser;
-	[aNetServiceBrowser release];
 	[self.netServiceBrowser searchForServicesOfType:type inDomain:domain];
 
 	[self.tableView reloadData];
@@ -170,8 +167,6 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 // When this is called, invalidate the existing timer before releasing it.
 - (void)setTimer:(NSTimer *)newTimer {
 	[_timer invalidate];
-	[newTimer retain];
-	[_timer release];
 	_timer = newTimer;
 }
 
@@ -195,7 +190,7 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 	static NSString *tableCellIdentifier = @"UITableViewCell";
 	UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:tableCellIdentifier];
 	if (cell == nil) {
-		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tableCellIdentifier] autorelease];
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tableCellIdentifier];
 	}
 	
 	NSUInteger count = [self.services count];
@@ -230,7 +225,6 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 										UIViewAutoresizingFlexibleTopMargin |
 										UIViewAutoresizingFlexibleBottomMargin);
 			cell.accessoryView = spinner;
-			[spinner release];
 		}
 	} else if (cell.accessoryView) {
 		cell.accessoryView = nil;
@@ -358,11 +352,9 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 - (void)netServiceDidResolveAddress:(NSNetService *)service {
 	assert(service == self.currentResolve);
 	
-	[service retain];
 	[self stopCurrentResolve];
 	
 	[self.delegate browserViewController:self didResolveInstance:service];
-	[service release];
 }
 
 
@@ -374,12 +366,8 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 - (void)dealloc {
 	// Cleanup any running resolve and free memory
 	[self stopCurrentResolve];
-	self.services = nil;
 	[self.netServiceBrowser stop];
-	self.netServiceBrowser = nil;
-	[_searchingForServicesString release];
 	
-	[super dealloc];
 }
 
 

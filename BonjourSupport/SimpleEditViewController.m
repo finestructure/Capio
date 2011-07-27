@@ -70,7 +70,6 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 									   initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelAction)];
 		
 		self.navigationItem.leftBarButtonItem = cancelButton;
-		[cancelButton release];
 
 		CGSize size = self.view.frame.size;
 		CGRect rect = CGRectMake(5, 5, size.width-10, 30);
@@ -122,10 +121,6 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 }
 
 
-- (void)dealloc {
-	[_textField release];
-	[super dealloc];
-}
 
 
 @end

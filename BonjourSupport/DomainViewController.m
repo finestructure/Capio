@@ -92,7 +92,7 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 - (id)initWithTitle:(NSString*)title showDisclosureIndicators:(BOOL)show customsTitle:(NSString*)customsTitle customs:(NSMutableArray*)customs addDomainTitle:(NSString*)addDomainTitle showCancelButton:(BOOL)showCancelButton {
 	if ((self = [super initWithStyle:UITableViewStylePlain])) {
 		self.title = title;
-		self.domains = [[[NSMutableArray alloc] init] autorelease];
+		self.domains = [[NSMutableArray alloc] init];
 		self.showDisclosureIndicators = show;
 		self.customTitle = customsTitle;
 		self.customs = customs ? customs : [NSMutableArray array];
@@ -108,8 +108,6 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 // this first sends it a -stop message before releasing it.
 - (void)setNetServiceBrowser:(NSNetServiceBrowser*)newBrowser {
 	[_netServiceBrowser stop];
-	[newBrowser retain];
-	[_netServiceBrowser release];
 	_netServiceBrowser = newBrowser;
 }
 
@@ -125,7 +123,6 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 								  initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addAction:)];
 	if (right) self.navigationItem.rightBarButtonItem = addButton;
 	else self.navigationItem.leftBarButtonItem = addButton;
-	[addButton release];
 }
 
 - (void)addButtons:(BOOL)editing {
@@ -135,7 +132,6 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 									   initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneAction:)];
 		
 		self.navigationItem.leftBarButtonItem = doneButton;
-		[doneButton release];
 
 		[self addAddButton:YES];
 	} else {
@@ -145,7 +141,6 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 										   initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editAction:)];
 			
 			self.navigationItem.leftBarButtonItem = editButton;
-			[editButton release];
 		} else {
 			[self addAddButton:NO];
 		}
@@ -155,7 +150,6 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 			UIBarButtonItem *addButton = [[UIBarButtonItem alloc]
 										  initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelAction)];
 			self.navigationItem.rightBarButtonItem = addButton;
-			[addButton release];
 		} else {
 			self.navigationItem.rightBarButtonItem = nil;
 		}
@@ -163,7 +157,7 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 }
 
 - (BOOL)commonSetup {
-	self.netServiceBrowser = [[[NSNetServiceBrowser alloc] init] autorelease];
+	self.netServiceBrowser = [[NSNetServiceBrowser alloc] init];
 	if(!self.netServiceBrowser) {
 		return NO;
 	}
@@ -204,7 +198,7 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
 	if (cell == nil) {
-		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"] autorelease];
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
 	}
 	
 	// Set up the text for the cell
@@ -305,9 +299,7 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 	SimpleEditViewController* sevc = [[SimpleEditViewController alloc] initWithTitle:self.addDomainTitle currentText:nil];
 	[sevc setDelegate:self];
 	UINavigationController* nc = [[UINavigationController alloc] initWithRootViewController:sevc];
-	[sevc release];
 	[self.navigationController presentModalViewController:nc animated:YES];
-	[nc release];
 }
 
 
@@ -343,14 +335,5 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 }
 
 
-- (void)dealloc {
-	[_domains release];
-	[_customs release];
-	[_customTitle release];
-	[_addDomainTitle release];
-	[_netServiceBrowser release];
-	
-	[super dealloc];
-}
 
 @end

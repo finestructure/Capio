@@ -58,12 +58,12 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 @end
 
 @interface SimpleEditViewController : UIViewController <UITextFieldDelegate> {
-	id<SimpleEditViewControllerDelegate> _delegate;
+	id<SimpleEditViewControllerDelegate> __weak _delegate;
 	UITextField* _textField;
 	BOOL cancelling;
 }
 
-@property(nonatomic, assign) id<SimpleEditViewControllerDelegate> delegate;
+@property(nonatomic, weak) id<SimpleEditViewControllerDelegate> delegate;
 
 - (id)initWithTitle:(NSString*)title currentText:(NSString*)current;
 

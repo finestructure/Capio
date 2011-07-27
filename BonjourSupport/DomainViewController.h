@@ -73,7 +73,7 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 @end
 
 @interface DomainViewController : UITableViewController <SimpleEditViewControllerDelegate, NSNetServiceBrowserDelegate> {
-	id<DomainViewControllerDelegate> _delegate;
+	id<DomainViewControllerDelegate> __weak _delegate;
 	BOOL _showDisclosureIndicators;
 	NSMutableArray* _domains;
 	NSMutableArray* _customs;
@@ -83,7 +83,7 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 	BOOL _showCancelButton;
 }
 
-@property(nonatomic, assign) id<DomainViewControllerDelegate> delegate;
+@property(nonatomic, weak) id<DomainViewControllerDelegate> delegate;
 
 - (id)initWithTitle:(NSString *)title showDisclosureIndicators:(BOOL)showDisclosureIndicators customsTitle:(NSString*)customsTitle customs:(NSMutableArray*)customs addDomainTitle:(NSString*)addDomainTitle showCancelButton:(BOOL)showCancelButton;
 - (BOOL)searchForBrowsableDomains;
