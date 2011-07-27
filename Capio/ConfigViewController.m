@@ -110,10 +110,16 @@
                       portStr,
                       path];
 	
-  [[NSUserDefaults standardUserDefaults] setValue:service.name forKey:kCouchServiceName];
-  NSLog(@"Stored kCouchServiceName: %@", service.name);
-  [[NSUserDefaults standardUserDefaults] setValue:url forKey:kCouchServiceUrl];
-  NSLog(@"Stored kCouchServiceUrl: %@", url);
+  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+  NSString *previousUrl = [defaults stringForKey:kCouchServiceUrl];
+  
+  if (! [previousUrl isEqualToString:url]) {
+    [defaults setValue:service.name forKey:kCouchServiceName];
+    NSLog(@"Stored kCouchServiceName: %@", service.name);
+    [defaults setValue:url forKey:kCouchServiceUrl];
+    NSLog(@"Stored kCouchServiceUrl: %@", url);
+    [[NSNotificationCenter defaultCenter] postNotificationName:kCouchServiceUrlChanged object:self];
+  }
 }
 
 @end
