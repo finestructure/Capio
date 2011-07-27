@@ -335,5 +335,9 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 }
 
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+	return YES;
+}
+
 
 @end
