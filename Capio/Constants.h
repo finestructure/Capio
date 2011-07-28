@@ -14,3 +14,6 @@ extern NSString * const kCouchServiceUrl;
 
 // notifications
 extern NSString * const kCouchServiceUrlChanged;
+
+// other
+extern NSString * const kCouchPathSep;

@@ -12,3 +12,5 @@ NSString * const kCouchServiceName = @"kCouchServiceName";
 NSString * const kCouchServiceUrl = @"kCouchServiceUrl";
 
 NSString * const kCouchServiceUrlChanged = @"kCouchServiceUrlChanged";
+
+NSString * const kCouchPathSep = @"%2F";

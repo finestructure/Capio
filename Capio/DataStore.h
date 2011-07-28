@@ -18,5 +18,6 @@
 - (NSArray *)dummyData:(NSUInteger)count;
 
 - (NSDictionary *)fetchDocument:(NSString *)doc;
+- (NSDictionary *)fetchDocument:(NSString *)doc forDate:(NSDate *)asof;
 
 @end

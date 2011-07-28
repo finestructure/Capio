@@ -87,6 +87,21 @@
 }
 
 
+- (NSDictionary *)fetchDocument:(NSString *)doc forDate:(NSDate *)asof {
+  static NSDateFormatter *dateFormatter = nil;
+  if (! dateFormatter) {
+    dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+  }
+
+  NSMutableString *url = [NSMutableString stringWithString:doc];
+  [url appendString:kCouchPathSep];
+  [url appendString:[dateFormatter stringFromDate:asof]];
+  
+  return [self fetchDocument:url];
+}
+
+
 - (NSArray *)appList {
   static NSDateFormatter *dateFormatter = nil;
   if (! dateFormatter) {

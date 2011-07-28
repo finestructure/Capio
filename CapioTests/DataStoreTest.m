@@ -21,6 +21,19 @@
 }
 
 
+- (void)test_fetchDocument_forDate {
+  NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+  [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+
+  NSDate *asof = [dateFormatter dateFromString:@"2011-06-30"];
+  NSDictionary *doc = [[DataStore sharedDataStore] fetchDocument:@"DBGERLT2073" forDate:asof];
+  STAssertNotNil(doc, nil);
+  STAssertEquals(9u, [doc count], nil);
+  STAssertNotNil([doc objectForKey:@"_id"], nil);
+  STAssertEqualObjects(@"DBGERLT2073/2011-03-02", [doc objectForKey:@"_id"], nil);
+}
+
+
 - (void)test_appList {
   NSArray *apps = [[DataStore sharedDataStore] appList];
   STAssertEquals(6u, [apps count], nil);
@@ -48,7 +61,6 @@
   NSLog(@"results: %@", results);
   STAssertEquals(3, (int)[results count], nil);
 }
-
 
 
 @end
