@@ -78,7 +78,7 @@
     NSString *msg = [NSString stringWithFormat:@"Server did not return any data"];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Data" message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
-    return [NSArray array];
+    return nil;
   }
   
   NSError *error = nil;
