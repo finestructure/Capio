@@ -210,7 +210,7 @@
 						<string key="NSFrame">{{20, 79}, {478, 368}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="323722585"/>
+						<reference key="NSNextKeyView" ref="345513865"/>
 						<string key="NSReuseIdentifierKey">_NS:364</string>
 						<reference key="IBUIBackgroundColor" ref="151957731"/>
 						<int key="IBUIContentMode">1</int>
@@ -227,7 +227,7 @@
 						<string key="NSFrame">{{20, 20}, {539, 22}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="942927582"/>
+						<reference key="NSNextKeyView" ref="819125034"/>
 						<string key="NSReuseIdentifierKey">_NS:330</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -245,7 +245,7 @@
 						</object>
 						<reference key="IBUIFont" ref="212500548"/>
 					</object>
-					<object class="IBUISegmentedControl" id="942927582">
+					<object class="IBUISegmentedControl" id="819125034">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{473, 20}, {210, 30}}</string>
@@ -287,6 +287,22 @@
 							<object class="NSNull" id="4"/>
 							<reference ref="4"/>
 							<reference ref="4"/>
+						</object>
+					</object>
+					<object class="IBUIImageView" id="345513865">
+						<reference key="NSNextResponder" ref="766721923"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{545, 79}, {138, 97}}</string>
+						<reference key="NSSuperview" ref="766721923"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="323722585"/>
+						<string key="NSReuseIdentifierKey">_NS:364</string>
+						<int key="IBUIContentMode">10</int>
+						<bool key="IBUIUserInteractionEnabled">NO</bool>
+						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+						<object class="NSCustomResource" key="IBUIImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">workload_legend.png</string>
 						</object>
 					</object>
 				</object>
@@ -381,7 +397,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">segmentTapped:</string>
-						<reference key="source" ref="942927582"/>
+						<reference key="source" ref="819125034"/>
 						<reference key="destination" ref="841351856"/>
 						<int key="IBEventType">13</int>
 					</object>
@@ -430,7 +446,8 @@
 							<reference ref="444824465"/>
 							<reference ref="219293329"/>
 							<reference ref="565313192"/>
-							<reference ref="942927582"/>
+							<reference ref="819125034"/>
+							<reference ref="345513865"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -471,7 +488,12 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">17</int>
-						<reference key="object" ref="942927582"/>
+						<reference key="object" ref="819125034"/>
+						<reference key="parent" ref="766721923"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">21</int>
+						<reference key="object" ref="345513865"/>
 						<reference key="parent" ref="766721923"/>
 					</object>
 				</object>
@@ -489,6 +511,7 @@
 					<string>14.IBPluginDependency</string>
 					<string>17.IBPluginDependency</string>
 					<string>2.IBPluginDependency</string>
+					<string>21.IBPluginDependency</string>
 					<string>5.IBPluginDependency</string>
 					<string>5.IBUIButtonInspectorSelectedStateConfigurationMetadataKey</string>
 					<string>7.IBPluginDependency</string>
@@ -503,6 +526,7 @@
 					<string>ServerOverviewController</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>UIResponder</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -531,7 +555,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">19</int>
+			<int key="maxID">21</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -618,12 +642,14 @@
 				<string>button1.png</string>
 				<string>button1_pressed.png</string>
 				<string>response_workloads.png</string>
+				<string>workload_legend.png</string>
 			</object>
 			<object class="NSMutableArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>{325, 48}</string>
 				<string>{325, 48}</string>
 				<string>{600, 458}</string>
+				<string>{131, 86}</string>
 			</object>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">894</string>

@@ -49,6 +49,7 @@
 		5A88ECBF13E15EA0007A259F /* DBGERLT2073%2F2011-03-02.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A88ECBD13E15EA0007A259F /* DBGERLT2073%2F2011-03-02.json */; };
 		5A88ECC213E187D6007A259F /* response_history.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A88ECC013E187D6007A259F /* response_history.png */; };
 		5A88ECC313E187D6007A259F /* response_trend.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A88ECC113E187D6007A259F /* response_trend.png */; };
+		5A88ECC513E18DD8007A259F /* workload_legend.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A88ECC413E18DD8007A259F /* workload_legend.png */; };
 		5A9DC74A13CC5F5A00D67F65 /* DataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DC74913CC5F5A00D67F65 /* DataStore.m */; };
 		5A9DC74D13CC9CA300D67F65 /* Tuple.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DC74C13CC9CA300D67F65 /* Tuple.m */; };
 		5AA4D7E113BB52080029B616 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA4D7E013BB52080029B616 /* UIKit.framework */; };
@@ -221,6 +222,7 @@
 		5A88ECBD13E15EA0007A259F /* DBGERLT2073%2F2011-03-02.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "DBGERLT2073%2F2011-03-02.json"; sourceTree = "<group>"; };
 		5A88ECC013E187D6007A259F /* response_history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = response_history.png; sourceTree = "<group>"; };
 		5A88ECC113E187D6007A259F /* response_trend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = response_trend.png; sourceTree = "<group>"; };
+		5A88ECC413E18DD8007A259F /* workload_legend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = workload_legend.png; sourceTree = "<group>"; };
 		5A9DC74813CC5F5A00D67F65 /* DataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStore.h; sourceTree = "<group>"; };
 		5A9DC74913CC5F5A00D67F65 /* DataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataStore.m; sourceTree = "<group>"; };
 		5A9DC74B13CC9CA300D67F65 /* Tuple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tuple.h; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 		5A15955513BB54700007B60F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5A88ECC413E18DD8007A259F /* workload_legend.png */,
 				5A88ECB813E146D1007A259F /* Test Data */,
 				5A32466213E0358800AE1937 /* gear.png */,
 				5A32464613DEED9E00AE1937 /* button2_pressed.png */,
@@ -711,6 +714,7 @@
 				5A88ECBE13E15EA0007A259F /* DBGERLT2073%2F2011-03-02.json in Resources */,
 				5A88ECC213E187D6007A259F /* response_history.png in Resources */,
 				5A88ECC313E187D6007A259F /* response_trend.png in Resources */,
+				5A88ECC513E18DD8007A259F /* workload_legend.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
