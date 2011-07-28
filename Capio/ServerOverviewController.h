@@ -18,5 +18,6 @@
 - (IBAction)segmentTapped:(id)sender;
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) NSDictionary *detailItem;
 
 @end

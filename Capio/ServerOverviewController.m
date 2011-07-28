@@ -14,6 +14,7 @@
 @implementation ServerOverviewController
 
 @synthesize imageView = _imageView;
+@synthesize detailItem = _detailItem;
 
 
 #pragma mark - Actions
