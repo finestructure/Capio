@@ -26,7 +26,7 @@
   self.origFrameAppArrowView = self.appArrowView.frame;
   self.origFrameTabArrowView = self.tabArrowView.frame;
   
-  [UIView animateWithDuration:0.8
+  [UIView animateWithDuration:0.5
                    animations:^{
                      {
                        self.appArrowView.alpha = 1;
