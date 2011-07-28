@@ -17,4 +17,6 @@
 
 - (NSArray *)dummyData:(NSUInteger)count;
 
+- (NSDictionary *)fetchDocument:(NSString *)doc;
+
 @end

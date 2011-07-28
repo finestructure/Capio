@@ -13,6 +13,14 @@
 @implementation DataStoreTest
 
 
+- (void)test_fetchDocument {
+  NSDictionary *doc = [[DataStore sharedDataStore] fetchDocument:@"apps"];
+  STAssertNotNil(doc, nil);
+  // 6 apps + _id
+  STAssertEquals(7u, [doc count], nil);
+}
+
+
 - (void)test_appList {
   NSArray *apps = [[DataStore sharedDataStore] appList];
   STAssertEquals(6u, [apps count], nil);

@@ -71,14 +71,8 @@
 }
 
 
-- (NSArray *)appList {
-  static NSDateFormatter *dateFormatter = nil;
-  if (! dateFormatter) {
-    dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
-  }
-
-  NSData *data = [self fetchDocument:@"apps" isLocal:YES];
+- (NSDictionary *)fetchDocument:(NSString *)doc {
+  NSData *data = [self fetchDocument:doc isLocal:YES];
   
   if (data == nil) {
     NSString *msg = [NSString stringWithFormat:@"Server at did not return any data"];
@@ -89,9 +83,21 @@
   
   NSError *error = nil;
   NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+  return  jsonDict;
+}
+
+
+- (NSArray *)appList {
+  static NSDateFormatter *dateFormatter = nil;
+  if (! dateFormatter) {
+    dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+  }
+
+  NSDictionary *doc = [self fetchDocument:@"apps"];
   
   NSMutableArray *apps = [NSMutableArray array];
-  [jsonDict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+  [doc enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
     if ([obj isKindOfClass:[NSDictionary class]]) {
       NSDictionary *dict = (NSDictionary *)obj;
       AppOverview *item = [[AppOverview alloc] init];
