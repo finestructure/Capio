@@ -47,13 +47,7 @@
 }
 
 
-- (NSArray *)appList {
-  static NSDateFormatter *dateFormatter = nil;
-  if (! dateFormatter) {
-    dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
-  }
-
+- (NSData *)fetchAppsData {
   NSString *baseUrl = [self baseUrl];
   
   if (baseUrl == nil) {
@@ -67,10 +61,21 @@
   
   [urlString appendString:@"/dev/apps"];
   NSURL *url = [NSURL URLWithString:urlString];
-  NSData *data = [NSData dataWithContentsOfURL:url];
+  return [NSData dataWithContentsOfURL:url];
+}
+
+
+- (NSArray *)appList {
+  static NSDateFormatter *dateFormatter = nil;
+  if (! dateFormatter) {
+    dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+  }
+
+  NSData *data = [self fetchAppsData];
   
   if (data == nil) {
-    NSString *msg = [NSString stringWithFormat:@"Server at '%@' did not return any data", urlString];
+    NSString *msg = [NSString stringWithFormat:@"Server at did not return any data"];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Data" message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
     return [NSArray array];
