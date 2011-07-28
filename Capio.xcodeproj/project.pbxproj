@@ -45,8 +45,8 @@
 		5A886EDD13C33E8F003E06FA /* button1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A886EDB13C33E8F003E06FA /* button1.png */; };
 		5A88ECBB13E155DA007A259F /* apps.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A32A12813D4912900AC7CB3 /* apps.json */; };
 		5A88ECBC13E155DC007A259F /* apps.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A32A12813D4912900AC7CB3 /* apps.json */; };
-		5A88ECBE13E15EA0007A259F /* DBGERLT2073%2F20110630.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A88ECBD13E15EA0007A259F /* DBGERLT2073%2F20110630.json */; };
-		5A88ECBF13E15EA0007A259F /* DBGERLT2073%2F20110630.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A88ECBD13E15EA0007A259F /* DBGERLT2073%2F20110630.json */; };
+		5A88ECBE13E15EA0007A259F /* DBGERLT2073%2F2011-03-02.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A88ECBD13E15EA0007A259F /* DBGERLT2073%2F2011-03-02.json */; };
+		5A88ECBF13E15EA0007A259F /* DBGERLT2073%2F2011-03-02.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A88ECBD13E15EA0007A259F /* DBGERLT2073%2F2011-03-02.json */; };
 		5A9DC74A13CC5F5A00D67F65 /* DataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DC74913CC5F5A00D67F65 /* DataStore.m */; };
 		5A9DC74D13CC9CA300D67F65 /* Tuple.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DC74C13CC9CA300D67F65 /* Tuple.m */; };
 		5AA4D7E113BB52080029B616 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA4D7E013BB52080029B616 /* UIKit.framework */; };
@@ -216,7 +216,7 @@
 		5A843E3113C2096F00289E51 /* amber_rag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amber_rag.png; sourceTree = "<group>"; };
 		5A886EDA13C33E8F003E06FA /* button1_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button1_pressed.png; sourceTree = "<group>"; };
 		5A886EDB13C33E8F003E06FA /* button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button1.png; sourceTree = "<group>"; };
-		5A88ECBD13E15EA0007A259F /* DBGERLT2073%2F20110630.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "DBGERLT2073%2F20110630.json"; sourceTree = "<group>"; };
+		5A88ECBD13E15EA0007A259F /* DBGERLT2073%2F2011-03-02.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "DBGERLT2073%2F2011-03-02.json"; sourceTree = "<group>"; };
 		5A9DC74813CC5F5A00D67F65 /* DataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStore.h; sourceTree = "<group>"; };
 		5A9DC74913CC5F5A00D67F65 /* DataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataStore.m; sourceTree = "<group>"; };
 		5A9DC74B13CC9CA300D67F65 /* Tuple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tuple.h; sourceTree = "<group>"; };
@@ -446,7 +446,7 @@
 		5A88ECB813E146D1007A259F /* Test Data */ = {
 			isa = PBXGroup;
 			children = (
-				5A88ECBD13E15EA0007A259F /* DBGERLT2073%2F20110630.json */,
+				5A88ECBD13E15EA0007A259F /* DBGERLT2073%2F2011-03-02.json */,
 				5A32A12813D4912900AC7CB3 /* apps.json */,
 			);
 			name = "Test Data";
@@ -702,7 +702,7 @@
 				5A32466313E0358900AE1937 /* gear.png in Resources */,
 				5A32466813E03B8300AE1937 /* ConfigView.xib in Resources */,
 				5A88ECBB13E155DA007A259F /* apps.json in Resources */,
-				5A88ECBE13E15EA0007A259F /* DBGERLT2073%2F20110630.json in Resources */,
+				5A88ECBE13E15EA0007A259F /* DBGERLT2073%2F2011-03-02.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,7 +713,7 @@
 				5AA4D81713BB52080029B616 /* InfoPlist.strings in Resources */,
 				5AA4D81913BB52080029B616 /* CapioTests.h in Resources */,
 				5A88ECBC13E155DC007A259F /* apps.json in Resources */,
-				5A88ECBF13E15EA0007A259F /* DBGERLT2073%2F20110630.json in Resources */,
+				5A88ECBF13E15EA0007A259F /* DBGERLT2073%2F2011-03-02.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
