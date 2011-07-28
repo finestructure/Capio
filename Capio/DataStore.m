@@ -75,7 +75,7 @@
   NSData *data = [self fetchDocument:doc isLocal:YES];
   
   if (data == nil) {
-    NSString *msg = [NSString stringWithFormat:@"Server at did not return any data"];
+    NSString *msg = [NSString stringWithFormat:@"Server did not return any data"];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Data" message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
     return [NSArray array];
