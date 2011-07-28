@@ -1,0 +1,59 @@
+{
+  "_attachments" : {
+    "ecp_DBGERLT2073_2011Mar02_1.cpc.gz" : {
+      "content_type" : "gzip",
+      "digest" : "md5-Qo3GpoAXDHKlMA3cGJKpCw==",
+      "length" : 2975910,
+      "revpos" : 3,
+      "stub" : true
+    },
+    "ecp_DBGERLT2073_2011Mar02_2.cpc.gz" : {
+      "content_type" : "gzip",
+      "digest" : "md5-4QVUyj4cEBsu0JmSXtA/NA==",
+      "length" : 1628724,
+      "revpos" : 2,
+      "stub" : true
+    }
+  },
+  "_id" : "DBGERLT2073/2011-03-02",
+  "_rev" : "28-efd01303ede8a181f013bf5d9ccdb5bf",
+  "asof" : "2011-03-02",
+  "config" : {
+    "CPU" : "Intel Core2 Duo",
+    "Local Storage" : "C: 1000 MB",
+    "Memory" : "4096 MB",
+    "Network Interface" : "1 Gbit",
+    "SAN 1" : "host:/san001",
+    "SAN 2" : "host:/san002"
+  },
+  "hostname" : "DBGERLT2073",
+  "processed" : {
+    "cpu" : "DBGERLT2073/2011-03-02/cpu",
+    "cpu_mode" : "DBGERLT2073/2011-03-02/cpu_mode",
+    "cpu_proc" : null,
+    "cpu_top10images" : "DBGERLT2073/2011-03-02/cpu_top10images",
+    "cpu_top10users" : null,
+    "cpu_workload" : "DBGERLT2073/2011-03-02/cpu_workload",
+    "disk_io" : null,
+    "disk_io_type" : null,
+    "fs_top10iooperations" : "DBGERLT2073/2011-03-02/fs_top10iooperations",
+    "fs_top10size" : null,
+    "mem" : "DBGERLT2073/2011-03-02/mem",
+    "mem_alloc" : null,
+    "mem_faultrate" : "DBGERLT2073/2011-03-02/mem_faultrate",
+    "mem_faults_io" : "DBGERLT2073/2011-03-02/mem_faults_io",
+    "mem_faults_type" : null,
+    "net_closed" : null,
+    "net_established" : null,
+    "net_ip_packetrate" : "DBGERLT2073/2011-03-02/net_ip_packetrate",
+    "net_received" : null,
+    "net_sent" : null,
+    "net_tcp_datarate" : null,
+    "net_tcp_packetrate" : "DBGERLT2073/2011-03-02/net_tcp_packetrate",
+    "net_udp_packetrate" : "DBGERLT2073/2011-03-02/net_udp_packetrate",
+    "proccount" : "DBGERLT2073/2011-03-02/proccount",
+    "proccount_workload" : "DBGERLT2073/2011-03-02/proccount_workload"
+  },
+  "type" : "server",
+  "version" : 1
+}
