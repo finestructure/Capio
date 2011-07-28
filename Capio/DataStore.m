@@ -119,8 +119,7 @@
       item.appName = [dict objectForKey:@"app_name"];
       item.appDescription = [dict objectForKey:@"app_description"];
       item.appOwner = [dict objectForKey:@"app_owner"];
-      NSArray *server_list = [dict objectForKey:@"server_list"];
-      item.serverCount = [NSNumber numberWithUnsignedInteger:[server_list count]];
+      item.serverList = [dict objectForKey:@"server_list"];
       NSString *value = [dict objectForKey:@"report_date"];
       item.reportDate = [dateFormatter dateFromString:value];
       item.ragRed = [dict objectForKey:@"red_rag_count"];

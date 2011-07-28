@@ -13,7 +13,7 @@
 @property (nonatomic, strong) NSString *appName;
 @property (nonatomic, strong) NSString *appDescription;
 @property (nonatomic, strong) NSString *appOwner;
-@property (nonatomic, strong) NSNumber *serverCount;
+@property (nonatomic, strong) NSArray *serverList;
 @property (nonatomic, strong) NSDate *reportDate;
 @property (nonatomic, strong) NSNumber *ragRed;
 @property (nonatomic, strong) NSNumber *ragAmber;

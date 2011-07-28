@@ -64,7 +64,7 @@
   self.appName.text = self.detailItem.appName;
   self.appDescription.text = self.detailItem.appDescription;
   self.appOwner.text = self.detailItem.appOwner;
-  self.serverCount.text = [self.detailItem.serverCount stringValue];
+  self.serverCount.text = [NSString stringWithFormat:@"%d", [self.detailItem.serverList count]];
   NSString *reportDate = [dateFormatter stringFromDate:self.detailItem.reportDate];
   [self.reportDateButton setTitle:reportDate forState:UIControlStateNormal];
   [self.reportDateButton setTitle:reportDate forState:UIControlStateHighlighted];
