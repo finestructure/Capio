@@ -15,6 +15,25 @@
 
 @synthesize imageView = _imageView;
 @synthesize detailItem = _detailItem;
+@synthesize serverName = _serverName;
+@synthesize reportDate = _reportDate;
+
+
+#pragma mark - Workers
+
+
+- (void)updateView {
+  self.serverName.text = [self.detailItem objectForKey:@"hostname"];
+  self.reportDate.text = [self.detailItem objectForKey:@"asof"];
+}
+
+
+- (void)setDetailItem:(NSDictionary *)newDetailItem {  
+  if (_detailItem != newDetailItem) {
+    _detailItem = newDetailItem;
+    [self updateView];
+  }
+}
 
 
 #pragma mark - Actions
@@ -82,15 +101,17 @@
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+- (void)viewDidLoad{
+  [super viewDidLoad];
+
+  [self updateView];
 }
 
 - (void)viewDidUnload
 {
   [self setImageView:nil];
+  [self setServerName:nil];
+  [self setReportDate:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

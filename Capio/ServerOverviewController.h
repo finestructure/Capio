@@ -10,6 +10,8 @@
 
 @interface ServerOverviewController : UIViewController {
   UIImageView *_imageView;
+  UILabel *_serverName;
+  UILabel *_reportDate;
 }
 
 - (IBAction)metricsTapped:(id)sender;
@@ -19,5 +21,8 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) NSDictionary *detailItem;
+
+@property (strong, nonatomic) IBOutlet UILabel *serverName;
+@property (strong, nonatomic) IBOutlet UILabel *reportDate;
 
 @end
