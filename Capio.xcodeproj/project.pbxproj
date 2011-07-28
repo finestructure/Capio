@@ -43,6 +43,8 @@
 		5A843E3213C2096F00289E51 /* amber_rag.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A843E3113C2096F00289E51 /* amber_rag.png */; };
 		5A886EDC13C33E8F003E06FA /* button1_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A886EDA13C33E8F003E06FA /* button1_pressed.png */; };
 		5A886EDD13C33E8F003E06FA /* button1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A886EDB13C33E8F003E06FA /* button1.png */; };
+		5A88ECBB13E155DA007A259F /* apps.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A32A12813D4912900AC7CB3 /* apps.json */; };
+		5A88ECBC13E155DC007A259F /* apps.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A32A12813D4912900AC7CB3 /* apps.json */; };
 		5A9DC74A13CC5F5A00D67F65 /* DataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DC74913CC5F5A00D67F65 /* DataStore.m */; };
 		5A9DC74D13CC9CA300D67F65 /* Tuple.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DC74C13CC9CA300D67F65 /* Tuple.m */; };
 		5AA4D7E113BB52080029B616 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA4D7E013BB52080029B616 /* UIKit.framework */; };
@@ -695,6 +697,7 @@
 				5A32464F13DEF41D00AE1937 /* ServerConfig.xib in Resources */,
 				5A32466313E0358900AE1937 /* gear.png in Resources */,
 				5A32466813E03B8300AE1937 /* ConfigView.xib in Resources */,
+				5A88ECBB13E155DA007A259F /* apps.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,6 +707,7 @@
 			files = (
 				5AA4D81713BB52080029B616 /* InfoPlist.strings in Resources */,
 				5AA4D81913BB52080029B616 /* CapioTests.h in Resources */,
+				5A88ECBC13E155DC007A259F /* apps.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -47,21 +47,27 @@
 }
 
 
-- (NSData *)fetchAppsData {
-  NSString *baseUrl = [self baseUrl];
-  
-  if (baseUrl == nil) {
-    NSString *msg = [NSString stringWithFormat:@"Server at '%@' did not available", baseUrl];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Server Not Available" message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [alert show];
-    return [NSArray array];
+- (NSData *)fetchDocument:(NSString *)doc isLocal:(BOOL)local {
+  if (local) {
+    NSString *path = [[NSBundle mainBundle] pathForResource:doc ofType:@"json"];
+    return [NSData dataWithContentsOfFile:path];
+  } else {
+    NSString *baseUrl = [self baseUrl];
+    
+    if (baseUrl == nil) {
+      NSString *msg = [NSString stringWithFormat:@"Server at '%@' did not available", baseUrl];
+      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Server Not Available" message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+      [alert show];
+      return [NSArray array];
+    }
+    
+    NSMutableString *urlString = [NSMutableString stringWithString:baseUrl];
+    
+    [urlString appendString:@"/dev/"];
+    [urlString appendFormat:doc];
+    NSURL *url = [NSURL URLWithString:urlString];
+    return [NSData dataWithContentsOfURL:url];
   }
-  
-  NSMutableString *urlString = [NSMutableString stringWithString:baseUrl];
-  
-  [urlString appendString:@"/dev/apps"];
-  NSURL *url = [NSURL URLWithString:urlString];
-  return [NSData dataWithContentsOfURL:url];
 }
 
 
@@ -72,7 +78,7 @@
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
   }
 
-  NSData *data = [self fetchAppsData];
+  NSData *data = [self fetchDocument:@"apps" isLocal:YES];
   
   if (data == nil) {
     NSString *msg = [NSString stringWithFormat:@"Server at did not return any data"];
