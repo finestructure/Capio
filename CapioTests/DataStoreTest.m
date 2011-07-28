@@ -30,7 +30,7 @@
 }
 
 
-- (void)test_appfiler {
+- (void)test_appfilter {
   NSArray *apps = [[DataStore sharedDataStore] appList];
   NSString *searchText = @"App";
   NSString *asterisk = @"*";
