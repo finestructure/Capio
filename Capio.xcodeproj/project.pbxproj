@@ -68,6 +68,7 @@
 		5AB26AB713C5B44900AC5B87 /* TimelineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB26AB513C5B44900AC5B87 /* TimelineController.m */; };
 		5AB26AB813C5B44900AC5B87 /* Timeline.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AB26AB613C5B44900AC5B87 /* Timeline.xib */; };
 		5ABC806013BC5BA000468868 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ABC805E13BC5BA000468868 /* MainWindow.xib */; };
+		5ABE2DD613E1C8C300170DE7 /* db_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ABE2DD513E1C8C300170DE7 /* db_logo.png */; };
 		5AD5B6AA13BC6CA10083D454 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5B6A813BC6CA10083D454 /* SecondViewController.m */; };
 		5AD5B6AB13BC6CA10083D454 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD5B6A913BC6CA10083D454 /* SecondViewController.xib */; };
 		5AD615D213BB6D4E00F9CA45 /* AppListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD615D013BB6D4E00F9CA45 /* AppListController.m */; };
@@ -247,6 +248,7 @@
 		5AB26AB513C5B44900AC5B87 /* TimelineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineController.m; sourceTree = "<group>"; };
 		5AB26AB613C5B44900AC5B87 /* Timeline.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Timeline.xib; sourceTree = "<group>"; };
 		5ABC805E13BC5BA000468868 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainWindow.xib; path = ../MainWindow.xib; sourceTree = "<group>"; };
+		5ABE2DD513E1C8C300170DE7 /* db_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = db_logo.png; sourceTree = "<group>"; };
 		5AD5B6A713BC6CA10083D454 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		5AD5B6A813BC6CA10083D454 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		5AD5B6A913BC6CA10083D454 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 		5A15955513BB54700007B60F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5ABE2DD513E1C8C300170DE7 /* db_logo.png */,
 				5A88ECC413E18DD8007A259F /* workload_legend.png */,
 				5A88ECB813E146D1007A259F /* Test Data */,
 				5A32466213E0358800AE1937 /* gear.png */,
@@ -715,6 +718,7 @@
 				5A88ECC213E187D6007A259F /* response_history.png in Resources */,
 				5A88ECC313E187D6007A259F /* response_trend.png in Resources */,
 				5A88ECC513E18DD8007A259F /* workload_legend.png in Resources */,
+				5ABE2DD613E1C8C300170DE7 /* db_logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
