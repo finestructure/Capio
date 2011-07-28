@@ -8,6 +8,7 @@
 
 #import "CapioTests.h"
 #import "Tuple.h"
+#import "Constants.h"
 
 
 @implementation CapioTests
@@ -72,6 +73,18 @@
   STAssertNotNil(obj, @"obj must not be nil");
   NSDictionary *app = [obj objectForKey:@"DB Caprep"];
   STAssertEqualObjects(@"Steven Götäpp", [app objectForKey:@"app_owner"], nil);
+}
+
+
+- (void)test_ymd_date_formatter {
+  YmdDateFormatter *df = [YmdDateFormatter sharedInstance];
+  NSDate *date = [df dateFromString:@"2011-07-28"];
+  STAssertNotNil(date, nil);
+  NSDateComponents *parts = [[NSCalendar currentCalendar] components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:date];
+  STAssertNotNil(parts, nil);
+  STAssertEquals(2011, parts.year, nil);
+  STAssertEquals(7, parts.month, nil);
+  STAssertEquals(28, parts.day, nil);
 }
 
 

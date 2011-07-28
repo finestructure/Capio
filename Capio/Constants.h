@@ -17,3 +17,10 @@ extern NSString * const kCouchServiceUrlChanged;
 
 // other
 extern NSString * const kCouchPathSep;
+
+
+@interface YmdDateFormatter : NSDateFormatter
+
++ (YmdDateFormatter *)sharedInstance;
+
+@end

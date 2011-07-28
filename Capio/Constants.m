@@ -14,3 +14,33 @@ NSString * const kCouchServiceUrl = @"kCouchServiceUrl";
 NSString * const kCouchServiceUrlChanged = @"kCouchServiceUrlChanged";
 
 NSString * const kCouchPathSep = @"%2F";
+
+
+@implementation YmdDateFormatter
+
+- (id)init {
+  self = [super init];
+  if (self) {
+    [self setDateFormat:@"yyyy-MM-dd"];
+  }
+  
+  return self;
+}
+
++ (YmdDateFormatter *)sharedInstance {
+  static YmdDateFormatter *sharedInstance = nil;
+  
+  if (sharedInstance) {
+    return sharedInstance;
+  }
+  
+  @synchronized(self) {
+    if (!sharedInstance) {
+      sharedInstance = [[YmdDateFormatter alloc] init];
+    }
+    
+    return sharedInstance;
+  }
+}
+
+@end
