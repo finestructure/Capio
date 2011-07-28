@@ -452,8 +452,6 @@
 				5AA4D7E613BB52080029B616 /* Capio */,
 				5A32465413E022C000AE1937 /* BonjourSupport */,
 				5A57427713DED37600294D1A /* CorePlotHeaders */,
-				5A5742C213DED37600294D1A /* libCorePlot-CocoaTouch.a */,
-				5A26ECC513C7137500533B5D /* QuartzCore.framework */,
 				5AD615E713BB820100F9CA45 /* MGSplitViewController */,
 				5AA4D81213BB52080029B616 /* CapioTests */,
 				5AA4D7DF13BB52080029B616 /* Frameworks */,
@@ -473,6 +471,8 @@
 		5AA4D7DF13BB52080029B616 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5A5742C213DED37600294D1A /* libCorePlot-CocoaTouch.a */,
+				5A26ECC513C7137500533B5D /* QuartzCore.framework */,
 				5AA4D7E013BB52080029B616 /* UIKit.framework */,
 				5AA4D7E213BB52080029B616 /* Foundation.framework */,
 				5AA4D7E413BB52080029B616 /* CoreGraphics.framework */,
