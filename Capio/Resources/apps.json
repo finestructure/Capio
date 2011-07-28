@@ -8,7 +8,7 @@
     "server_list" : [
       "DBGERLT2073"
     ],
-    "report_date" : "2011-06-30 14:10",
+    "report_date" : "2011-06-30",
     "red_rag_count" : 0,
     "amber_rag_count" : 1,
     "green_rag_count" : 0
@@ -21,7 +21,7 @@
     "server_list" : [
       "DBGERLT2073"
     ],
-    "report_date" : "2011-06-30 14:10",
+    "report_date" : "2011-06-30",
     "red_rag_count" : 0,
     "amber_rag_count" : 1,
     "green_rag_count" : 0
@@ -34,7 +34,7 @@
     "server_list" : [
       "DBGERLT2073"
     ],
-    "report_date" : "2011-06-30 14:10",
+    "report_date" : "2011-06-30",
     "red_rag_count" : 0,
     "amber_rag_count" : 1,
     "green_rag_count" : 0
@@ -47,7 +47,7 @@
     "server_list" : [
       "DBGERLT2073"
     ],
-    "report_date" : "2011-06-30 14:10",
+    "report_date" : "2011-06-30",
     "red_rag_count" : 0,
     "amber_rag_count" : 1,
     "green_rag_count" : 0
@@ -61,7 +61,7 @@
       "sol45a",
       "sol45d"
     ],
-    "report_date" : "2011-06-30 14:10",
+    "report_date" : "2011-06-30",
     "red_rag_count" : 0,
     "amber_rag_count" : 1,
     "green_rag_count" : 1
@@ -74,7 +74,7 @@
     "server_list" : [
       "caprpu1"
     ],
-    "report_date" : "2011-06-30 14:10",
+    "report_date" : "2011-06-30",
     "red_rag_count" : 1,
     "amber_rag_count" : 0,
     "green_rag_count" : 0

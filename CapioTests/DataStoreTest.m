@@ -9,6 +9,7 @@
 #import "DataStoreTest.h"
 #import "DataStore.h"
 #import "AppOverview.h"
+#import "Constants.h"
 
 @implementation DataStoreTest
 
@@ -22,10 +23,7 @@
 
 
 - (void)test_fetchDocument_forDate {
-  NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-  [dateFormatter setDateFormat:@"yyyy-MM-dd"];
-
-  NSDate *asof = [dateFormatter dateFromString:@"2011-06-30"];
+  NSDate *asof = [[YmdDateFormatter sharedInstance] dateFromString:@"2011-06-30"];
   NSDictionary *doc = [[DataStore sharedDataStore] fetchDocument:@"DBGERLT2073" forDate:asof];
   STAssertNotNil(doc, nil);
   STAssertEquals(9u, [doc count], nil);

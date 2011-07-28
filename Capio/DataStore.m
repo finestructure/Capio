@@ -88,27 +88,15 @@
 
 
 - (NSDictionary *)fetchDocument:(NSString *)doc forDate:(NSDate *)asof {
-  static NSDateFormatter *dateFormatter = nil;
-  if (! dateFormatter) {
-    dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
-  }
-
   NSMutableString *url = [NSMutableString stringWithString:doc];
   [url appendString:kCouchPathSep];
-  [url appendString:[dateFormatter stringFromDate:asof]];
+  [url appendString:[[YmdDateFormatter sharedInstance] stringFromDate:asof]];
   
   return [self fetchDocument:url];
 }
 
 
 - (NSArray *)appList {
-  static NSDateFormatter *dateFormatter = nil;
-  if (! dateFormatter) {
-    dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
-  }
-
   NSDictionary *doc = [self fetchDocument:@"apps"];
   
   NSMutableArray *apps = [NSMutableArray array];
@@ -121,7 +109,7 @@
       item.appOwner = [dict objectForKey:@"app_owner"];
       item.serverList = [dict objectForKey:@"server_list"];
       NSString *value = [dict objectForKey:@"report_date"];
-      item.reportDate = [dateFormatter dateFromString:value];
+      item.reportDate = [[YmdDateFormatter sharedInstance] dateFromString:value];
       item.ragRed = [dict objectForKey:@"red_rag_count"];
       item.ragAmber = [dict objectForKey:@"amber_rag_count"];
       item.ragGreen = [dict objectForKey:@"green_rag_count"];
