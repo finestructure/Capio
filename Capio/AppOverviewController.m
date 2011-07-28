@@ -31,7 +31,7 @@
 @synthesize ragTotal = _ragTotal;
 @synthesize timeline = _timeline;
 @synthesize detailView = _detailView;
-@synthesize blankView = _blankView;
+@synthesize introView = _blankView;
 @synthesize reportDateButton = _reportDateButton;
 
 
@@ -205,7 +205,7 @@
   [self setRagAmber:nil];
   [self setRagGreen:nil];
   [self setRagTotal:nil];
-  [self setBlankView:nil];
+  [self setIntroView:nil];
   [self setDetailView:nil];
   [self setReportDateButton:nil];
     [self setTimeline:nil];

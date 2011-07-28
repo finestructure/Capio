@@ -49,7 +49,7 @@
 @property (nonatomic, strong) IBOutlet UIButton *timeline;
 
 @property (nonatomic, strong) IBOutlet UIView *detailView;
-@property (nonatomic, strong) IBOutlet UIView *blankView;
+@property (nonatomic, strong) IBOutlet UIView *introView;
 
 - (IBAction)reportDateButtonTapped:(id)sender;
 - (IBAction)timelineTapped:(id)sender;
