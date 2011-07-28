@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ServerOverviewController : UIViewController
+@interface ServerOverviewController : UIViewController {
+  UIImageView *_imageView;
+}
 
 - (IBAction)metricsTapped:(id)sender;
 - (IBAction)timelineTapped:(id)sender;
 - (IBAction)configTapped:(id)sender;
+- (IBAction)segmentTapped:(id)sender;
+
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
 @end

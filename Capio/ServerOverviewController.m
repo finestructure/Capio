@@ -13,6 +13,9 @@
 
 @implementation ServerOverviewController
 
+@synthesize imageView = _imageView;
+
+
 #pragma mark - Actions
 
 
@@ -30,6 +33,31 @@
 - (IBAction)configTapped:(id)sender {
   id vc = [[ServerConfigController alloc] initWithNibName:@"ServerConfig" bundle:nil];
   [self.navigationController pushViewController:vc animated:YES];
+}
+
+
+- (IBAction)segmentTapped:(id)sender {
+  UISegmentedControl *segment = (UISegmentedControl *)sender;
+
+  switch (segment.selectedSegmentIndex) {
+    case 0: {
+      self.imageView.image = [UIImage imageNamed:@"response_workloads.png"];
+      break;
+    }
+    
+    case 1: {
+      self.imageView.image = [UIImage imageNamed:@"response_trend.png"];
+      break;
+    }
+    
+    case 2: {
+      self.imageView.image = [UIImage imageNamed:@"response_history.png"];
+      break;
+    }
+      
+    default:
+      break;
+  }
 }
 
 
@@ -61,6 +89,7 @@
 
 - (void)viewDidUnload
 {
+  [self setImageView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
