@@ -218,6 +218,7 @@
 
 - (void)cancel:(id)sender {
   [self.popover dismissPopoverAnimated:YES];
+  self.reportDateButton.selected = NO;  
 }
 
 
@@ -229,6 +230,7 @@
     [self updateView];
   }
   [self.popover dismissPopoverAnimated:YES];
+  self.reportDateButton.selected = NO;  
 }
 
 
