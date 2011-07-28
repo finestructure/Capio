@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IntroViewController : UIViewController
+@interface IntroViewController : UIViewController {
+  UIView *_appArrowView;
+  UIView *_tabArrowView;
+}
+
+@property (strong, nonatomic) IBOutlet UIView *appArrowView;
+@property (strong, nonatomic) IBOutlet UIView *tabArrowView;
 
 @end

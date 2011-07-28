@@ -9,6 +9,8 @@
 #import "IntroViewController.h"
 
 @implementation IntroViewController
+@synthesize appArrowView = _appArrowView;
+@synthesize tabArrowView = _tabArrowView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,14 +31,36 @@
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+- (void)viewDidLoad {
+  [super viewDidLoad];
+
+  self.appArrowView.alpha = 0;
+  self.tabArrowView.alpha = 0;
+  
+  [UIView animateWithDuration:1.0
+                   animations:^{
+                     {
+                       self.appArrowView.alpha = 1;
+                       CGRect target = self.appArrowView.frame;
+                       target.origin.x = 0;
+                       self.appArrowView.frame = target;
+                     }
+                     {
+                       self.tabArrowView.alpha = 1;
+                       CGRect target = self.tabArrowView.frame;
+                       target.origin.y = 567;
+                       self.tabArrowView.frame = target;
+                     }
+                   }
+                   completion:^(BOOL finished){
+
+                   }];
 }
 
 - (void)viewDidUnload
 {
+  [self setAppArrowView:nil];
+  [self setTabArrowView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
