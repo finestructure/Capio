@@ -156,8 +156,8 @@
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  NSTimeInterval duration = 0.15;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {  
+  NSTimeInterval duration = 0.05;
   UIView *visibleView = self.detailViewController.visibleViewController.view;
 
   [UIView animateWithDuration:duration
