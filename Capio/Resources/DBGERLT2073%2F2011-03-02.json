@@ -1,31 +1,14 @@
 {
-  "_attachments" : {
-    "ecp_DBGERLT2073_2011Mar02_1.cpc.gz" : {
-      "content_type" : "gzip",
-      "digest" : "md5-Qo3GpoAXDHKlMA3cGJKpCw==",
-      "length" : 2975910,
-      "revpos" : 3,
-      "stub" : true
-    },
-    "ecp_DBGERLT2073_2011Mar02_2.cpc.gz" : {
-      "content_type" : "gzip",
-      "digest" : "md5-4QVUyj4cEBsu0JmSXtA/NA==",
-      "length" : 1628724,
-      "revpos" : 2,
-      "stub" : true
-    }
-  },
   "_id" : "DBGERLT2073/2011-03-02",
-  "_rev" : "28-efd01303ede8a181f013bf5d9ccdb5bf",
   "asof" : "2011-03-02",
-  "config" : {
-    "CPU" : "Intel Core2 Duo",
-    "Local Storage" : "C: 1000 MB",
-    "Memory" : "4096 MB",
-    "Network Interface" : "1 Gbit",
-    "SAN 1" : "host:/san001",
-    "SAN 2" : "host:/san002"
-  },
+  "config" : [
+    ["CPU", "Intel Core2 Duo"],
+    ["Memory", "4096 MB"],
+    ["Network Interface", "1 Gbit"],
+    ["Local Storage", "C: 1000 MB"],
+    ["SAN 1", "host:/san001"],
+    ["SAN 2", "host:/san002"]
+  ],
   "hostname" : "DBGERLT2073",
   "processed" : {
     "cpu" : "DBGERLT2073/2011-03-02/cpu",

@@ -51,8 +51,14 @@
 }
 
 - (IBAction)configTapped:(id)sender {
-  id vc = [[ServerConfigController alloc] initWithNibName:@"ServerConfig" bundle:nil];
-  [self.navigationController pushViewController:vc animated:YES];
+  id config = [self.detailItem objectForKey:@"config"];
+  
+  if (config != nil) {
+    ServerConfigController *vc = [[ServerConfigController alloc] initWithNibName:@"ServerConfig" bundle:nil];
+    vc.detailItem = config;
+    vc.parentDetailItem = self.detailItem;
+    [self.navigationController pushViewController:vc animated:YES];
+  }
 }
 
 

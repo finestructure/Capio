@@ -11,7 +11,42 @@
 
 @implementation ServerConfigController
 
+@synthesize detailItem = _detailItem;
+@synthesize parentDetailItem = _parentDetailItem;
+@synthesize serverName = _serverName;
+@synthesize reportDate = _reportDate;
 @synthesize tableview = _tableview;
+
+
+#pragma mark - Workers
+
+
+- (void)updateView {
+  NSLog(@"server: %@", [self.parentDetailItem objectForKey:@"hostname"]);
+  self.serverName.text = [self.parentDetailItem objectForKey:@"hostname"];
+  self.reportDate.text = [self.parentDetailItem objectForKey:@"asof"];
+}
+
+
+- (void)setDetailItem:(NSArray *)newDetailItem {  
+  if (_detailItem != newDetailItem) {
+    _detailItem = newDetailItem;
+    // detail item drives the table view -- refresh it on update of this property
+    [self.tableview reloadData];
+  }
+}
+
+
+- (void)setParentDetailItem:(NSDictionary *)newDetailItem {  
+  if (_parentDetailItem != newDetailItem) {
+    _parentDetailItem = newDetailItem;
+    // parent detail item affects the server and asof labels
+    [self updateView];
+  }
+}
+
+
+#pragma mark - Initializers
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -37,14 +72,16 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-  return 20;
+  return [self.detailItem count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ConfigCell"];
+  UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"ConfigCell"];
   
   // Configure the cell
-  cell.textLabel.text = [NSString stringWithFormat:@"Configuration %d", indexPath.row];
+  NSArray *pair = [self.detailItem objectAtIndex:indexPath.row];
+  cell.textLabel.text = [pair objectAtIndex:0];
+  cell.detailTextLabel.text = [pair objectAtIndex:1];
   
   return cell;
 }
@@ -54,13 +91,18 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  
   self.tableview.layer.borderWidth = 1.0;
   self.tableview.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+
+  [self updateView];
 }
 
 - (void)viewDidUnload
 {
   [self setTableview:nil];
+  [self setServerName:nil];
+  [self setReportDate:nil];
   [super viewDidUnload];
   // Release any retained subviews of the main view.
   // e.g. self.myOutlet = nil;
