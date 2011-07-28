@@ -23,8 +23,6 @@
   UIButton *_ragGreen;
   UIButton *_ragTotal;
   UIButton *_timeline;
-  UIView *_detailView;
-  UIView *_blankView;
   UIButton *_reportDateButton;
   UISegmentedControl *_performanceCostToggle;
 }
@@ -47,9 +45,6 @@
 @property (nonatomic, strong) IBOutlet UIButton *ragTotal;
 
 @property (nonatomic, strong) IBOutlet UIButton *timeline;
-
-@property (nonatomic, strong) IBOutlet UIView *detailView;
-@property (nonatomic, strong) IBOutlet UIView *introView;
 
 - (IBAction)reportDateButtonTapped:(id)sender;
 - (IBAction)timelineTapped:(id)sender;

@@ -30,8 +30,6 @@
 @synthesize ragGreen = _ragGreen;
 @synthesize ragTotal = _ragTotal;
 @synthesize timeline = _timeline;
-@synthesize detailView = _detailView;
-@synthesize introView = _blankView;
 @synthesize reportDateButton = _reportDateButton;
 
 
@@ -62,7 +60,6 @@
     [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
     [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
   }
-  self.view = self.detailView;
   self.appName.text = self.detailItem.appName;
   self.appDescription.text = self.detailItem.appDescription;
   self.appOwner.text = self.detailItem.appOwner;
@@ -192,6 +189,8 @@
   UIImage *img = [UIImage imageNamed:@"dropdown_button_pressed.png"];
   [self.reportDateButton setBackgroundImage:img forState:UIControlStateSelected];
   [self.reportDateButton setBackgroundImage:img forState:(UIControlStateHighlighted|UIControlStateSelected)];
+  
+  [self updateView];
 }
 
 - (void)viewDidUnload
@@ -205,8 +204,6 @@
   [self setRagAmber:nil];
   [self setRagGreen:nil];
   [self setRagTotal:nil];
-  [self setIntroView:nil];
-  [self setDetailView:nil];
   [self setReportDateButton:nil];
     [self setTimeline:nil];
     [super viewDidUnload];
