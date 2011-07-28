@@ -112,7 +112,7 @@
 		5A32466613E03B8300AE1937 /* ConfigView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigView.xib; sourceTree = "<group>"; };
 		5A32466E13E0537900AE1937 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		5A32466F13E0537900AE1937 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
-		5A32A12813D4912900AC7CB3 /* testdata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testdata.json; sourceTree = "<group>"; };
+		5A32A12813D4912900AC7CB3 /* apps.json */ = {isa = PBXFileReference; path = apps.json; sourceTree = "<group>"; };
 		5A32A12913D495CA00AC7CB3 /* DataStoreTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStoreTest.h; sourceTree = "<group>"; };
 		5A32A12A13D495CA00AC7CB3 /* DataStoreTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataStoreTest.m; sourceTree = "<group>"; };
 		5A4B5E4713D561EC006E1C9E /* ServerOverviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerOverviewController.h; sourceTree = "<group>"; };
@@ -291,6 +291,7 @@
 		5A15955513BB54700007B60F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5A88ECB813E146D1007A259F /* Test Data */,
 				5A32466213E0358800AE1937 /* gear.png */,
 				5A32464613DEED9E00AE1937 /* button2_pressed.png */,
 				5A32464713DEED9E00AE1937 /* button2.png */,
@@ -298,7 +299,6 @@
 				5ADF8CBD13DEE6BA00023BA8 /* app_config.png */,
 				5A4B5E5F13D5D1DE006E1C9E /* metrics.png */,
 				5A4B5E5313D5CC35006E1C9E /* response_workloads.png */,
-				5A32A12813D4912900AC7CB3 /* testdata.json */,
 				5A886EDA13C33E8F003E06FA /* button1_pressed.png */,
 				5A886EDB13C33E8F003E06FA /* button1.png */,
 				5A66A31813BF3B6000DB7161 /* dropdown_button.png */,
@@ -436,6 +436,14 @@
 				5A32466F13E0537900AE1937 /* Constants.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		5A88ECB813E146D1007A259F /* Test Data */ = {
+			isa = PBXGroup;
+			children = (
+				5A32A12813D4912900AC7CB3 /* apps.json */,
+			);
+			name = "Test Data";
 			sourceTree = "<group>";
 		};
 		5AA4D7D113BB52080029B616 = {
