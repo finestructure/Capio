@@ -630,6 +630,7 @@
 				5AA4D7D813BB52080029B616 /* Sources */,
 				5AA4D7D913BB52080029B616 /* Frameworks */,
 				5AA4D7DA13BB52080029B616 /* Resources */,
+				5ABE2DED13E2A76F00170DE7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -757,6 +758,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		5ABE2DED13E2A76F00170DE7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\ngit status\nversion=$(git describe --tags --dirty)\n\n# version can be empty when there are no tags, use rev-parse in that case\n# to log the last commit id\nif [[ -z \"$version\" ]]; then\n  diff=$(git diff)\n  version=$(git rev-parse --short HEAD)\n\n  if [[ -n \"$diff\" ]]; then\n    version=${version}-dirty\n  fi\nfi\n\necho version: $version\n\ninfo_plist=$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.app/Info.plist\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $version\" $info_plist";
 		};
 /* End PBXShellScriptBuildPhase section */
 

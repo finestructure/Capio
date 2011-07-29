@@ -102,7 +102,11 @@
 
   self.appArrowView.alpha = 0;
   self.tabArrowView.alpha = 0;
-    
+  
+  NSString *version = [[[NSBundle mainBundle] infoDictionary]
+                       objectForKey:@"CFBundleVersion"];
+  self.versionButton.titleLabel.text = version;
+  
   [self animateViews];
 }
 
