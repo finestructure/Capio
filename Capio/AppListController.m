@@ -16,7 +16,7 @@
 
 @implementation AppListController
 
-@synthesize appOverviewController = _appOverviewController;
+@synthesize detailViewController = _detailViewController;
 @synthesize apps = _apps;
 @synthesize displayedApps = _displayedApps;
 @synthesize tableView = _tableView;
@@ -156,28 +156,26 @@
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  NSTimeInterval duration = 0.15;
-  UIView *visibleView = self.appOverviewController.navigationController.visibleViewController.view;
-  UIView *rootView = [[self.appOverviewController.navigationController.viewControllers objectAtIndex:0] view];
-  if (visibleView != rootView) {
-    rootView.alpha = 0;
-  }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {  
+  NSTimeInterval duration = 0.05;
+  UIView *visibleView = self.detailViewController.visibleViewController.view;
+
   [UIView animateWithDuration:duration
                    animations:^{
                      visibleView.alpha = 0;
                    }
                    completion:^(BOOL finished){
-                     AppOverview *item = [self.displayedApps objectAtIndex:indexPath.row];
-                     self.appOverviewController.detailItem = item;
-                     [self.appOverviewController.navigationController popToRootViewControllerAnimated:NO];
+                     AppOverview *app = [self.displayedApps objectAtIndex:indexPath.row];
+                     
+                     AppOverviewController *newViewController = [[AppOverviewController alloc] initWithNibName:@"AppOverview" bundle:nil];
+                     newViewController.detailItem = app;
 
+                     [self.detailViewController setViewControllers:[NSArray arrayWithObject:newViewController] animated:NO];
+                     newViewController.view.alpha = 0;
+                     
                      [UIView animateWithDuration:duration
                                       animations:^{
-                                        visibleView.alpha = 1;
-                                        if (visibleView != rootView) {
-                                          rootView.alpha = 1;
-                                        }
+                                        newViewController.view.alpha = 1;
                                       }];
                    }];
 }

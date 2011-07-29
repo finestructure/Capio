@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@class AppOverviewController;
 
 @interface AppListController : UIViewController<UISearchBarDelegate> {
   UITableView *_tableView;
@@ -19,7 +18,7 @@
 @property (nonatomic, strong) NSArray *apps;
 @property (strong, nonatomic) NSArray *displayedApps;
 
-@property (strong, nonatomic) IBOutlet AppOverviewController *appOverviewController;
+@property (strong, nonatomic) IBOutlet UINavigationController *detailViewController;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) IBOutlet UISearchBar *searchBar;
 

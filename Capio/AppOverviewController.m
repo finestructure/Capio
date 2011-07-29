@@ -30,22 +30,10 @@
 @synthesize ragGreen = _ragGreen;
 @synthesize ragTotal = _ragTotal;
 @synthesize timeline = _timeline;
-@synthesize detailView = _detailView;
-@synthesize introView = _blankView;
 @synthesize reportDateButton = _reportDateButton;
 
 
-#pragma mark -
-#pragma mark Managing the detail item
-
-
-// When setting the detail item, update the view and dismiss the popover controller if it's showing.
-- (void)setDetailItem:(AppOverview *)newDetailItem {  
-  if (_detailItem != newDetailItem) {
-    _detailItem = newDetailItem;
-    [self updateView];
-  }
-}
+#pragma mark - Helpers
 
 
 - (void)setTitle:(NSString *)title forButton:(UIButton *)button {
@@ -62,7 +50,6 @@
     [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
     [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
   }
-  self.view = self.detailView;
   self.appName.text = self.detailItem.appName;
   self.appDescription.text = self.detailItem.appDescription;
   self.appOwner.text = self.detailItem.appOwner;
@@ -75,6 +62,9 @@
   [self setTitle:[self.detailItem.ragGreen stringValue] forButton:self.ragGreen];
   [self setTitle:[self.detailItem.ragTotal stringValue] forButton:self.ragTotal];
 }
+
+
+#pragma mark - Actions
 
 
 - (void)reportDateButtonTapped:(id)sender {
@@ -185,6 +175,7 @@
 
 #pragma mark - View lifecycle
 
+
 - (void)viewDidLoad {
   [super viewDidLoad];
 
@@ -192,6 +183,8 @@
   UIImage *img = [UIImage imageNamed:@"dropdown_button_pressed.png"];
   [self.reportDateButton setBackgroundImage:img forState:UIControlStateSelected];
   [self.reportDateButton setBackgroundImage:img forState:(UIControlStateHighlighted|UIControlStateSelected)];
+  
+  [self updateView];
 }
 
 - (void)viewDidUnload
@@ -205,13 +198,9 @@
   [self setRagAmber:nil];
   [self setRagGreen:nil];
   [self setRagTotal:nil];
-  [self setIntroView:nil];
-  [self setDetailView:nil];
   [self setReportDateButton:nil];
-    [self setTimeline:nil];
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+  [self setTimeline:nil];
+  [super viewDidUnload];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
