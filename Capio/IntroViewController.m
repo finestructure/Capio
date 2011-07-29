@@ -105,7 +105,9 @@
   
   NSString *version = [[[NSBundle mainBundle] infoDictionary]
                        objectForKey:@"CFBundleVersion"];
-  self.versionButton.titleLabel.text = version;
+  [self.versionButton setTitle:version forState:UIControlStateNormal];
+  [self.versionButton setTitle:version forState:UIControlStateHighlighted];
+  [self.versionButton setTitle:version forState:UIControlStateSelected];
   
   [self animateViews];
 }
