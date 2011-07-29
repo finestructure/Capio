@@ -168,9 +168,10 @@
                      AppOverview *app = [self.displayedApps objectAtIndex:indexPath.row];
                      
                      AppOverviewController *newViewController = [[AppOverviewController alloc] initWithNibName:@"AppOverview" bundle:nil];
+                     newViewController.detailItem = app;
+
                      [self.detailViewController setViewControllers:[NSArray arrayWithObject:newViewController] animated:NO];
                      newViewController.view.alpha = 0;
-                     newViewController.detailItem = app;
                      
                      [UIView animateWithDuration:duration
                                       animations:^{

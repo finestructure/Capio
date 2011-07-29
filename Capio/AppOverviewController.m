@@ -33,17 +33,7 @@
 @synthesize reportDateButton = _reportDateButton;
 
 
-#pragma mark -
-#pragma mark Managing the detail item
-
-
-// When setting the detail item, update the view and dismiss the popover controller if it's showing.
-- (void)setDetailItem:(AppOverview *)newDetailItem {  
-  if (_detailItem != newDetailItem) {
-    _detailItem = newDetailItem;
-    [self updateView];
-  }
-}
+#pragma mark - Helpers
 
 
 - (void)setTitle:(NSString *)title forButton:(UIButton *)button {
@@ -72,6 +62,9 @@
   [self setTitle:[self.detailItem.ragGreen stringValue] forButton:self.ragGreen];
   [self setTitle:[self.detailItem.ragTotal stringValue] forButton:self.ragTotal];
 }
+
+
+#pragma mark - Actions
 
 
 - (void)reportDateButtonTapped:(id)sender {
@@ -182,6 +175,7 @@
 
 #pragma mark - View lifecycle
 
+
 - (void)viewDidLoad {
   [super viewDidLoad];
 
@@ -205,10 +199,8 @@
   [self setRagGreen:nil];
   [self setRagTotal:nil];
   [self setReportDateButton:nil];
-    [self setTimeline:nil];
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+  [self setTimeline:nil];
+  [super viewDidUnload];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
