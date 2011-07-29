@@ -28,14 +28,6 @@
 }
 
 
-- (void)setDetailItem:(NSDictionary *)newDetailItem {  
-  if (_detailItem != newDetailItem) {
-    _detailItem = newDetailItem;
-    [self updateView];
-  }
-}
-
-
 #pragma mark - Actions
 
 

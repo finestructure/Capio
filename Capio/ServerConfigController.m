@@ -28,15 +28,6 @@
 }
 
 
-- (void)setDetailItem:(NSArray *)newDetailItem {  
-  if (_detailItem != newDetailItem) {
-    _detailItem = newDetailItem;
-    // detail item drives the table view -- refresh it on update of this property
-    [self.tableview reloadData];
-  }
-}
-
-
 - (void)setParentDetailItem:(NSDictionary *)newDetailItem {  
   if (_parentDetailItem != newDetailItem) {
     _parentDetailItem = newDetailItem;
