@@ -3,12 +3,12 @@
 	<data>
 		<int key="IBDocument.SystemTarget">1280</int>
 		<string key="IBDocument.SystemVersion">11A511</string>
-		<string key="IBDocument.InterfaceBuilderVersion">1891</string>
+		<string key="IBDocument.InterfaceBuilderVersion">1900</string>
 		<string key="IBDocument.AppKitVersion">1138</string>
 		<string key="IBDocument.HIToolboxVersion">566.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-			<string key="NS.object.0">884</string>
+			<string key="NS.object.0">894</string>
 		</object>
 		<object class="NSArray" key="IBDocument.IntegratedClassDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -50,6 +50,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{232, 10}, {40, 40}}</string>
 								<reference key="NSSuperview" ref="155271004"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="700533562"/>
 								<string key="NSReuseIdentifierKey">_NS:552</string>
 								<int key="IBUIContentMode">4</int>
@@ -66,6 +67,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{20, 16}, {211, 21}}</string>
 								<reference key="NSSuperview" ref="155271004"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="1043530027"/>
 								<string key="NSReuseIdentifierKey">_NS:330</string>
 								<bool key="IBUIOpaque">NO</bool>
@@ -78,7 +80,10 @@
 									<int key="NSColorSpace">1</int>
 									<bytes key="NSRGB">MCAwIDAAA</bytes>
 								</object>
-								<nil key="IBUIHighlightedColor"/>
+								<object class="NSColor" key="IBUIHighlightedColor" id="67589650">
+									<int key="NSColorSpace">3</int>
+									<bytes key="NSWhite">MQA</bytes>
+								</object>
 								<int key="IBUIBaselineAdjustment">1</int>
 								<float key="IBUIMinimumFontSize">10</float>
 								<object class="IBUIFontDescription" key="IBUIFontDescription">
@@ -96,6 +101,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{237, 13}, {28, 28}}</string>
 								<reference key="NSSuperview" ref="155271004"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="477172203"/>
 								<string key="NSReuseIdentifierKey">_NS:330</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
@@ -108,10 +114,7 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<string key="IBUIText">5</string>
-								<object class="NSColor" key="IBUITextColor" id="67589650">
-									<int key="NSColorSpace">3</int>
-									<bytes key="NSWhite">MQA</bytes>
-								</object>
+								<reference key="IBUITextColor" ref="67589650"/>
 								<nil key="IBUIHighlightedColor"/>
 								<string key="IBUIShadowOffset">{1, -1}</string>
 								<int key="IBUIBaselineAdjustment">1</int>
@@ -132,6 +135,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{274, 10}, {40, 40}}</string>
 								<reference key="NSSuperview" ref="155271004"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="735716765"/>
 								<string key="NSReuseIdentifierKey">_NS:552</string>
 								<int key="IBUIContentMode">4</int>
@@ -148,6 +152,8 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{280, 13}, {28, 28}}</string>
 								<reference key="NSSuperview" ref="155271004"/>
+								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:330</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">3</int>
@@ -169,8 +175,9 @@
 								<reference key="IBUIFont" ref="274583993"/>
 							</object>
 						</object>
-						<string key="NSFrameSize">{320, 52}</string>
+						<string key="NSFrame">{{1, 0}, {318, 51}}</string>
 						<reference key="NSSuperview" ref="987372652"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="849372344"/>
 						<string key="NSReuseIdentifierKey">_NS:379</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
@@ -186,6 +193,7 @@
 				</object>
 				<string key="NSFrameSize">{320, 52}</string>
 				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="155271004"/>
 				<string key="NSReuseIdentifierKey">_NS:368</string>
 				<object class="NSColor" key="IBUIBackgroundColor">
@@ -356,7 +364,72 @@
 			<nil key="sourceID"/>
 			<int key="maxID">15</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+				<object class="IBPartialClassDescription">
+					<string key="className">AppListCell</string>
+					<string key="superclassName">UITableViewCell</string>
+					<object class="NSMutableDictionary" key="outlets">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>amberImage</string>
+							<string>appName</string>
+							<string>ragAmber</string>
+							<string>ragRed</string>
+							<string>redImage</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>UIImageView</string>
+							<string>UILabel</string>
+							<string>UILabel</string>
+							<string>UILabel</string>
+							<string>UIImageView</string>
+						</object>
+					</object>
+					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>amberImage</string>
+							<string>appName</string>
+							<string>ragAmber</string>
+							<string>ragRed</string>
+							<string>redImage</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">amberImage</string>
+								<string key="candidateClassName">UIImageView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">appName</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">ragAmber</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">ragRed</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">redImage</string>
+								<string key="candidateClassName">UIImageView</string>
+							</object>
+						</object>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/AppListCell.h</string>
+					</object>
+				</object>
+			</object>
+		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBIPadFramework</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDevelopmentDependencies">
@@ -378,6 +451,6 @@
 				<string>{46, 46}</string>
 			</object>
 		</object>
-		<string key="IBCocoaTouchPluginVersion">884</string>
+		<string key="IBCocoaTouchPluginVersion">894</string>
 	</data>
 </archive>
