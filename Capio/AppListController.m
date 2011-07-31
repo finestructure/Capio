@@ -8,6 +8,7 @@
 
 #import "AppListController.h"
 #import "AppOverviewController.h"
+#import "IntroViewController.h"
 #import "AppOverview.h"
 #import "AppListCell.h"
 #import "DataStore.h"
@@ -169,15 +170,19 @@
                    completion:^(BOOL finished){
                      AppOverview *app = [self.displayedApps objectAtIndex:indexPath.row];
                      
-                     AppOverviewController *newViewController = [[AppOverviewController alloc] initWithNibName:@"AppOverview" bundle:nil];
-                     newViewController.detailItem = app;
+                     AppOverviewController *appOverviewController = [[AppOverviewController alloc] initWithNibName:@"AppOverview" bundle:nil];
+                     appOverviewController.detailItem = app;
+                     
+                     NSArray *viewControllers = [NSArray arrayWithObjects:[[IntroViewController alloc] initWithNibName:@"IntroView" bundle:nil],
+                                                 appOverviewController,
+                                                 nil];
 
-                     [self.detailViewController setViewControllers:[NSArray arrayWithObject:newViewController] animated:NO];
-                     newViewController.view.alpha = 0;
+                     [self.detailViewController setViewControllers:viewControllers animated:NO];
+                     appOverviewController.view.alpha = 0;
                      
                      [UIView animateWithDuration:duration
                                       animations:^{
-                                        newViewController.view.alpha = 1;
+                                        appOverviewController.view.alpha = 1;
                                       }];
                    }];
 }
