@@ -43,7 +43,7 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
-    self.title = @"Server Configuration";
+    self.title = NSLocalizedString(@"Server Configuration", @"Server Config Title");
   }
   return self;
 }

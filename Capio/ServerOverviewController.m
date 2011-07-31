@@ -38,7 +38,7 @@
 
 - (IBAction)timelineTapped:(id)sender {
   TimelineController *vc = [[TimelineController alloc] initWithNibName:@"Timeline" bundle:nil];
-  vc.title = @"Server Timeline";
+  vc.title = NSLocalizedString(@"Server Timeline", @"Server Timeline Title");
   [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -84,7 +84,7 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
-    self.title = @"Server Overview";
+    self.title = NSLocalizedString(@"Server Overview", @"Server Overview Title");
   }
   return self;
 }

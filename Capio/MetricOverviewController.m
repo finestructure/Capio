@@ -13,7 +13,7 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
-    self.title = @"Metrics Overview";
+    self.title = NSLocalizedString(@"Metrics Overview", @"Metrics Overview Title");
   }
   return self;
 }

@@ -81,7 +81,7 @@
 
 - (IBAction)timelineTapped:(id)sender {
   TimelineController *vc = [[TimelineController alloc] initWithNibName:@"Timeline" bundle:nil];
-  vc.title = @"Application Timeline";
+  vc.title = NSLocalizedString(@"Application Timeline", @"App Timeline Title");
   [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -185,6 +185,8 @@
   [self.reportDateButton setBackgroundImage:img forState:(UIControlStateHighlighted|UIControlStateSelected)];
   
   [self updateView];
+  
+  self.title = NSLocalizedString(@"Application Overview", @"App Overview Title");
 }
 
 - (void)viewDidUnload

@@ -48,6 +48,8 @@
   self.tableView.rowHeight = 52;
   
   self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchButtonTapped:)];
+
+  self.title = NSLocalizedString(@"Applications", @"AppList Controller Title");
 }
 
 
