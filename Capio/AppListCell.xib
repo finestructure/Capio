@@ -45,23 +45,6 @@
 						<int key="NSvFlags">256</int>
 						<object class="NSMutableArray" key="NSSubviews">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBUIImageView" id="1043530027">
-								<reference key="NSNextResponder" ref="155271004"/>
-								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{232, 10}, {40, 40}}</string>
-								<reference key="NSSuperview" ref="155271004"/>
-								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="700533562"/>
-								<string key="NSReuseIdentifierKey">_NS:552</string>
-								<int key="IBUIContentMode">4</int>
-								<bool key="IBUIUserInteractionEnabled">NO</bool>
-								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-								<object class="NSCustomResource" key="IBUIImage" id="317075914">
-									<string key="NSClassName">NSImage</string>
-									<string key="NSResourceName">amber_rag.png</string>
-								</object>
-								<reference key="IBUIHighlightedImage" ref="317075914"/>
-							</object>
 							<object class="IBUILabel" id="849372344">
 								<reference key="NSNextResponder" ref="155271004"/>
 								<int key="NSvFlags">292</int>
@@ -96,13 +79,30 @@
 									<int key="NSfFlags">16</int>
 								</object>
 							</object>
+							<object class="IBUIImageView" id="1043530027">
+								<reference key="NSNextResponder" ref="155271004"/>
+								<int key="NSvFlags">292</int>
+								<string key="NSFrame">{{274, 10}, {40, 40}}</string>
+								<reference key="NSSuperview" ref="155271004"/>
+								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="735716765"/>
+								<string key="NSReuseIdentifierKey">_NS:552</string>
+								<int key="IBUIContentMode">4</int>
+								<bool key="IBUIUserInteractionEnabled">NO</bool>
+								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+								<object class="NSCustomResource" key="IBUIImage" id="317075914">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">amber_rag.png</string>
+								</object>
+								<reference key="IBUIHighlightedImage" ref="317075914"/>
+							</object>
 							<object class="IBUILabel" id="700533562">
 								<reference key="NSNextResponder" ref="155271004"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{237, 13}, {28, 28}}</string>
+								<string key="NSFrame">{{280, 13}, {28, 28}}</string>
 								<reference key="NSSuperview" ref="155271004"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="477172203"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:330</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">3</int>
@@ -113,7 +113,7 @@
 								<int key="IBUIContentMode">7</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-								<string key="IBUIText">5</string>
+								<string key="IBUIText">A</string>
 								<reference key="IBUITextColor" ref="67589650"/>
 								<nil key="IBUIHighlightedColor"/>
 								<string key="IBUIShadowOffset">{1, -1}</string>
@@ -133,10 +133,10 @@
 							<object class="IBUIImageView" id="477172203">
 								<reference key="NSNextResponder" ref="155271004"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{274, 10}, {40, 40}}</string>
+								<string key="NSFrame">{{232, 10}, {40, 40}}</string>
 								<reference key="NSSuperview" ref="155271004"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="735716765"/>
+								<reference key="NSNextKeyView" ref="700533562"/>
 								<string key="NSReuseIdentifierKey">_NS:552</string>
 								<int key="IBUIContentMode">4</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
@@ -150,10 +150,10 @@
 							<object class="IBUILabel" id="735716765">
 								<reference key="NSNextResponder" ref="155271004"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{280, 13}, {28, 28}}</string>
+								<string key="NSFrame">{{237, 13}, {28, 28}}</string>
 								<reference key="NSSuperview" ref="155271004"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
+								<reference key="NSNextKeyView" ref="477172203"/>
 								<string key="NSReuseIdentifierKey">_NS:330</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">3</int>
@@ -164,7 +164,7 @@
 								<int key="IBUIContentMode">7</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-								<string key="IBUIText">5</string>
+								<string key="IBUIText">R</string>
 								<reference key="IBUITextColor" ref="67589650"/>
 								<reference key="IBUIHighlightedColor" ref="67589650"/>
 								<string key="IBUIShadowOffset">{1, -1}</string>
