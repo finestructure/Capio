@@ -296,10 +296,7 @@
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
 						</object>
-						<object class="NSColor" key="IBUIDisabledTitleColor" id="770639495">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MC42NjY2NjY2NjY3AA</bytes>
-						</object>
+						<reference key="IBUIDisabledTitleColor" ref="379350758"/>
 						<reference key="IBUINormalTitleColor" ref="379350758"/>
 						<object class="NSColor" key="IBUINormalTitleShadowColor" id="416155284">
 							<int key="NSColorSpace">3</int>
@@ -309,7 +306,7 @@
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">red_rag_big_pressed.png</string>
 						</object>
-						<object class="NSCustomResource" key="IBUISelectedBackgroundImage" id="452373527">
+						<object class="NSCustomResource" key="IBUISelectedBackgroundImage" id="793063191">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">button2_pressed.png</string>
 						</object>
@@ -338,14 +335,14 @@
 						<double key="IBUIContentEdgeInsets.right">0.0</double>
 						<string key="IBUINormalTitle">1</string>
 						<reference key="IBUIHighlightedTitleColor" ref="379350758"/>
-						<reference key="IBUIDisabledTitleColor" ref="770639495"/>
+						<reference key="IBUIDisabledTitleColor" ref="379350758"/>
 						<reference key="IBUINormalTitleColor" ref="379350758"/>
 						<reference key="IBUINormalTitleShadowColor" ref="416155284"/>
 						<object class="NSCustomResource" key="IBUIHighlightedBackgroundImage">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">green_rag_big_pressed.png</string>
 						</object>
-						<reference key="IBUISelectedBackgroundImage" ref="452373527"/>
+						<reference key="IBUISelectedBackgroundImage" ref="793063191"/>
 						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">green_rag_big.png</string>
@@ -371,14 +368,14 @@
 						<double key="IBUIContentEdgeInsets.right">0.0</double>
 						<string key="IBUINormalTitle">2</string>
 						<reference key="IBUIHighlightedTitleColor" ref="379350758"/>
-						<reference key="IBUIDisabledTitleColor" ref="770639495"/>
+						<reference key="IBUIDisabledTitleColor" ref="379350758"/>
 						<reference key="IBUINormalTitleColor" ref="379350758"/>
 						<reference key="IBUINormalTitleShadowColor" ref="416155284"/>
 						<object class="NSCustomResource" key="IBUIHighlightedBackgroundImage">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">amber_rag_big_pressed.png</string>
 						</object>
-						<reference key="IBUISelectedBackgroundImage" ref="452373527"/>
+						<reference key="IBUISelectedBackgroundImage" ref="793063191"/>
 						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">amber_rag_big.png</string>
@@ -426,14 +423,14 @@
 						<double key="IBUIContentEdgeInsets.right">0.0</double>
 						<string key="IBUINormalTitle">8</string>
 						<reference key="IBUIHighlightedTitleColor" ref="379350758"/>
-						<reference key="IBUIDisabledTitleColor" ref="770639495"/>
+						<reference key="IBUIDisabledTitleColor" ref="379350758"/>
 						<reference key="IBUINormalTitleColor" ref="379350758"/>
 						<reference key="IBUINormalTitleShadowColor" ref="416155284"/>
 						<object class="NSCustomResource" key="IBUIHighlightedBackgroundImage">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">total_rag_big_pressed.png</string>
 						</object>
-						<reference key="IBUISelectedBackgroundImage" ref="452373527"/>
+						<reference key="IBUISelectedBackgroundImage" ref="793063191"/>
 						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">total_rag_big.png</string>
@@ -491,7 +488,10 @@
 						<double key="IBUIContentEdgeInsets.right">0.0</double>
 						<string key="IBUINormalTitle">Timeline</string>
 						<reference key="IBUIHighlightedTitleColor" ref="379350758"/>
-						<reference key="IBUIDisabledTitleColor" ref="770639495"/>
+						<object class="NSColor" key="IBUIDisabledTitleColor" id="770639495">
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MC42NjY2NjY2NjY3AA</bytes>
+						</object>
 						<reference key="IBUINormalTitleColor" ref="777318996"/>
 						<reference key="IBUINormalTitleShadowColor" ref="416155284"/>
 						<object class="NSCustomResource" key="IBUIHighlightedBackgroundImage" id="876635127">
@@ -979,14 +979,14 @@
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<real value="1"/>
+					<real value="3"/>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<real value="1"/>
+					<real value="3"/>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<real value="1"/>
+					<real value="3"/>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<real value="0.0"/>
+					<real value="3"/>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<real value="0.0"/>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>

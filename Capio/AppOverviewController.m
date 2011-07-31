@@ -61,6 +61,19 @@
   [self setTitle:[self.detailItem.ragAmber stringValue] forButton:self.ragAmber];
   [self setTitle:[self.detailItem.ragGreen stringValue] forButton:self.ragGreen];
   [self setTitle:[self.detailItem.ragTotal stringValue] forButton:self.ragTotal];
+
+  if ([self.detailItem.ragRed unsignedIntegerValue] == 0) {
+    self.ragRed.enabled = NO;
+  }
+  if ([self.detailItem.ragAmber unsignedIntegerValue] == 0) {
+    self.ragAmber.enabled = NO;
+  }
+  if ([self.detailItem.ragGreen unsignedIntegerValue] == 0) {
+    self.ragGreen.enabled = NO;
+  }
+  if ([self.detailItem.ragTotal unsignedIntegerValue] == 0) {
+    self.ragTotal.enabled = NO;
+  }
 }
 
 
