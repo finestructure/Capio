@@ -66,6 +66,9 @@
 - (void)refresh:(id)sender {
   NSLog(@"Refreshing...");
   [self fetchAppList];
+  
+  id vc = [[IntroViewController alloc] initWithNibName:@"IntroView" bundle:nil];
+  [self.detailViewController setViewControllers:[NSArray arrayWithObject:vc]];
 }
 
 
@@ -180,9 +183,7 @@
                      AppOverviewController *appOverviewController = [[AppOverviewController alloc] initWithNibName:@"AppOverview" bundle:nil];
                      appOverviewController.detailItem = app;
                      
-                     NSArray *viewControllers = [NSArray arrayWithObjects:[[IntroViewController alloc] initWithNibName:@"IntroView" bundle:nil],
-                                                 appOverviewController,
-                                                 nil];
+                     NSArray *viewControllers = [NSArray arrayWithObject:appOverviewController];
 
                      [self.detailViewController setViewControllers:viewControllers animated:NO];
                      appOverviewController.view.alpha = 0;
