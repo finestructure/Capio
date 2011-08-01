@@ -64,7 +64,7 @@
     NSMutableString *urlString = [NSMutableString stringWithString:baseUrl];
     
     [urlString appendString:@"/dev/"];
-    [urlString appendFormat:doc];
+    [urlString appendString:doc];
     NSURL *url = [NSURL URLWithString:urlString];
     return [NSData dataWithContentsOfURL:url];
   }
@@ -72,7 +72,8 @@
 
 
 - (NSDictionary *)fetchDocument:(NSString *)doc {
-  NSData *data = [self fetchDocument:doc isLocal:YES];
+  NSString *escapedString = [doc stringByReplacingOccurrencesOfString:@"/" withString:kCouchPathSep];
+  NSData *data = [self fetchDocument:escapedString isLocal:YES];
   
   if (data == nil) {
     NSString *msg = [NSString stringWithFormat:@"Server did not return any data"];
@@ -92,6 +93,24 @@
   [url appendString:kCouchPathSep];
   [url appendString:[[YmdDateFormatter sharedInstance] stringFromDate:asof]];
   
+  return [self fetchDocument:url];
+}
+
+
+- (NSDictionary *)fetchDocPath:(NSArray *)pathComponents {
+  NSMutableArray *stringComponents = [NSMutableArray array];
+  for (id item in pathComponents) {
+    if ([item isKindOfClass:[NSString class]]) {
+      [stringComponents addObject:item];
+    } else if ([item isKindOfClass:[NSDate class]]) {
+      NSString *dateString = [[YmdDateFormatter sharedInstance] stringFromDate:item];
+      [stringComponents addObject:dateString];
+    } else {
+      NSException *exception = [NSException exceptionWithName:@"BadPathComponentException" reason:[NSString stringWithFormat:@"Path component %@ cannot be represented as a path string", item] userInfo:nil];
+      @throw exception;
+    }
+  }
+  NSString *url = [stringComponents componentsJoinedByString:kCouchPathSep];
   return [self fetchDocument:url];
 }
 

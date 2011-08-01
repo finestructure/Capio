@@ -23,5 +23,6 @@
 @property (nonatomic, strong) IBOutlet UISearchBar *searchBar;
 
 - (void)searchButtonTapped:(id)sender;
+- (void)refresh:(id)sender;
 
 @end

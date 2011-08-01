@@ -32,7 +32,8 @@
 
 
 - (IBAction)metricsTapped:(id)sender {
-  id vc = [[MetricOverviewController alloc] initWithNibName:@"MetricOverview" bundle:nil];
+  MetricOverviewController *vc = [[MetricOverviewController alloc] initWithNibName:@"MetricOverview" bundle:nil];
+  vc.detailItem = self.detailItem;
   [self.navigationController pushViewController:vc animated:YES];
 }
 

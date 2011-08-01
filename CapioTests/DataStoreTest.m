@@ -23,12 +23,26 @@
 
 
 - (void)test_fetchDocument_forDate {
-  NSDate *asof = [[YmdDateFormatter sharedInstance] dateFromString:@"2011-06-30"];
+  NSDate *asof = [[YmdDateFormatter sharedInstance] dateFromString:@"2011-03-02"];
   NSDictionary *doc = [[DataStore sharedDataStore] fetchDocument:@"DBGERLT2073" forDate:asof];
   STAssertNotNil(doc, nil);
-  STAssertEquals(9u, [doc count], nil);
+  STAssertEquals(7u, [doc count], nil);
   STAssertNotNil([doc objectForKey:@"_id"], nil);
   STAssertEqualObjects(@"DBGERLT2073/2011-03-02", [doc objectForKey:@"_id"], nil);
+}
+
+
+- (void)test_fetchDocPath {
+  NSArray *path = [NSArray arrayWithObjects:
+                   @"DBGERLT2073",
+                   [[YmdDateFormatter sharedInstance] dateFromString:@"2011-03-02"],
+                   @"cpu",
+                   nil];
+  NSDictionary *doc = [[DataStore sharedDataStore] fetchDocPath:path];
+  STAssertNotNil(doc, nil);
+  STAssertEquals(15u, [doc count], nil);
+  STAssertNotNil([doc objectForKey:@"_id"], nil);
+  STAssertEqualObjects(@"DBGERLT2073/2011-03-02/cpu", [doc objectForKey:@"_id"], nil);
 }
 
 

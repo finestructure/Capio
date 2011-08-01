@@ -33,6 +33,10 @@
 		5A5742C313DED37600294D1A /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A5742C213DED37600294D1A /* libCorePlot-CocoaTouch.a */; };
 		5A5742CC13DEE17700294D1A /* AppConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5742CA13DEE17700294D1A /* AppConfigController.m */; };
 		5A5742CD13DEE17700294D1A /* AppConfig.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A5742CB13DEE17700294D1A /* AppConfig.xib */; };
+		5A61C17D13E6084600751084 /* DBGERLT2073%2F2011-03-02%2Fcpu.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A61C17C13E6084600751084 /* DBGERLT2073%2F2011-03-02%2Fcpu.json */; };
+		5A61C17E13E6084600751084 /* DBGERLT2073%2F2011-03-02%2Fcpu.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A61C17C13E6084600751084 /* DBGERLT2073%2F2011-03-02%2Fcpu.json */; };
+		5A61C18113E611C900751084 /* DBGERLT2073%2F2011-03-02%2Fmem.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A61C18013E611C900751084 /* DBGERLT2073%2F2011-03-02%2Fmem.json */; };
+		5A61C18213E611C900751084 /* DBGERLT2073%2F2011-03-02%2Fmem.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A61C18013E611C900751084 /* DBGERLT2073%2F2011-03-02%2Fmem.json */; };
 		5A66A31913BF3B6000DB7161 /* dropdown_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A66A31813BF3B6000DB7161 /* dropdown_button.png */; };
 		5A66A31C13BF3C3600DB7161 /* dropdown_button_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A66A31B13BF3C3600DB7161 /* dropdown_button_pressed.png */; };
 		5A67A26F13BCB82D002BDCAA /* AppOverview.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A67A26E13BCB82D002BDCAA /* AppOverview.m */; };
@@ -219,6 +223,8 @@
 		5A5742C913DEE17700294D1A /* AppConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfigController.h; sourceTree = "<group>"; };
 		5A5742CA13DEE17700294D1A /* AppConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConfigController.m; sourceTree = "<group>"; };
 		5A5742CB13DEE17700294D1A /* AppConfig.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppConfig.xib; sourceTree = "<group>"; };
+		5A61C17C13E6084600751084 /* DBGERLT2073%2F2011-03-02%2Fcpu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "DBGERLT2073%2F2011-03-02%2Fcpu.json"; sourceTree = "<group>"; };
+		5A61C18013E611C900751084 /* DBGERLT2073%2F2011-03-02%2Fmem.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "DBGERLT2073%2F2011-03-02%2Fmem.json"; sourceTree = "<group>"; };
 		5A66A31813BF3B6000DB7161 /* dropdown_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropdown_button.png; sourceTree = "<group>"; };
 		5A66A31B13BF3C3600DB7161 /* dropdown_button_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropdown_button_pressed.png; sourceTree = "<group>"; };
 		5A67A26D13BCB82D002BDCAA /* AppOverview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppOverview.h; sourceTree = "<group>"; };
@@ -487,6 +493,8 @@
 		5A88ECB813E146D1007A259F /* Test Data */ = {
 			isa = PBXGroup;
 			children = (
+				5A61C18013E611C900751084 /* DBGERLT2073%2F2011-03-02%2Fmem.json */,
+				5A61C17C13E6084600751084 /* DBGERLT2073%2F2011-03-02%2Fcpu.json */,
 				5A88ECBD13E15EA0007A259F /* DBGERLT2073%2F2011-03-02.json */,
 				5A32A12813D4912900AC7CB3 /* apps.json */,
 			);
@@ -761,6 +769,8 @@
 				5ABE2DFB13E59E0400170DE7 /* amber_rag_big_pressed.png in Resources */,
 				5ABE2DFC13E59E0400170DE7 /* red_rag_big_pressed.png in Resources */,
 				5ABE2DFE13E59E8800170DE7 /* green_rag_big_pressed.png in Resources */,
+				5A61C17D13E6084600751084 /* DBGERLT2073%2F2011-03-02%2Fcpu.json in Resources */,
+				5A61C18113E611C900751084 /* DBGERLT2073%2F2011-03-02%2Fmem.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -772,6 +782,8 @@
 				5AA4D81913BB52080029B616 /* CapioTests.h in Resources */,
 				5A88ECBC13E155DC007A259F /* apps.json in Resources */,
 				5A88ECBF13E15EA0007A259F /* DBGERLT2073%2F2011-03-02.json in Resources */,
+				5A61C17E13E6084600751084 /* DBGERLT2073%2F2011-03-02%2Fcpu.json in Resources */,
+				5A61C18213E611C900751084 /* DBGERLT2073%2F2011-03-02%2Fmem.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

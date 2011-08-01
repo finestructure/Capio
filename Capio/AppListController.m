@@ -48,6 +48,7 @@
   [self.tableView registerNib:[UINib nibWithNibName:@"AppListCell" bundle:nil] forCellReuseIdentifier:@"AppListCell"];
   self.tableView.rowHeight = 52;
   
+  self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refresh:)];
   self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchButtonTapped:)];
 
   self.title = NSLocalizedString(@"Applications", @"AppList Controller Title");
@@ -60,6 +61,12 @@
 
 
 #pragma mark - Actions
+
+
+- (void)refresh:(id)sender {
+  NSLog(@"Refreshing...");
+  [self fetchAppList];
+}
 
 
 - (void)toggleSearchbar {

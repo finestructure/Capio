@@ -19,5 +19,6 @@
 
 - (NSDictionary *)fetchDocument:(NSString *)doc;
 - (NSDictionary *)fetchDocument:(NSString *)doc forDate:(NSDate *)asof;
+- (NSDictionary *)fetchDocPath:(NSArray *)pathComponents;
 
 @end
