@@ -20,6 +20,7 @@
 - (NSDictionary *)fetchDocument:(NSString *)doc;
 - (void)fetchDocument:(NSString *)doc withCompletionBlock:(void (^)(NSDictionary *doc))block;
 - (NSDictionary *)fetchDocument:(NSString *)doc forDate:(NSDate *)asof;
+- (void)fetchDocument:(NSString *)doc forDate:(NSDate *)date withCompletionBlock:(void (^)(NSDictionary *doc))block;
 - (NSDictionary *)fetchDocPath:(NSArray *)pathComponents;
 - (NSString *)baseUrl;
 

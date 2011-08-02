@@ -53,6 +53,14 @@
 }
 
 
+- (void)test_fetch_Document_forDate_withCompletionBlock {
+  NSDate *asof = [[YmdDateFormatter sharedInstance] dateFromString:@"2011-03-02"];
+  [[DataStore sharedDataStore] fetchDocument:@"DBGERLT2073" forDate:asof withCompletionBlock:^(NSDictionary *doc) {
+    STAssertNotNil(doc, nil);
+  }];
+}
+
+
 - (void)test_appList {
   NSArray *apps = [[DataStore sharedDataStore] appList];
   STAssertEquals(6u, [apps count], nil);

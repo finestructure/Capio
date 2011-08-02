@@ -106,6 +106,16 @@
 }
 
 
+- (void)fetchDocument:(NSString *)docUrl forDate:(NSDate *)date withCompletionBlock:(void (^)(NSDictionary *doc))block {
+  // avoid reference cycle
+  __block __typeof__(self) blockSelf = self;
+  [self.fetchQueue addOperationWithBlock:^(void) {
+    NSDictionary *doc = [blockSelf fetchDocument:docUrl forDate:date];
+    block(doc);
+  }];
+}
+
+
 - (NSDictionary *)fetchDocPath:(NSArray *)pathComponents {
   NSMutableArray *stringComponents = [NSMutableArray array];
   for (id item in pathComponents) {
