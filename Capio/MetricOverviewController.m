@@ -195,11 +195,11 @@
           @"mem_faults_io",
           @"proccount",
           @"proccount_workload",
-          @"net_sent",
-          @"net_received",
           @"net_ip_packetrate",
           @"net_tcp_packetrate",
           @"net_udp_packetrate",
+          @"net_sent",
+          @"net_received",
           nil];
 }
 
@@ -236,6 +236,8 @@
   NSString *title = [self metricTitle:index];
   CPTColor *color = [self metricColor:index];
   
+  NSLog(@"Drawing %@", title);
+  
   NSString *docKey = [self.processed objectForKey:title];
   NSAssert(docKey != nil, @"doc key must not be nil");
   
@@ -260,7 +262,7 @@
   [self configurePlotSpace:(CPTXYPlotSpace *)graph.defaultPlotSpace];
 	
   [self configureAxes:(CPTXYAxisSet *)graph.axisSet];
-	
+  
   [self drawLegend];
 }
 
@@ -340,6 +342,7 @@
   self.reportDate.text = [self.detailItem objectForKey:@"asof"];
   
   self.data = [NSMutableDictionary dictionary];
+
   [self createGraph];
 
   // check list of available metrics against supported one (from metricTitle),
