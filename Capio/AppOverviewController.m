@@ -98,6 +98,7 @@
   [self.navigationController pushViewController:vc animated:YES];
 }
 
+
 - (IBAction)ragButtonTapped:(id)sender {
   NSUInteger count = 0;
   if (sender == self.ragRed) {
@@ -113,7 +114,13 @@
     NSString *server = [self.detailItem.serverList objectAtIndex:0];
     NSDate *asof = self.detailItem.reportDate;    
     [[DataStore sharedDataStore] fetchDocument:server forDate:asof withCompletionBlock:^(NSDictionary *doc) {
-      if (doc != nil) {
+      if (doc == nil) {
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+          NSString *msg = [NSString stringWithFormat:@"No data available for '%@/%@'", server, [[YmdDateFormatter sharedInstance] stringFromDate:asof]];
+          UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Data" message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+          [alert show];
+        }];
+      } else {
         [[NSOperationQueue mainQueue] addOperationWithBlock:^(void) {
           ServerOverviewController *vc = [[ServerOverviewController alloc] initWithNibName:@"ServerOverview" bundle:nil];
           vc.detailItem = doc;
