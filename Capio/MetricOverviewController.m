@@ -223,16 +223,17 @@
   NSString *title = [self metricTitle:index];
   CPTColor *color = [self metricColor:index];
   
-  //NSArray *data = [[DataStore sharedDataStore] dummyData:10];
   NSString *docKey = [self.processed objectForKey:title];
   NSAssert(docKey != nil, @"doc key must not be nil");
   
-  NSDictionary *doc = [[DataStore sharedDataStore] fetchDocument:docKey];
-  NSArray *data = [doc objectForKey:@"values"];
-  
-  if (data != nil) {
-    [self plotData:data withTitle:title color:color animated:YES];
-  }
+  [[DataStore sharedDataStore] fetchDocument:docKey withCompletionBlock:^(NSDictionary *doc) {
+    NSArray *data = [doc objectForKey:@"values"];
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^(void) {
+      if (data != nil) {
+        [self plotData:data withTitle:title color:color animated:YES];
+      }
+    }];
+  }];
 }
 
 

@@ -111,13 +111,16 @@
   }
   if (count == 1) {
     NSString *server = [self.detailItem.serverList objectAtIndex:0];
-    NSDate *asof = self.detailItem.reportDate;
-    NSDictionary *doc = [[DataStore sharedDataStore] fetchDocument:server forDate:asof];
-    if (doc != nil) {
-      ServerOverviewController *vc = [[ServerOverviewController alloc] initWithNibName:@"ServerOverview" bundle:nil];
-      vc.detailItem = doc;
-      [self.navigationController pushViewController:vc animated:YES];
-    }
+    NSDate *asof = self.detailItem.reportDate;    
+    [[DataStore sharedDataStore] fetchDocument:server forDate:asof withCompletionBlock:^(NSDictionary *doc) {
+      if (doc != nil) {
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^(void) {
+          ServerOverviewController *vc = [[ServerOverviewController alloc] initWithNibName:@"ServerOverview" bundle:nil];
+          vc.detailItem = doc;
+          [self.navigationController pushViewController:vc animated:YES];
+        }];
+      }
+    }];
   } else if (count > 1) {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Not Implemented" message:@"Display of multiple servers not implemented yet" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
