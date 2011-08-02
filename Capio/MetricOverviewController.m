@@ -183,23 +183,31 @@
 }
 
 
+- (NSArray *)metricTitles {
+  return [NSArray arrayWithObjects:
+          @"cpu",
+          @"cpu_mode",
+          @"cpu_top10images",
+          @"cpu_proc",
+          @"cpu_workload",
+          @"mem",
+          @"mem_faultrate",
+          @"mem_faults_io",
+          @"proccount",
+          @"proccount_workload",
+          @"net_sent",
+          @"net_received",
+          @"net_ip_packetrate",
+          @"net_tcp_packetrate",
+          @"net_udp_packetrate",
+          nil];
+}
+
+
 - (NSString *)metricTitle:(NSUInteger)index {
   static NSArray *titles = nil;
   if (titles == nil) {
-    titles = [NSArray arrayWithObjects:
-              @"cpu",
-              @"cpu top 10 images",
-              @"cpu top 10 users",
-              @"cpu workload",
-              @"mem",
-              @"mem alloc",
-              @"mem faultrate",
-              @"mem faults io",
-              @"net sent",
-              @"net received",
-              @"net closed",
-              @"net ip packet rate",
-              nil];
+    titles = [self metricTitles];
   }
   return [titles objectAtIndex:index];
 }
@@ -218,7 +226,7 @@
 - (CPTColor *)metricColor:(NSUInteger)index {
   static NSArray *colors = nil;
   if (colors == nil) {
-    colors = [self makePalette:20];
+    colors = [self makePalette:[[self metricTitles] count]];
   }
   return [colors objectAtIndex:index];
 }
@@ -253,26 +261,6 @@
 	
   [self configureAxes:(CPTXYAxisSet *)graph.axisSet];
 	
-  // check list of available metrics against supported one (from metricTitle),
-  // deactivate the toggles for the ones not procssed and draw the first available one
-  BOOL oneActive = NO;
-  for (UISwitch *toggle in self.metricSwitches) {
-    NSString *title = [self metricTitle:toggle.tag];
-    if ([self.processed objectForKey:title] == nil) {
-      toggle.on = NO;
-      toggle.enabled = NO;
-    } else {
-      toggle.enabled = YES;
-      if (! oneActive) {
-        oneActive = YES;
-        toggle.on = YES;
-        [self drawMetric:toggle.tag];
-      } else {
-        toggle.on = NO;
-      }
-    }
-  }
-  
   [self drawLegend];
 }
 
@@ -345,6 +333,7 @@
   [super viewDidLoad];
   
   NSAssert([[self.detailItem objectForKey:@"type"] isEqualToString:@"server"], @"must be a server type document");
+
   self.processed = [self.detailItem objectForKey:@"processed"];
   
   self.serverName.text = [self.detailItem objectForKey:@"hostname"];
@@ -352,6 +341,26 @@
   
   self.data = [NSMutableDictionary dictionary];
   [self createGraph];
+
+  // check list of available metrics against supported one (from metricTitle),
+  // deactivate the toggles for the ones not procssed and draw the first available one
+  BOOL oneActive = NO;
+  for (UISwitch *toggle in self.metricSwitches) {
+    NSString *title = [self metricTitle:toggle.tag];
+    if ([[self.processed objectForKey:title] isEqual:[NSNull null]]) {
+      toggle.on = NO;
+      toggle.enabled = NO;
+    } else {
+      toggle.enabled = YES;
+      if (! oneActive) {
+        oneActive = YES;
+        toggle.on = YES;
+        [self drawMetric:toggle.tag];
+      } else {
+        toggle.on = NO;
+      }
+    }
+  }
 }
 
 
