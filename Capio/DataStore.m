@@ -82,8 +82,14 @@
   }
   
   NSError *error = nil;
-  NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
-  return  jsonDict;
+  @try {
+    NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+    return  jsonDict;
+  }
+  @catch (NSException *exception) {
+    NSLog(@"Exception: %@", exception);
+    return nil;
+  }
 }
 
 
