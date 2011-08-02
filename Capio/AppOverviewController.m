@@ -82,7 +82,6 @@
 
 - (void)reportDateButtonTapped:(id)sender {
   DatePopupController *vc = [[DatePopupController alloc] initWithNibName:@"DatePopup" bundle:nil];
-  vc.datePicker.date = self.detailItem.reportDate;
   vc.delegate = self;
   self.popover = [[UIPopoverController alloc] initWithContentViewController:vc];
   self.popover.delegate = self;
@@ -90,6 +89,8 @@
   [self.popover presentPopoverFromRect:self.reportDateButton.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
   // keep button selected while the popover is up
   self.reportDateButton.selected = YES;
+  // set this late so the view is up for it to register
+  vc.datePicker.date = self.detailItem.reportDate;
 }
 
 - (IBAction)timelineTapped:(id)sender {
