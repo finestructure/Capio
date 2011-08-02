@@ -87,6 +87,16 @@
 }
 
 
+- (void)fetchDocument:(NSString *)docUrl withCompletionBlock:(void (^)(NSDictionary *doc))block {
+  // avoid reference cycle
+  __block __typeof__(self) blockSelf = self;
+  [self.fetchQueue addOperationWithBlock:^(void) {
+    NSDictionary *doc = [blockSelf fetchDocument:docUrl];
+    block(doc);
+  }];
+}
+
+
 - (NSDictionary *)fetchDocument:(NSString *)doc forDate:(NSDate *)asof {
   NSMutableString *url = [NSMutableString stringWithString:doc];
   [url appendString:kCouchPathSep];

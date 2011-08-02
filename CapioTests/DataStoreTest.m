@@ -46,6 +46,13 @@
 }
 
 
+- (void)test_fetch_Document_withCompletionBlock {
+  [[DataStore sharedDataStore] fetchDocument:@"apps" withCompletionBlock:^(NSDictionary *doc) {
+    STAssertNotNil(doc, nil);
+  }];
+}
+
+
 - (void)test_appList {
   NSArray *apps = [[DataStore sharedDataStore] appList];
   STAssertEquals(6u, [apps count], nil);
@@ -71,7 +78,7 @@
                             @"appName", [[asterisk stringByAppendingString:searchText] stringByAppendingString:asterisk]];
   NSArray *results = [apps filteredArrayUsingPredicate:predicate];
   NSLog(@"results: %@", results);
-  STAssertEquals(3, (int)[results count], nil);
+  STAssertEquals(2, (int)[results count], nil);
 }
 
 
