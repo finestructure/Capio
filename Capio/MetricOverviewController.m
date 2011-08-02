@@ -103,7 +103,7 @@
 	plot.cachePrecision = CPTPlotCachePrecisionDecimal;
 	
 	CABasicAnimation *fadeInAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
-	fadeInAnimation.duration = 1.0f;
+	fadeInAnimation.duration = 0.2f;
 	fadeInAnimation.removedOnCompletion = NO;
 	fadeInAnimation.fillMode = kCAFillModeForwards;
 	fadeInAnimation.toValue = [NSNumber numberWithFloat:1.0];
@@ -227,7 +227,7 @@
     NSArray *data = [doc objectForKey:@"values"];
     [[NSOperationQueue mainQueue] addOperationWithBlock:^(void) {
       if (data != nil) {
-        [self plotData:data withTitle:title color:color animated:YES];
+        [self plotData:data withTitle:title color:color animated:NO];
       }
     }];
   }];
