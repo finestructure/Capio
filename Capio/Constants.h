@@ -11,6 +11,7 @@
 // user defaults keys
 extern NSString * const kCouchServiceName;
 extern NSString * const kCouchServiceUrl;
+extern NSString * const kUseLocalTestData;
 
 // notifications
 extern NSString * const kCouchServiceUrlChanged;

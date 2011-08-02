@@ -20,8 +20,8 @@
 		5A32465F13E022C000AE1937 /* DomainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A32465A13E022C000AE1937 /* DomainViewController.m */; };
 		5A32466013E022C000AE1937 /* SimpleEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A32465C13E022C000AE1937 /* SimpleEditViewController.m */; };
 		5A32466313E0358900AE1937 /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A32466213E0358800AE1937 /* gear.png */; };
-		5A32466713E03B8300AE1937 /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A32466513E03B8300AE1937 /* ConfigViewController.m */; };
-		5A32466813E03B8300AE1937 /* ConfigView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A32466613E03B8300AE1937 /* ConfigView.xib */; };
+		5A32466713E03B8300AE1937 /* SettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A32466513E03B8300AE1937 /* SettingsController.m */; };
+		5A32466813E03B8300AE1937 /* Settings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A32466613E03B8300AE1937 /* Settings.xib */; };
 		5A32467013E0537900AE1937 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A32466F13E0537900AE1937 /* Constants.m */; };
 		5A32A12B13D495CA00AC7CB3 /* DataStoreTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A32A12A13D495CA00AC7CB3 /* DataStoreTest.m */; };
 		5A4B5E4A13D561EC006E1C9E /* ServerOverviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B5E4813D561EC006E1C9E /* ServerOverviewController.m */; };
@@ -43,6 +43,8 @@
 		5A67A27013BCB82D002BDCAA /* AppOverview.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A67A26E13BCB82D002BDCAA /* AppOverview.m */; };
 		5A67A27B13BCCEDC002BDCAA /* DatePopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A67A27913BCCEDC002BDCAA /* DatePopupController.m */; };
 		5A67A27C13BCCEDC002BDCAA /* DatePopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A67A27A13BCCEDC002BDCAA /* DatePopup.xib */; };
+		5A73F4CC13E70F17008E727C /* GeneralSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A73F4CA13E70F16008E727C /* GeneralSettingsController.m */; };
+		5A73F4CD13E70F17008E727C /* GeneralSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A73F4CB13E70F17008E727C /* GeneralSettings.xib */; };
 		5A843E2F13C2049A00289E51 /* red_rag.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A843E2E13C2049A00289E51 /* red_rag.png */; };
 		5A843E3213C2096F00289E51 /* amber_rag.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A843E3113C2096F00289E51 /* amber_rag.png */; };
 		5A886EDC13C33E8F003E06FA /* button1_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A886EDA13C33E8F003E06FA /* button1_pressed.png */; };
@@ -96,6 +98,7 @@
 		5ADF8CC313DEE7E200023BA8 /* AppConnectionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADF8CC113DEE7E200023BA8 /* AppConnectionsController.m */; };
 		5ADF8CC413DEE7E200023BA8 /* AppConnections.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ADF8CC213DEE7E200023BA8 /* AppConnections.xib */; };
 		5ADF8CC613DEE87800023BA8 /* app_connections.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ADF8CC513DEE87800023BA8 /* app_connections.png */; };
+		5ADFF7D413E7E21D00807383 /* UIView+RoundedCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF7D313E7E21D00807383 /* UIView+RoundedCorners.m */; };
 		5AF74AD713C1EC9F00DF0794 /* AppListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF74AD513C1EC9F00DF0794 /* AppListCell.m */; };
 		5AF74AD813C1EC9F00DF0794 /* AppListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF74AD613C1EC9F00DF0794 /* AppListCell.xib */; };
 /* End PBXBuildFile section */
@@ -129,9 +132,9 @@
 		5A32465B13E022C000AE1937 /* SimpleEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleEditViewController.h; sourceTree = "<group>"; };
 		5A32465C13E022C000AE1937 /* SimpleEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleEditViewController.m; sourceTree = "<group>"; };
 		5A32466213E0358800AE1937 /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
-		5A32466413E03B8300AE1937 /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigViewController.h; sourceTree = "<group>"; };
-		5A32466513E03B8300AE1937 /* ConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigViewController.m; sourceTree = "<group>"; };
-		5A32466613E03B8300AE1937 /* ConfigView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigView.xib; sourceTree = "<group>"; };
+		5A32466413E03B8300AE1937 /* SettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsController.h; sourceTree = "<group>"; };
+		5A32466513E03B8300AE1937 /* SettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsController.m; sourceTree = "<group>"; };
+		5A32466613E03B8300AE1937 /* Settings.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Settings.xib; sourceTree = "<group>"; };
 		5A32466E13E0537900AE1937 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		5A32466F13E0537900AE1937 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		5A32A12813D4912900AC7CB3 /* apps.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = apps.json; sourceTree = "<group>"; };
@@ -232,6 +235,9 @@
 		5A67A27813BCCEDC002BDCAA /* DatePopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePopupController.h; sourceTree = "<group>"; };
 		5A67A27913BCCEDC002BDCAA /* DatePopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePopupController.m; sourceTree = "<group>"; };
 		5A67A27A13BCCEDC002BDCAA /* DatePopup.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePopup.xib; sourceTree = "<group>"; };
+		5A73F4C913E70F16008E727C /* GeneralSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralSettingsController.h; sourceTree = "<group>"; };
+		5A73F4CA13E70F16008E727C /* GeneralSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralSettingsController.m; sourceTree = "<group>"; };
+		5A73F4CB13E70F17008E727C /* GeneralSettings.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralSettings.xib; sourceTree = "<group>"; };
 		5A843E2E13C2049A00289E51 /* red_rag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_rag.png; sourceTree = "<group>"; };
 		5A843E3113C2096F00289E51 /* amber_rag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amber_rag.png; sourceTree = "<group>"; };
 		5A886EDA13C33E8F003E06FA /* button1_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button1_pressed.png; sourceTree = "<group>"; };
@@ -296,6 +302,8 @@
 		5ADF8CC113DEE7E200023BA8 /* AppConnectionsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConnectionsController.m; sourceTree = "<group>"; };
 		5ADF8CC213DEE7E200023BA8 /* AppConnections.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppConnections.xib; sourceTree = "<group>"; };
 		5ADF8CC513DEE87800023BA8 /* app_connections.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_connections.png; sourceTree = "<group>"; };
+		5ADFF7D213E7E21D00807383 /* UIView+RoundedCorners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RoundedCorners.h"; sourceTree = "<group>"; };
+		5ADFF7D313E7E21D00807383 /* UIView+RoundedCorners.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RoundedCorners.m"; sourceTree = "<group>"; };
 		5AF74AD413C1EC9F00DF0794 /* AppListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppListCell.h; sourceTree = "<group>"; };
 		5AF74AD513C1EC9F00DF0794 /* AppListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppListCell.m; sourceTree = "<group>"; };
 		5AF74AD613C1EC9F00DF0794 /* AppListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppListCell.xib; sourceTree = "<group>"; };
@@ -386,9 +394,9 @@
 				5AD5B6A713BC6CA10083D454 /* SecondViewController.h */,
 				5AD5B6A813BC6CA10083D454 /* SecondViewController.m */,
 				5AD5B6A913BC6CA10083D454 /* SecondViewController.xib */,
-				5A32466413E03B8300AE1937 /* ConfigViewController.h */,
-				5A32466513E03B8300AE1937 /* ConfigViewController.m */,
-				5A32466613E03B8300AE1937 /* ConfigView.xib */,
+				5A32466413E03B8300AE1937 /* SettingsController.h */,
+				5A32466513E03B8300AE1937 /* SettingsController.m */,
+				5A32466613E03B8300AE1937 /* Settings.xib */,
 			);
 			name = "Main Views";
 			sourceTree = "<group>";
@@ -490,6 +498,15 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		5A73F47E13E70028008E727C /* UIView-RoundedCorners */ = {
+			isa = PBXGroup;
+			children = (
+				5ADFF7D213E7E21D00807383 /* UIView+RoundedCorners.h */,
+				5ADFF7D313E7E21D00807383 /* UIView+RoundedCorners.m */,
+			);
+			path = "UIView-RoundedCorners";
+			sourceTree = "<group>";
+		};
 		5A88ECB813E146D1007A259F /* Test Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -501,14 +518,15 @@
 			name = "Test Data";
 			sourceTree = "<group>";
 		};
-		5A88ECBA13E1473D007A259F /* Headers */ = {
+		5A88ECBA13E1473D007A259F /* External */ = {
 			isa = PBXGroup;
 			children = (
+				5A73F47E13E70028008E727C /* UIView-RoundedCorners */,
 				5A32465413E022C000AE1937 /* BonjourSupport */,
 				5A57427713DED37600294D1A /* CorePlotHeaders */,
 				5AD615E713BB820100F9CA45 /* MGSplitViewController */,
 			);
-			name = Headers;
+			name = External;
 			sourceTree = "<group>";
 		};
 		5AA4D7D113BB52080029B616 = {
@@ -516,7 +534,7 @@
 			children = (
 				5AA4D7E613BB52080029B616 /* Capio */,
 				5AA4D81213BB52080029B616 /* CapioTests */,
-				5A88ECBA13E1473D007A259F /* Headers */,
+				5A88ECBA13E1473D007A259F /* External */,
 				5AA4D7DF13BB52080029B616 /* Frameworks */,
 				5AA4D7DD13BB52080029B616 /* Products */,
 			);
@@ -633,6 +651,9 @@
 				5ABE2DD813E1CCCA00170DE7 /* IntroViewController.h */,
 				5ABE2DD913E1CCCA00170DE7 /* IntroViewController.m */,
 				5ABE2DDA13E1CCCA00170DE7 /* IntroView.xib */,
+				5A73F4C913E70F16008E727C /* GeneralSettingsController.h */,
+				5A73F4CA13E70F16008E727C /* GeneralSettingsController.m */,
+				5A73F4CB13E70F17008E727C /* GeneralSettings.xib */,
 				5AB26AED13C5D14E00AC5B87 /* Accessory Controls */,
 			);
 			name = ViewControllers;
@@ -753,7 +774,7 @@
 				5A32464913DEED9E00AE1937 /* button2.png in Resources */,
 				5A32464F13DEF41D00AE1937 /* ServerConfig.xib in Resources */,
 				5A32466313E0358900AE1937 /* gear.png in Resources */,
-				5A32466813E03B8300AE1937 /* ConfigView.xib in Resources */,
+				5A32466813E03B8300AE1937 /* Settings.xib in Resources */,
 				5A88ECBB13E155DA007A259F /* apps.json in Resources */,
 				5A88ECBE13E15EA0007A259F /* DBGERLT2073%2F2011-03-02.json in Resources */,
 				5A88ECC213E187D6007A259F /* response_history.png in Resources */,
@@ -771,6 +792,7 @@
 				5ABE2DFE13E59E8800170DE7 /* green_rag_big_pressed.png in Resources */,
 				5A61C17D13E6084600751084 /* DBGERLT2073%2F2011-03-02%2Fcpu.json in Resources */,
 				5A61C18113E611C900751084 /* DBGERLT2073%2F2011-03-02%2Fmem.json in Resources */,
+				5A73F4CD13E70F17008E727C /* GeneralSettings.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -846,9 +868,11 @@
 				5A32465E13E022C000AE1937 /* BrowserViewController.m in Sources */,
 				5A32465F13E022C000AE1937 /* DomainViewController.m in Sources */,
 				5A32466013E022C000AE1937 /* SimpleEditViewController.m in Sources */,
-				5A32466713E03B8300AE1937 /* ConfigViewController.m in Sources */,
+				5A32466713E03B8300AE1937 /* SettingsController.m in Sources */,
 				5A32467013E0537900AE1937 /* Constants.m in Sources */,
 				5ABE2DDB13E1CCCA00170DE7 /* IntroViewController.m in Sources */,
+				5A73F4CC13E70F17008E727C /* GeneralSettingsController.m in Sources */,
+				5ADFF7D413E7E21D00807383 /* UIView+RoundedCorners.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

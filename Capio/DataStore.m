@@ -47,8 +47,11 @@
 }
 
 
-- (NSData *)fetchDocument:(NSString *)doc isLocal:(BOOL)local {
-  if (local) {
+- (NSData *)_fetchDocument:(NSString *)doc {
+  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+  BOOL useLocalTestData = [defaults boolForKey:kUseLocalTestData];
+  
+  if (useLocalTestData) {
     NSString *path = [[NSBundle mainBundle] pathForResource:doc ofType:@"json"];
     return [NSData dataWithContentsOfFile:path];
   } else {
@@ -73,7 +76,7 @@
 
 - (NSDictionary *)fetchDocument:(NSString *)doc {
   NSString *escapedString = [doc stringByReplacingOccurrencesOfString:@"/" withString:kCouchPathSep];
-  NSData *data = [self fetchDocument:escapedString isLocal:YES];
+  NSData *data = [self _fetchDocument:escapedString];
   
   if (data == nil) {
     NSString *msg = [NSString stringWithFormat:@"Server did not return any data"];

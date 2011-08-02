@@ -10,6 +10,7 @@
 
 NSString * const kCouchServiceName = @"kCouchServiceName";
 NSString * const kCouchServiceUrl = @"kCouchServiceUrl";
+NSString * const kUseLocalTestData = @"kUseLocalTestData";
 
 NSString * const kCouchServiceUrlChanged = @"kCouchServiceUrlChanged";
 

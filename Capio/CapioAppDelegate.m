@@ -10,7 +10,7 @@
 #import "MGSplitViewController.h"
 
 #import "SecondViewController.h"
-#import "ConfigViewController.h"
+#import "SettingsController.h"
 
 @implementation CapioAppDelegate
 
@@ -34,7 +34,7 @@
   self.tabBarController.viewControllers = [NSArray arrayWithObjects:
                                            self.splitViewController,
                                            [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil],
-                                           [[ConfigViewController alloc] initWithNibName:@"ConfigView" bundle:nil],
+                                           [[SettingsController alloc] initWithNibName:@"Settings" bundle:nil],
                                            nil];
   
   [self.window addSubview:self.tabBarController.view];
