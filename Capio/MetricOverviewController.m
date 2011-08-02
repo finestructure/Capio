@@ -197,23 +197,20 @@
 }
 
 
+- (NSArray *)makePalette:(NSUInteger)count {
+  NSMutableArray *colors = [NSMutableArray arrayWithCapacity:count];
+  for (NSUInteger i = 0; i < count; ++i) {
+    UIColor *color = [UIColor colorWithHue:((float)i)/count saturation:1 brightness:0.8 alpha:1];
+    [colors addObject:[CPTColor colorWithCGColor:color.CGColor]];
+  }
+  return colors;
+}
+
+
 - (CPTColor *)metricColor:(NSUInteger)index {
   static NSArray *colors = nil;
   if (colors == nil) {
-    colors = [NSArray arrayWithObjects:
-              [CPTColor redColor],
-              [CPTColor colorWithComponentRed:1.00 green:0.40 blue:0.00 alpha:1.0],
-              [CPTColor colorWithComponentRed:1.00 green:0.58 blue:0.00 alpha:1.0],
-              [CPTColor colorWithComponentRed:1.00 green:0.77 blue:0.00 alpha:1.0],
-              [CPTColor colorWithComponentRed:1.00 green:1.00 blue:0.00 alpha:1.0],
-              [CPTColor colorWithComponentRed:0.55 green:0.78 blue:0.00 alpha:1.0],
-              [CPTColor colorWithComponentRed:0.06 green:0.68 blue:0.00 alpha:1.0],
-              [self colorWithRed:0 green:163 blue:199],
-              [self colorWithRed:0 green:100 blue:181],
-              [self colorWithRed:0 green:16 blue:165],
-              [self colorWithRed:99 green:0 blue:165],
-              [self colorWithRed:197 green:0 blue:124],
-              nil];
+    colors = [self makePalette:20];
   }
   return [colors objectAtIndex:index];
 }
