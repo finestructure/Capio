@@ -51,6 +51,19 @@
 }
 
 
+- (CPTTimeFormatter *)labelFormatterWithFormat:(NSString *)format {
+  NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+  dateFormatter.dateFormat = format;
+
+  NSString *asof = [self.detailItem objectForKey:@"asof"];
+  NSDate *refDate = [[YmdDateFormatter sharedInstance] dateFromString:asof];
+
+  CPTTimeFormatter *labelFormatter = [[CPTTimeFormatter alloc] initWithDateFormatter:dateFormatter];
+  labelFormatter.referenceDate = refDate;
+  return labelFormatter;
+}
+
+
 - (void)configureAxes:(CPTXYAxisSet *)axisSet {
   NSTimeInterval oneDay = 24 * 60 * 60;
   NSDateFormatter *dateTimeFormatter = [[NSDateFormatter alloc] init];
@@ -63,17 +76,12 @@
   {
     CPTXYAxis *x = axisSet.xAxis;
     x.majorIntervalLength = CPTDecimalFromInt(oneDay);
-    x.minorTicksPerInterval = 12;
+    x.minorTicksPerInterval = 11;
     x.labelRotation = 0.7;
+    x.minorTickLabelRotation = 0.7;
     
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.dateFormat = @"MM-dd HH:mm";
-    CPTTimeFormatter *timeFormatter = [[CPTTimeFormatter alloc] initWithDateFormatter:dateFormatter];
-    
-    NSString *asof = [self.detailItem objectForKey:@"asof"];
-    NSDate *refDate = [[YmdDateFormatter sharedInstance] dateFromString:asof];
-    timeFormatter.referenceDate = refDate;
-    x.labelFormatter = timeFormatter;
+    x.labelFormatter = [self labelFormatterWithFormat:@"MMM-dd"];
+    x.minorTickLabelFormatter = [self labelFormatterWithFormat:@"HH:mm"];
     
     x.isFloatingAxis = YES;
     x.constraints = CPTMakeConstraints(CPTConstraintFixed,
@@ -81,7 +89,7 @@
     
     x.titleTextStyle = axisTitleTextStyle;
     x.titleOffset = 45.0;
-    x.title = NSLocalizedString(@"Date", @"Utilization graph x axis label");
+    x.title = NSLocalizedString(@"Time", @"Utilization graph x axis label");
   }
   {
     CPTXYAxis *y = axisSet.yAxis;
