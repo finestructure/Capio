@@ -49,12 +49,12 @@
 }
 
 
-- (NSData *)_fetchDocument:(NSString *)doc {
+- (NSData *)_fetchDocument:(NSString *)docKey {
   NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
   BOOL useLocalTestData = [defaults boolForKey:kUseLocalTestData];
   
   if (useLocalTestData) {
-    NSString *path = [[NSBundle mainBundle] pathForResource:doc ofType:@"json"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:docKey ofType:@"json"];
     return [NSData dataWithContentsOfFile:path];
   } else {
     NSString *baseUrl = [self baseUrl];
@@ -66,15 +66,15 @@
     NSMutableString *urlString = [NSMutableString stringWithString:baseUrl];
     
     [urlString appendString:@"/dev/"];
-    [urlString appendString:doc];
+    [urlString appendString:docKey];
     NSURL *url = [NSURL URLWithString:urlString];
     return [NSData dataWithContentsOfURL:url];
   }
 }
 
 
-- (NSDictionary *)fetchDocument:(NSString *)doc {
-  NSString *escapedString = [doc stringByReplacingOccurrencesOfString:@"/" withString:kCouchPathSep];
+- (NSDictionary *)fetchDocument:(NSString *)docKey {
+  NSString *escapedString = [docKey stringByReplacingOccurrencesOfString:@"/" withString:kCouchPathSep];
   NSData *data = [self _fetchDocument:escapedString];
   
   if (data == nil) {
@@ -87,18 +87,18 @@
 }
 
 
-- (void)fetchDocument:(NSString *)docUrl withCompletionBlock:(void (^)(NSDictionary *doc))block {
+- (void)fetchDocument:(NSString *)docKey withCompletionBlock:(void (^)(NSDictionary *doc))block {
   // avoid reference cycle
   __block __typeof__(self) blockSelf = self;
   [self.fetchQueue addOperationWithBlock:^(void) {
-    NSDictionary *doc = [blockSelf fetchDocument:docUrl];
+    NSDictionary *doc = [blockSelf fetchDocument:docKey];
     block(doc);
   }];
 }
 
 
-- (NSDictionary *)fetchDocument:(NSString *)doc forDate:(NSDate *)asof {
-  NSMutableString *url = [NSMutableString stringWithString:doc];
+- (NSDictionary *)fetchDocument:(NSString *)docKey forDate:(NSDate *)asof {
+  NSMutableString *url = [NSMutableString stringWithString:docKey];
   [url appendString:kCouchPathSep];
   [url appendString:[[YmdDateFormatter sharedInstance] stringFromDate:asof]];
   
@@ -106,11 +106,11 @@
 }
 
 
-- (void)fetchDocument:(NSString *)docUrl forDate:(NSDate *)date withCompletionBlock:(void (^)(NSDictionary *doc))block {
+- (void)fetchDocument:(NSString *)docKey forDate:(NSDate *)date withCompletionBlock:(void (^)(NSDictionary *doc))block {
   // avoid reference cycle
   __block __typeof__(self) blockSelf = self;
   [self.fetchQueue addOperationWithBlock:^(void) {
-    NSDictionary *doc = [blockSelf fetchDocument:docUrl forDate:date];
+    NSDictionary *doc = [blockSelf fetchDocument:docKey forDate:date];
     block(doc);
   }];
 }
