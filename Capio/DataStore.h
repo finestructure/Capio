@@ -22,4 +22,6 @@
 - (NSDictionary *)fetchDocPath:(NSArray *)pathComponents;
 - (NSString *)baseUrl;
 
+@property (strong, nonatomic) NSOperationQueue *fetchQueue;
+
 @end

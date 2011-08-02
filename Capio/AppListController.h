@@ -15,7 +15,7 @@
 }
 
 
-@property (nonatomic, strong) NSArray *apps;
+@property (nonatomic, strong) NSMutableArray *apps;
 @property (strong, nonatomic) NSArray *displayedApps;
 
 @property (strong, nonatomic) IBOutlet UINavigationController *detailViewController;

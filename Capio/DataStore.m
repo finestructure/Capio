@@ -14,6 +14,8 @@
 
 @implementation DataStore
 
+@synthesize fetchQueue = _fetchQueue;
+
 
 #pragma mark - Workers
 
@@ -58,9 +60,6 @@
     NSString *baseUrl = [self baseUrl];
     
     if (baseUrl == nil) {
-      NSString *msg = [NSString stringWithFormat:@"Server at '%@' did not available", baseUrl];
-      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Server Not Available" message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-      [alert show];
       return [NSArray array];
     }
     
@@ -79,9 +78,6 @@
   NSData *data = [self _fetchDocument:escapedString];
   
   if (data == nil) {
-    NSString *msg = [NSString stringWithFormat:@"Server did not return any data"];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Data" message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [alert show];
     return nil;
   }
   
@@ -144,15 +140,15 @@
 
 #pragma mark - Initializers
 
-- (id)init
-{
-    self = [super init];
-    if (self) {
-        // Initialization code here.
-    }
-    
-    return self;
+- (id)init {
+  self = [super init];
+  if (self) {
+    self.fetchQueue = [[NSOperationQueue alloc] init];
+  }
+  
+  return self;
 }
+
 
 + (DataStore *)sharedDataStore {
   static DataStore *sharedDataStore = nil;

@@ -28,9 +28,46 @@
 
 
 - (void)fetchAppList {
-  self.apps = [[DataStore sharedDataStore] appList];
-  self.displayedApps = [self.apps copy];
-  [self.tableView reloadData];
+  [[DataStore sharedDataStore].fetchQueue addOperationWithBlock:^(void) {
+    NSLog(@"Fetching ...");
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    self.apps = [NSMutableArray array];
+    self.displayedApps = [self.apps copy];
+    [self.tableView reloadData];
+    
+    NSDictionary *doc = [[DataStore sharedDataStore] fetchDocument:@"apps"];
+    NSLog(@"... done");
+    if (doc == nil) {
+      [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        NSString *msg = [NSString stringWithFormat:@"Server '%@' did not return any data", [[DataStore sharedDataStore] baseUrl]];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Data" message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+      }];
+    } else {
+      [doc enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        if ([obj isKindOfClass:[NSDictionary class]]) {
+          NSDictionary *dict = (NSDictionary *)obj;
+          AppOverview *item = [[AppOverview alloc] init];
+          item.appName = [dict objectForKey:@"app_name"];
+          item.appDescription = [dict objectForKey:@"app_description"];
+          item.appOwner = [dict objectForKey:@"app_owner"];
+          item.serverList = [dict objectForKey:@"server_list"];
+          NSString *value = [dict objectForKey:@"report_date"];
+          item.reportDate = [[YmdDateFormatter sharedInstance] dateFromString:value];
+          item.ragRed = [dict objectForKey:@"red_rag_count"];
+          item.ragAmber = [dict objectForKey:@"amber_rag_count"];
+          item.ragGreen = [dict objectForKey:@"green_rag_count"];
+          item.ragTotal = [NSNumber numberWithUnsignedInteger:[item.ragRed unsignedIntValue] + [item.ragAmber unsignedIntValue] + [item.ragGreen unsignedIntValue]];
+          [self.apps addObject:item];
+        }
+      }];
+      self.displayedApps = [self.apps copy];
+    }
+  
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    [self.tableView reloadData];    
+    NSLog(@"Reloaded");
+  }];
 }
 
 
