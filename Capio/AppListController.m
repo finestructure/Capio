@@ -30,10 +30,13 @@
 - (void)fetchAppList {
   [[DataStore sharedDataStore].fetchQueue addOperationWithBlock:^(void) {
     NSLog(@"Fetching ...");
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     self.apps = [NSMutableArray array];
     self.displayedApps = [self.apps copy];
-    [self.tableView reloadData];
+
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+      [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+      [self.tableView reloadData];
+    }];
     
     NSDictionary *doc = [[DataStore sharedDataStore] fetchDocument:@"apps"];
     NSLog(@"... done");
@@ -64,9 +67,11 @@
       self.displayedApps = [self.apps copy];
     }
   
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-    [self.tableView reloadData];    
-    NSLog(@"Reloaded");
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+      [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+      [self.tableView reloadData];    
+      NSLog(@"Reloaded");
+    }];
   }];
 }
 
