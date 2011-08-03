@@ -14,6 +14,11 @@
 @implementation DataStoreTest
 
 
+- (void)setUp {
+  [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kUseLocalTestData];
+}
+
+
 - (void)test_fetchDocument {
   NSDictionary *doc = [[DataStore sharedDataStore] fetchDocument:@"apps"];
   STAssertNotNil(doc, nil);
@@ -89,5 +94,19 @@
   STAssertEquals(2, (int)[results count], nil);
 }
 
+
+- (void)test_fetchFromView {
+  [[NSUserDefaults standardUserDefaults] setBool:NO forKey:kUseLocalTestData];
+  NSString *startKey = @"[\"DBGERLT2073\",\"2011-03-02\"]";
+  NSString *endKey = @"[\"DBGERLT2073\",\"2011-03-02\"]";
+  NSDictionary *doc = [[DataStore sharedDataStore] fetchFromView:@"server_asof_dates" startKey:startKey endKey:endKey];
+  STAssertNotNil(doc, nil);
+  NSNumber *total_rows = [doc objectForKey:@"total_rows"];
+  STAssertNotNil(total_rows, nil);
+  STAssertEquals(5u, [total_rows unsignedIntValue], nil);
+  NSArray *rows = [doc objectForKey:@"rows"];
+  STAssertNotNil(rows, nil);
+  STAssertEquals(1u, [rows count], nil);
+}
 
 @end

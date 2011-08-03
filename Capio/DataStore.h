@@ -22,6 +22,9 @@
 - (NSDictionary *)fetchDocument:(NSString *)docKey forDate:(NSDate *)asof;
 - (void)fetchDocument:(NSString *)docKey forDate:(NSDate *)date withCompletionBlock:(void (^)(NSDictionary *doc))block;
 - (NSDictionary *)fetchDocPath:(NSArray *)pathComponents;
+
+- (NSDictionary *)fetchFromView:(NSString *)viewKey startKey:(NSString *)startKey endKey:(NSString *)endKey;
+
 - (NSString *)baseUrl;
 
 @property (strong, nonatomic) NSOperationQueue *fetchQueue;

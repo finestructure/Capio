@@ -70,6 +70,7 @@
            @"%28", @"(",
            @"%29", @")",
            @"%2A", @"*",
+           @"%22", @"\"",
            nil];
   }  
   NSMutableString *encodedString = [unencodedString mutableCopy];
@@ -81,13 +82,15 @@
 }
 
 
-- (NSData *)_fetchDocument:(NSString *)docKey {
+- (NSDictionary *)_fetchDocument:(NSString *)docKey {
   NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
   BOOL useLocalTestData = [defaults boolForKey:kUseLocalTestData];
   
+  NSData *data = nil;
+  
   if (useLocalTestData) {
     NSString *path = [[NSBundle mainBundle] pathForResource:docKey ofType:@"json"];
-    return [NSData dataWithContentsOfFile:path];
+    data = [NSData dataWithContentsOfFile:path];
   } else {
     NSString *baseUrl = [self baseUrl];
     
@@ -100,15 +103,9 @@
     [urlString appendString:@"/dev/"];
     [urlString appendString:docKey];
     NSURL *url = [NSURL URLWithString:urlString];
-    return [NSData dataWithContentsOfURL:url];
+    data = [NSData dataWithContentsOfURL:url];
   }
-}
 
-
-- (NSDictionary *)fetchDocument:(NSString *)docKey {
-  NSString *escapedString = [self encodeString:docKey];
-  NSData *data = [self _fetchDocument:escapedString];
-  
   if (data == nil) {
     return nil;
   }
@@ -122,6 +119,13 @@
     NSLog(@"Exception: %@", exception);
     return nil;
   }
+}
+
+
+- (NSDictionary *)fetchDocument:(NSString *)docKey {
+  NSString *escapedString = [self encodeString:docKey];
+  NSDictionary *doc = [self _fetchDocument:escapedString];
+  return doc;
 }
 
 
@@ -171,6 +175,15 @@
   return [self fetchDocument:url];
 }
 
+
+- (NSDictionary *)fetchFromView:(NSString *)viewKey startKey:(NSString *)startKey endKey:(NSString *)endKey {
+  //@"_design/capm/_view/{viewKey}?startkey={startKey}&endkey={endKey}"
+  NSMutableString *viewUrl = [NSMutableString stringWithFormat:@"_design/capm/_view/%@", viewKey];
+  [viewUrl appendFormat:@"?startkey=%@", [self encodeString:startKey]];
+  [viewUrl appendFormat:@"&endkey=%@", [self encodeString:endKey]];
+  NSDictionary *doc = [self _fetchDocument:viewUrl];
+  return doc;
+}
 
 - (NSArray *)appList {
   NSDictionary *doc = [self fetchDocument:@"apps"];
