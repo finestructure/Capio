@@ -49,6 +49,38 @@
 }
 
 
+- (NSString *)encodeString:(NSString *)unencodedString {
+  static NSDictionary *map = nil;
+  if (map == nil) {
+    map = [NSDictionary dictionaryWithObjectsAndKeys:
+           @"%3B", @";",
+           @"%2F", @"/",
+           @"%3F", @"?",
+           @"%3A", @":",
+           @"%40", @"@",
+           @"%26", @"&",
+           @"%3D", @"=",
+           @"%2B", @"+",
+           @"%24", @"$",
+           @"%2C", @",",
+           @"%5B", @"[",
+           @"%5D", @"]",
+           @"%23", @"#",
+           @"%21", @"!",
+           @"%28", @"(",
+           @"%29", @")",
+           @"%2A", @"*",
+           nil];
+  }  
+  NSMutableString *encodedString = [unencodedString mutableCopy];
+  [map enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+    [encodedString replaceOccurrencesOfString:key withString:obj options:NSLiteralSearch range:NSMakeRange(0, [encodedString length])];
+  }];
+    
+  return encodedString;
+}
+
+
 - (NSData *)_fetchDocument:(NSString *)docKey {
   NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
   BOOL useLocalTestData = [defaults boolForKey:kUseLocalTestData];
@@ -74,7 +106,7 @@
 
 
 - (NSDictionary *)fetchDocument:(NSString *)docKey {
-  NSString *escapedString = [docKey stringByReplacingOccurrencesOfString:@"/" withString:kCouchPathSep];
+  NSString *escapedString = [self encodeString:docKey];
   NSData *data = [self _fetchDocument:escapedString];
   
   if (data == nil) {
