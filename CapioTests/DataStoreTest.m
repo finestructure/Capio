@@ -95,10 +95,16 @@
 }
 
 
+- (void)test_jsonEncode {
+  NSArray *unencoded = [NSArray arrayWithObjects:@"DBGERLT2073", @"2011-03-02", nil];
+  STAssertEqualObjects(@"[\"DBGERLT2073\",\"2011-03-02\"]", [[DataStore sharedDataStore] jsonEncode:unencoded], nil);
+}
+
+
 - (void)test_fetchFromView {
   [[NSUserDefaults standardUserDefaults] setBool:NO forKey:kUseLocalTestData];
-  NSString *startKey = @"[\"DBGERLT2073\",\"2011-03-02\"]";
-  NSString *endKey = @"[\"DBGERLT2073\",\"2011-03-02\"]";
+  id startKey = [NSArray arrayWithObjects:@"DBGERLT2073", @"2011-03-02", nil];
+  id endKey = startKey;
   NSDictionary *doc = [[DataStore sharedDataStore] fetchFromView:@"server_asof_dates" startKey:startKey endKey:endKey];
   STAssertNotNil(doc, nil);
   NSNumber *total_rows = [doc objectForKey:@"total_rows"];

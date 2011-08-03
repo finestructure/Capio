@@ -82,6 +82,27 @@
 }
 
 
+- (NSString *)jsonEncode:(id)object {
+  if (! [NSJSONSerialization isValidJSONObject:object]) {
+    return nil;
+  }
+  
+  NSError *error = nil;
+  @try {
+    NSData *data = [NSJSONSerialization dataWithJSONObject:object options:0 error:&error];
+    if (error != nil) {
+      NSLog(@"Error while encoding JSON: %@", error);
+    }
+    NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    return string;
+  }
+  @catch (NSException *exception) {
+    NSLog(@"Exception: %@", exception);
+    return nil;
+  }
+}
+
+
 - (NSDictionary *)_fetchDocument:(NSString *)docKey {
   NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
   BOOL useLocalTestData = [defaults boolForKey:kUseLocalTestData];
@@ -113,6 +134,9 @@
   NSError *error = nil;
   @try {
     NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+    if (error != nil) {
+      NSLog(@"Error while decoding JSON: %@", error);
+    }
     return  jsonDict;
   }
   @catch (NSException *exception) {
@@ -176,11 +200,11 @@
 }
 
 
-- (NSDictionary *)fetchFromView:(NSString *)viewKey startKey:(NSString *)startKey endKey:(NSString *)endKey {
+- (NSDictionary *)fetchFromView:(NSString *)viewKey startKey:(id)startKey endKey:(id)endKey {
   //@"_design/capm/_view/{viewKey}?startkey={startKey}&endkey={endKey}"
   NSMutableString *viewUrl = [NSMutableString stringWithFormat:@"_design/capm/_view/%@", viewKey];
-  [viewUrl appendFormat:@"?startkey=%@", [self encodeString:startKey]];
-  [viewUrl appendFormat:@"&endkey=%@", [self encodeString:endKey]];
+  [viewUrl appendFormat:@"?startkey=%@", [self encodeString:[self jsonEncode:startKey]]];
+  [viewUrl appendFormat:@"&endkey=%@", [self encodeString:[self jsonEncode:endKey]]];
   NSDictionary *doc = [self _fetchDocument:viewUrl];
   return doc;
 }
