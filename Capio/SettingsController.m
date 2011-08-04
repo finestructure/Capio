@@ -173,11 +173,11 @@
 
 #pragma mark - Table view delegate
 
-- (WebViewController *)webControllerForResource:(NSString *)resource {
+- (WebViewController *)webControllerForPath:(NSString *)resource {
   WebViewController *vc = [[WebViewController alloc] initWithNibName:@"WebView" bundle:nil];
   vc.webView.delegate = self;
   
-  NSString *path = [[NSBundle mainBundle] pathForResource:resource ofType:@"html"];
+  NSString *path = [NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] resourcePath], resource];
   NSLog(@"Path: %@", path);
   NSURL *url = [NSURL fileURLWithPath:path];
   //NSURL *url = [NSURL URLWithString:@"http://mbostock.github.com/d3/ex/calendar.html"];
@@ -219,7 +219,7 @@
       break;
     }
     case 3: {
-      self.detailViewController = [self webControllerForResource:@"dji"];
+      self.detailViewController = [self webControllerForPath:@"d3/examples/calendar/dji.html"];
       break;
     }
     default:

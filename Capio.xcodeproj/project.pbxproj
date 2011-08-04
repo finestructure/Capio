@@ -43,6 +43,7 @@
 		5A67A27013BCB82D002BDCAA /* AppOverview.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A67A26E13BCB82D002BDCAA /* AppOverview.m */; };
 		5A67A27B13BCCEDC002BDCAA /* DatePopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A67A27913BCCEDC002BDCAA /* DatePopupController.m */; };
 		5A67A27C13BCCEDC002BDCAA /* DatePopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A67A27A13BCCEDC002BDCAA /* DatePopup.xib */; };
+		5A6F751F13EAF12B00327817 /* d3 in Resources */ = {isa = PBXBuildFile; fileRef = 5A6F751E13EAF12B00327817 /* d3 */; };
 		5A73F4CC13E70F17008E727C /* GeneralSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A73F4CA13E70F16008E727C /* GeneralSettingsController.m */; };
 		5A73F4CD13E70F17008E727C /* GeneralSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A73F4CB13E70F17008E727C /* GeneralSettings.xib */; };
 		5A843E2F13C2049A00289E51 /* red_rag.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A843E2E13C2049A00289E51 /* red_rag.png */; };
@@ -108,97 +109,6 @@
 		5ADFF82113EAE59200807383 /* jquery.mobile-1.0b1.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF81A13EAE59200807383 /* jquery.mobile-1.0b1.min.js */; };
 		5ADFF82213EAE59200807383 /* jquery.mobile.datebox.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF81B13EAE59200807383 /* jquery.mobile.datebox.min.css */; };
 		5ADFF82313EAE59200807383 /* jquery.mobile.datebox.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF81C13EAE59200807383 /* jquery.mobile.datebox.min.js */; };
-		5ADFF8A513EAE8BE00807383 /* d3.behavior.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF83713EAE8BE00807383 /* d3.behavior.js */; };
-		5ADFF8A613EAE8BE00807383 /* d3.behavior.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF83813EAE8BE00807383 /* d3.behavior.min.js */; };
-		5ADFF8A713EAE8BE00807383 /* d3.chart.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF83913EAE8BE00807383 /* d3.chart.js */; };
-		5ADFF8A813EAE8BE00807383 /* d3.chart.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF83A13EAE8BE00807383 /* d3.chart.min.js */; };
-		5ADFF8A913EAE8BE00807383 /* d3.csv.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF83B13EAE8BE00807383 /* d3.csv.js */; };
-		5ADFF8AA13EAE8BE00807383 /* d3.csv.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF83C13EAE8BE00807383 /* d3.csv.min.js */; };
-		5ADFF8AB13EAE8BE00807383 /* d3.geo.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF83D13EAE8BE00807383 /* d3.geo.js */; };
-		5ADFF8AC13EAE8BE00807383 /* d3.geo.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF83E13EAE8BE00807383 /* d3.geo.min.js */; };
-		5ADFF8AD13EAE8BE00807383 /* d3.geom.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF83F13EAE8BE00807383 /* d3.geom.js */; };
-		5ADFF8AE13EAE8BE00807383 /* d3.geom.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF84013EAE8BE00807383 /* d3.geom.min.js */; };
-		5ADFF8AF13EAE8BE00807383 /* d3.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF84113EAE8BE00807383 /* d3.js */; };
-		5ADFF8B013EAE8BE00807383 /* d3.layout.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF84213EAE8BE00807383 /* d3.layout.js */; };
-		5ADFF8B113EAE8BE00807383 /* d3.layout.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF84313EAE8BE00807383 /* d3.layout.min.js */; };
-		5ADFF8B213EAE8BE00807383 /* d3.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF84413EAE8BE00807383 /* d3.min.js */; };
-		5ADFF8B313EAE8BE00807383 /* d3.time.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF84513EAE8BE00807383 /* d3.time.js */; };
-		5ADFF8B413EAE8BE00807383 /* d3.time.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF84613EAE8BE00807383 /* d3.time.min.js */; };
-		5ADFF8B513EAE8BE00807383 /* calendar.css in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF84913EAE8BE00807383 /* calendar.css */; };
-		5ADFF8B613EAE8BE00807383 /* calendar.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF84A13EAE8BE00807383 /* calendar.js */; };
-		5ADFF8B713EAE8BE00807383 /* dji.csv in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF84B13EAE8BE00807383 /* dji.csv */; };
-		5ADFF8B813EAE8BE00807383 /* dji.html in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF84C13EAE8BE00807383 /* dji.html */; };
-		5ADFF8B913EAE8BE00807383 /* dji.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF84D13EAE8BE00807383 /* dji.js */; };
-		5ADFF8BA13EAE8BE00807383 /* vix.csv in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF84E13EAE8BE00807383 /* vix.csv */; };
-		5ADFF8BB13EAE8BE00807383 /* vix.html in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF84F13EAE8BE00807383 /* vix.html */; };
-		5ADFF8BC13EAE8BE00807383 /* vix.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF85013EAE8BE00807383 /* vix.js */; };
-		5ADFF8BD13EAE8BE00807383 /* colorbrewer.css in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF85313EAE8BE00807383 /* colorbrewer.css */; };
-		5ADFF8BE13EAE8BE00807383 /* colorbrewer.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF85413EAE8BE00807383 /* colorbrewer.js */; };
-		5ADFF8BF13EAE8BE00807383 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF85513EAE8BE00807383 /* LICENSE */; };
-		5ADFF8C013EAE8BE00807383 /* envjs in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF85813EAE8BE00807383 /* envjs */; };
-		5ADFF8C113EAE8BE00807383 /* console.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF85A13EAE8BE00807383 /* console.js */; };
-		5ADFF8C213EAE8BE00807383 /* css.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF85B13EAE8BE00807383 /* css.js */; };
-		5ADFF8C313EAE8BE00807383 /* dom.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF85C13EAE8BE00807383 /* dom.js */; };
-		5ADFF8C413EAE8BE00807383 /* event.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF85D13EAE8BE00807383 /* event.js */; };
-		5ADFF8C513EAE8BE00807383 /* html.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF85E13EAE8BE00807383 /* html.js */; };
-		5ADFF8C613EAE8BE00807383 /* johnson.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF85F13EAE8BE00807383 /* johnson.js */; };
-		5ADFF8C713EAE8BE00807383 /* johnson.rb in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF86013EAE8BE00807383 /* johnson.rb */; };
-		5ADFF8C813EAE8BE00807383 /* node.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF86113EAE8BE00807383 /* node.js */; };
-		5ADFF8C913EAE8BE00807383 /* parser.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF86213EAE8BE00807383 /* parser.js */; };
-		5ADFF8CA13EAE8BE00807383 /* core.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF86413EAE8BE00807383 /* core.js */; };
-		5ADFF8CB13EAE8BE00807383 /* johnson.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF86513EAE8BE00807383 /* johnson.js */; };
-		5ADFF8CC13EAE8BE00807383 /* node.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF86613EAE8BE00807383 /* node.js */; };
-		5ADFF8CD13EAE8BE00807383 /* rhino.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF86713EAE8BE00807383 /* rhino.js */; };
-		5ADFF8CE13EAE8BE00807383 /* rubyracer.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF86813EAE8BE00807383 /* rubyracer.js */; };
-		5ADFF8CF13EAE8BE00807383 /* spydermonkey.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF86913EAE8BE00807383 /* spydermonkey.js */; };
-		5ADFF8D013EAE8BE00807383 /* rhino.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF86A13EAE8BE00807383 /* rhino.js */; };
-		5ADFF8D113EAE8BE00807383 /* rubyracer.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF86B13EAE8BE00807383 /* rubyracer.js */; };
-		5ADFF8D213EAE8BE00807383 /* rubyracer.rb in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF86C13EAE8BE00807383 /* rubyracer.rb */; };
-		5ADFF8D313EAE8BE00807383 /* spydermonkey.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF86D13EAE8BE00807383 /* spydermonkey.js */; };
-		5ADFF8D413EAE8BE00807383 /* spydermonkey.py in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF86E13EAE8BE00807383 /* spydermonkey.py */; };
-		5ADFF8D513EAE8BE00807383 /* window.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF86F13EAE8BE00807383 /* window.js */; };
-		5ADFF8D613EAE8BE00807383 /* xhr.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF87013EAE8BE00807383 /* xhr.js */; };
-		5ADFF8D713EAE8BE00807383 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF87113EAE8BE00807383 /* LICENSE */; };
-		5ADFF8D813EAE8BE00807383 /* local_settings.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF87213EAE8BE00807383 /* local_settings.js */; };
-		5ADFF8D913EAE8BE00807383 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF87413EAE8BE00807383 /* LICENSE */; };
-		5ADFF8DA13EAE8BE00807383 /* jquery.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF87613EAE8BE00807383 /* jquery.js */; };
-		5ADFF8DB13EAE8BE00807383 /* jquery.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF87713EAE8BE00807383 /* jquery.min.js */; };
-		5ADFF8DC13EAE8BE00807383 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF87813EAE8BE00807383 /* LICENSE */; };
-		5ADFF8DD13EAE8BE00807383 /* ui-bg_diagonals-thick_18_b81900_40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF87B13EAE8BE00807383 /* ui-bg_diagonals-thick_18_b81900_40x40.png */; };
-		5ADFF8DE13EAE8BE00807383 /* ui-bg_diagonals-thick_20_666666_40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF87C13EAE8BE00807383 /* ui-bg_diagonals-thick_20_666666_40x40.png */; };
-		5ADFF8DF13EAE8BE00807383 /* ui-bg_flat_10_000000_40x100.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF87D13EAE8BE00807383 /* ui-bg_flat_10_000000_40x100.png */; };
-		5ADFF8E013EAE8BE00807383 /* ui-bg_glass_100_f6f6f6_1x400.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF87E13EAE8BE00807383 /* ui-bg_glass_100_f6f6f6_1x400.png */; };
-		5ADFF8E113EAE8BE00807383 /* ui-bg_glass_100_fdf5ce_1x400.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF87F13EAE8BE00807383 /* ui-bg_glass_100_fdf5ce_1x400.png */; };
-		5ADFF8E213EAE8BE00807383 /* ui-bg_glass_65_ffffff_1x400.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF88013EAE8BE00807383 /* ui-bg_glass_65_ffffff_1x400.png */; };
-		5ADFF8E313EAE8BE00807383 /* ui-bg_gloss-wave_35_f6a828_500x100.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF88113EAE8BE00807383 /* ui-bg_gloss-wave_35_f6a828_500x100.png */; };
-		5ADFF8E413EAE8BE00807383 /* ui-bg_highlight-soft_100_eeeeee_1x100.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF88213EAE8BE00807383 /* ui-bg_highlight-soft_100_eeeeee_1x100.png */; };
-		5ADFF8E513EAE8BE00807383 /* ui-bg_highlight-soft_75_ffe45c_1x100.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF88313EAE8BE00807383 /* ui-bg_highlight-soft_75_ffe45c_1x100.png */; };
-		5ADFF8E613EAE8BE00807383 /* ui-icons_222222_256x240.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF88413EAE8BE00807383 /* ui-icons_222222_256x240.png */; };
-		5ADFF8E713EAE8BE00807383 /* ui-icons_228ef1_256x240.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF88513EAE8BE00807383 /* ui-icons_228ef1_256x240.png */; };
-		5ADFF8E813EAE8BE00807383 /* ui-icons_ef8c08_256x240.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF88613EAE8BE00807383 /* ui-icons_ef8c08_256x240.png */; };
-		5ADFF8E913EAE8BE00807383 /* ui-icons_ffd27a_256x240.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF88713EAE8BE00807383 /* ui-icons_ffd27a_256x240.png */; };
-		5ADFF8EA13EAE8BE00807383 /* ui-icons_ffffff_256x240.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF88813EAE8BE00807383 /* ui-icons_ffffff_256x240.png */; };
-		5ADFF8EB13EAE8BE00807383 /* jquery-ui.css in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF88913EAE8BE00807383 /* jquery-ui.css */; };
-		5ADFF8EC13EAE8BE00807383 /* jquery-ui.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF88A13EAE8BE00807383 /* jquery-ui.min.js */; };
-		5ADFF8ED13EAE8BE00807383 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF88B13EAE8BE00807383 /* LICENSE */; };
-		5ADFF8EE13EAE8BE00807383 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF88D13EAE8BE00807383 /* LICENSE */; };
-		5ADFF8EF13EAE8BE00807383 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF88F13EAE8BE00807383 /* LICENSE */; };
-		5ADFF8F013EAE8BE00807383 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF89113EAE8BE00807383 /* LICENSE */; };
-		5ADFF8F113EAE8BE00807383 /* science.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF89213EAE8BE00807383 /* science.js */; };
-		5ADFF8F213EAE8BE00807383 /* science.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF89313EAE8BE00807383 /* science.min.js */; };
-		5ADFF8F313EAE8BE00807383 /* science.stats.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF89413EAE8BE00807383 /* science.stats.js */; };
-		5ADFF8F413EAE8BE00807383 /* science.stats.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF89513EAE8BE00807383 /* science.stats.min.js */; };
-		5ADFF8F513EAE8BE00807383 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF89713EAE8BE00807383 /* LICENSE */; };
-		5ADFF8F613EAE8BE00807383 /* sizzle.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF89813EAE8BE00807383 /* sizzle.js */; };
-		5ADFF8F713EAE8BE00807383 /* sizzle.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF89913EAE8BE00807383 /* sizzle.min.js */; };
-		5ADFF8F813EAE8BE00807383 /* uglifyjs in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF89C13EAE8BE00807383 /* uglifyjs */; };
-		5ADFF8F913EAE8BE00807383 /* index.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF89D13EAE8BE00807383 /* index.js */; };
-		5ADFF8FA13EAE8BE00807383 /* parse-js.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF89F13EAE8BE00807383 /* parse-js.js */; };
-		5ADFF8FB13EAE8BE00807383 /* process.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF8A013EAE8BE00807383 /* process.js */; };
-		5ADFF8FC13EAE8BE00807383 /* squeeze-more.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF8A113EAE8BE00807383 /* squeeze-more.js */; };
-		5ADFF8FD13EAE8BE00807383 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF8A213EAE8BE00807383 /* LICENSE */; };
-		5ADFF8FE13EAE8BE00807383 /* package.json in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF8A313EAE8BE00807383 /* package.json */; };
-		5ADFF8FF13EAE8BE00807383 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF8A413EAE8BE00807383 /* README.md */; };
 		5AF74AD713C1EC9F00DF0794 /* AppListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF74AD513C1EC9F00DF0794 /* AppListCell.m */; };
 		5AF74AD813C1EC9F00DF0794 /* AppListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF74AD613C1EC9F00DF0794 /* AppListCell.xib */; };
 /* End PBXBuildFile section */
@@ -335,6 +245,7 @@
 		5A67A27813BCCEDC002BDCAA /* DatePopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePopupController.h; sourceTree = "<group>"; };
 		5A67A27913BCCEDC002BDCAA /* DatePopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePopupController.m; sourceTree = "<group>"; };
 		5A67A27A13BCCEDC002BDCAA /* DatePopup.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePopup.xib; sourceTree = "<group>"; };
+		5A6F751E13EAF12B00327817 /* d3 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = d3; sourceTree = "<group>"; };
 		5A73F4C913E70F16008E727C /* GeneralSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralSettingsController.h; sourceTree = "<group>"; };
 		5A73F4CA13E70F16008E727C /* GeneralSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralSettingsController.m; sourceTree = "<group>"; };
 		5A73F4CB13E70F17008E727C /* GeneralSettings.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralSettings.xib; sourceTree = "<group>"; };
@@ -414,97 +325,6 @@
 		5ADFF81A13EAE59200807383 /* jquery.mobile-1.0b1.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery.mobile-1.0b1.min.js"; sourceTree = "<group>"; };
 		5ADFF81B13EAE59200807383 /* jquery.mobile.datebox.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = jquery.mobile.datebox.min.css; sourceTree = "<group>"; };
 		5ADFF81C13EAE59200807383 /* jquery.mobile.datebox.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.mobile.datebox.min.js; sourceTree = "<group>"; };
-		5ADFF83713EAE8BE00807383 /* d3.behavior.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.behavior.js; sourceTree = "<group>"; };
-		5ADFF83813EAE8BE00807383 /* d3.behavior.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.behavior.min.js; sourceTree = "<group>"; };
-		5ADFF83913EAE8BE00807383 /* d3.chart.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.chart.js; sourceTree = "<group>"; };
-		5ADFF83A13EAE8BE00807383 /* d3.chart.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.chart.min.js; sourceTree = "<group>"; };
-		5ADFF83B13EAE8BE00807383 /* d3.csv.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.csv.js; sourceTree = "<group>"; };
-		5ADFF83C13EAE8BE00807383 /* d3.csv.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.csv.min.js; sourceTree = "<group>"; };
-		5ADFF83D13EAE8BE00807383 /* d3.geo.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.geo.js; sourceTree = "<group>"; };
-		5ADFF83E13EAE8BE00807383 /* d3.geo.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.geo.min.js; sourceTree = "<group>"; };
-		5ADFF83F13EAE8BE00807383 /* d3.geom.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.geom.js; sourceTree = "<group>"; };
-		5ADFF84013EAE8BE00807383 /* d3.geom.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.geom.min.js; sourceTree = "<group>"; };
-		5ADFF84113EAE8BE00807383 /* d3.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.js; sourceTree = "<group>"; };
-		5ADFF84213EAE8BE00807383 /* d3.layout.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.layout.js; sourceTree = "<group>"; };
-		5ADFF84313EAE8BE00807383 /* d3.layout.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.layout.min.js; sourceTree = "<group>"; };
-		5ADFF84413EAE8BE00807383 /* d3.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.min.js; sourceTree = "<group>"; };
-		5ADFF84513EAE8BE00807383 /* d3.time.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.time.js; sourceTree = "<group>"; };
-		5ADFF84613EAE8BE00807383 /* d3.time.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.time.min.js; sourceTree = "<group>"; };
-		5ADFF84913EAE8BE00807383 /* calendar.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = calendar.css; sourceTree = "<group>"; };
-		5ADFF84A13EAE8BE00807383 /* calendar.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = calendar.js; sourceTree = "<group>"; };
-		5ADFF84B13EAE8BE00807383 /* dji.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dji.csv; sourceTree = "<group>"; };
-		5ADFF84C13EAE8BE00807383 /* dji.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = dji.html; sourceTree = "<group>"; };
-		5ADFF84D13EAE8BE00807383 /* dji.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = dji.js; sourceTree = "<group>"; };
-		5ADFF84E13EAE8BE00807383 /* vix.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vix.csv; sourceTree = "<group>"; };
-		5ADFF84F13EAE8BE00807383 /* vix.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = vix.html; sourceTree = "<group>"; };
-		5ADFF85013EAE8BE00807383 /* vix.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = vix.js; sourceTree = "<group>"; };
-		5ADFF85313EAE8BE00807383 /* colorbrewer.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = colorbrewer.css; sourceTree = "<group>"; };
-		5ADFF85413EAE8BE00807383 /* colorbrewer.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = colorbrewer.js; sourceTree = "<group>"; };
-		5ADFF85513EAE8BE00807383 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		5ADFF85813EAE8BE00807383 /* envjs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = envjs; sourceTree = "<group>"; };
-		5ADFF85A13EAE8BE00807383 /* console.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = console.js; sourceTree = "<group>"; };
-		5ADFF85B13EAE8BE00807383 /* css.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = css.js; sourceTree = "<group>"; };
-		5ADFF85C13EAE8BE00807383 /* dom.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = dom.js; sourceTree = "<group>"; };
-		5ADFF85D13EAE8BE00807383 /* event.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = event.js; sourceTree = "<group>"; };
-		5ADFF85E13EAE8BE00807383 /* html.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = html.js; sourceTree = "<group>"; };
-		5ADFF85F13EAE8BE00807383 /* johnson.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = johnson.js; sourceTree = "<group>"; };
-		5ADFF86013EAE8BE00807383 /* johnson.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = johnson.rb; sourceTree = "<group>"; };
-		5ADFF86113EAE8BE00807383 /* node.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = node.js; sourceTree = "<group>"; };
-		5ADFF86213EAE8BE00807383 /* parser.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = parser.js; sourceTree = "<group>"; };
-		5ADFF86413EAE8BE00807383 /* core.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = core.js; sourceTree = "<group>"; };
-		5ADFF86513EAE8BE00807383 /* johnson.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = johnson.js; sourceTree = "<group>"; };
-		5ADFF86613EAE8BE00807383 /* node.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = node.js; sourceTree = "<group>"; };
-		5ADFF86713EAE8BE00807383 /* rhino.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = rhino.js; sourceTree = "<group>"; };
-		5ADFF86813EAE8BE00807383 /* rubyracer.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = rubyracer.js; sourceTree = "<group>"; };
-		5ADFF86913EAE8BE00807383 /* spydermonkey.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = spydermonkey.js; sourceTree = "<group>"; };
-		5ADFF86A13EAE8BE00807383 /* rhino.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = rhino.js; sourceTree = "<group>"; };
-		5ADFF86B13EAE8BE00807383 /* rubyracer.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = rubyracer.js; sourceTree = "<group>"; };
-		5ADFF86C13EAE8BE00807383 /* rubyracer.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = rubyracer.rb; sourceTree = "<group>"; };
-		5ADFF86D13EAE8BE00807383 /* spydermonkey.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = spydermonkey.js; sourceTree = "<group>"; };
-		5ADFF86E13EAE8BE00807383 /* spydermonkey.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = spydermonkey.py; sourceTree = "<group>"; };
-		5ADFF86F13EAE8BE00807383 /* window.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = window.js; sourceTree = "<group>"; };
-		5ADFF87013EAE8BE00807383 /* xhr.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = xhr.js; sourceTree = "<group>"; };
-		5ADFF87113EAE8BE00807383 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		5ADFF87213EAE8BE00807383 /* local_settings.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = local_settings.js; sourceTree = "<group>"; };
-		5ADFF87413EAE8BE00807383 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		5ADFF87613EAE8BE00807383 /* jquery.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.js; sourceTree = "<group>"; };
-		5ADFF87713EAE8BE00807383 /* jquery.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.min.js; sourceTree = "<group>"; };
-		5ADFF87813EAE8BE00807383 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		5ADFF87B13EAE8BE00807383 /* ui-bg_diagonals-thick_18_b81900_40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ui-bg_diagonals-thick_18_b81900_40x40.png"; sourceTree = "<group>"; };
-		5ADFF87C13EAE8BE00807383 /* ui-bg_diagonals-thick_20_666666_40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ui-bg_diagonals-thick_20_666666_40x40.png"; sourceTree = "<group>"; };
-		5ADFF87D13EAE8BE00807383 /* ui-bg_flat_10_000000_40x100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ui-bg_flat_10_000000_40x100.png"; sourceTree = "<group>"; };
-		5ADFF87E13EAE8BE00807383 /* ui-bg_glass_100_f6f6f6_1x400.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ui-bg_glass_100_f6f6f6_1x400.png"; sourceTree = "<group>"; };
-		5ADFF87F13EAE8BE00807383 /* ui-bg_glass_100_fdf5ce_1x400.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ui-bg_glass_100_fdf5ce_1x400.png"; sourceTree = "<group>"; };
-		5ADFF88013EAE8BE00807383 /* ui-bg_glass_65_ffffff_1x400.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ui-bg_glass_65_ffffff_1x400.png"; sourceTree = "<group>"; };
-		5ADFF88113EAE8BE00807383 /* ui-bg_gloss-wave_35_f6a828_500x100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ui-bg_gloss-wave_35_f6a828_500x100.png"; sourceTree = "<group>"; };
-		5ADFF88213EAE8BE00807383 /* ui-bg_highlight-soft_100_eeeeee_1x100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ui-bg_highlight-soft_100_eeeeee_1x100.png"; sourceTree = "<group>"; };
-		5ADFF88313EAE8BE00807383 /* ui-bg_highlight-soft_75_ffe45c_1x100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ui-bg_highlight-soft_75_ffe45c_1x100.png"; sourceTree = "<group>"; };
-		5ADFF88413EAE8BE00807383 /* ui-icons_222222_256x240.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ui-icons_222222_256x240.png"; sourceTree = "<group>"; };
-		5ADFF88513EAE8BE00807383 /* ui-icons_228ef1_256x240.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ui-icons_228ef1_256x240.png"; sourceTree = "<group>"; };
-		5ADFF88613EAE8BE00807383 /* ui-icons_ef8c08_256x240.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ui-icons_ef8c08_256x240.png"; sourceTree = "<group>"; };
-		5ADFF88713EAE8BE00807383 /* ui-icons_ffd27a_256x240.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ui-icons_ffd27a_256x240.png"; sourceTree = "<group>"; };
-		5ADFF88813EAE8BE00807383 /* ui-icons_ffffff_256x240.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ui-icons_ffffff_256x240.png"; sourceTree = "<group>"; };
-		5ADFF88913EAE8BE00807383 /* jquery-ui.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "jquery-ui.css"; sourceTree = "<group>"; };
-		5ADFF88A13EAE8BE00807383 /* jquery-ui.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-ui.min.js"; sourceTree = "<group>"; };
-		5ADFF88B13EAE8BE00807383 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		5ADFF88D13EAE8BE00807383 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		5ADFF88F13EAE8BE00807383 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		5ADFF89113EAE8BE00807383 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		5ADFF89213EAE8BE00807383 /* science.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = science.js; sourceTree = "<group>"; };
-		5ADFF89313EAE8BE00807383 /* science.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = science.min.js; sourceTree = "<group>"; };
-		5ADFF89413EAE8BE00807383 /* science.stats.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = science.stats.js; sourceTree = "<group>"; };
-		5ADFF89513EAE8BE00807383 /* science.stats.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = science.stats.min.js; sourceTree = "<group>"; };
-		5ADFF89713EAE8BE00807383 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		5ADFF89813EAE8BE00807383 /* sizzle.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sizzle.js; sourceTree = "<group>"; };
-		5ADFF89913EAE8BE00807383 /* sizzle.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sizzle.min.js; sourceTree = "<group>"; };
-		5ADFF89C13EAE8BE00807383 /* uglifyjs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = uglifyjs; sourceTree = "<group>"; };
-		5ADFF89D13EAE8BE00807383 /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
-		5ADFF89F13EAE8BE00807383 /* parse-js.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "parse-js.js"; sourceTree = "<group>"; };
-		5ADFF8A013EAE8BE00807383 /* process.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = process.js; sourceTree = "<group>"; };
-		5ADFF8A113EAE8BE00807383 /* squeeze-more.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "squeeze-more.js"; sourceTree = "<group>"; };
-		5ADFF8A213EAE8BE00807383 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		5ADFF8A313EAE8BE00807383 /* package.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
-		5ADFF8A413EAE8BE00807383 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		5AF74AD413C1EC9F00DF0794 /* AppListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppListCell.h; sourceTree = "<group>"; };
 		5AF74AD513C1EC9F00DF0794 /* AppListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppListCell.m; sourceTree = "<group>"; };
 		5AF74AD613C1EC9F00DF0794 /* AppListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppListCell.xib; sourceTree = "<group>"; };
@@ -881,7 +701,7 @@
 		5ADFF7EB13EAB48100807383 /* html */ = {
 			isa = PBXGroup;
 			children = (
-				5ADFF83613EAE8BE00807383 /* d3 */,
+				5A6F751E13EAF12B00327817 /* d3 */,
 				5ADFF81513EAE59200807383 /* app_overview */,
 			);
 			path = html;
@@ -899,256 +719,6 @@
 				5ADFF81C13EAE59200807383 /* jquery.mobile.datebox.min.js */,
 			);
 			path = app_overview;
-			sourceTree = "<group>";
-		};
-		5ADFF83613EAE8BE00807383 /* d3 */ = {
-			isa = PBXGroup;
-			children = (
-				5ADFF83713EAE8BE00807383 /* d3.behavior.js */,
-				5ADFF83813EAE8BE00807383 /* d3.behavior.min.js */,
-				5ADFF83913EAE8BE00807383 /* d3.chart.js */,
-				5ADFF83A13EAE8BE00807383 /* d3.chart.min.js */,
-				5ADFF83B13EAE8BE00807383 /* d3.csv.js */,
-				5ADFF83C13EAE8BE00807383 /* d3.csv.min.js */,
-				5ADFF83D13EAE8BE00807383 /* d3.geo.js */,
-				5ADFF83E13EAE8BE00807383 /* d3.geo.min.js */,
-				5ADFF83F13EAE8BE00807383 /* d3.geom.js */,
-				5ADFF84013EAE8BE00807383 /* d3.geom.min.js */,
-				5ADFF84113EAE8BE00807383 /* d3.js */,
-				5ADFF84213EAE8BE00807383 /* d3.layout.js */,
-				5ADFF84313EAE8BE00807383 /* d3.layout.min.js */,
-				5ADFF84413EAE8BE00807383 /* d3.min.js */,
-				5ADFF84513EAE8BE00807383 /* d3.time.js */,
-				5ADFF84613EAE8BE00807383 /* d3.time.min.js */,
-				5ADFF84713EAE8BE00807383 /* examples */,
-				5ADFF85113EAE8BE00807383 /* lib */,
-			);
-			path = d3;
-			sourceTree = "<group>";
-		};
-		5ADFF84713EAE8BE00807383 /* examples */ = {
-			isa = PBXGroup;
-			children = (
-				5ADFF84813EAE8BE00807383 /* calendar */,
-			);
-			path = examples;
-			sourceTree = "<group>";
-		};
-		5ADFF84813EAE8BE00807383 /* calendar */ = {
-			isa = PBXGroup;
-			children = (
-				5ADFF84913EAE8BE00807383 /* calendar.css */,
-				5ADFF84A13EAE8BE00807383 /* calendar.js */,
-				5ADFF84B13EAE8BE00807383 /* dji.csv */,
-				5ADFF84C13EAE8BE00807383 /* dji.html */,
-				5ADFF84D13EAE8BE00807383 /* dji.js */,
-				5ADFF84E13EAE8BE00807383 /* vix.csv */,
-				5ADFF84F13EAE8BE00807383 /* vix.html */,
-				5ADFF85013EAE8BE00807383 /* vix.js */,
-			);
-			path = calendar;
-			sourceTree = "<group>";
-		};
-		5ADFF85113EAE8BE00807383 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				5ADFF85213EAE8BE00807383 /* colorbrewer */,
-				5ADFF85613EAE8BE00807383 /* env-js */,
-				5ADFF87313EAE8BE00807383 /* jit */,
-				5ADFF87513EAE8BE00807383 /* jquery */,
-				5ADFF87913EAE8BE00807383 /* jquery-ui */,
-				5ADFF88C13EAE8BE00807383 /* polymaps */,
-				5ADFF88E13EAE8BE00807383 /* protovis */,
-				5ADFF89013EAE8BE00807383 /* science */,
-				5ADFF89613EAE8BE00807383 /* sizzle */,
-				5ADFF89A13EAE8BE00807383 /* uglifyjs */,
-			);
-			path = lib;
-			sourceTree = "<group>";
-		};
-		5ADFF85213EAE8BE00807383 /* colorbrewer */ = {
-			isa = PBXGroup;
-			children = (
-				5ADFF85313EAE8BE00807383 /* colorbrewer.css */,
-				5ADFF85413EAE8BE00807383 /* colorbrewer.js */,
-				5ADFF85513EAE8BE00807383 /* LICENSE */,
-			);
-			path = colorbrewer;
-			sourceTree = "<group>";
-		};
-		5ADFF85613EAE8BE00807383 /* env-js */ = {
-			isa = PBXGroup;
-			children = (
-				5ADFF85713EAE8BE00807383 /* bin */,
-				5ADFF85913EAE8BE00807383 /* envjs */,
-				5ADFF87113EAE8BE00807383 /* LICENSE */,
-				5ADFF87213EAE8BE00807383 /* local_settings.js */,
-			);
-			path = "env-js";
-			sourceTree = "<group>";
-		};
-		5ADFF85713EAE8BE00807383 /* bin */ = {
-			isa = PBXGroup;
-			children = (
-				5ADFF85813EAE8BE00807383 /* envjs */,
-			);
-			path = bin;
-			sourceTree = "<group>";
-		};
-		5ADFF85913EAE8BE00807383 /* envjs */ = {
-			isa = PBXGroup;
-			children = (
-				5ADFF85A13EAE8BE00807383 /* console.js */,
-				5ADFF85B13EAE8BE00807383 /* css.js */,
-				5ADFF85C13EAE8BE00807383 /* dom.js */,
-				5ADFF85D13EAE8BE00807383 /* event.js */,
-				5ADFF85E13EAE8BE00807383 /* html.js */,
-				5ADFF85F13EAE8BE00807383 /* johnson.js */,
-				5ADFF86013EAE8BE00807383 /* johnson.rb */,
-				5ADFF86113EAE8BE00807383 /* node.js */,
-				5ADFF86213EAE8BE00807383 /* parser.js */,
-				5ADFF86313EAE8BE00807383 /* platform */,
-				5ADFF86A13EAE8BE00807383 /* rhino.js */,
-				5ADFF86B13EAE8BE00807383 /* rubyracer.js */,
-				5ADFF86C13EAE8BE00807383 /* rubyracer.rb */,
-				5ADFF86D13EAE8BE00807383 /* spydermonkey.js */,
-				5ADFF86E13EAE8BE00807383 /* spydermonkey.py */,
-				5ADFF86F13EAE8BE00807383 /* window.js */,
-				5ADFF87013EAE8BE00807383 /* xhr.js */,
-			);
-			path = envjs;
-			sourceTree = "<group>";
-		};
-		5ADFF86313EAE8BE00807383 /* platform */ = {
-			isa = PBXGroup;
-			children = (
-				5ADFF86413EAE8BE00807383 /* core.js */,
-				5ADFF86513EAE8BE00807383 /* johnson.js */,
-				5ADFF86613EAE8BE00807383 /* node.js */,
-				5ADFF86713EAE8BE00807383 /* rhino.js */,
-				5ADFF86813EAE8BE00807383 /* rubyracer.js */,
-				5ADFF86913EAE8BE00807383 /* spydermonkey.js */,
-			);
-			path = platform;
-			sourceTree = "<group>";
-		};
-		5ADFF87313EAE8BE00807383 /* jit */ = {
-			isa = PBXGroup;
-			children = (
-				5ADFF87413EAE8BE00807383 /* LICENSE */,
-			);
-			path = jit;
-			sourceTree = "<group>";
-		};
-		5ADFF87513EAE8BE00807383 /* jquery */ = {
-			isa = PBXGroup;
-			children = (
-				5ADFF87613EAE8BE00807383 /* jquery.js */,
-				5ADFF87713EAE8BE00807383 /* jquery.min.js */,
-				5ADFF87813EAE8BE00807383 /* LICENSE */,
-			);
-			path = jquery;
-			sourceTree = "<group>";
-		};
-		5ADFF87913EAE8BE00807383 /* jquery-ui */ = {
-			isa = PBXGroup;
-			children = (
-				5ADFF87A13EAE8BE00807383 /* images */,
-				5ADFF88913EAE8BE00807383 /* jquery-ui.css */,
-				5ADFF88A13EAE8BE00807383 /* jquery-ui.min.js */,
-				5ADFF88B13EAE8BE00807383 /* LICENSE */,
-			);
-			path = "jquery-ui";
-			sourceTree = "<group>";
-		};
-		5ADFF87A13EAE8BE00807383 /* images */ = {
-			isa = PBXGroup;
-			children = (
-				5ADFF87B13EAE8BE00807383 /* ui-bg_diagonals-thick_18_b81900_40x40.png */,
-				5ADFF87C13EAE8BE00807383 /* ui-bg_diagonals-thick_20_666666_40x40.png */,
-				5ADFF87D13EAE8BE00807383 /* ui-bg_flat_10_000000_40x100.png */,
-				5ADFF87E13EAE8BE00807383 /* ui-bg_glass_100_f6f6f6_1x400.png */,
-				5ADFF87F13EAE8BE00807383 /* ui-bg_glass_100_fdf5ce_1x400.png */,
-				5ADFF88013EAE8BE00807383 /* ui-bg_glass_65_ffffff_1x400.png */,
-				5ADFF88113EAE8BE00807383 /* ui-bg_gloss-wave_35_f6a828_500x100.png */,
-				5ADFF88213EAE8BE00807383 /* ui-bg_highlight-soft_100_eeeeee_1x100.png */,
-				5ADFF88313EAE8BE00807383 /* ui-bg_highlight-soft_75_ffe45c_1x100.png */,
-				5ADFF88413EAE8BE00807383 /* ui-icons_222222_256x240.png */,
-				5ADFF88513EAE8BE00807383 /* ui-icons_228ef1_256x240.png */,
-				5ADFF88613EAE8BE00807383 /* ui-icons_ef8c08_256x240.png */,
-				5ADFF88713EAE8BE00807383 /* ui-icons_ffd27a_256x240.png */,
-				5ADFF88813EAE8BE00807383 /* ui-icons_ffffff_256x240.png */,
-			);
-			path = images;
-			sourceTree = "<group>";
-		};
-		5ADFF88C13EAE8BE00807383 /* polymaps */ = {
-			isa = PBXGroup;
-			children = (
-				5ADFF88D13EAE8BE00807383 /* LICENSE */,
-			);
-			path = polymaps;
-			sourceTree = "<group>";
-		};
-		5ADFF88E13EAE8BE00807383 /* protovis */ = {
-			isa = PBXGroup;
-			children = (
-				5ADFF88F13EAE8BE00807383 /* LICENSE */,
-			);
-			path = protovis;
-			sourceTree = "<group>";
-		};
-		5ADFF89013EAE8BE00807383 /* science */ = {
-			isa = PBXGroup;
-			children = (
-				5ADFF89113EAE8BE00807383 /* LICENSE */,
-				5ADFF89213EAE8BE00807383 /* science.js */,
-				5ADFF89313EAE8BE00807383 /* science.min.js */,
-				5ADFF89413EAE8BE00807383 /* science.stats.js */,
-				5ADFF89513EAE8BE00807383 /* science.stats.min.js */,
-			);
-			path = science;
-			sourceTree = "<group>";
-		};
-		5ADFF89613EAE8BE00807383 /* sizzle */ = {
-			isa = PBXGroup;
-			children = (
-				5ADFF89713EAE8BE00807383 /* LICENSE */,
-				5ADFF89813EAE8BE00807383 /* sizzle.js */,
-				5ADFF89913EAE8BE00807383 /* sizzle.min.js */,
-			);
-			path = sizzle;
-			sourceTree = "<group>";
-		};
-		5ADFF89A13EAE8BE00807383 /* uglifyjs */ = {
-			isa = PBXGroup;
-			children = (
-				5ADFF89B13EAE8BE00807383 /* bin */,
-				5ADFF89D13EAE8BE00807383 /* index.js */,
-				5ADFF89E13EAE8BE00807383 /* lib */,
-				5ADFF8A213EAE8BE00807383 /* LICENSE */,
-				5ADFF8A313EAE8BE00807383 /* package.json */,
-				5ADFF8A413EAE8BE00807383 /* README.md */,
-			);
-			path = uglifyjs;
-			sourceTree = "<group>";
-		};
-		5ADFF89B13EAE8BE00807383 /* bin */ = {
-			isa = PBXGroup;
-			children = (
-				5ADFF89C13EAE8BE00807383 /* uglifyjs */,
-			);
-			path = bin;
-			sourceTree = "<group>";
-		};
-		5ADFF89E13EAE8BE00807383 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				5ADFF89F13EAE8BE00807383 /* parse-js.js */,
-				5ADFF8A013EAE8BE00807383 /* process.js */,
-				5ADFF8A113EAE8BE00807383 /* squeeze-more.js */,
-			);
-			path = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1276,44 +846,7 @@
 				5ADFF81E13EAE59200807383 /* bundle-bundle_application_head.css in Resources */,
 				5ADFF81F13EAE59200807383 /* demos.css in Resources */,
 				5ADFF82213EAE59200807383 /* jquery.mobile.datebox.min.css in Resources */,
-				5ADFF8B513EAE8BE00807383 /* calendar.css in Resources */,
-				5ADFF8B713EAE8BE00807383 /* dji.csv in Resources */,
-				5ADFF8B813EAE8BE00807383 /* dji.html in Resources */,
-				5ADFF8BA13EAE8BE00807383 /* vix.csv in Resources */,
-				5ADFF8BB13EAE8BE00807383 /* vix.html in Resources */,
-				5ADFF8BD13EAE8BE00807383 /* colorbrewer.css in Resources */,
-				5ADFF8BF13EAE8BE00807383 /* LICENSE in Resources */,
-				5ADFF8C013EAE8BE00807383 /* envjs in Resources */,
-				5ADFF8C713EAE8BE00807383 /* johnson.rb in Resources */,
-				5ADFF8D213EAE8BE00807383 /* rubyracer.rb in Resources */,
-				5ADFF8D413EAE8BE00807383 /* spydermonkey.py in Resources */,
-				5ADFF8D713EAE8BE00807383 /* LICENSE in Resources */,
-				5ADFF8D913EAE8BE00807383 /* LICENSE in Resources */,
-				5ADFF8DC13EAE8BE00807383 /* LICENSE in Resources */,
-				5ADFF8DD13EAE8BE00807383 /* ui-bg_diagonals-thick_18_b81900_40x40.png in Resources */,
-				5ADFF8DE13EAE8BE00807383 /* ui-bg_diagonals-thick_20_666666_40x40.png in Resources */,
-				5ADFF8DF13EAE8BE00807383 /* ui-bg_flat_10_000000_40x100.png in Resources */,
-				5ADFF8E013EAE8BE00807383 /* ui-bg_glass_100_f6f6f6_1x400.png in Resources */,
-				5ADFF8E113EAE8BE00807383 /* ui-bg_glass_100_fdf5ce_1x400.png in Resources */,
-				5ADFF8E213EAE8BE00807383 /* ui-bg_glass_65_ffffff_1x400.png in Resources */,
-				5ADFF8E313EAE8BE00807383 /* ui-bg_gloss-wave_35_f6a828_500x100.png in Resources */,
-				5ADFF8E413EAE8BE00807383 /* ui-bg_highlight-soft_100_eeeeee_1x100.png in Resources */,
-				5ADFF8E513EAE8BE00807383 /* ui-bg_highlight-soft_75_ffe45c_1x100.png in Resources */,
-				5ADFF8E613EAE8BE00807383 /* ui-icons_222222_256x240.png in Resources */,
-				5ADFF8E713EAE8BE00807383 /* ui-icons_228ef1_256x240.png in Resources */,
-				5ADFF8E813EAE8BE00807383 /* ui-icons_ef8c08_256x240.png in Resources */,
-				5ADFF8E913EAE8BE00807383 /* ui-icons_ffd27a_256x240.png in Resources */,
-				5ADFF8EA13EAE8BE00807383 /* ui-icons_ffffff_256x240.png in Resources */,
-				5ADFF8EB13EAE8BE00807383 /* jquery-ui.css in Resources */,
-				5ADFF8ED13EAE8BE00807383 /* LICENSE in Resources */,
-				5ADFF8EE13EAE8BE00807383 /* LICENSE in Resources */,
-				5ADFF8EF13EAE8BE00807383 /* LICENSE in Resources */,
-				5ADFF8F013EAE8BE00807383 /* LICENSE in Resources */,
-				5ADFF8F513EAE8BE00807383 /* LICENSE in Resources */,
-				5ADFF8F813EAE8BE00807383 /* uglifyjs in Resources */,
-				5ADFF8FD13EAE8BE00807383 /* LICENSE in Resources */,
-				5ADFF8FE13EAE8BE00807383 /* package.json in Resources */,
-				5ADFF8FF13EAE8BE00807383 /* README.md in Resources */,
+				5A6F751F13EAF12B00327817 /* d3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1398,59 +931,6 @@
 				5ADFF82013EAE59200807383 /* jquery-1.6.1.min.js in Sources */,
 				5ADFF82113EAE59200807383 /* jquery.mobile-1.0b1.min.js in Sources */,
 				5ADFF82313EAE59200807383 /* jquery.mobile.datebox.min.js in Sources */,
-				5ADFF8A513EAE8BE00807383 /* d3.behavior.js in Sources */,
-				5ADFF8A613EAE8BE00807383 /* d3.behavior.min.js in Sources */,
-				5ADFF8A713EAE8BE00807383 /* d3.chart.js in Sources */,
-				5ADFF8A813EAE8BE00807383 /* d3.chart.min.js in Sources */,
-				5ADFF8A913EAE8BE00807383 /* d3.csv.js in Sources */,
-				5ADFF8AA13EAE8BE00807383 /* d3.csv.min.js in Sources */,
-				5ADFF8AB13EAE8BE00807383 /* d3.geo.js in Sources */,
-				5ADFF8AC13EAE8BE00807383 /* d3.geo.min.js in Sources */,
-				5ADFF8AD13EAE8BE00807383 /* d3.geom.js in Sources */,
-				5ADFF8AE13EAE8BE00807383 /* d3.geom.min.js in Sources */,
-				5ADFF8AF13EAE8BE00807383 /* d3.js in Sources */,
-				5ADFF8B013EAE8BE00807383 /* d3.layout.js in Sources */,
-				5ADFF8B113EAE8BE00807383 /* d3.layout.min.js in Sources */,
-				5ADFF8B213EAE8BE00807383 /* d3.min.js in Sources */,
-				5ADFF8B313EAE8BE00807383 /* d3.time.js in Sources */,
-				5ADFF8B413EAE8BE00807383 /* d3.time.min.js in Sources */,
-				5ADFF8B613EAE8BE00807383 /* calendar.js in Sources */,
-				5ADFF8B913EAE8BE00807383 /* dji.js in Sources */,
-				5ADFF8BC13EAE8BE00807383 /* vix.js in Sources */,
-				5ADFF8BE13EAE8BE00807383 /* colorbrewer.js in Sources */,
-				5ADFF8C113EAE8BE00807383 /* console.js in Sources */,
-				5ADFF8C213EAE8BE00807383 /* css.js in Sources */,
-				5ADFF8C313EAE8BE00807383 /* dom.js in Sources */,
-				5ADFF8C413EAE8BE00807383 /* event.js in Sources */,
-				5ADFF8C513EAE8BE00807383 /* html.js in Sources */,
-				5ADFF8C613EAE8BE00807383 /* johnson.js in Sources */,
-				5ADFF8C813EAE8BE00807383 /* node.js in Sources */,
-				5ADFF8C913EAE8BE00807383 /* parser.js in Sources */,
-				5ADFF8CA13EAE8BE00807383 /* core.js in Sources */,
-				5ADFF8CB13EAE8BE00807383 /* johnson.js in Sources */,
-				5ADFF8CC13EAE8BE00807383 /* node.js in Sources */,
-				5ADFF8CD13EAE8BE00807383 /* rhino.js in Sources */,
-				5ADFF8CE13EAE8BE00807383 /* rubyracer.js in Sources */,
-				5ADFF8CF13EAE8BE00807383 /* spydermonkey.js in Sources */,
-				5ADFF8D013EAE8BE00807383 /* rhino.js in Sources */,
-				5ADFF8D113EAE8BE00807383 /* rubyracer.js in Sources */,
-				5ADFF8D313EAE8BE00807383 /* spydermonkey.js in Sources */,
-				5ADFF8D513EAE8BE00807383 /* window.js in Sources */,
-				5ADFF8D613EAE8BE00807383 /* xhr.js in Sources */,
-				5ADFF8D813EAE8BE00807383 /* local_settings.js in Sources */,
-				5ADFF8DA13EAE8BE00807383 /* jquery.js in Sources */,
-				5ADFF8DB13EAE8BE00807383 /* jquery.min.js in Sources */,
-				5ADFF8EC13EAE8BE00807383 /* jquery-ui.min.js in Sources */,
-				5ADFF8F113EAE8BE00807383 /* science.js in Sources */,
-				5ADFF8F213EAE8BE00807383 /* science.min.js in Sources */,
-				5ADFF8F313EAE8BE00807383 /* science.stats.js in Sources */,
-				5ADFF8F413EAE8BE00807383 /* science.stats.min.js in Sources */,
-				5ADFF8F613EAE8BE00807383 /* sizzle.js in Sources */,
-				5ADFF8F713EAE8BE00807383 /* sizzle.min.js in Sources */,
-				5ADFF8F913EAE8BE00807383 /* index.js in Sources */,
-				5ADFF8FA13EAE8BE00807383 /* parse-js.js in Sources */,
-				5ADFF8FB13EAE8BE00807383 /* process.js in Sources */,
-				5ADFF8FC13EAE8BE00807383 /* squeeze-more.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
