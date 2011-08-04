@@ -38,6 +38,7 @@
                          @"General",
                          @"CouchDB Server",
                          @"Webview Test",
+                         @"Calendar",
                          nil];
     }
     return self;
@@ -172,6 +173,21 @@
 
 #pragma mark - Table view delegate
 
+- (WebViewController *)webControllerForResource:(NSString *)resource {
+  WebViewController *vc = [[WebViewController alloc] initWithNibName:@"WebView" bundle:nil];
+  vc.webView.delegate = self;
+  
+  NSString *path = [[NSBundle mainBundle] pathForResource:resource ofType:@"html"];
+  NSLog(@"Path: %@", path);
+  NSURL *url = [NSURL fileURLWithPath:path];
+  //NSURL *url = [NSURL URLWithString:@"http://mbostock.github.com/d3/ex/calendar.html"];
+  
+  vc.url = url;
+  
+  return vc;
+}
+
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   [self.detailViewController.view removeFromSuperview];
   switch (indexPath.row) {
@@ -200,6 +216,10 @@
       NSURL *url = [NSURL fileURLWithPath:path];
       vc.url = url;
       
+      break;
+    }
+    case 3: {
+      self.detailViewController = [self webControllerForResource:@"dji"];
       break;
     }
     default:
