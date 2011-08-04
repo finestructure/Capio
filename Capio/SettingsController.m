@@ -39,6 +39,8 @@
                          @"CouchDB Server",
                          @"Webview Test",
                          @"Calendar",
+                         @"Force",
+                         @"Treemap",
                          nil];
     }
     return self;
@@ -220,6 +222,14 @@
     }
     case 3: {
       self.detailViewController = [self webControllerForPath:@"d3/examples/calendar/dji.html"];
+      break;
+    }
+    case 4: {
+      self.detailViewController = [self webControllerForPath:@"d3/examples/force/force.html"];
+      break;
+    }
+    case 5: {
+      self.detailViewController = [self webControllerForPath:@"d3/examples/treemap/treemap.html"];
       break;
     }
     default:
