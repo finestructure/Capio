@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!-- saved from url=(0091)http://staging.int3.capm.bpm.tools.intranet.db.com/capm/application/overview/1?portfolioId= -->
+<html xmlns="http://www.w3.org/1999/xhtml" class="ui-mobile landscape min-width-320px min-width-480px min-width-768px min-width-1024px">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--<base href="http://staging.int3.capm.bpm.tools.intranet.db.com/capm/application/overview/1?portfolioId=">-->
+    <base href="." />
+    <style type="text/css">          @media screen and (orientation: landscape) {
+            html, body {
+              width: 100%;
+            }
+            .content h1.landscape { display: block }
+            .content h1.portrait { display: none }
+          }
+          @media screen and (orientation: portrait) {
+            html, body {
+              width: 100%;
+            }
+            .content .landscape { display: none }
+            .content .portrait { display: block }
+          }
+          /*this is a fix for a jQuery mobile bug*/
+          /*when radio buttons are disguised as buttons*/
+          /*you can see the underlying radio button without this property*/
+          .ui-radio .ui-btn-inner {
+                overflow:visible;
+          }
+  </style>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b1/jquery.mobile-1.0b1.min.css" type="text/css" />
+    <link type="text/css" href="jquery.mobile.datebox.min.css" rel="stylesheet" />
+    <link type="text/css" href="demos.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-1.6.1.min.js"></script>
+    <script type="text/javascript" src="jquery.mobile-1.0b1.min.js"></script>
+    <script type="text/javascript" src="jquery.mobile.datebox.min.js"></script>
+    <!--[if IE]><script src="/capm/static/js/flotplugins/excanvas.min.js" type="text/javascript" ></script><![endif]-->
+    <link href="bundle-bundle_application_head.css" type="text/css" rel="stylesheet" media="screen, projector" />
+    <!--[if IE]><link href="/capm/static/css/application-ie.css" type="text/css" rel="stylesheet" media="screen, projector" /><![endif]-->
+    <meta name="layout" content="main" />
+    <style type="text/css">      .ui-header .ui-title, .ui-footer .ui-title  {
+               float:left !important;
+      }
+      </style>
+    <!-- NOTE: Script load order is significant! -->
+    <script type="text/javascript">          //customize jQuery Mobile to let IE7+ in (Mobile IE)
+              jQuery(document).bind("mobileinit", function(){
+                $.extend( jQuery.mobile , {
+                //extend gradeA qualifier to include IE7+
+                  gradeA: function(){
+                   //IE version check by James Padolsey, modified by jdalton - from http://gist.github.com/527683
+                        var ie = (function() {
+                        var v = 3, div = document.createElement('div'), a = div.all || [];
+                        while (div.innerHTML = '&lt;!--[if gt IE '+(++v)+']>&lt;br>&lt;![endif]-->', a[0]);
+                              return v > 4 ? v : !v;
+                        }());
+
+                   //must either support media queries or be IE7+
+                        return $.support.mediaquery || (ie &amp;&amp; ie >= 7);
+                  }
+              });
+            });
+            jQuery.extend(jQuery.mobile.datebox.prototype.options, {
+                         'dateFormat': 'dd mmm YYYY',
+                         'headerFormat': 'dd mmm YYYY'
+            });
+  </script>
+    <title>Application Overview</title>
+  </head>
+  <body class="ui-mobile-viewport">
+    <div id="demo" data-role="page" data-theme="d" data-url="demo" class="ui-page ui-body-d ui-page-active" style="min-height: 849px;">
+      <div data-role="content" class="ui-content" role="main" style="height: 716px;">
+        <div class="content" id="main-content">
+          <form>
+            <div id="top-content-section">
+              <div class="largeleftcolumn">
+                <h3>dbAffinity-Global
+</h3>
+                                Here's some blurb about dbAffinity-Global What a great application it is. It's got loads of servers each with plenty of memory It's simply superb<br />
+                <br />
+                                
+</div>
+              <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">Application Owner: Chan Ha
+</div>
+              <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
+                <div>
+                  <div style="width:200px;float:left;padding-bottom:5px;">
+                    <p align="right"></p>
+                  </div>
+                  <div style="width:90px;float:left;padding-bottom:5px;">
+                    <p align="center">
+                      <b>Red</b>
+                    </p>
+                  </div>
+                  <div style="width:90px;float:left;padding-bottom:5px;">
+                    <p align="center">
+                      <b>Amber</b>
+                    </p>
+                  </div>
+                  <div style="width:90px;float:left;padding-bottom:5px;">
+                    <p align="center">
+                      <b>Green</b>
+                    </p>
+                  </div>
+                  <div style="width:90px;float:left;padding-bottom:5px;">
+                    <p align="center">
+                      <b>Missing</b>
+                    </p>
+                  </div>
+                  <div style="width:30px;float:left;padding-bottom:5px;">
+                    <p align="center"> 
+</p>
+                  </div>
+                  <div style="width:90px;float:left;padding-bottom:5px;">
+                    <p align="center">
+                      <b>∑</b>
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <div style="width:200px;float:left;">
+                    <p align="left">
+                      <b>Performance</b>
+                    </p>
+                  </div>
+                  <div style="width:90px;height:42px;float:left;border:1px solid #C0C0C0;text-align:center">
+                    <p style="#padding-top:14px; #padding-bootom:14px">
+                      <a style="text-decoration:none" data-ajax="false" href="http://staging.int3.capm.bpm.tools.intranet.db.com/capm/server/metricList?id=1&amp;ragColour=red&amp;navigatedFrom=" class="ui-link">
+                        <span style="color:red;">8</span>
+                      </a>
+                    </p>
+                  </div>
+                  <div style="width:90px;height:42px;float:left;border-top:1px solid #C0C0C0;border-right:1px solid #C0C0C0;border-bottom: 1px solid #C0C0C0;text-align:center">
+                    <p style="#padding-top:14px; #padding-bootom:14px">
+                      <a style="text-decoration:none" data-ajax="false" href="http://staging.int3.capm.bpm.tools.intranet.db.com/capm/server/metricList?id=1&amp;ragColour=amber&amp;navigatedFrom=" class="ui-link">
+                        <span style="color:orange;">6</span>
+                      </a>
+                    </p>
+                  </div>
+                  <div style="width:90px;height:42px;float:left;border-top:1px solid #C0C0C0;border-right:1px solid #C0C0C0;border-bottom: 1px solid #C0C0C0;text-align:center">
+                    <p style="#padding-top:14px; #padding-bootom:14px">
+                      <a style="text-decoration:none" data-ajax="false" href="http://staging.int3.capm.bpm.tools.intranet.db.com/capm/server/metricList?id=1&amp;ragColour=green&amp;navigatedFrom=" class="ui-link">
+                        <span style="color:green;">6</span>
+                      </a>
+                    </p>
+                  </div>
+                  <div style="width:90px;height:42px;float:left;border-top:1px solid #C0C0C0;border-right:1px solid #C0C0C0;border-bottom: 1px solid #C0C0C0;text-align:center">
+                    <p style="#padding-top:14px; #padding-bootom:14px">
+                      <a style="text-decoration:none" data-ajax="false" href="http://staging.int3.capm.bpm.tools.intranet.db.com/capm/server/metricList?id=1&amp;ragColour=missing&amp;navigatedFrom=" class="ui-link">0</a>
+                    </p>
+                  </div>
+                  <div style="width:30px;height:42px;float:left;text-align:center">
+                    <p style="#padding-top:14px; #padding-bootom:14px"> 
+</p>
+                  </div>
+                  <div style="width:90px;height:42px;float:left;border:1px solid #C0C0C0;text-align:center">
+                    <p style="#padding-top:14px; #padding-bootom:14px">
+                      <a style="text-decoration:none" data-ajax="false" href="http://staging.int3.capm.bpm.tools.intranet.db.com/capm/server/metricList?id=1&amp;ragColour=black&amp;navigatedFrom=" class="ui-link">
+                        <span style="color:black;">20</span>
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div data-role="fieldcontain" class="embeded-link ui-field-contain ui-body ui-br" style="width:350px">
+                <br />
+                <br />
+                <ul data-inset="true" data-role="listview" data-dividertheme="b" class=" ui-listview ui-listview-inset ui-corner-all ui-shadow">
+                  <li class="ui-ie-border ui-btn ui-btn-up-c ui-btn-icon-right ui-li ui-corner-top ui-corner-bottom" data-theme="c">
+                    <div class="ui-btn-inner ui-li ui-corner-top ui-corner-bottom">
+                      <div class="ui-btn-text">
+                        <a data-ajax="false" href="http://staging.int3.capm.bpm.tools.intranet.db.com/capm/application/timeline/1?portfolioId=" class="ui-link-inherit">Application Timeline</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <br />
+                <ul data-inset="true" data-role="listview" class=" ui-listview ui-listview-inset ui-corner-all ui-shadow">
+                  <li class="ui-ie-border ui-btn ui-btn-up-c ui-btn-icon-right ui-li ui-corner-top ui-corner-bottom" data-theme="c">
+                    <div class="ui-btn-inner ui-li ui-corner-top ui-corner-bottom">
+                      <div class="ui-btn-text">
+                        <a data-ajax="false" href="http://staging.int3.capm.bpm.tools.intranet.db.com/capm/application/configuration/1?portfolioId=" class="ui-link-inherit">Application Configuration</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <br />
+                <ul data-inset="true" data-role="listview" class=" ui-listview ui-listview-inset ui-corner-all ui-shadow">
+                  <li class="ui-ie-border ui-btn ui-btn-up-c ui-btn-icon-right ui-li ui-corner-top ui-corner-bottom" data-theme="c">
+                    <div class="ui-btn-inner ui-li ui-corner-top ui-corner-bottom">
+                      <div class="ui-btn-text">
+                        <a data-ajax="false" href="http://staging.int3.capm.bpm.tools.intranet.db.com/capm/application/overview/1?portfolioId=#" class="ui-link-inherit">Application Workload Configuration</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <br />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="ui-datebox-screen ui-datebox-hidden" style="z-index: 499;"></div>
+    <div class="ui-datebox-container ui-overlay-shadow ui-corner-all ui-datebox-hidden pop ui-body-b" style="z-index: 500;">
+      <div class="ui-datebox-gridheader">
+        <div class="ui-datebox-gridminus ui-btn ui-btn-up-a ui-btn-inline ui-btn-icon-notext ui-btn-corner-all ui-shadow" title="Prev Month" data-theme="a">
+          <span class="ui-btn-inner ui-btn-corner-all">
+            <span class="ui-btn-text">
+              <a href="http://staging.int3.capm.bpm.tools.intranet.db.com/capm/application/overview/1?portfolioId=#">Prev Month</a>
+            </span>
+          </span>
+        </div>
+        <div class="ui-datebox-gridplus ui-btn ui-btn-up-a ui-btn-inline ui-btn-icon-notext ui-btn-corner-all ui-shadow" title="Next Month" data-theme="a">
+          <span class="ui-btn-inner ui-btn-corner-all">
+            <span class="ui-btn-text">
+              <a href="http://staging.int3.capm.bpm.tools.intranet.db.com/capm/application/overview/1?portfolioId=#">Next Month</a>
+            </span>
+          </span>
+        </div>
+        <div class="ui-datebox-gridlabel">
+          <h4>Uninitialized
+</h4>
+        </div>
+      </div>
+      <div class="ui-datebox-grid"></div>
+    </div>
+  </body>
+</html>

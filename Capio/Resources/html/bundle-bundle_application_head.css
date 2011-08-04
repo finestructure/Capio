@@ -1,0 +1,532 @@
+@charset "UTF-8";
+/*  DESKTOP DEFAULT
+    Default Layout: GREATER > 1024 x 768 */
+
+/*//320,480,768,1024*/
+
+/*		IPHONE3 & BLACKBERRY
+        Mobile Layout: 480 x 320 
+        
+   		!!IMPORTANT - No height attribute on menu break IE display     
+   		  
+*/
+
+/*
+ when deployed to the server there is a rubbish scaling issue
+*/
+
+html {
+    font-size:70% !important;
+}
+
+/*body {*/
+    /*font-size:80% !important;*/
+/*}   */
+   
+label {
+    font-size: 14px !important;
+}
+        
+#menu-content { 
+         float:left;
+         left:48px;
+         width:350px;
+         margin-right:0px;
+}
+
+#main-content {
+             float:left;
+             width:320px;
+             height: 900px;
+             margin-left:0px;
+}
+
+.min-width-1024px #menu-content {
+             float:left;
+             left:48px;
+             width:350px;
+             margin-right:24px;
+}
+
+
+.min-width-1024px #main-content {
+             float:left;
+             width:780px;
+             height:480px;
+             margin-left:24px;
+}
+
+
+
+/*		IPHONE 4
+        Wide Mobile Layout: 960 x 640 */
+
+.max-width-1024px #menu-content {
+         float:left;
+         left:48px;
+         width:160px;
+         margin-right:0px;
+}
+
+
+.max-width-1024px #main-content {
+         float:left;
+         width:420px;
+         height:480px;
+         margin-left:0px;
+}
+
+/*		IPHONE3 & BLACKBERRY*/
+        /*Mobile Layout: 480 x 320 */
+
+.max-width-768px #menu-content {
+         float:left;
+         left:48px;
+         width:320px;
+         margin-right:0px;
+}
+
+.max-width-768px #main-content {
+             float:left;
+             width:320px;
+             height:480px;
+             margin-left:0px;
+}
+
+/* TABLES */
+
+table {
+	border: 1px solid #DFDFDF;
+	border-collapse: collapse;
+	width: 100%;
+	margin-bottom: 1em;
+}
+
+
+
+
+tr {
+	border: 0;
+}
+
+tr>td:first-child, tr>th:first-child {
+	padding-left: 1.25em;
+}
+
+tr>td:last-child, tr>th:last-child {
+	padding-right: 1.25em;
+}
+
+td, th {
+	line-height: 1.5em;
+	padding: 0.5em 0.6em;
+	text-align: left;
+	vertical-align: top;
+}
+
+th {
+	background-color: #efefef;
+	background-image: -moz-linear-gradient(top, #ffffff, #eaeaea);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff), color-stop(1, #eaeaea));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#ffffff', EndColorStr = '#eaeaea');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', EndColorStr='#eaeaea')";
+	color: #666666;
+	font-weight: bold;
+	line-height: 1.7em;
+	padding: 0.2em 0.6em;
+}
+
+thead th {
+	white-space: nowrap;
+}
+
+th a {
+	display: block;
+	text-decoration: none;
+}
+
+th a:link, th a:visited {
+	color: #666666;
+}
+
+th a:hover, th a:focus {
+	color: #333333;
+}
+
+th.sortable a {
+	background-position: right;
+	background-repeat: no-repeat;
+	padding-right: 1.1em;
+}
+
+th.asc a {
+	background-image: url(images/skin/sorted_asc.gif);
+}
+
+th.desc a {
+	background-image: url(images/skin/sorted_desc.gif);
+}
+
+.odd {
+	background: #f7f7f7;
+}
+
+.even {
+	background: #ffffff;
+}
+
+th:hover, tr:hover {
+	background: #C0C0C0;
+}
+
+
+#data-content-right ul li{
+	padding: 0px 25px;
+	display: inline;
+	float:left;
+}
+
+#data-content-right-board ul li{
+	border: 1px solid #2A2A2A;
+	padding: 15px 25px;
+	display: inline;
+	float:left;
+}
+
+.largeleftcolumn {
+	width: 420px; 
+	float: left;
+}
+.smallrightcolumn { 
+	/*width: 310px;*/
+    float: left !important;
+    width: 280px;
+}
+
+.largerightcolumn {
+/* border: 1px solid #2A2A2A; */
+	width: 630px; 
+	float: right;
+}
+.smallleftcolumn { 
+	width: 300px;  
+	float: left;
+}
+
+.embeded-link { 
+	width: 250px;  
+	float: left;
+}
+
+#data-content-right ul li span { 
+		font-weight:bold;
+		align:center;
+        float: left;
+        width: 45px;
+}
+
+#data-content-right-board ul li span { 
+        float: left;
+        width: 45px;
+        font-weight:bold;
+}
+
+
+.ui-icon-blue {
+    background: url("/capmv2/static/images/blue.png");
+}
+.ui-icon-amber {
+    background: url("/capmv2/static/images/amber.png");
+}
+
+.ui-icon-green {
+    background: url("/capmv2/static/images/green.png");
+}
+
+.ui-icon-red {
+    background: url("/capmv2/static/images/red.png");
+}
+
+.ui-li-image {
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: -1.0em;
+    padding: 0.3em 0.5em;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+}
+
+.red-text {
+    color : red !important;
+    font-weight:normal;
+    text-decoration: none !important;
+}
+
+.black-text {
+    color : black !important;
+    font-weight:normal;
+    text-decoration: none !important;
+}
+
+.amber-text {
+    color : orange !important;
+    font-weight:normal;
+    text-decoration: none !important;
+}
+
+.green-text {
+    color : green !important;
+    font-weight:normal;
+    text-decoration: none !important;
+}
+
+.blue-text {
+    color : #00008b !important;
+    font-weight:normal;
+    text-decoration: none !important;
+}
+
+.font-b {
+    font-weight: bold;
+}
+
+.lefthalf {
+		width: 350px; 
+		float: left;
+}
+
+.rigthhalf { 
+	width: 350px;  
+	float: right;
+}
+
+
+.ui-li-text {
+	font-weight:normal;
+   	margin-top: -0.9em;
+   	padding: 0.2em 0.5em;
+  	position: absolute;
+   	right: 5px;
+   	top: 50%;
+}
+
+/* overide jQuery framework bottom lines */
+.ui-br {
+      	border-bottom:none
+}
+
+/* overide jQuery framework bottom lines
+	.ui-title {
+	    font-size: 18px !important;
+	  	margin: 0.5em !important;
+	  	padding: 0.2em 0.7em 0.2em 0.7em !important;
+	}   
+*/
+
+.square-icon {
+	border:1px solid black;
+	color: white !important;
+	font-weight:bold;
+}
+
+
+.red-color {
+	background-color:red;
+}
+
+.green-color {
+	background-color:green;
+}
+
+.blue-color {
+	background-color:blue;
+}
+
+.amber-color {
+	background-color:orange;
+}
+
+.grey-color {
+	background-color:gray;
+}
+
+body h3 {
+    font-size: 16px;
+}
+          
+body h4 {
+   font-size: 14px;
+}
+
+
+body h3 {
+    font-size: 16px;
+}
+          
+body h4 {
+   font-size: 14px;
+}
+
+.graph-color-icons {
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: -1em;
+    padding: 0.2em 0.5em;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+}
+
+
+
+/** header styling **/
+.ui-header {
+     height:40px;
+}
+
+.ui-header .ui-btn, .ui-footer .ui-btn, .ui-bar .ui-btn {
+    font-size: 11px;
+}
+
+.ui-controlgroup .ui-checkbox label, .ui-controlgroup .ui-radio label {
+    font-size: 14px;
+}
+	
+.header-second-button {
+	position:relative;
+	left:250px;
+ }	
+
+/*380 px is the width of the left hand menu with margin*/
+/* we need it at 190 px*/
+/* so set fixed width 60px center aligned text */
+.header .sub-heading {
+    position:absolute;
+    text-align:center;
+    font-size: 16px;
+    left:160px;
+    top:0.7em;
+    width:60px;
+}
+
+/*380 px is the left hand menu
+  710 is the graph both with margin
+  ((380 + (710 / 2)) - (200 / 2) = 615 */
+.header .main-heading {
+    position:absolute;
+    text-align:center;
+    font-size: 16px;
+    left:605px;
+    width:250px;
+    top:0.7em;
+}
+
+.header .home {
+    position:absolute;
+    right:60px;
+    top:0.2em;
+}
+
+.header .home a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.header .help {
+  	position:absolute;
+  	top:0.0em;
+  	right:10px;
+  	cursor:pointer;
+ }
+ 
+ .navi {
+	height:580px;
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+
+.ui-li-botton_hol {
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: -1.9em;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+}
+ 
+ 
+ .ui-input-datebox {
+    margin: 0 0 10px;
+    padding: 0 !important;
+    width: 65% !important;
+    float: right;
+    font-size: 12px;
+}
+ 
+ .ui-input-datebox input {
+    background-color: transparent;
+    border: 1px solid transparent !important;
+    display: inline-block !important;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 4px;
+    text-align: center;
+    padding-left: 9px;
+    vertical-align: middle;
+    width: 70% !important;
+}
+
+.ui-btn-icon-notext {
+    padding: 0 0 0 0 !important;
+}
+
+.ui-shadow-inset {
+    box-shadow: none !important;
+}
+
+
+.underGraph {
+   width:350px;
+   padding-left: 180px;
+}
+
+.footer-wrapper{
+   width:300px;
+   margin-left:660px;
+}
+
+.footer-icon-wrapper {
+   width:93px;
+   float:left
+}
+
+.footer-icon-text {
+   font-size: 12px;
+}
+
+.ui-radio .ui-btn-text {
+    font-size: 12px !important;
+}
+
+.rag-toggle {
+    float: left;
+    padding-left: 10px;
+    padding-top: 7px;
+    width: 138px;
+    z-index: 0;
+}
+
+.ui-btn-icon-notext {
+    width: 19px;
+}
+
+.pref-toggle {
+ 	float: right;
+    /*width: 247px;*/
+}
+
+ 
+ 
+
+
