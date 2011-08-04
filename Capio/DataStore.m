@@ -116,7 +116,7 @@
     NSString *baseUrl = [self baseUrl];
     
     if (baseUrl == nil) {
-      return [NSArray array];
+      return [NSDictionary dictionary];
     }
     
     NSMutableString *urlString = [NSMutableString stringWithString:baseUrl];
