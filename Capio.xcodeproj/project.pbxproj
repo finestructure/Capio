@@ -99,6 +99,15 @@
 		5ADF8CC413DEE7E200023BA8 /* AppConnections.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ADF8CC213DEE7E200023BA8 /* AppConnections.xib */; };
 		5ADF8CC613DEE87800023BA8 /* app_connections.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ADF8CC513DEE87800023BA8 /* app_connections.png */; };
 		5ADFF7D413E7E21D00807383 /* UIView+RoundedCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF7D313E7E21D00807383 /* UIView+RoundedCorners.m */; };
+		5ADFF7F313EAB48100807383 /* app_overview.html in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF7EC13EAB48100807383 /* app_overview.html */; };
+		5ADFF7F413EAB48100807383 /* bundle-bundle_application_head.css in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF7ED13EAB48100807383 /* bundle-bundle_application_head.css */; };
+		5ADFF7F513EAB48100807383 /* demos.css in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF7EE13EAB48100807383 /* demos.css */; };
+		5ADFF7F613EAB48100807383 /* jquery-1.6.1.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF7EF13EAB48100807383 /* jquery-1.6.1.min.js */; };
+		5ADFF7F713EAB48100807383 /* jquery.mobile-1.0b1.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF7F013EAB48100807383 /* jquery.mobile-1.0b1.min.js */; };
+		5ADFF7F813EAB48100807383 /* jquery.mobile.datebox.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF7F113EAB48100807383 /* jquery.mobile.datebox.min.css */; };
+		5ADFF7F913EAB48100807383 /* jquery.mobile.datebox.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF7F213EAB48100807383 /* jquery.mobile.datebox.min.js */; };
+		5ADFF7FD13EAB86600807383 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF7FB13EAB86500807383 /* WebViewController.m */; };
+		5ADFF7FE13EAB86600807383 /* WebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF7FC13EAB86500807383 /* WebView.xib */; };
 		5AF74AD713C1EC9F00DF0794 /* AppListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF74AD513C1EC9F00DF0794 /* AppListCell.m */; };
 		5AF74AD813C1EC9F00DF0794 /* AppListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF74AD613C1EC9F00DF0794 /* AppListCell.xib */; };
 /* End PBXBuildFile section */
@@ -304,6 +313,16 @@
 		5ADF8CC513DEE87800023BA8 /* app_connections.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_connections.png; sourceTree = "<group>"; };
 		5ADFF7D213E7E21D00807383 /* UIView+RoundedCorners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RoundedCorners.h"; sourceTree = "<group>"; };
 		5ADFF7D313E7E21D00807383 /* UIView+RoundedCorners.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RoundedCorners.m"; sourceTree = "<group>"; };
+		5ADFF7EC13EAB48100807383 /* app_overview.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = app_overview.html; sourceTree = "<group>"; };
+		5ADFF7ED13EAB48100807383 /* bundle-bundle_application_head.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "bundle-bundle_application_head.css"; sourceTree = "<group>"; };
+		5ADFF7EE13EAB48100807383 /* demos.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = demos.css; sourceTree = "<group>"; };
+		5ADFF7EF13EAB48100807383 /* jquery-1.6.1.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-1.6.1.min.js"; sourceTree = "<group>"; };
+		5ADFF7F013EAB48100807383 /* jquery.mobile-1.0b1.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery.mobile-1.0b1.min.js"; sourceTree = "<group>"; };
+		5ADFF7F113EAB48100807383 /* jquery.mobile.datebox.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = jquery.mobile.datebox.min.css; sourceTree = "<group>"; };
+		5ADFF7F213EAB48100807383 /* jquery.mobile.datebox.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.mobile.datebox.min.js; sourceTree = "<group>"; };
+		5ADFF7FA13EAB86400807383 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		5ADFF7FB13EAB86500807383 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		5ADFF7FC13EAB86500807383 /* WebView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebView.xib; sourceTree = "<group>"; };
 		5AF74AD413C1EC9F00DF0794 /* AppListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppListCell.h; sourceTree = "<group>"; };
 		5AF74AD513C1EC9F00DF0794 /* AppListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppListCell.m; sourceTree = "<group>"; };
 		5AF74AD613C1EC9F00DF0794 /* AppListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppListCell.xib; sourceTree = "<group>"; };
@@ -339,6 +358,7 @@
 		5A15955513BB54700007B60F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5ADFF7EB13EAB48100807383 /* html */,
 				5ABE2DFD13E59E8800170DE7 /* green_rag_big_pressed.png */,
 				5ABE2DF913E59E0400170DE7 /* amber_rag_big_pressed.png */,
 				5ABE2DFA13E59E0400170DE7 /* red_rag_big_pressed.png */,
@@ -654,6 +674,9 @@
 				5A73F4C913E70F16008E727C /* GeneralSettingsController.h */,
 				5A73F4CA13E70F16008E727C /* GeneralSettingsController.m */,
 				5A73F4CB13E70F17008E727C /* GeneralSettings.xib */,
+				5ADFF7FA13EAB86400807383 /* WebViewController.h */,
+				5ADFF7FB13EAB86500807383 /* WebViewController.m */,
+				5ADFF7FC13EAB86500807383 /* WebView.xib */,
 				5AB26AED13C5D14E00AC5B87 /* Accessory Controls */,
 			);
 			name = ViewControllers;
@@ -671,6 +694,20 @@
 			);
 			name = MGSplitViewController;
 			path = Capio;
+			sourceTree = "<group>";
+		};
+		5ADFF7EB13EAB48100807383 /* html */ = {
+			isa = PBXGroup;
+			children = (
+				5ADFF7EC13EAB48100807383 /* app_overview.html */,
+				5ADFF7ED13EAB48100807383 /* bundle-bundle_application_head.css */,
+				5ADFF7EE13EAB48100807383 /* demos.css */,
+				5ADFF7EF13EAB48100807383 /* jquery-1.6.1.min.js */,
+				5ADFF7F013EAB48100807383 /* jquery.mobile-1.0b1.min.js */,
+				5ADFF7F113EAB48100807383 /* jquery.mobile.datebox.min.css */,
+				5ADFF7F213EAB48100807383 /* jquery.mobile.datebox.min.js */,
+			);
+			path = html;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -793,6 +830,11 @@
 				5A61C17D13E6084600751084 /* DBGERLT2073%2F2011-03-02%2Fcpu.json in Resources */,
 				5A61C18113E611C900751084 /* DBGERLT2073%2F2011-03-02%2Fmem.json in Resources */,
 				5A73F4CD13E70F17008E727C /* GeneralSettings.xib in Resources */,
+				5ADFF7F313EAB48100807383 /* app_overview.html in Resources */,
+				5ADFF7F413EAB48100807383 /* bundle-bundle_application_head.css in Resources */,
+				5ADFF7F513EAB48100807383 /* demos.css in Resources */,
+				5ADFF7F813EAB48100807383 /* jquery.mobile.datebox.min.css in Resources */,
+				5ADFF7FE13EAB86600807383 /* WebView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -873,6 +915,10 @@
 				5ABE2DDB13E1CCCA00170DE7 /* IntroViewController.m in Sources */,
 				5A73F4CC13E70F17008E727C /* GeneralSettingsController.m in Sources */,
 				5ADFF7D413E7E21D00807383 /* UIView+RoundedCorners.m in Sources */,
+				5ADFF7F613EAB48100807383 /* jquery-1.6.1.min.js in Sources */,
+				5ADFF7F713EAB48100807383 /* jquery.mobile-1.0b1.min.js in Sources */,
+				5ADFF7F913EAB48100807383 /* jquery.mobile.datebox.min.js in Sources */,
+				5ADFF7FD13EAB86600807383 /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

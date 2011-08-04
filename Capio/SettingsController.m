@@ -12,6 +12,7 @@
 #import "Constants.h"
 #import "SettingsController.h"
 #import "GeneralSettingsController.h"
+#import "WebViewController.h"
 
 
 
@@ -34,8 +35,10 @@
       self.tabBarItem = tab;
       
       self.categories = [NSArray arrayWithObjects:
-                       @"General",
-                       @"CouchDB Server", nil];
+                         @"General",
+                         @"CouchDB Server",
+                         @"Webview Test",
+                         nil];
     }
     return self;
 }
@@ -188,10 +191,34 @@
       self.detailViewController = browser;
       break;
     }
+    case 2: {
+      WebViewController *vc = [[WebViewController alloc] initWithNibName:@"WebView" bundle:nil];
+      vc.webView.delegate = self;
+      self.detailViewController = vc;
+
+      NSString *path = [[NSBundle mainBundle] pathForResource:@"app_overview" ofType:@"html"];
+      NSURL *url = [NSURL fileURLWithPath:path];
+      vc.url = url;
+      
+      break;
+    }
     default:
       break;
   }
   [self.detailView addSubview:self.detailViewController.view];
+}
+
+
+#pragma mark - UIWebViewDelegate
+
+
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+  NSLog(@"webViewDidStartLoad");
+}
+
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+  NSLog(@"Error: %@", error);
 }
 
 
