@@ -14,7 +14,6 @@
 #import "AppConnectionsController.h"
 #import "Constants.h"
 #import "DataStore.h"
-#import "PickerPopupController.h"
 
 
 @implementation AppOverviewController
@@ -243,6 +242,21 @@
 
 - (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
   self.reportDateButton.selected = NO;  
+}
+
+
+#pragma mark - DatePopupControllerDelegate
+
+
+- (void)cancel:(id)sender {
+  [self.popover dismissPopoverAnimated:YES];
+  self.reportDateButton.selected = NO;
+}
+
+
+- (void)done:(id)sender {
+  [self.popover dismissPopoverAnimated:YES];
+  self.reportDateButton.selected = NO;
 }
 
 

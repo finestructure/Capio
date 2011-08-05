@@ -7,12 +7,13 @@
 //
 
 #import "MGSplitViewController.h"
+#import "PickerPopupController.h"
 
 
 @class AppOverview;
 
 
-@interface AppOverviewController : UIViewController <UIPopoverControllerDelegate, MGSplitViewControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource> {
+@interface AppOverviewController : UIViewController <UIPopoverControllerDelegate, MGSplitViewControllerDelegate, PickerPopupControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource> {
   UILabel *_appName;
   UITextView *_appDescription;
   UILabel *_appOwner;
