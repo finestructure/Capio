@@ -44,6 +44,7 @@
 		5A67A27B13BCCEDC002BDCAA /* DatePopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A67A27913BCCEDC002BDCAA /* DatePopupController.m */; };
 		5A67A27C13BCCEDC002BDCAA /* DatePopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A67A27A13BCCEDC002BDCAA /* DatePopup.xib */; };
 		5A6F752A13EBC97D00327817 /* html in Resources */ = {isa = PBXBuildFile; fileRef = 5A6F752913EBC97D00327817 /* html */; };
+		5A6F753213EBCEEE00327817 /* UIView+RoundedCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F753113EBCEEE00327817 /* UIView+RoundedCorners.m */; };
 		5A73F4CC13E70F17008E727C /* GeneralSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A73F4CA13E70F16008E727C /* GeneralSettingsController.m */; };
 		5A73F4CD13E70F17008E727C /* GeneralSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A73F4CB13E70F17008E727C /* GeneralSettings.xib */; };
 		5A843E2F13C2049A00289E51 /* red_rag.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A843E2E13C2049A00289E51 /* red_rag.png */; };
@@ -99,7 +100,6 @@
 		5ADF8CC313DEE7E200023BA8 /* AppConnectionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADF8CC113DEE7E200023BA8 /* AppConnectionsController.m */; };
 		5ADF8CC413DEE7E200023BA8 /* AppConnections.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ADF8CC213DEE7E200023BA8 /* AppConnections.xib */; };
 		5ADF8CC613DEE87800023BA8 /* app_connections.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ADF8CC513DEE87800023BA8 /* app_connections.png */; };
-		5ADFF7D413E7E21D00807383 /* UIView+RoundedCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF7D313E7E21D00807383 /* UIView+RoundedCorners.m */; };
 		5ADFF7FD13EAB86600807383 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFF7FB13EAB86500807383 /* WebViewController.m */; };
 		5ADFF7FE13EAB86600807383 /* WebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF7FC13EAB86500807383 /* WebView.xib */; };
 		5AF74AD713C1EC9F00DF0794 /* AppListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF74AD513C1EC9F00DF0794 /* AppListCell.m */; };
@@ -239,6 +239,8 @@
 		5A67A27913BCCEDC002BDCAA /* DatePopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePopupController.m; sourceTree = "<group>"; };
 		5A67A27A13BCCEDC002BDCAA /* DatePopup.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePopup.xib; sourceTree = "<group>"; };
 		5A6F752913EBC97D00327817 /* html */ = {isa = PBXFileReference; lastKnownFileType = folder; path = html; sourceTree = "<group>"; };
+		5A6F753013EBCEEE00327817 /* UIView+RoundedCorners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RoundedCorners.h"; sourceTree = "<group>"; };
+		5A6F753113EBCEEE00327817 /* UIView+RoundedCorners.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RoundedCorners.m"; sourceTree = "<group>"; };
 		5A73F4C913E70F16008E727C /* GeneralSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralSettingsController.h; sourceTree = "<group>"; };
 		5A73F4CA13E70F16008E727C /* GeneralSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralSettingsController.m; sourceTree = "<group>"; };
 		5A73F4CB13E70F17008E727C /* GeneralSettings.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralSettings.xib; sourceTree = "<group>"; };
@@ -306,8 +308,6 @@
 		5ADF8CC113DEE7E200023BA8 /* AppConnectionsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConnectionsController.m; sourceTree = "<group>"; };
 		5ADF8CC213DEE7E200023BA8 /* AppConnections.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppConnections.xib; sourceTree = "<group>"; };
 		5ADF8CC513DEE87800023BA8 /* app_connections.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_connections.png; sourceTree = "<group>"; };
-		5ADFF7D213E7E21D00807383 /* UIView+RoundedCorners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RoundedCorners.h"; sourceTree = "<group>"; };
-		5ADFF7D313E7E21D00807383 /* UIView+RoundedCorners.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RoundedCorners.m"; sourceTree = "<group>"; };
 		5ADFF7FA13EAB86400807383 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		5ADFF7FB13EAB86500807383 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		5ADFF7FC13EAB86500807383 /* WebView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebView.xib; sourceTree = "<group>"; };
@@ -506,11 +506,11 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		5A73F47E13E70028008E727C /* UIView-RoundedCorners */ = {
+		5A6F752F13EBCEEE00327817 /* UIView-RoundedCorners */ = {
 			isa = PBXGroup;
 			children = (
-				5ADFF7D213E7E21D00807383 /* UIView+RoundedCorners.h */,
-				5ADFF7D313E7E21D00807383 /* UIView+RoundedCorners.m */,
+				5A6F753013EBCEEE00327817 /* UIView+RoundedCorners.h */,
+				5A6F753113EBCEEE00327817 /* UIView+RoundedCorners.m */,
 			);
 			path = "UIView-RoundedCorners";
 			sourceTree = "<group>";
@@ -529,7 +529,7 @@
 		5A88ECBA13E1473D007A259F /* External */ = {
 			isa = PBXGroup;
 			children = (
-				5A73F47E13E70028008E727C /* UIView-RoundedCorners */,
+				5A6F752F13EBCEEE00327817 /* UIView-RoundedCorners */,
 				5A32465413E022C000AE1937 /* BonjourSupport */,
 				5A57427713DED37600294D1A /* CorePlotHeaders */,
 				5AD615E713BB820100F9CA45 /* MGSplitViewController */,
@@ -885,8 +885,8 @@
 				5A32467013E0537900AE1937 /* Constants.m in Sources */,
 				5ABE2DDB13E1CCCA00170DE7 /* IntroViewController.m in Sources */,
 				5A73F4CC13E70F17008E727C /* GeneralSettingsController.m in Sources */,
-				5ADFF7D413E7E21D00807383 /* UIView+RoundedCorners.m in Sources */,
 				5ADFF7FD13EAB86600807383 /* WebViewController.m in Sources */,
+				5A6F753213EBCEEE00327817 /* UIView+RoundedCorners.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
