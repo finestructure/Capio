@@ -209,9 +209,8 @@
   return doc;
 }
 
-- (NSArray *)appList {
-  NSDictionary *doc = [self fetchDocument:@"apps"];
-  
+
+- (NSArray *)decodeAppList:(NSDictionary *)doc {
   NSMutableArray *apps = [NSMutableArray array];
   [doc enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
     if ([obj isKindOfClass:[NSDictionary class]]) {
@@ -231,6 +230,20 @@
     }
   }];
   return apps;
+}
+
+
+- (NSArray *)appList {
+  NSDictionary *doc = [self fetchDocument:@"apps"];
+  return [self decodeAppList:doc];
+}
+
+
+- (void)appListWithCompletionBlock:(void (^)(NSArray *apps))block {
+  [self fetchDocument:@"apps" withCompletionBlock:^(NSDictionary *doc) {
+    NSArray *apps = [self decodeAppList:doc];
+    block(apps);
+  }];
 }
 
 

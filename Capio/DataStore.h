@@ -13,7 +13,9 @@
 + (DataStore *)sharedDataStore;
 
 - (NSUInteger)randomWithMax:(NSUInteger)maxValue;
+
 - (NSArray *)appList;
+- (void)appListWithCompletionBlock:(void (^)(NSArray *apps))block;
 
 - (NSArray *)dummyData:(NSUInteger)count;
 
