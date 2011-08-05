@@ -9,10 +9,21 @@
 #import <UIKit/UIKit.h>
 
 
+@protocol PickerPopupControllerDelegate <NSObject>
+
+- (void)cancel:(id)sender;
+- (void)done:(id)sender;
+
+@end
+
+
 @interface PickerPopupController : UIViewController {
   UIPickerView *_pickerView;
 }
 
+@property (nonatomic, weak) id<PickerPopupControllerDelegate> delegate;
+
 @property (strong, nonatomic) IBOutlet UIPickerView *pickerView;
+
 
 @end
