@@ -8,18 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "PopupControllerDelegate.h"
-
 
 @interface PickerPopupController : UIViewController {
   UIPickerView *_pickerView;
 }
 
-@property (nonatomic, weak) id<PopupControllerDelegate> delegate;
-
 @property (strong, nonatomic) IBOutlet UIPickerView *pickerView;
-
-- (IBAction)done:(id)sender;
-- (IBAction)cancel:(id)sender;
 
 @end

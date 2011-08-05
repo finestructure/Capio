@@ -14,6 +14,7 @@
 #import "AppConnectionsController.h"
 #import "Constants.h"
 #import "DataStore.h"
+#import "PickerPopupController.h"
 
 
 @implementation AppOverviewController
@@ -81,8 +82,9 @@
 
 
 - (void)reportDateButtonTapped:(id)sender {
-  DatePopupController *vc = [[DatePopupController alloc] initWithNibName:@"DatePopup" bundle:nil];
-  vc.delegate = self;
+  PickerPopupController *vc = [[PickerPopupController alloc] initWithNibName:@"PickerPopup" bundle:nil];
+  vc.pickerView.delegate = self;
+  vc.pickerView.dataSource = self;
   self.popover = [[UIPopoverController alloc] initWithContentViewController:vc];
   self.popover.delegate = self;
   self.popover.popoverContentSize = CGSizeMake(300, 260);
@@ -90,7 +92,8 @@
   // keep button selected while the popover is up
   self.reportDateButton.selected = YES;
   // set this late so the view is up for it to register
-  vc.datePicker.date = self.detailItem.reportDate;
+#warning Implement!
+//  vc.datePicker.date = self.detailItem.reportDate;
 }
 
 - (IBAction)timelineTapped:(id)sender {
@@ -236,31 +239,35 @@
 }
 
 
-#pragma mark - DatePopupControllerDelegate
-
-
-- (void)cancel:(id)sender {
-  [self.popover dismissPopoverAnimated:YES];
-  self.reportDateButton.selected = NO;  
-}
-
-
-- (void)done:(id)sender {
-  DatePopupController *vc = (DatePopupController *)self.popover.contentViewController;
-  NSLog(@"%@", vc.datePicker.date);
-  if (! [self.detailItem.reportDate isEqualToDate:vc.datePicker.date]) {
-    self.detailItem.reportDate = vc.datePicker.date;
-    [self updateView];
-  }
-  [self.popover dismissPopoverAnimated:YES];
-  self.reportDateButton.selected = NO;  
-}
-
-
 #pragma mark - UIPopoverController delegate
 
 - (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
   self.reportDateButton.selected = NO;  
+}
+
+
+#pragma mark - UIPickerViewDelegate
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+  NSArray *a = [NSArray arrayWithObjects:@"2011-06-01", @"2011-06-02", nil];
+  return [a objectAtIndex:row];
+}
+
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+  NSLog(@"Selected %d", row);
+}
+
+
+#pragma mark - UIPickerViewDataSource
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+  return 2;
+}
+
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+  return 1;
 }
 
 

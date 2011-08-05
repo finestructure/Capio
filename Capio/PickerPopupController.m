@@ -10,7 +10,6 @@
 
 @implementation PickerPopupController
 
-@synthesize delegate = _delegate;
 @synthesize pickerView = _pickerView;
 
 
@@ -51,16 +50,6 @@
 {
     // Return YES for supported orientations
 	return YES;
-}
-
-
-- (IBAction)cancel:(id)sender {
-  [self.delegate cancel:sender];
-}
-
-
-- (IBAction)done:(id)sender {
-  [self.delegate done:sender];
 }
 
 
