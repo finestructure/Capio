@@ -29,10 +29,6 @@
 		5A5742C313DED37600294D1A /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A5742C213DED37600294D1A /* libCorePlot-CocoaTouch.a */; };
 		5A5742CC13DEE17700294D1A /* AppConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5742CA13DEE17700294D1A /* AppConfigController.m */; };
 		5A5742CD13DEE17700294D1A /* AppConfig.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A5742CB13DEE17700294D1A /* AppConfig.xib */; };
-		5A61C17D13E6084600751084 /* DBGERLT2073%2F2011-03-02%2Fcpu.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A61C17C13E6084600751084 /* DBGERLT2073%2F2011-03-02%2Fcpu.json */; };
-		5A61C17E13E6084600751084 /* DBGERLT2073%2F2011-03-02%2Fcpu.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A61C17C13E6084600751084 /* DBGERLT2073%2F2011-03-02%2Fcpu.json */; };
-		5A61C18113E611C900751084 /* DBGERLT2073%2F2011-03-02%2Fmem.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A61C18013E611C900751084 /* DBGERLT2073%2F2011-03-02%2Fmem.json */; };
-		5A61C18213E611C900751084 /* DBGERLT2073%2F2011-03-02%2Fmem.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A61C18013E611C900751084 /* DBGERLT2073%2F2011-03-02%2Fmem.json */; };
 		5A66A31913BF3B6000DB7161 /* dropdown_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A66A31813BF3B6000DB7161 /* dropdown_button.png */; };
 		5A66A31C13BF3C3600DB7161 /* dropdown_button_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A66A31B13BF3C3600DB7161 /* dropdown_button_pressed.png */; };
 		5A67A26F13BCB82D002BDCAA /* AppOverview.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A67A26E13BCB82D002BDCAA /* AppOverview.m */; };
@@ -54,10 +50,6 @@
 		5A843E3213C2096F00289E51 /* amber_rag.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A843E3113C2096F00289E51 /* amber_rag.png */; };
 		5A886EDC13C33E8F003E06FA /* button1_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A886EDA13C33E8F003E06FA /* button1_pressed.png */; };
 		5A886EDD13C33E8F003E06FA /* button1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A886EDB13C33E8F003E06FA /* button1.png */; };
-		5A88ECBB13E155DA007A259F /* apps.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A32A12813D4912900AC7CB3 /* apps.json */; };
-		5A88ECBC13E155DC007A259F /* apps.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A32A12813D4912900AC7CB3 /* apps.json */; };
-		5A88ECBE13E15EA0007A259F /* DBGERLT2073%2F2011-03-02.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A88ECBD13E15EA0007A259F /* DBGERLT2073%2F2011-03-02.json */; };
-		5A88ECBF13E15EA0007A259F /* DBGERLT2073%2F2011-03-02.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A88ECBD13E15EA0007A259F /* DBGERLT2073%2F2011-03-02.json */; };
 		5A88ECC213E187D6007A259F /* response_history.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A88ECC013E187D6007A259F /* response_history.png */; };
 		5A88ECC313E187D6007A259F /* response_trend.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A88ECC113E187D6007A259F /* response_trend.png */; };
 		5A88ECC513E18DD8007A259F /* workload_legend.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A88ECC413E18DD8007A259F /* workload_legend.png */; };
@@ -104,6 +96,7 @@
 		5ADFF7FE13EAB86600807383 /* WebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFF7FC13EAB86500807383 /* WebView.xib */; };
 		5AF74AD713C1EC9F00DF0794 /* AppListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF74AD513C1EC9F00DF0794 /* AppListCell.m */; };
 		5AF74AD813C1EC9F00DF0794 /* AppListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF74AD613C1EC9F00DF0794 /* AppListCell.xib */; };
+		5AF9374213EC285C00802DFE /* json in Resources */ = {isa = PBXBuildFile; fileRef = 5AF9374113EC285C00802DFE /* json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,7 +125,6 @@
 		5A32466613E03B8300AE1937 /* Settings.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Settings.xib; sourceTree = "<group>"; };
 		5A32466E13E0537900AE1937 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		5A32466F13E0537900AE1937 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
-		5A32A12813D4912900AC7CB3 /* apps.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = apps.json; sourceTree = "<group>"; };
 		5A32A12913D495CA00AC7CB3 /* DataStoreTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStoreTest.h; sourceTree = "<group>"; };
 		5A32A12A13D495CA00AC7CB3 /* DataStoreTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataStoreTest.m; sourceTree = "<group>"; };
 		5A4B5E4713D561EC006E1C9E /* ServerOverviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerOverviewController.h; sourceTree = "<group>"; };
@@ -147,8 +139,6 @@
 		5A5742C913DEE17700294D1A /* AppConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfigController.h; sourceTree = "<group>"; };
 		5A5742CA13DEE17700294D1A /* AppConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConfigController.m; sourceTree = "<group>"; };
 		5A5742CB13DEE17700294D1A /* AppConfig.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppConfig.xib; sourceTree = "<group>"; };
-		5A61C17C13E6084600751084 /* DBGERLT2073%2F2011-03-02%2Fcpu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "DBGERLT2073%2F2011-03-02%2Fcpu.json"; sourceTree = "<group>"; };
-		5A61C18013E611C900751084 /* DBGERLT2073%2F2011-03-02%2Fmem.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "DBGERLT2073%2F2011-03-02%2Fmem.json"; sourceTree = "<group>"; };
 		5A66A31813BF3B6000DB7161 /* dropdown_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropdown_button.png; sourceTree = "<group>"; };
 		5A66A31B13BF3C3600DB7161 /* dropdown_button_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropdown_button_pressed.png; sourceTree = "<group>"; };
 		5A67A26D13BCB82D002BDCAA /* AppOverview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppOverview.h; sourceTree = "<group>"; };
@@ -254,7 +244,6 @@
 		5A843E3113C2096F00289E51 /* amber_rag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amber_rag.png; sourceTree = "<group>"; };
 		5A886EDA13C33E8F003E06FA /* button1_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button1_pressed.png; sourceTree = "<group>"; };
 		5A886EDB13C33E8F003E06FA /* button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button1.png; sourceTree = "<group>"; };
-		5A88ECBD13E15EA0007A259F /* DBGERLT2073%2F2011-03-02.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "DBGERLT2073%2F2011-03-02.json"; sourceTree = "<group>"; };
 		5A88ECC013E187D6007A259F /* response_history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = response_history.png; sourceTree = "<group>"; };
 		5A88ECC113E187D6007A259F /* response_trend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = response_trend.png; sourceTree = "<group>"; };
 		5A88ECC413E18DD8007A259F /* workload_legend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = workload_legend.png; sourceTree = "<group>"; };
@@ -314,6 +303,7 @@
 		5AF74AD413C1EC9F00DF0794 /* AppListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppListCell.h; sourceTree = "<group>"; };
 		5AF74AD513C1EC9F00DF0794 /* AppListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppListCell.m; sourceTree = "<group>"; };
 		5AF74AD613C1EC9F00DF0794 /* AppListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppListCell.xib; sourceTree = "<group>"; };
+		5AF9374113EC285C00802DFE /* json */ = {isa = PBXFileReference; lastKnownFileType = folder; path = json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -346,10 +336,10 @@
 		5A15955513BB54700007B60F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5AF9374113EC285C00802DFE /* json */,
 				5A6F752913EBC97D00327817 /* html */,
 				5ABC805E13BC5BA000468868 /* MainWindow.xib */,
 				5A6F759A13EBD09600327817 /* Images */,
-				5A88ECB813E146D1007A259F /* Test Data */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -558,17 +548,6 @@
 				5ADFF7FC13EAB86500807383 /* WebView.xib */,
 			);
 			name = "View Controllers (Tab 3)";
-			sourceTree = "<group>";
-		};
-		5A88ECB813E146D1007A259F /* Test Data */ = {
-			isa = PBXGroup;
-			children = (
-				5A61C18013E611C900751084 /* DBGERLT2073%2F2011-03-02%2Fmem.json */,
-				5A61C17C13E6084600751084 /* DBGERLT2073%2F2011-03-02%2Fcpu.json */,
-				5A88ECBD13E15EA0007A259F /* DBGERLT2073%2F2011-03-02.json */,
-				5A32A12813D4912900AC7CB3 /* apps.json */,
-			);
-			name = "Test Data";
 			sourceTree = "<group>";
 		};
 		5AA4D7D113BB52080029B616 = {
@@ -801,8 +780,6 @@
 				5A32464F13DEF41D00AE1937 /* ServerConfig.xib in Resources */,
 				5A32466313E0358900AE1937 /* gear.png in Resources */,
 				5A32466813E03B8300AE1937 /* Settings.xib in Resources */,
-				5A88ECBB13E155DA007A259F /* apps.json in Resources */,
-				5A88ECBE13E15EA0007A259F /* DBGERLT2073%2F2011-03-02.json in Resources */,
 				5A88ECC213E187D6007A259F /* response_history.png in Resources */,
 				5A88ECC313E187D6007A259F /* response_trend.png in Resources */,
 				5A88ECC513E18DD8007A259F /* workload_legend.png in Resources */,
@@ -816,11 +793,10 @@
 				5ABE2DFB13E59E0400170DE7 /* amber_rag_big_pressed.png in Resources */,
 				5ABE2DFC13E59E0400170DE7 /* red_rag_big_pressed.png in Resources */,
 				5ABE2DFE13E59E8800170DE7 /* green_rag_big_pressed.png in Resources */,
-				5A61C17D13E6084600751084 /* DBGERLT2073%2F2011-03-02%2Fcpu.json in Resources */,
-				5A61C18113E611C900751084 /* DBGERLT2073%2F2011-03-02%2Fmem.json in Resources */,
 				5A73F4CD13E70F17008E727C /* GeneralSettings.xib in Resources */,
 				5ADFF7FE13EAB86600807383 /* WebView.xib in Resources */,
 				5A6F752A13EBC97D00327817 /* html in Resources */,
+				5AF9374213EC285C00802DFE /* json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -830,10 +806,6 @@
 			files = (
 				5AA4D81713BB52080029B616 /* InfoPlist.strings in Resources */,
 				5AA4D81913BB52080029B616 /* CapioTests.h in Resources */,
-				5A88ECBC13E155DC007A259F /* apps.json in Resources */,
-				5A88ECBF13E15EA0007A259F /* DBGERLT2073%2F2011-03-02.json in Resources */,
-				5A61C17E13E6084600751084 /* DBGERLT2073%2F2011-03-02%2Fcpu.json in Resources */,
-				5A61C18213E611C900751084 /* DBGERLT2073%2F2011-03-02%2Fmem.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
