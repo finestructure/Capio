@@ -14,7 +14,6 @@
 #import "AppConnectionsController.h"
 #import "Constants.h"
 #import "DataStore.h"
-#import "PickerPopupController.h"
 
 
 @implementation AppOverviewController
@@ -82,12 +81,21 @@
 
 
 - (void)reportDateButtonTapped:(id)sender {
-  PickerPopupController *vc = [[PickerPopupController alloc] initWithNibName:@"PickerPopup" bundle:nil];
-  vc.pickerView.delegate = self;
-  vc.pickerView.dataSource = self;
+  UIViewController *vc = [[UIViewController alloc] init];
+  
+  UIPickerView *picker = [[UIPickerView alloc] init];
+  [vc.view addSubview:picker];
+  picker.delegate = self;
+  picker.dataSource = self;
+  picker.showsSelectionIndicator = YES;
+  CGRect frame = picker.frame;
+  frame.size.width = 150;
+  picker.frame = frame;
+  CGSize contentSize = picker.frame.size;
+  
   self.popover = [[UIPopoverController alloc] initWithContentViewController:vc];
   self.popover.delegate = self;
-  self.popover.popoverContentSize = CGSizeMake(300, 260);
+  self.popover.popoverContentSize = contentSize;
   [self.popover presentPopoverFromRect:self.reportDateButton.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
   // keep button selected while the popover is up
   self.reportDateButton.selected = YES;
@@ -256,6 +264,11 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
   NSLog(@"Selected %d", row);
+}
+
+
+- (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component {
+  return 120;
 }
 
 
