@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-#import "PopupControllerDelegate.h"
+
+@protocol DatePopupControllerDelegate <NSObject>
+
+- (void)cancel:(id)sender;
+- (void)done:(id)sender;
+
+@end
 
 
 @interface DatePopupController : UIViewController {
@@ -16,7 +22,7 @@
 }
 
 
-@property (nonatomic, weak) id<PopupControllerDelegate> delegate;
+@property (nonatomic, weak) id<DatePopupControllerDelegate> delegate;
 
 @property (nonatomic, strong) IBOutlet UIDatePicker *datePicker;
 
