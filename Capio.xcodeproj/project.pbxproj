@@ -547,6 +547,19 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		5A6F759B13EBD18900327817 /* View Controllers (Tab 3) */ = {
+			isa = PBXGroup;
+			children = (
+				5A73F4C913E70F16008E727C /* GeneralSettingsController.h */,
+				5A73F4CA13E70F16008E727C /* GeneralSettingsController.m */,
+				5A73F4CB13E70F17008E727C /* GeneralSettings.xib */,
+				5ADFF7FA13EAB86400807383 /* WebViewController.h */,
+				5ADFF7FB13EAB86500807383 /* WebViewController.m */,
+				5ADFF7FC13EAB86500807383 /* WebView.xib */,
+			);
+			name = "View Controllers (Tab 3)";
+			sourceTree = "<group>";
+		};
 		5A88ECB813E146D1007A259F /* Test Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -598,7 +611,9 @@
 				5AA4D7F013BB52080029B616 /* CapioAppDelegate.m */,
 				5A67A26B13BCB803002BDCAA /* Model */,
 				5A32466913E03B9E00AE1937 /* Main Views */,
-				5AD615CD13BB5F1E00F9CA45 /* ViewControllers */,
+				5AD615CD13BB5F1E00F9CA45 /* ViewControllers (Tab 1) */,
+				5A6F759B13EBD18900327817 /* View Controllers (Tab 3) */,
+				5AB26AED13C5D14E00AC5B87 /* Accessory Controls */,
 				5A15955513BB54700007B60F /* Resources */,
 				5AA4D7E713BB52080029B616 /* Supporting Files */,
 			);
@@ -650,7 +665,7 @@
 			name = "Accessory Controls";
 			sourceTree = "<group>";
 		};
-		5AD615CD13BB5F1E00F9CA45 /* ViewControllers */ = {
+		5AD615CD13BB5F1E00F9CA45 /* ViewControllers (Tab 1) */ = {
 			isa = PBXGroup;
 			children = (
 				5AD615CF13BB6D4E00F9CA45 /* AppListController.h */,
@@ -680,15 +695,8 @@
 				5ABE2DD813E1CCCA00170DE7 /* IntroViewController.h */,
 				5ABE2DD913E1CCCA00170DE7 /* IntroViewController.m */,
 				5ABE2DDA13E1CCCA00170DE7 /* IntroView.xib */,
-				5A73F4C913E70F16008E727C /* GeneralSettingsController.h */,
-				5A73F4CA13E70F16008E727C /* GeneralSettingsController.m */,
-				5A73F4CB13E70F17008E727C /* GeneralSettings.xib */,
-				5ADFF7FA13EAB86400807383 /* WebViewController.h */,
-				5ADFF7FB13EAB86500807383 /* WebViewController.m */,
-				5ADFF7FC13EAB86500807383 /* WebView.xib */,
-				5AB26AED13C5D14E00AC5B87 /* Accessory Controls */,
 			);
-			name = ViewControllers;
+			name = "ViewControllers (Tab 1)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
