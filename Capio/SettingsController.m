@@ -221,15 +221,15 @@
       break;
     }
     case 3: {
-      self.detailViewController = [self webControllerForPath:@"d3/examples/calendar/dji.html"];
+      self.detailViewController = [self webControllerForPath:@"html/d3/examples/calendar/dji.html"];
       break;
     }
     case 4: {
-      self.detailViewController = [self webControllerForPath:@"d3/examples/force/force.html"];
+      self.detailViewController = [self webControllerForPath:@"html/d3/examples/force/force.html"];
       break;
     }
     case 5: {
-      self.detailViewController = [self webControllerForPath:@"d3/examples/treemap/treemap.html"];
+      self.detailViewController = [self webControllerForPath:@"html/d3/examples/treemap/treemap.html"];
       break;
     }
     default:
