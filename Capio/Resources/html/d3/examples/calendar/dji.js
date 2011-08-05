@@ -6,7 +6,7 @@ var w = 960,
 
 var vis = d3.select("#chart")
   .selectAll("svg")
-    .data(d3.range(1990, 2011))
+    .data(d3.range(2008, 2011))
   .enter().append("svg:svg")
     .attr("width", w)
     .attr("height", h + ph * 2)
