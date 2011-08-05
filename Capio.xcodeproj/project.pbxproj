@@ -251,7 +251,7 @@
 		5A6F759613EBD03500327817 /* MGSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSplitViewController.m; sourceTree = "<group>"; };
 		5A6F759C13EBD74E00327817 /* PickerPopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerPopupController.h; sourceTree = "<group>"; };
 		5A6F759D13EBD74E00327817 /* PickerPopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerPopupController.m; sourceTree = "<group>"; };
-		5A6F759E13EBD74E00327817 /* PickerPopup.xib */ = {isa = PBXFileReference; fileEncoding = 4; path = PickerPopup.xib; sourceTree = "<group>"; };
+		5A6F759E13EBD74E00327817 /* PickerPopup.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickerPopup.xib; sourceTree = "<group>"; };
 		5A73F4C913E70F16008E727C /* GeneralSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralSettingsController.h; sourceTree = "<group>"; };
 		5A73F4CA13E70F16008E727C /* GeneralSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralSettingsController.m; sourceTree = "<group>"; };
 		5A73F4CB13E70F17008E727C /* GeneralSettings.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralSettings.xib; sourceTree = "<group>"; };
