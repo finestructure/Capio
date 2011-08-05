@@ -299,6 +299,7 @@
 		5ABE2DF913E59E0400170DE7 /* amber_rag_big_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amber_rag_big_pressed.png; sourceTree = "<group>"; };
 		5ABE2DFA13E59E0400170DE7 /* red_rag_big_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_rag_big_pressed.png; sourceTree = "<group>"; };
 		5ABE2DFD13E59E8800170DE7 /* green_rag_big_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_rag_big_pressed.png; sourceTree = "<group>"; };
+		5ABF6C3213EBD9F9000A1325 /* PopupControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupControllerDelegate.h; sourceTree = "<group>"; };
 		5AD5B6A713BC6CA10083D454 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		5AD5B6A813BC6CA10083D454 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		5AD5B6A913BC6CA10083D454 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
@@ -660,6 +661,7 @@
 		5AB26AED13C5D14E00AC5B87 /* Accessory Controls */ = {
 			isa = PBXGroup;
 			children = (
+				5ABF6C3213EBD9F9000A1325 /* PopupControllerDelegate.h */,
 				5A6F759C13EBD74E00327817 /* PickerPopupController.h */,
 				5A6F759D13EBD74E00327817 /* PickerPopupController.m */,
 				5A6F759E13EBD74E00327817 /* PickerPopup.xib */,

@@ -8,12 +8,13 @@
 
 #import "MGSplitViewController.h"
 #import "DatePopupController.h"
+#import "PopupControllerDelegate.h"
 
 
 @class AppOverview;
 
 
-@interface AppOverviewController : UIViewController <UIPopoverControllerDelegate, MGSplitViewControllerDelegate, DatePopupControllerDelegate> {
+@interface AppOverviewController : UIViewController <UIPopoverControllerDelegate, MGSplitViewControllerDelegate, PopupControllerDelegate> {
   UILabel *_appName;
   UITextView *_appDescription;
   UILabel *_appOwner;
