@@ -200,13 +200,27 @@
 }
 
 
-- (NSDictionary *)fetchFromView:(NSString *)viewKey startKey:(id)startKey endKey:(id)endKey {
+- (NSString *)composeViewUrl:(NSString *)viewKey startKey:(id)startKey endKey:(id)endKey {
   //@"_design/capm/_view/{viewKey}?startkey={startKey}&endkey={endKey}"
   NSMutableString *viewUrl = [NSMutableString stringWithFormat:@"_design/capm/_view/%@", viewKey];
   [viewUrl appendFormat:@"?startkey=%@", [self encodeString:[self jsonEncode:startKey]]];
   [viewUrl appendFormat:@"&endkey=%@", [self encodeString:[self jsonEncode:endKey]]];
+  return viewUrl;
+}
+
+
+- (NSDictionary *)fetchFromView:(NSString *)viewKey startKey:(id)startKey endKey:(id)endKey {
+  NSString *viewUrl = [self composeViewUrl:viewKey startKey:startKey endKey:endKey];
   NSDictionary *doc = [self _fetchDocument:viewUrl];
   return doc;
+}
+
+
+- (void)fetchFromView:(NSString *)viewKey startKey:(id)startKey endKey:(id)endKey withCompletionBlock:(void (^)(NSDictionary *doc))block {
+  NSString *viewUrl = [self composeViewUrl:viewKey startKey:startKey endKey:endKey];
+  [self fetchDocument:viewUrl withCompletionBlock:^(NSDictionary *doc) {
+    block(doc);
+  }];
 }
 
 
@@ -247,10 +261,7 @@
 }
 
 
-- (NSArray *)asofDatesForServer:(NSString *)server {
-  id startKey = [NSArray arrayWithObjects:server, @"", nil];
-  id endKey = [NSArray arrayWithObjects:server, @"9", nil];
-  NSDictionary *doc = [[DataStore sharedDataStore] fetchFromView:@"server_asof_dates" startKey:startKey endKey:endKey];
+- (NSArray *)decodeServerAsofDates:(NSDictionary *)doc {
   if (doc == nil) {
     return [NSArray array];
   }
@@ -266,9 +277,21 @@
 }
 
 
+- (NSArray *)asofDatesForServer:(NSString *)server {
+  id startKey = [NSArray arrayWithObjects:server, @"", nil];
+  id endKey = [NSArray arrayWithObjects:server, @"9", nil];
+  NSDictionary *doc = [self fetchFromView:@"server_asof_dates" startKey:startKey endKey:endKey];
+  return [self decodeServerAsofDates:doc];
+}
+
+
 - (void)asofDatesForServer:(NSString *)server withCompletionBlock:(void (^)(NSArray *dates))block {
-  NSArray *dates = [self asofDatesForServer:server];
-  block(dates);
+  id startKey = [NSArray arrayWithObjects:server, @"", nil];
+  id endKey = [NSArray arrayWithObjects:server, @"9", nil];
+  [self fetchFromView:@"server_asof_dates" startKey:startKey endKey:endKey withCompletionBlock:^(NSDictionary *doc) {
+    NSArray *dates = [self decodeServerAsofDates:doc];
+    block(dates);
+  }];
 }
 
 

@@ -21,11 +21,14 @@
 
 - (NSDictionary *)fetchDocument:(NSString *)docKey;
 - (void)fetchDocument:(NSString *)docKey withCompletionBlock:(void (^)(NSDictionary *doc))block;
+
 - (NSDictionary *)fetchDocument:(NSString *)docKey forDate:(NSDate *)asof;
 - (void)fetchDocument:(NSString *)docKey forDate:(NSDate *)date withCompletionBlock:(void (^)(NSDictionary *doc))block;
+
 - (NSDictionary *)fetchDocPath:(NSArray *)pathComponents;
 
 - (NSDictionary *)fetchFromView:(NSString *)viewKey startKey:(id)startKey endKey:(id)endKey;
+- (void)fetchFromView:(NSString *)viewKey startKey:(id)startKey endKey:(id)endKey withCompletionBlock:(void (^)(NSDictionary *doc))block;
 
 - (NSArray *)asofDatesForServer:(NSString *)server;
 - (void)asofDatesForServer:(NSString *)server withCompletionBlock:(void (^)(NSArray *dates))block;

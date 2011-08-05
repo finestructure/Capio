@@ -141,4 +141,14 @@
 }
 
 
+- (void)test_serverAsofDates_block {
+  [[NSUserDefaults standardUserDefaults] setBool:NO forKey:kUseLocalTestData];
+  [[DataStore sharedDataStore] asofDatesForServer:@"DBGERLT2073" withCompletionBlock:^(NSArray *dates) {
+    STAssertNotNil(dates, nil);
+    STAssertEquals([dates count], 2u, nil);
+    STAssertEqualObjects([dates objectAtIndex:0], @"2011-03-02", nil);
+    STAssertEqualObjects([dates objectAtIndex:1], @"2011-03-06", nil);
+  }];
+}
+
 @end
