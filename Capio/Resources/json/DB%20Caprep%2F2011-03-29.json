@@ -1,0 +1,11 @@
+{
+  "_id" : "DB Caprep/2011-03-29",
+  "type" : "app",
+  "asof" : "2011-03-29",
+  "server_list" : [
+    "caprpu1"
+  ],
+  "red_rag_count" : 1,
+  "amber_rag_count" : 0,
+  "green_rag_count" : 0
+}

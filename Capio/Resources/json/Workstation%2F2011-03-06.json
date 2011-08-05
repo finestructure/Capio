@@ -1,0 +1,11 @@
+{
+  "_id" : "Workstation/2011-03-06",
+  "type" : "app",
+  "asof" : "2011-03-06",
+  "server_list" : [
+    "DBGERLT2073"
+  ],
+  "red_rag_count" : 0,
+  "amber_rag_count" : 1,
+  "green_rag_count" : 0
+}

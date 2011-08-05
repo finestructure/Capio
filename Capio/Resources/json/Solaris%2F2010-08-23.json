@@ -1,0 +1,12 @@
+{
+  "_id" : "Solaris/2010-08-23",
+  "type" : "app",
+  "asof" : "2010-08-23",
+  "server_list" : [
+    "sol45a-1102",
+    "sol45d-1102"
+  ],
+  "red_rag_count" : 0,
+  "amber_rag_count" : 1,
+  "green_rag_count" : 1
+}

@@ -1,0 +1,7 @@
+{
+  "_id" : "Solaris",
+  "type" : "app_header",
+  "app_name" : "Solaris",
+  "app_description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut ligula lorem, vel adipiscing diam. Vivamus tempus augue non turpis.",
+  "app_owner" : "Peter Appowner"
+}
