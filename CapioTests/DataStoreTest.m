@@ -137,7 +137,7 @@
   STAssertNotNil(rows, nil);
   STAssertEquals([rows count], 2u, nil);
   STAssertEqualObjects([rows objectAtIndex:0], @"2011-03-02", nil);
-  STAssertEqualObjects([rows objectAtIndex:1], @"2011-03-02", nil);
+  STAssertEqualObjects([rows objectAtIndex:1], @"2011-03-06", nil);
 }
 
 
