@@ -101,7 +101,7 @@
 }
 
 
-- (void)test_fetchFromView {
+- (void)test_fetchFromView_1 {
   [[NSUserDefaults standardUserDefaults] setBool:NO forKey:kUseLocalTestData];
   id startKey = [NSArray arrayWithObjects:@"DBGERLT2073", @"2011-03-02", nil];
   id endKey = startKey;
@@ -114,5 +114,31 @@
   STAssertNotNil(rows, nil);
   STAssertEquals(1u, [rows count], nil);
 }
+
+
+- (void)test_fetchFromView_2 {
+  [[NSUserDefaults standardUserDefaults] setBool:NO forKey:kUseLocalTestData];
+  id startKey = [NSArray arrayWithObjects:@"DBGERLT2073", @"", nil];
+  id endKey = [NSArray arrayWithObjects:@"DBGERLT2073", @"9", nil];
+  NSDictionary *doc = [[DataStore sharedDataStore] fetchFromView:@"server_asof_dates" startKey:startKey endKey:endKey];
+  STAssertNotNil(doc, nil);
+  NSNumber *total_rows = [doc objectForKey:@"total_rows"];
+  STAssertNotNil(total_rows, nil);
+  STAssertEquals(5u, [total_rows unsignedIntValue], nil);
+  NSArray *rows = [doc objectForKey:@"rows"];
+  STAssertNotNil(rows, nil);
+  STAssertEquals(2u, [rows count], nil);
+}
+
+
+- (void)test_serverAsofDates {
+  [[NSUserDefaults standardUserDefaults] setBool:NO forKey:kUseLocalTestData];
+  NSArray *rows = [[DataStore sharedDataStore] asofDatesForServer:@"DBGERLT2073"];
+  STAssertNotNil(rows, nil);
+  STAssertEquals([rows count], 2u, nil);
+  STAssertEqualObjects([rows objectAtIndex:0], @"2011-03-02", nil);
+  STAssertEqualObjects([rows objectAtIndex:1], @"2011-03-02", nil);
+}
+
 
 @end

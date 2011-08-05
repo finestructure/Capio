@@ -233,6 +233,27 @@
   return apps;
 }
 
+
+- (NSArray *)asofDatesForServer:(NSString *)server {
+  id startKey = [NSArray arrayWithObjects:server, @"", nil];
+  id endKey = [NSArray arrayWithObjects:server, @"9", nil];
+  NSDictionary *doc = [[DataStore sharedDataStore] fetchFromView:@"server_asof_dates" startKey:startKey endKey:endKey];
+  if (doc == nil) {
+    return [NSArray array];
+  }
+  NSArray *rows = [doc objectForKey:@"rows"];
+  NSMutableArray *res = [NSMutableArray arrayWithCapacity:[rows count]];
+  [rows enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    NSDictionary *item = (NSDictionary *)obj;
+    NSArray *key = [item objectForKey:@"key"];
+    NSString *asof = [key objectAtIndex:1];
+    [res addObject:asof];
+  }];
+  return res;
+}
+
+
+
 #pragma mark - Initializers
 
 - (id)init {
