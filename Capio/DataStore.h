@@ -26,6 +26,7 @@
 - (NSDictionary *)fetchFromView:(NSString *)viewKey startKey:(id)startKey endKey:(id)endKey;
 
 - (NSArray *)asofDatesForServer:(NSString *)server;
+- (void)asofDatesForServer:(NSString *)server withCompletionBlock:(void (^)(NSArray *dates))block;
 
 - (NSString *)baseUrl;
 - (NSString *)jsonEncode:(id)object;

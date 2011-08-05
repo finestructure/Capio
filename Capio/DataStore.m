@@ -253,6 +253,12 @@
 }
 
 
+- (void)asofDatesForServer:(NSString *)server withCompletionBlock:(void (^)(NSArray *dates))block {
+  NSArray *dates = [self asofDatesForServer:server];
+  block(dates);
+}
+
+
 
 #pragma mark - Initializers
 
