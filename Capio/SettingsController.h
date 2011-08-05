@@ -12,11 +12,11 @@
 #import "BonjourBrowser.h"
 
 
-@interface SettingsController : UIViewController <BonjourBrowserDelegate> {
+@interface SettingsController : UIViewController <BonjourBrowserDelegate, UIWebViewDelegate> {
   UIView *_masterView;
   UIView *_detailView;
   UINavigationController *_masterViewController;
-  UINavigationController *_detailViewController;
+  UIViewController *_detailViewController;
   UITableView *_tableView;
 }
 
@@ -25,7 +25,7 @@
 @property (strong, nonatomic) IBOutlet UIView *masterView;
 @property (strong, nonatomic) IBOutlet UIView *detailView;
 @property (strong, nonatomic) IBOutlet UINavigationController *masterViewController;
-@property (strong, nonatomic) IBOutlet UINavigationController *detailViewController;
+@property (strong, nonatomic) IBOutlet UIViewController *detailViewController;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 

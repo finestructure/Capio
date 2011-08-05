@@ -12,6 +12,7 @@
 #import "Constants.h"
 #import "SettingsController.h"
 #import "GeneralSettingsController.h"
+#import "WebViewController.h"
 
 
 
@@ -34,8 +35,13 @@
       self.tabBarItem = tab;
       
       self.categories = [NSArray arrayWithObjects:
-                       @"General",
-                       @"CouchDB Server", nil];
+                         @"General",
+                         @"CouchDB Server",
+                         @"Webview Test",
+                         @"Calendar",
+                         @"Force",
+                         @"Treemap",
+                         nil];
     }
     return self;
 }
@@ -169,6 +175,21 @@
 
 #pragma mark - Table view delegate
 
+- (WebViewController *)webControllerForPath:(NSString *)resource {
+  WebViewController *vc = [[WebViewController alloc] initWithNibName:@"WebView" bundle:nil];
+  vc.webView.delegate = self;
+  
+  NSString *path = [NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] resourcePath], resource];
+  NSLog(@"Path: %@", path);
+  NSURL *url = [NSURL fileURLWithPath:path];
+  //NSURL *url = [NSURL URLWithString:@"http://mbostock.github.com/d3/ex/calendar.html"];
+  
+  vc.url = url;
+  
+  return vc;
+}
+
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   [self.detailViewController.view removeFromSuperview];
   switch (indexPath.row) {
@@ -188,10 +209,46 @@
       self.detailViewController = browser;
       break;
     }
+    case 2: {
+      WebViewController *vc = [[WebViewController alloc] initWithNibName:@"WebView" bundle:nil];
+      vc.webView.delegate = self;
+      self.detailViewController = vc;
+
+      NSString *path = [[NSBundle mainBundle] pathForResource:@"app_overview" ofType:@"html"];
+      NSURL *url = [NSURL fileURLWithPath:path];
+      vc.url = url;
+      
+      break;
+    }
+    case 3: {
+      self.detailViewController = [self webControllerForPath:@"d3/examples/calendar/dji.html"];
+      break;
+    }
+    case 4: {
+      self.detailViewController = [self webControllerForPath:@"d3/examples/force/force.html"];
+      break;
+    }
+    case 5: {
+      self.detailViewController = [self webControllerForPath:@"d3/examples/treemap/treemap.html"];
+      break;
+    }
     default:
       break;
   }
   [self.detailView addSubview:self.detailViewController.view];
+}
+
+
+#pragma mark - UIWebViewDelegate
+
+
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+  NSLog(@"webViewDidStartLoad");
+}
+
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+  NSLog(@"Error: %@", error);
 }
 
 
