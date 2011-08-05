@@ -8,8 +8,6 @@
 
 #import "GeneralSettingsController.h"
 
-#import "UIView+RoundedCorners.h"
-
 #import "Constants.h"
 #import "DataStore.h"
 
@@ -55,8 +53,6 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  // Do any additional setup after loading the view from its nib.
-  [self.view setRoundedCorners:UIViewRoundedCornerUpperRight radius:6.0];
 
   NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
   self.testDataToggle.on = [defaults boolForKey:kUseLocalTestData];

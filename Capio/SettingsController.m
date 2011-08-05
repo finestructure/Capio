@@ -236,6 +236,7 @@
       break;
   }
   [self.detailView addSubview:self.detailViewController.view];
+  [self.detailViewController.view setRoundedCorners:UIViewRoundedCornerUpperLeft radius:6.0];
 }
 
 
