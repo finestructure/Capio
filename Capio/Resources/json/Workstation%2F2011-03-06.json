@@ -1,6 +1,7 @@
 {
   "_id" : "Workstation/2011-03-06",
   "type" : "app",
+  "app_name" : "Workstation",
   "asof" : "2011-03-06",
   "server_list" : [
     "DBGERLT2073"

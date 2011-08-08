@@ -1,6 +1,7 @@
 {
   "_id" : "DB Caprep/2011-03-29",
   "type" : "app",
+  "app_name" : "DB Caprep",
   "asof" : "2011-03-29",
   "server_list" : [
     "caprpu1"

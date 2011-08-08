@@ -1,6 +1,7 @@
 {
   "_id" : "Solaris/2010-08-23",
   "type" : "app",
+  "app_name" : "Solaris",
   "asof" : "2010-08-23",
   "server_list" : [
     "sol45a-1102",

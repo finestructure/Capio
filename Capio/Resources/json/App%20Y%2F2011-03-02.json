@@ -1,6 +1,7 @@
 {
   "_id" : "App Y/2011-03-02",
   "type" : "app",
+  "app_name" : "App Y",
   "asof" : "2011-03-02",
   "server_list" : [
     "DBGERLT2073"

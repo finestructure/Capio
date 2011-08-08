@@ -1,6 +1,7 @@
 {
   "_id" : "Sol 45d/2010-08-23",
   "type" : "app",
+  "app_name" : "Sol 45d",
   "asof" : "2010-08-23",
   "server_list" : [
     "sol45d-1102"
