@@ -724,7 +724,7 @@
 		5AA4D7D313BB52080029B616 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "abstracture GmbH & Co. KG";
 			};
 			buildConfigurationList = 5AA4D7D613BB52080029B616 /* Build configuration list for PBXProject "Capio" */;
