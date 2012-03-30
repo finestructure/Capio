@@ -52,17 +52,25 @@
 
 
 - (void)test_fetch_Document_withCompletionBlock {
+  __block BOOL didRun = NO;
   [[DataStore sharedDataStore] fetchDocument:@"apps" withCompletionBlock:^(NSDictionary *doc) {
     STAssertNotNil(doc, nil);
+    didRun = YES;
   }];
+  [[DataStore sharedDataStore].fetchQueue waitUntilAllOperationsAreFinished];
+  STAssertTrue(didRun, nil);
 }
 
 
 - (void)test_fetch_Document_forDate_withCompletionBlock {
+  __block BOOL didRun = NO;
   NSDate *asof = [[YmdDateFormatter sharedInstance] dateFromString:@"2011-03-02"];
   [[DataStore sharedDataStore] fetchDocument:@"DBGERLT2073" forDate:asof withCompletionBlock:^(NSDictionary *doc) {
     STAssertNotNil(doc, nil);
+    didRun = YES;
   }];
+  [[DataStore sharedDataStore].fetchQueue waitUntilAllOperationsAreFinished];
+  STAssertTrue(didRun, nil);
 }
 
 
@@ -109,7 +117,7 @@
   STAssertNotNil(doc, nil);
   NSNumber *total_rows = [doc objectForKey:@"total_rows"];
   STAssertNotNil(total_rows, nil);
-  STAssertEquals(5u, [total_rows unsignedIntValue], nil);
+  STAssertEquals(88u, [total_rows unsignedIntValue], nil);
   NSArray *rows = [doc objectForKey:@"rows"];
   STAssertNotNil(rows, nil);
   STAssertEquals(1u, [rows count], nil);
@@ -118,37 +126,55 @@
 
 - (void)test_fetchFromView_2 {
   [[NSUserDefaults standardUserDefaults] setBool:NO forKey:kUseLocalTestData];
-  id startKey = [NSArray arrayWithObjects:@"DBGERLT2073", @"", nil];
-  id endKey = [NSArray arrayWithObjects:@"DBGERLT2073", @"9", nil];
+  id startKey = [NSArray arrayWithObjects:@"CAPRPD1", @"", nil];
+  id endKey = [NSArray arrayWithObjects:@"CAPRPD1", @"9", nil];
   NSDictionary *doc = [[DataStore sharedDataStore] fetchFromView:@"server_asof_dates" startKey:startKey endKey:endKey];
   STAssertNotNil(doc, nil);
   NSNumber *total_rows = [doc objectForKey:@"total_rows"];
   STAssertNotNil(total_rows, nil);
-  STAssertEquals(5u, [total_rows unsignedIntValue], nil);
+  STAssertEquals(88u, [total_rows unsignedIntValue], nil);
   NSArray *rows = [doc objectForKey:@"rows"];
   STAssertNotNil(rows, nil);
-  STAssertEquals(2u, [rows count], nil);
+  STAssertEquals(37u, [rows count], nil);
+}
+
+
+- (void)test_fetchFromView_with_completionBlock {
+  [[NSUserDefaults standardUserDefaults] setBool:NO forKey:kUseLocalTestData];
+  __block BOOL didRun = NO;
+  id startKey = [NSArray arrayWithObjects:@"CAPRPD1", @"", nil];
+  id endKey = [NSArray arrayWithObjects:@"CAPRPD1", @"9", nil];
+  [[DataStore sharedDataStore] fetchFromView:@"server_asof_dates" startKey:startKey endKey:endKey withCompletionBlock:^(NSDictionary *doc) {
+    STAssertNotNil(doc, nil);
+    didRun = YES;
+  }];  
+  [[DataStore sharedDataStore].fetchQueue waitUntilAllOperationsAreFinished];
+  STAssertTrue(didRun, nil);
 }
 
 
 - (void)test_serverAsofDates {
   [[NSUserDefaults standardUserDefaults] setBool:NO forKey:kUseLocalTestData];
-  NSArray *rows = [[DataStore sharedDataStore] asofDatesForServer:@"DBGERLT2073"];
+  NSArray *rows = [[DataStore sharedDataStore] asofDatesForServer:@"CAPRPD1"];
   STAssertNotNil(rows, nil);
-  STAssertEquals([rows count], 2u, nil);
-  STAssertEqualObjects([rows objectAtIndex:0], @"2011-03-02", nil);
-  STAssertEqualObjects([rows objectAtIndex:1], @"2011-03-06", nil);
+  STAssertEquals([rows count], 37u, nil);
+  STAssertEqualObjects([rows objectAtIndex:0], @"2011-08-21", nil);
+  STAssertEqualObjects([rows objectAtIndex:1], @"2011-08-22", nil);
 }
 
 
 - (void)test_serverAsofDates_block {
   [[NSUserDefaults standardUserDefaults] setBool:NO forKey:kUseLocalTestData];
-  [[DataStore sharedDataStore] asofDatesForServer:@"DBGERLT2073" withCompletionBlock:^(NSArray *dates) {
+  __block BOOL didRun = NO;
+  [[DataStore sharedDataStore] asofDatesForServer:@"CAPRPD1" withCompletionBlock:^(NSArray *dates) {
     STAssertNotNil(dates, nil);
     STAssertEquals([dates count], 2u, nil);
     STAssertEqualObjects([dates objectAtIndex:0], @"2011-03-02", nil);
     STAssertEqualObjects([dates objectAtIndex:1], @"2011-03-06", nil);
+    didRun = YES;
   }];
+  [[DataStore sharedDataStore].fetchQueue waitUntilAllOperationsAreFinished];
+  STAssertTrue(didRun, nil);
 }
 
 @end
