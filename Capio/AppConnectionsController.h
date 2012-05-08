@@ -12,8 +12,6 @@
   UIWebView *_webView;
 }
 
-@property (strong, nonatomic) NSURL *url;
-
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 
 - (IBAction)reload:(id)sender;

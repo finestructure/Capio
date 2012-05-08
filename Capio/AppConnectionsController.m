@@ -10,7 +10,6 @@
 
 @implementation AppConnectionsController
 
-@synthesize url = _url;
 @synthesize webView = _webView;
 
 
@@ -35,9 +34,13 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  // Do any additional setup after loading the view from its nib  
-  NSLog(@"WebView viewDidLoad");
-  NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
+
+  NSString *resource = @"html/d3/examples/force_small/force.html";
+  NSString *path = [NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] resourcePath], resource];
+
+  NSURL *url = [NSURL fileURLWithPath:path];
+
+  NSURLRequest *request = [NSURLRequest requestWithURL:url];
   [self.webView loadRequest:request];
   
   self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reload:)];

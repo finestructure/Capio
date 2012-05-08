@@ -145,11 +145,6 @@
 
 - (IBAction)connectionsTapped:(id)sender {
   AppConnectionsController *vc = [[AppConnectionsController alloc] initWithNibName:@"AppConnections" bundle:nil];
-  NSString *resource = @"html/d3/examples/force/force.html";
-  NSString *path = [NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] resourcePath], resource];
-  NSLog(@"Path: %@", path);
-  NSURL *url = [NSURL fileURLWithPath:path];
-  vc.url = url;
   [self.navigationController pushViewController:vc animated:YES];
 }
 
