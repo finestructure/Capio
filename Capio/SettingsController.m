@@ -37,9 +37,7 @@
       self.categories = [NSArray arrayWithObjects:
                          @"General",
                          @"CouchDB Server",
-                         @"Webview Test",
                          @"Calendar",
-                         @"Force",
                          @"Treemap",
                          nil];
     }
@@ -210,25 +208,10 @@
       break;
     }
     case 2: {
-      WebViewController *vc = [[WebViewController alloc] initWithNibName:@"WebView" bundle:nil];
-      vc.webView.delegate = self;
-      self.detailViewController = vc;
-
-      NSString *path = [[NSBundle mainBundle] pathForResource:@"app_overview" ofType:@"html"];
-      NSURL *url = [NSURL fileURLWithPath:path];
-      vc.url = url;
-      
-      break;
-    }
-    case 3: {
       self.detailViewController = [self webControllerForPath:@"html/d3/examples/calendar/dji.html"];
       break;
     }
-    case 4: {
-      self.detailViewController = [self webControllerForPath:@"html/d3/examples/force/force.html"];
-      break;
-    }
-    case 5: {
+    case 3: {
       self.detailViewController = [self webControllerForPath:@"html/d3/examples/treemap/treemap.html"];
       break;
     }
