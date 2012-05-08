@@ -14,6 +14,7 @@
 #import "AppConnectionsController.h"
 #import "Constants.h"
 #import "DataStore.h"
+#import "WebViewController.h"
 
 
 @implementation AppOverviewController
@@ -143,7 +144,12 @@
 
 
 - (IBAction)connectionsTapped:(id)sender {
-  id vc = [[AppConnectionsController alloc] initWithNibName:@"AppConnections" bundle:nil];
+  AppConnectionsController *vc = [[AppConnectionsController alloc] initWithNibName:@"AppConnections" bundle:nil];
+  NSString *resource = @"html/d3/examples/force/force.html";
+  NSString *path = [NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] resourcePath], resource];
+  NSLog(@"Path: %@", path);
+  NSURL *url = [NSURL fileURLWithPath:path];
+  vc.url = url;
   [self.navigationController pushViewController:vc animated:YES];
 }
 

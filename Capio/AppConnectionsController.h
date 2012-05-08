@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppConnectionsController : UIViewController
+@interface AppConnectionsController : UIViewController {
+  UIWebView *_webView;
+}
+
+@property (strong, nonatomic) NSURL *url;
+
+@property (strong, nonatomic) IBOutlet UIWebView *webView;
+
+- (IBAction)reload:(id)sender;
+
 
 @end

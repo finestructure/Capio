@@ -10,6 +10,10 @@
 
 @implementation AppConnectionsController
 
+@synthesize url = _url;
+@synthesize webView = _webView;
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
@@ -30,21 +34,30 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+  [super viewDidLoad];
+  // Do any additional setup after loading the view from its nib  
+  NSLog(@"WebView viewDidLoad");
+  NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
+  [self.webView loadRequest:request];
 }
 
 - (void)viewDidUnload
 {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+  [self setWebView:nil];
+  [super viewDidUnload];
+  // Release any retained subviews of the main view.
+  // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
 	return YES;
+}
+
+- (IBAction)reload:(id)sender {
+  NSLog(@"url: %@", self.webView.request);
+  [self.webView reload];
 }
 
 @end
