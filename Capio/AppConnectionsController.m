@@ -39,6 +39,8 @@
   NSLog(@"WebView viewDidLoad");
   NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
   [self.webView loadRequest:request];
+  
+  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reload:)];
 }
 
 - (void)viewDidUnload
