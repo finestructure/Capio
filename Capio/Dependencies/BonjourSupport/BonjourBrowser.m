@@ -54,6 +54,7 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 #import "BonjourBrowser.h"
 #import "BrowserViewController.h"
 #import "DomainViewController.h"
+#import "UIView+RoundedCorners.h"
 
 
 @interface BonjourBrowser ()
@@ -111,6 +112,18 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 	
 	return self;
 }
+
+
+-(void)viewDidLoad
+{
+  // fix status bar offset
+  CGRect frame = self.view.frame;
+  frame.origin.y -= 20;
+  self.view.frame = frame;
+  [self.navigationBar setRoundedCorners:UIViewRoundedCornerUpperLeft radius:6];
+  // right is ok already
+}
+
 
 - (NSString*) searchingForServicesString {
 	return _searchingForServicesString;
